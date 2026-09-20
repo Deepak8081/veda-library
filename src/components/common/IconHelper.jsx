@@ -1,0 +1,71 @@
+import React from "react";
+import {
+  BookOpen,
+  Compass,
+  Sparkles,
+  Eye,
+  ShieldCheck,
+  Flower2,
+  Flower,
+  Flame,
+  Volume2,
+  Sun,
+  Crown,
+  Leaf,
+  Scroll,
+  Layers,
+  FileCheck,
+  Landmark,
+  Hand,
+  Languages,
+  UserCheck,
+  Library,
+  Search,
+  FileText,
+  Calendar,
+  Scale,
+  Home,
+  Archive,
+  BookMarked,
+  CheckCircle2,
+  Clock,
+  Sparkle
+} from "lucide-react";
+
+const ICON_MAP = {
+  BookOpen,
+  Compass,
+  Sparkles,
+  Eye,
+  ShieldCheck,
+  Flower2,
+  Flower,
+  Flame,
+  Volume2,
+  Sun,
+  Crown,
+  Leaf,
+  Scroll,
+  Layers,
+  FileCheck,
+  Landmark,
+  Hand,
+  Languages,
+  UserCheck,
+  Library,
+  Search,
+  FileText,
+  Calendar,
+  Scale,
+  Home,
+  Archive,
+  BookMarked,
+  CheckCircle2,
+  Clock,
+  Sparkle
+};
+
+export default function IconHelper({ name, className = "w-5 h-5", size, ...props }) {
+  const Component = ICON_MAP[name] || BookOpen;
+  return <Component className={className} size={size} {...props} />;
+}

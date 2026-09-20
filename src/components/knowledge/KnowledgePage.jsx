@@ -1,0 +1,251 @@
+import React, { useState } from "react";
+import { useNavigate, Link } from "react-router-dom";
+import {
+  BookOpen,
+  ArrowRight,
+  Home,
+  Sparkles,
+  Layers,
+  ChevronRight
+} from "lucide-react";
+import { KNOWLEDGE_BRANCHES } from "../../data/knowledgePageData.js";
+import { SACRED_ICON_MAP } from "../common/SacredIcons.jsx";
+import { SACRED_QUOTE } from "../../data/libraryHomeData.js";
+import bannerTempleGhat from "../../assets/images/library/banners/banner-temple-ghat.jpg";
+
+export default function KnowledgePage({ onNavigateHome }) {
+  const navigate = useNavigate();
+  const [selectedBranchId, setSelectedBranchId] = useState("all");
+
+  const handleCardClick = (cardId) => {
+    if (cardId === "veda") {
+      navigate("/library/veda");
+    } else if (cardId === "rudrabhisheka") {
+      navigate("/library/puja/shaiva/rudrabhisheka");
+    } else if (cardId === "gayatri" || cardId === "mahamrityunjaya") {
+      navigate("/library/mantra-stotra");
+    } else if (cardId === "hora") {
+      navigate("/library/jyotisha");
+    } else if (cardId === "shodashopachara") {
+      navigate("/library/puja");
+    } else {
+      navigate("/library/veda");
+    }
+  };
+
+  const filteredBranches =
+    selectedBranchId === "all"
+      ? KNOWLEDGE_BRANCHES
+      : KNOWLEDGE_BRANCHES.filter((b) => b.id === selectedBranchId);
+
+  return (
+    <div className="bg-[#fffaf0] min-h-screen">
+      {/* 1. Mobile-First Hero Header */}
+      <div className="relative bg-gradient-to-r from-[#1f140c] via-[#2c1b10] to-[#1a1008] text-white py-10 sm:py-14 px-4 sm:px-6 lg:px-8 border-b border-amber-900/40 overflow-hidden">
+        <div className="absolute inset-0 z-0 opacity-30 mix-blend-luminosity">
+          <img
+            src={bannerTempleGhat}
+            alt="Temple Ghats"
+            className="w-full h-full object-cover object-center"
+          />
+        </div>
+        <div className="relative z-10 max-w-7xl mx-auto">
+          {/* Breadcrumb */}
+          <div className="flex items-center gap-2 text-xs font-medium text-amber-200/80 mb-2">
+            <Link
+              to="/"
+              className="hover:text-white transition-colors cursor-pointer flex items-center gap-1"
+            >
+              <Home className="w-3.5 h-3.5" />
+              <span>Home</span>
+            </Link>
+            <span>›</span>
+            <Link
+              to="/library"
+              className="hover:text-white transition-colors cursor-pointer"
+            >
+              Veda Library
+            </Link>
+            <span>›</span>
+            <span className="text-white font-semibold">Knowledge Branches</span>
+          </div>
+
+          <span className="inline-block text-[10px] sm:text-xs font-bold uppercase tracking-widest text-amber-300 bg-amber-500/15 border border-amber-400/30 px-3 py-1 rounded-full mb-2">
+            १२ ज्ञान शाखाएँ • VEDIC TAXONOMY
+          </span>
+          <h1 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-white mb-2">
+            Explore Knowledge Branches
+          </h1>
+          <p className="text-xs sm:text-sm text-amber-100/90 font-devanagari max-w-2xl leading-relaxed">
+            वेद, वेदाङ्ग, उपनिषद, दर्शन, धर्म, मंत्र, पूजा, ज्योतिष, आयुर्वेद एवं पारंपरिक ज्ञान का संपूर्ण संरचित संग्रह।
+          </p>
+        </div>
+      </div>
+
+      {/* 2. Sleek Horizontal Scrollable Filter Chips (100% Mobile Friendly - No Rigid Sidebar) */}
+      <div className="sticky top-16 z-30 bg-[#fffdfa]/95 backdrop-blur-md border-b border-amber-200/80 py-3 px-4 sm:px-6 lg:px-8 shadow-2xs">
+        <div className="max-w-7xl mx-auto flex items-center gap-2 overflow-x-auto no-scrollbar py-0.5">
+          <button
+            type="button"
+            onClick={() => setSelectedBranchId("all")}
+            className={`px-3.5 py-1.5 rounded-full text-xs font-semibold whitespace-nowrap transition-all cursor-pointer ${
+              selectedBranchId === "all"
+                ? "bg-amber-700 text-white shadow-xs font-bold"
+                : "bg-white text-stone-700 border border-stone-200 hover:border-amber-300 hover:bg-amber-50"
+            }`}
+          >
+            All Branches (सभी १२ शाखाएँ)
+          </button>
+
+          {KNOWLEDGE_BRANCHES.map((b) => {
+            const isSelected = selectedBranchId === b.id;
+            return (
+              <button
+                key={b.id}
+                type="button"
+                onClick={() => setSelectedBranchId(b.id)}
+                className={`px-3.5 py-1.5 rounded-full text-xs font-semibold whitespace-nowrap transition-all cursor-pointer ${
+                  isSelected
+                    ? "bg-amber-700 text-white shadow-xs font-bold"
+                    : "bg-white text-stone-700 border border-stone-200 hover:border-amber-300 hover:bg-amber-50"
+                }`}
+              >
+                {b.title} ({b.hindiTitle})
+              </button>
+            );
+          })}
+        </div>
+      </div>
+
+      {/* 3. Main Content: Flowing Knowledge Sections */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 space-y-12">
+        {filteredBranches.map((branch) => (
+          <section
+            key={branch.id}
+            id={branch.id}
+            className="bg-white p-5 sm:p-7 rounded-3xl border border-stone-200/90 shadow-2xs space-y-6"
+          >
+            {/* Branch Header */}
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between pb-4 border-b border-amber-100 gap-2">
+              <div>
+                <div className="flex items-center gap-2 mb-1">
+                  <span className="text-xs font-bold uppercase tracking-wider text-amber-800 font-devanagari">
+                    {branch.hindiTitle}
+                  </span>
+                  <span className="text-stone-300">•</span>
+                  <span className="text-xs text-stone-500 font-medium">
+                    {branch.subItems?.length || branch.cards.length} Sub-divisions
+                  </span>
+                </div>
+                <h2 className="font-serif text-2xl sm:text-3xl font-bold text-stone-900">
+                  {branch.title}
+                </h2>
+                <p className="text-xs sm:text-sm text-stone-600 font-devanagari mt-0.5">
+                  {branch.subtitle}
+                </p>
+              </div>
+
+              {branch.subItems && (
+                <div className="flex flex-wrap gap-1.5 self-start sm:self-auto">
+                  {branch.subItems.slice(0, 4).map((sub, idx) => (
+                    <span
+                      key={idx}
+                      className="px-2.5 py-0.5 rounded-md text-[11px] font-medium bg-amber-50 text-amber-900 border border-amber-200/70"
+                    >
+                      {sub}
+                    </span>
+                  ))}
+                </div>
+              )}
+            </div>
+
+            {/* Cards Grid: 1 col on mobile, 2 col on tablet, 3 or 4 col on desktop */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
+              {branch.cards.map((card) => {
+                const IconComponent = SACRED_ICON_MAP[card.icon];
+                return (
+                  <div
+                    key={card.id}
+                    onClick={() => handleCardClick(card.id)}
+                    className="group p-4 sm:p-5 rounded-2xl bg-[#fffdfa] border border-stone-200 hover:border-amber-400/90 shadow-2xs hover:shadow-md transition-all duration-300 flex items-start gap-3.5 cursor-pointer"
+                  >
+                    {/* Pastel Circle Icon Badge */}
+                    <div
+                      className={`w-12 h-12 sm:w-13 sm:h-13 rounded-full flex items-center justify-center flex-shrink-0 transition-transform duration-300 group-hover:scale-105 ${card.badgeBg}`}
+                    >
+                      {IconComponent ? (
+                        <IconComponent className={`w-6 h-6 ${card.iconColor}`} />
+                      ) : (
+                        <BookOpen className="w-5 h-5 text-amber-700" />
+                      )}
+                    </div>
+
+                    {/* Content Box */}
+                    <div className="flex-1 min-w-0 flex flex-col justify-between min-h-[85px]">
+                      <div>
+                        <div className="flex items-center justify-between gap-1">
+                          <h3 className="font-serif text-base sm:text-lg font-bold text-stone-900 group-hover:text-amber-800 transition-colors truncate">
+                            {card.title}
+                          </h3>
+                          <span className="text-[10px] font-devanagari text-stone-400 flex-shrink-0">
+                            {card.hindiTitle}
+                          </span>
+                        </div>
+                        <p className="text-xs text-stone-500 mt-1 leading-relaxed line-clamp-2">
+                          {card.desc}
+                        </p>
+                      </div>
+
+                      <div className="mt-3 pt-2 border-t border-stone-100 flex items-center justify-between text-xs">
+                        <span className="text-[11px] font-medium text-stone-500">
+                          {card.sectionsCount}
+                        </span>
+                        <span className="text-amber-700 group-hover:text-amber-900 font-bold flex items-center gap-1 transition-colors">
+                          Explore →
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+
+            {/* Related Tags */}
+            {branch.relatedTags && (
+              <div className="pt-2 flex flex-wrap items-center gap-1.5 text-xs text-stone-500">
+                <span className="font-semibold text-stone-700 text-[11px]">Related:</span>
+                {branch.relatedTags.map((t) => (
+                  <span
+                    key={t}
+                    onClick={() => navigate("/library/veda")}
+                    className="px-2 py-0.5 rounded-md bg-stone-100 text-stone-600 hover:bg-amber-100 hover:text-amber-900 cursor-pointer transition-colors text-[11px]"
+                  >
+                    #{t}
+                  </span>
+                ))}
+              </div>
+            )}
+          </section>
+        ))}
+
+        {/* Sacred Quote Card */}
+        <div className="relative rounded-3xl overflow-hidden border border-amber-200/80 shadow-xs bg-gradient-to-r from-amber-50/90 via-[#fff8eb] to-amber-50/90 p-6 sm:p-8 text-center">
+          <div className="relative z-10 max-w-xl mx-auto space-y-2">
+            <span className="text-[10px] font-bold uppercase tracking-widest text-amber-800 bg-amber-100 px-3 py-1 rounded-full">
+              तैत्तिरीयोपनिषद्
+            </span>
+            <p className="font-devanagari text-lg sm:text-xl font-bold text-amber-950">
+              “{SACRED_QUOTE.sanskrit}”
+            </p>
+            <p className="font-serif italic text-xs sm:text-sm text-stone-700">
+              "{SACRED_QUOTE.translation}"
+            </p>
+            <span className="text-xs font-semibold text-amber-900 block">
+              — {SACRED_QUOTE.source}
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
