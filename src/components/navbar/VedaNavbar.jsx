@@ -4,20 +4,19 @@ import {
   Search,
   Menu,
   X,
-  Sun,
   Sparkles,
   BookOpen,
   Layers,
   Scroll,
   FileText,
   Compass,
-  ArrowRight
+  ArrowRight,
 } from "lucide-react";
 
 export default function VedaNavbar({
   currentView = "home",
   onNavigate,
-  onOpenSearch
+  onOpenSearch,
 }) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -35,11 +34,18 @@ export default function VedaNavbar({
   const getActiveTab = () => {
     const path = location.pathname;
     if (path === "/" || path === "/library" || path === "/library/") return "home";
-    if (path.startsWith("/library/knowledge")) return "knowledge";
-    if (path.startsWith("/library/collections")) return "collections";
-    if (path.startsWith("/library/veda") || path.startsWith("/library/puja") || path.startsWith("/library/mantra")) {
-      return "knowledge";
-    }
+    if (path.startsWith("/library/knowledge")) return "explore";
+    if (path.startsWith("/library/collections")) return "grantha";
+    if (
+      path.startsWith("/library/mantra-stotra") ||
+      path.startsWith("/library/mantra")
+    )
+      return "mantra-stotra";
+    if (
+      path.startsWith("/library/veda") ||
+      path.startsWith("/library/puja")
+    )
+      return "explore";
     return currentView || "home";
   };
 
@@ -47,21 +53,20 @@ export default function VedaNavbar({
 
   const handleNavClick = (view, path, e) => {
     if (e) e.preventDefault();
-    if (onNavigate) {
-      onNavigate(view);
-    }
-    if (navigate && path) {
-      navigate(path);
-    }
+    if (onNavigate) onNavigate(view);
+    if (navigate && path) navigate(path);
     window.scrollTo({ top: 0, behavior: "smooth" });
     setIsMobileMenuOpen(false);
   };
 
+  // Document-specified nav items: Home · Explore · Grantha · Topics · Mantra & Stotra · Research
   const navItems = [
-    { id: "home", label: "Home", path: "/library", hindi: "गृह" },
-    { id: "knowledge", label: "Knowledge", path: "/library/knowledge", hindi: "ज्ञान शाखाएँ" },
-    { id: "collections", label: "Collections", path: "/library/collections", hindi: "संग्रह" },
-    { id: "article", label: "Articles", path: "/library/puja/shaiva/rudrabhisheka", hindi: "आलेख" }
+    { id: "home", label: "Home", path: "/library" },
+    { id: "explore", label: "Explore", path: "/library/knowledge" },
+    { id: "grantha", label: "Grantha", path: "/library/collections" },
+    { id: "topics", label: "Topics", path: "/library/knowledge" },
+    { id: "mantra-stotra", label: "Mantra & Stotra", path: "/library/mantra-stotra" },
+    { id: "research", label: "Research", path: "/library/knowledge" },
   ];
 
   return (
@@ -74,7 +79,7 @@ export default function VedaNavbar({
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between gap-4">
-          {/* Left: Brand Logo & Title (Ultra Premium & Scholarly) */}
+          {/* Left: Brand Logo & Title */}
           <Link
             to="/library"
             onClick={(e) => handleNavClick("home", "/library", e)}
@@ -94,7 +99,11 @@ export default function VedaNavbar({
                   <circle cx="12" cy="12" r="3" />
                   <path d="M12 2v3M12 19v3M2 12h3M19 12h3" />
                   <path d="M4.93 4.93l2.12 2.12M16.95 16.95l2.12 2.12M4.93 19.07l2.12-2.12M16.95 7.05l2.12-2.12" />
-                  <path d="M12 7c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5z" opacity="0.2" fill="currentColor" />
+                  <path
+                    d="M12 7c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5z"
+                    opacity="0.2"
+                    fill="currentColor"
+                  />
                 </svg>
               </div>
               <span className="absolute -bottom-1 -right-1 w-3.5 h-3.5 rounded-full bg-[#18110b] border border-amber-400/60 flex items-center justify-center text-[8px] font-bold text-amber-400">
@@ -108,13 +117,14 @@ export default function VedaNavbar({
                   VEDA LIBRARY
                 </span>
               </div>
-              <span className="block text-[10px] tracking-[0.08em] uppercase font-semibold text-amber-800/85 mt-0.5 leading-tight">
-                Vedic & Traditional Knowledge Archive
+              {/* Document-specified Hindi subtitle */}
+              <span className="block text-[10px] font-devanagari font-semibold text-amber-800/85 mt-0.5 leading-tight">
+                वैदिक एवं भारतीय ज्ञान परंपरा का डिजिटल संग्रह
               </span>
             </div>
           </Link>
 
-          {/* Center: Desktop Navigation (Refined Floating Pill Indicators) */}
+          {/* Center: Desktop Navigation — Document-specified 6 items */}
           <nav className="hidden lg:flex items-center gap-1 bg-amber-50/40 p-1 rounded-2xl border border-amber-200/50 shadow-2xs">
             {navItems.map((item) => {
               const isActive = activeTab === item.id;
@@ -136,24 +146,11 @@ export default function VedaNavbar({
                 </Link>
               );
             })}
-
-            {/* Grantha Anchor */}
-            <a
-              href="#granthas"
-              onClick={(e) => {
-                if (location.pathname !== "/" && location.pathname !== "/library") {
-                  handleNavClick("home", "/library#granthas", e);
-                }
-              }}
-              className="px-4 py-1.5 text-xs font-semibold text-stone-700 hover:text-amber-900 hover:bg-white/60 rounded-xl transition-colors cursor-pointer"
-            >
-              Grantha
-            </a>
           </nav>
 
-          {/* Right: Search Pill + Quick Actions + Mobile Toggle */}
+          {/* Right: Search Pill + Language Tag + Mobile Toggle */}
           <div className="flex items-center gap-2.5">
-            {/* Desktop Pill Search Bar (Matching Reference Image with Premium Aura) */}
+            {/* Desktop Pill Search Bar */}
             <button
               type="button"
               onClick={onOpenSearch}
@@ -166,7 +163,7 @@ export default function VedaNavbar({
               </kbd>
             </button>
 
-            {/* Sanskrit / English Authentic Language Tag */}
+            {/* Sanskrit / English Language Tag */}
             <div className="hidden md:flex items-center gap-1 px-2.5 py-1 rounded-full bg-amber-100/60 border border-amber-200/70 text-[11px] font-bold text-amber-900 select-none">
               <span className="font-devanagari">संस्कृत</span>
               <span className="text-amber-400">•</span>
@@ -183,7 +180,7 @@ export default function VedaNavbar({
               <Search className="w-5 h-5 text-amber-800" />
             </button>
 
-            {/* Mobile Menu Toggle Button */}
+            {/* Mobile Menu Toggle */}
             <button
               type="button"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -200,7 +197,7 @@ export default function VedaNavbar({
         </div>
       </div>
 
-      {/* Mobile Navigation Drawer with Premium Glass Backdrop */}
+      {/* Mobile Navigation Drawer */}
       {isMobileMenuOpen && (
         <div className="lg:hidden border-t border-amber-200 bg-[#fffdf8]/98 backdrop-blur-xl px-4 py-4 space-y-3 animate-fadeIn shadow-lg">
           <button
@@ -223,9 +220,11 @@ export default function VedaNavbar({
           <div className="space-y-1 pt-2">
             {[
               { label: "Home (मुख्य पृष्ठ)", path: "/library", icon: BookOpen },
-              { label: "Knowledge (१२ ज्ञान शाखाएँ)", path: "/library/knowledge", icon: Layers },
-              { label: "Collections (८ पावन संग्रह)", path: "/library/collections", icon: Scroll },
-              { label: "Articles (रुद्राभिषेक व अध्ययन)", path: "/library/puja/shaiva/rudrabhisheka", icon: FileText }
+              { label: "Explore (ज्ञान शाखाएँ)", path: "/library/knowledge", icon: Layers },
+              { label: "Grantha (ग्रंथ संग्रह)", path: "/library/collections", icon: Scroll },
+              { label: "Topics (विषय सूची)", path: "/library/knowledge", icon: Compass },
+              { label: "Mantra & Stotra (मंत्र संग्रह)", path: "/library/mantra-stotra", icon: FileText },
+              { label: "Research (शोध)", path: "/library/knowledge", icon: Sparkles },
             ].map((link) => {
               const Icon = link.icon;
               return (

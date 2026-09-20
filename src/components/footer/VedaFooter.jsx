@@ -1,17 +1,12 @@
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 import {
-  Sun,
   ArrowUp,
   Search,
   BookOpen,
   Sparkles,
   CheckCircle2,
   Scroll,
-  ShieldCheck,
-  Compass,
-  Layers,
-  ArrowRight
 } from "lucide-react";
 
 export default function VedaFooter({ onOpenSearch }) {
@@ -48,11 +43,12 @@ export default function VedaFooter({ onOpenSearch }) {
         </div>
       </div>
 
-      {/* 2. Main 5-Column Grid */}
+      {/* 2. Main 4-Column Grid */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-14 pb-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-10 pb-12 border-b border-stone-800/80">
-          {/* Column 1 & 2: Brand Heritage & Purpose (lg:col-span-4) */}
-          <div className="lg:col-span-4 space-y-4">
+
+          {/* Column 1: Brand Heritage & Purpose (lg:col-span-3) */}
+          <div className="lg:col-span-3 space-y-4">
             {/* Logo Emblem */}
             <Link
               to="/library"
@@ -90,10 +86,10 @@ export default function VedaFooter({ onOpenSearch }) {
             </Link>
 
             <p className="text-xs font-devanagari text-stone-400 leading-relaxed max-w-sm">
-              भारतीय वैदिक एवं शास्त्रीय ज्ञान परंपरा का प्रामाणिक, संदर्भ-आधारित एवं संरचित डिजिटल संग्रह। श्रुति, स्मृति, दर्शन, पुराण और अनुष्ठान विधियों का विशुद्ध संकलन।
+              भारतीय वैदिक एवं शास्त्रीय ज्ञान का डिजिटल संग्रह।
             </p>
 
-            {/* Trust Badges Strip */}
+            {/* Trust Badges */}
             <div className="space-y-2 pt-1">
               <div className="flex items-center gap-2 text-xs font-medium text-amber-200/90">
                 <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400 flex-shrink-0" />
@@ -109,7 +105,7 @@ export default function VedaFooter({ onOpenSearch }) {
               </div>
             </div>
 
-            {/* Quick Search Trigger Pill */}
+            {/* Quick Search Trigger */}
             {onOpenSearch && (
               <button
                 type="button"
@@ -125,22 +121,22 @@ export default function VedaFooter({ onOpenSearch }) {
             )}
           </div>
 
-          {/* Column 3: Shruti & Shastra (lg:col-span-3) */}
+          {/* Column 2: Explore — 8 Doc-Specified Categories (lg:col-span-3) */}
           <div className="lg:col-span-3 space-y-3">
             <h3 className="text-xs font-bold uppercase tracking-widest text-amber-400 border-b border-amber-900/60 pb-2 flex items-center gap-1.5">
               <BookOpen className="w-3.5 h-3.5 text-amber-500" />
-              <span>Shruti & Shastra (श्रुति व शास्त्र)</span>
+              <span>Explore (ज्ञान शाखाएँ)</span>
             </h3>
             <ul className="space-y-2 text-xs font-medium">
               {[
-                { label: "चारों वेद संहिताएँ (The Four Vedas)", path: "/library/veda" },
-                { label: "ऋग्वेद (Rigveda Samhita)", path: "/library/veda/rigveda" },
-                { label: "यजुर्वेद (Yajurveda Samhita)", path: "/library/veda" },
-                { label: "सामवेद (Samaveda Melodies)", path: "/library/veda" },
-                { label: "अथर्ववेद (Atharvaveda Corpus)", path: "/library/veda" },
-                { label: "१० प्रमुख उपनिषद (Mukhya Upanishads)", path: "/library/upanishad" },
-                { label: "षड्दर्शन (Six Schools of Philosophy)", path: "/library/darshana" },
-                { label: "६ वेदाङ्ग (Vedangas — Shiksha, Kalpa...)", path: "/library/vedanga" }
+                { label: "वेद (The Vedas)", path: "/library/veda" },
+                { label: "वेदाङ्ग (Vedangas)", path: "/library/vedanga" },
+                { label: "उपनिषद एवं दर्शन", path: "/library/upanishad" },
+                { label: "पुराण एवं इतिहास", path: "/library/purana-itihasa" },
+                { label: "मंत्र, सूक्त एवं स्तोत्र", path: "/library/mantra-stotra" },
+                { label: "ज्योतिष (Jyotisha)", path: "/library/jyotisha" },
+                { label: "वास्तु (Vastu Shastra)", path: "/library/vastu" },
+                { label: "शास्त्र (Classical Shastras)", path: "/library/shastra" }
               ].map((link, idx) => (
                 <li key={idx}>
                   <Link
@@ -156,22 +152,22 @@ export default function VedaFooter({ onOpenSearch }) {
             </ul>
           </div>
 
-          {/* Column 4: Grantha & Rituals (lg:col-span-3) */}
+          {/* Column 3: Resources (lg:col-span-3) */}
           <div className="lg:col-span-3 space-y-3">
             <h3 className="text-xs font-bold uppercase tracking-widest text-amber-400 border-b border-amber-900/60 pb-2 flex items-center gap-1.5">
               <Scroll className="w-3.5 h-3.5 text-amber-500" />
-              <span>Corpus & Rituals (ग्रंथ व अनुष्ठान)</span>
+              <span>Resources (संसाधन)</span>
             </h3>
             <ul className="space-y-2 text-xs font-medium">
               {[
-                { label: "श्रीमद्भगवद्गीता (Bhagavad Gita)", path: "/library/collections" },
-                { label: "वाल्मीकि रामायण (Valmiki Ramayana)", path: "/library/collections" },
-                { label: "महाभारत (Vyasa Mahabharata)", path: "/library/collections" },
-                { label: "१८ महापुराण (18 Mahapuranas)", path: "/library/collections" },
-                { label: "रुद्राभिषेक संपूर्ण विधान (Rudrabhisheka)", path: "/library/puja/shaiva/rudrabhisheka" },
-                { label: "षोडश संस्कार (16 Vedic Samskaras)", path: "/library/yagya-sanskar" },
-                { label: "दैनिक अग्निहोत्र व यज्ञ (Agnihotra Vidhi)", path: "/library/yagya-sanskar" },
-                { label: "फलित व सिद्धांत ज्योतिष (Jyotisha)", path: "/library/jyotisha" }
+                { label: "Grantha (ग्रंथ संग्रह)", path: "/library/collections" },
+                { label: "Topics (विषय सूची)", path: "/library/knowledge" },
+                { label: "Glossary (शब्दकोश)", path: "/library/knowledge" },
+                { label: "Research (शोध)", path: "/library/knowledge" },
+                { label: "References (संदर्भ)", path: "/library/knowledge" },
+                { label: "Manuscripts & Rare Texts", path: "/library/knowledge" },
+                { label: "Knowledge Connection Graph", path: "/library/knowledge" },
+                { label: "Recently Added Articles", path: "/library/knowledge" }
               ].map((link, idx) => (
                 <li key={idx}>
                   <Link
@@ -187,31 +183,31 @@ export default function VedaFooter({ onOpenSearch }) {
             </ul>
           </div>
 
-          {/* Column 5: Research & Architecture (lg:col-span-2) */}
-          <div className="lg:col-span-2 space-y-3">
+          {/* Column 4: Veda Structure (lg:col-span-3) */}
+          <div className="lg:col-span-3 space-y-3">
             <h3 className="text-xs font-bold uppercase tracking-widest text-amber-400 border-b border-amber-900/60 pb-2 flex items-center gap-1.5">
               <Sparkles className="w-3.5 h-3.5 text-amber-500" />
-              <span>Research (शोध)</span>
+              <span>Veda Structure</span>
             </h3>
             <ul className="space-y-2 text-xs font-medium text-stone-400">
-              <li className="hover:text-amber-300 transition-colors cursor-pointer">
-                Sayana Bhashya Archive
-              </li>
-              <li className="hover:text-amber-300 transition-colors cursor-pointer">
-                Critical Textual Editions (BORI)
-              </li>
-              <li className="hover:text-amber-300 transition-colors cursor-pointer">
-                Manuscript Lineage & Citations
-              </li>
-              <li className="hover:text-amber-300 transition-colors cursor-pointer">
-                Knowledge Connection Graph
-              </li>
-              <li className="hover:text-amber-300 transition-colors cursor-pointer">
-                Editorial Principles & Ethics
-              </li>
-              <li className="hover:text-amber-300 transition-colors cursor-pointer">
-                Library Growth Roadmap
-              </li>
+              {[
+                { label: "About Veda Structure", path: "/library" },
+                { label: "Contact", path: "/library" },
+                { label: "Privacy Policy", path: "/library" },
+                { label: "Terms", path: "/library" },
+                { label: "Our Principles & Methodology", path: "/library" },
+                { label: "Library Growth Roadmap", path: "/library" },
+                { label: "Newsletter Updates", path: "/library" }
+              ].map((link, idx) => (
+                <li
+                  key={idx}
+                  onClick={() => { navigate(link.path); scrollToTop(); }}
+                  className="hover:text-amber-300 transition-colors cursor-pointer flex items-center gap-1.5"
+                >
+                  <span className="text-amber-500/70 text-[10px]">›</span>
+                  <span>{link.label}</span>
+                </li>
+              ))}
             </ul>
 
             <div className="pt-3">

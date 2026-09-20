@@ -10,12 +10,12 @@ import rigvedaImg from "../../assets/images/library/cards/card-rigveda.jpg";
 const THUMBNAILS = {
   "card-yagya-fire.jpg": yagyaFireImg,
   "card-puja.jpg": pujaImg,
-  "card-rigveda.jpg": rigvedaImg
+  "card-rigveda.jpg": rigvedaImg,
 };
 
 export default function RecentlyAddedSection({ onSelectArticle }) {
   return (
-    <section id="recent" className="py-12 sm:py-16 bg-[#fffaf0]">
+    <section id="recent" className="py-12 sm:py-16 bg-[#fffaf0] border-b border-amber-200/50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="flex items-center justify-between mb-6">
@@ -24,7 +24,7 @@ export default function RecentlyAddedSection({ onSelectArticle }) {
               Recently Added
             </h2>
             <p className="text-xs sm:text-sm text-stone-500 font-devanagari mt-0.5">
-              हाल ही में जोड़े गए प्रामाणिक वैदिक एवं शास्त्रीय आलेख।
+              Veda Library में हाल ही में जोड़े गए ज्ञान-सामग्री को explore करें।
             </p>
           </div>
 
@@ -38,62 +38,74 @@ export default function RecentlyAddedSection({ onSelectArticle }) {
           </button>
         </div>
 
-        {/* Vertical List (Matching Client Reference Image) */}
-        <div className="space-y-3">
+        {/* Cards Grid — with image, description, Read More CTA */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {RECENTLY_ADDED.map((item) => {
             const thumb = THUMBNAILS[item.imageKey] || yagyaFireImg;
             return (
               <div
                 key={item.id}
                 onClick={() => onSelectArticle && onSelectArticle(item.id)}
-                className="group flex items-center justify-between p-3 sm:p-4 rounded-2xl bg-white border border-stone-200/80 hover:border-amber-300 shadow-2xs hover:shadow-sm transition-all cursor-pointer"
+                className="group flex flex-col bg-white rounded-2xl border border-stone-200/80 hover:border-amber-300 shadow-2xs hover:shadow-md transition-all cursor-pointer overflow-hidden"
               >
-                {/* Left: Thumbnail & Info */}
-                <div className="flex items-center gap-3.5 sm:gap-4 min-w-0">
-                  <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-xl overflow-hidden bg-stone-900 flex-shrink-0 shadow-2xs">
-                    <img
-                      src={thumb}
-                      alt={item.title}
-                      className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-300"
-                    />
-                  </div>
-
-                  <div className="min-w-0">
-                    <h3 className="font-serif text-base sm:text-lg font-bold text-stone-900 group-hover:text-amber-800 transition-colors truncate">
-                      {item.title}
-                    </h3>
-                    <div className="flex flex-wrap items-center gap-2 mt-1">
-                      <span className="text-xs text-stone-500 font-medium">
-                        {item.category}
-                      </span>
-
-                      {/* Status Badges (Matching Reference Image) */}
-                      {item.statusType === "verified" && (
-                        <span className="inline-flex items-center gap-1 text-[11px] font-semibold px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200">
-                          <CheckCircle2 className="w-3 h-3" />
-                          {item.statusBadge}
-                        </span>
-                      )}
-                      {item.statusType === "approved" && (
-                        <span className="inline-flex items-center gap-1 text-[11px] font-semibold px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200">
-                          <CheckCircle2 className="w-3 h-3" />
-                          {item.statusBadge}
-                        </span>
-                      )}
-                      {item.statusType === "review" && (
-                        <span className="inline-flex items-center gap-1 text-[11px] font-semibold px-2 py-0.5 rounded-full bg-amber-50 text-amber-700 border border-amber-200">
-                          <AlertCircle className="w-3 h-3" />
-                          {item.statusBadge}
-                        </span>
-                      )}
-                    </div>
-                  </div>
+                {/* Thumbnail Image */}
+                <div className="relative h-40 overflow-hidden bg-stone-900 flex-shrink-0">
+                  <img
+                    src={thumb}
+                    alt={item.title}
+                    className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
+                  {/* Category badge on image */}
+                  <span className="absolute bottom-2 left-3 text-[10px] font-semibold text-white bg-black/60 px-2 py-0.5 rounded backdrop-blur-xs">
+                    {item.category}
+                  </span>
                 </div>
 
-                {/* Right: Time Ago */}
-                <div className="flex items-center gap-1 text-xs text-stone-400 font-medium flex-shrink-0 pl-2">
-                  <Clock className="w-3.5 h-3.5" />
-                  <span>{item.timeAgo}</span>
+                {/* Content */}
+                <div className="p-4 flex-1 flex flex-col">
+                  {/* Status + Time row */}
+                  <div className="flex items-center gap-2 mb-2 flex-wrap">
+                    {item.statusType === "verified" && (
+                      <span className="inline-flex items-center gap-1 text-[11px] font-semibold px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200">
+                        <CheckCircle2 className="w-3 h-3" />
+                        {item.statusBadge}
+                      </span>
+                    )}
+                    {item.statusType === "approved" && (
+                      <span className="inline-flex items-center gap-1 text-[11px] font-semibold px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200">
+                        <CheckCircle2 className="w-3 h-3" />
+                        {item.statusBadge}
+                      </span>
+                    )}
+                    {item.statusType === "review" && (
+                      <span className="inline-flex items-center gap-1 text-[11px] font-semibold px-2 py-0.5 rounded-full bg-amber-50 text-amber-700 border border-amber-200">
+                        <AlertCircle className="w-3 h-3" />
+                        {item.statusBadge}
+                      </span>
+                    )}
+                    <span className="flex items-center gap-1 text-[10px] text-stone-400 font-medium ml-auto">
+                      <Clock className="w-3 h-3" />
+                      {item.timeAgo}
+                    </span>
+                  </div>
+
+                  {/* Title */}
+                  <h3 className="font-serif text-base font-bold text-stone-900 group-hover:text-amber-800 transition-colors leading-snug">
+                    {item.title}
+                  </h3>
+
+                  {/* 1-2 Line Description — per document requirement */}
+                  <p className="font-devanagari text-xs text-stone-500 mt-1.5 leading-relaxed flex-1 line-clamp-2">
+                    {item.desc}
+                  </p>
+
+                  {/* Read More CTA — per document requirement */}
+                  <div className="mt-3 pt-2.5 border-t border-stone-100">
+                    <span className="text-xs font-bold text-amber-700 group-hover:text-amber-900 flex items-center gap-1 transition-colors">
+                      Read More <ArrowRight className="w-3 h-3" />
+                    </span>
+                  </div>
                 </div>
               </div>
             );

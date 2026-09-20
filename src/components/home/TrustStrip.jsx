@@ -11,7 +11,7 @@ const ICONS = {
 
 export default function TrustStrip() {
   return (
-    <div className="bg-[#fffdf8] border-b border-amber-200/60 shadow-2xs">
+    <div className="bg-[#fff8ee] border-y border-amber-200/80 shadow-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 divide-y md:divide-y-0 md:divide-x divide-amber-100">
           {TRUST_STRIP_ITEMS.map((item, idx) => {

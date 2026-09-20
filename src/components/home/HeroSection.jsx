@@ -7,7 +7,6 @@ import {
   Layers,
   FileCheck,
   Flame,
-  Sun
 } from "lucide-react";
 import { HERO_CONTENT, TRUST_STRIP_ITEMS } from "../../data/libraryHomeData.js";
 import heroGhatImg from "../../assets/images/library/banners/banner-temple-ghat.jpg";
@@ -16,7 +15,7 @@ const TRUST_ICONS = {
   BookOpen,
   Layers,
   FileCheck,
-  Flame
+  Flame,
 };
 
 export default function HeroSection({ onOpenSearch, onNavigateKnowledge, onNavigateCollections }) {
@@ -49,7 +48,7 @@ export default function HeroSection({ onOpenSearch, onNavigateKnowledge, onNavig
           <span className="w-1.5 h-1.5 rounded-full bg-amber-400" />
         </div>
 
-        {/* Main Title (Regal Sanskrit & Garamond Hierarchy) */}
+        {/* Main Title */}
         <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-[0.04em] text-white mb-2 leading-none drop-shadow-md">
           VEDA LIBRARY
         </h1>
@@ -58,12 +57,17 @@ export default function HeroSection({ onOpenSearch, onNavigateKnowledge, onNavig
           {HERO_CONTENT.enTitle}
         </p>
 
-        {/* Devanagari Sacred Subtitle */}
-        <p className="font-devanagari text-sm sm:text-base md:text-lg text-amber-100/85 mb-8 max-w-2xl mx-auto font-normal leading-relaxed">
-          {HERO_CONTENT.tagline}
+        {/* Devanagari Subheading — Document Section: Main subheading */}
+        <p className="font-devanagari text-sm sm:text-base md:text-lg text-amber-100/90 mb-3 max-w-3xl mx-auto font-medium leading-relaxed">
+          {HERO_CONTENT.subheading}
         </p>
 
-        {/* Big Prominent Search Box (Matching Reference Image with Premium Aura) */}
+        {/* Supporting Text */}
+        <p className="font-devanagari text-xs sm:text-sm text-amber-100/75 mb-8 max-w-2xl mx-auto font-normal leading-relaxed">
+          {HERO_CONTENT.supportingText}
+        </p>
+
+        {/* Big Prominent Search Box */}
         <form
           onSubmit={handleSearchSubmit}
           className="relative max-w-2xl mx-auto mb-4 group"
@@ -75,7 +79,7 @@ export default function HeroSection({ onOpenSearch, onNavigateKnowledge, onNavig
               value={localQuery}
               onChange={(e) => setLocalQuery(e.target.value)}
               onClick={() => onOpenSearch && onOpenSearch(localQuery)}
-              placeholder={HERO_CONTENT.searchPlaceholder}
+              placeholder="Search Veda, Grantha, Mantra, Shloka, Topic…"
               className="w-full bg-transparent text-stone-900 placeholder:text-stone-400 focus:outline-none text-xs sm:text-sm md:text-base font-medium pr-2"
             />
             <button
@@ -90,7 +94,7 @@ export default function HeroSection({ onOpenSearch, onNavigateKnowledge, onNavig
 
         {/* Popular Search Suggestions */}
         <div className="flex flex-wrap items-center justify-center gap-1.5 text-[11px] sm:text-xs text-amber-200/80 mb-8 max-w-2xl mx-auto">
-          <span className="font-bold text-amber-300">Popular Searches:</span>
+          <span className="font-bold text-amber-300">Popular:</span>
           {HERO_CONTENT.popularSuggestions.map((item, idx) => (
             <React.Fragment key={item}>
               <button
@@ -107,14 +111,14 @@ export default function HeroSection({ onOpenSearch, onNavigateKnowledge, onNavig
           ))}
         </div>
 
-        {/* Dual CTAs */}
-        <div className="flex flex-wrap items-center justify-center gap-3.5 mb-12">
+        {/* Dual CTAs — exact document labels */}
+        <div className="flex flex-wrap items-center justify-center gap-3.5 mb-0">
           <button
             type="button"
             onClick={onNavigateKnowledge}
             className="px-6 sm:px-7 py-3 rounded-full bg-gradient-to-r from-amber-500 via-amber-550 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-stone-950 font-bold text-xs sm:text-sm shadow-lg shadow-amber-600/35 hover:scale-[1.02] transition-all flex items-center gap-2 cursor-pointer"
           >
-            <span>{HERO_CONTENT.primaryCta}</span>
+            <span>Explore the Library</span>
             <ArrowRight className="w-4 h-4" />
           </button>
 
@@ -123,37 +127,8 @@ export default function HeroSection({ onOpenSearch, onNavigateKnowledge, onNavig
             onClick={onNavigateCollections}
             className="px-6 sm:px-7 py-3 rounded-full bg-white/10 hover:bg-white/20 border border-white/30 hover:border-amber-300/60 text-white font-semibold text-xs sm:text-sm backdrop-blur-md transition-all flex items-center gap-2 cursor-pointer"
           >
-            <span>{HERO_CONTENT.secondaryCta}</span>
+            <span>Browse Grantha</span>
           </button>
-        </div>
-
-        {/* 4 Trust Strip Pillars Placed Directly On Top of the Hero Image Backdrop */}
-        <div className="max-w-5xl mx-auto rounded-2xl bg-black/50 backdrop-blur-md border border-amber-400/30 p-3.5 sm:p-4 shadow-2xl">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 divide-y md:divide-y-0 md:divide-x divide-white/10">
-            {TRUST_STRIP_ITEMS.map((item, idx) => {
-              const IconComponent = TRUST_ICONS[item.icon] || BookOpen;
-              return (
-                <div
-                  key={idx}
-                  className="flex items-center gap-2.5 sm:gap-3 px-2 sm:px-3 py-1.5 first:pt-0 md:first:pt-1.5 text-left"
-                >
-                  <div
-                    className="w-8 h-8 sm:w-9 sm:h-9 rounded-xl flex items-center justify-center flex-shrink-0 shadow-xs bg-amber-500/20 text-amber-300 border border-amber-400/30"
-                  >
-                    <IconComponent className="w-4 h-4 sm:w-4.5 sm:h-4.5 text-amber-300" />
-                  </div>
-                  <div className="min-w-0">
-                    <h4 className="text-xs sm:text-sm font-bold text-white leading-tight truncate">
-                      {item.title}
-                    </h4>
-                    <p className="text-[10px] sm:text-[11px] text-amber-100/80 font-medium mt-0.5 font-devanagari truncate">
-                      {item.subtitle}
-                    </p>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
         </div>
       </div>
     </section>

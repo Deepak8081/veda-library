@@ -1,15 +1,16 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import HeroSection from "../components/home/HeroSection.jsx";
+import TrustStrip from "../components/home/TrustStrip.jsx";
+import AboutVedaLibrarySection from "../components/home/AboutVedaLibrarySection.jsx";
 import ExploreKnowledgeSection from "../components/home/ExploreKnowledgeSection.jsx";
+import FeaturedKnowledgeSection from "../components/home/FeaturedKnowledgeSection.jsx";
 import FeaturedCollectionsSection from "../components/home/FeaturedCollectionsSection.jsx";
-import RecentlyAddedSection from "../components/home/RecentlyAddedSection.jsx";
-import BrowseBySourceSection from "../components/home/BrowseBySourceSection.jsx";
-import SacredQuoteSection from "../components/home/SacredQuoteSection.jsx";
 import FourVedasSection from "../components/home/FourVedasSection.jsx";
 import GranthaArchiveSection from "../components/home/GranthaArchiveSection.jsx";
 import MantraStotraSection from "../components/home/MantraStotraSection.jsx";
 import TopicDiscoverySection from "../components/home/TopicDiscoverySection.jsx";
+import RecentlyAddedSection from "../components/home/RecentlyAddedSection.jsx";
 import KnowledgeConnectionSection from "../components/home/KnowledgeConnectionSection.jsx";
 import ResearchSection from "../components/home/ResearchSection.jsx";
 import AudiencePathsSection from "../components/home/AudiencePathsSection.jsx";
@@ -23,25 +24,58 @@ export default function HomePage({ onOpenSearch }) {
 
   return (
     <div className="space-y-0">
-      {/* 1. Hero Section + Prominent Search + Dual CTAs + 4 Trust Pillars Directly On Top */}
+      {/* 01. HERO SECTION + PROMINENT SEARCH + DUAL CTAs */}
       <HeroSection
         onOpenSearch={onOpenSearch}
         onNavigateKnowledge={() => navigate("/library/veda")}
         onNavigateCollections={() => navigate("/library/collections")}
       />
 
-      {/* 2. Explore Knowledge (12 Compact Pastel Cards with Bespoke Sacred SVGs) */}
+      {/* 02. TRUST / PURPOSE STRIP — separate section immediately below hero */}
+      <TrustStrip />
+
+      {/* 03. ABOUT VEDA LIBRARY — एक स्थान पर भारतीय ज्ञान परंपरा */}
+      <AboutVedaLibrarySection
+        onNavigateKnowledge={() => navigate("/library/knowledge")}
+      />
+
+      {/* 04. EXPLORE BY CATEGORY — 8 primary cards + View All 18 */}
       <ExploreKnowledgeSection
         onSelectCategory={(id) => navigate(`/library/${id}`)}
         onNavigateKnowledge={() => navigate("/library/knowledge")}
       />
 
-      {/* 3. Featured Collections (4 Compact Widescreen Image Cards) */}
+      {/* 05. FEATURED KNOWLEDGE — Tabbed: All | Articles | Mantra | Grantha | Topics */}
+      <FeaturedKnowledgeSection
+        onNavigateKnowledge={() => navigate("/library/knowledge")}
+      />
+
+      {/* 06. FEATURED COLLECTIONS — Curated Archives */}
       <FeaturedCollectionsSection
         onNavigateCollections={() => navigate("/library/collections")}
       />
 
-      {/* 4. Recently Added (Compact List with Verified Badges) */}
+      {/* 07. THE FOUR VEDAS */}
+      <FourVedasSection
+        onNavigateKnowledge={() => navigate("/library/veda")}
+      />
+
+      {/* 08. GRANTHA ARCHIVE */}
+      <GranthaArchiveSection
+        onNavigateCollections={() => navigate("/library/collections")}
+      />
+
+      {/* 09. MANTRA, SUKTA & STOTRA */}
+      <MantraStotraSection
+        onNavigateKnowledge={() => navigate("/library/mantra-stotra")}
+      />
+
+      {/* 10. EXPLORE BY TOPIC */}
+      <TopicDiscoverySection
+        onNavigateKnowledge={() => navigate("/library/knowledge")}
+      />
+
+      {/* 11. RECENTLY ADDED */}
       <RecentlyAddedSection
         onSelectArticle={(id) => {
           if (id === "rudrabhisheka") {
@@ -54,57 +88,29 @@ export default function HomePage({ onOpenSearch }) {
         }}
       />
 
-      {/* 5. Browse by Source (10 Compact Rounded Pills) */}
-      <BrowseBySourceSection
-        onNavigateKnowledge={() => navigate("/library/veda")}
-      />
-
-      {/* 6. Sacred Upanishad Quote Card */}
-      <SacredQuoteSection />
-
-      {/* 7. The Four Vedas */}
-      <FourVedasSection
-        onNavigateKnowledge={() => navigate("/library/veda")}
-      />
-
-      {/* 8. Grantha Archive */}
-      <GranthaArchiveSection
-        onNavigateCollections={() => navigate("/library/collections")}
-      />
-
-      {/* 9. Mantra, Sukta & Stotra */}
-      <MantraStotraSection
-        onNavigateKnowledge={() => navigate("/library/mantra-stotra")}
-      />
-
-      {/* 10. Explore by Topic */}
-      <TopicDiscoverySection
-        onNavigateKnowledge={() => navigate("/library/veda")}
-      />
-
-      {/* 11. Knowledge Connection Graph */}
+      {/* 12. DISCOVER THE CONNECTIONS */}
       <KnowledgeConnectionSection />
 
-      {/* 12. Research & References */}
+      {/* 13. RESEARCH & REFERENCES */}
       <ResearchSection
-        onNavigateKnowledge={() => navigate("/library/veda")}
+        onNavigateKnowledge={() => navigate("/library/knowledge")}
       />
 
-      {/* 13. Start Where You Are */}
+      {/* 14. START WHERE YOU ARE — Students / Seekers / Researchers */}
       <AudiencePathsSection
         onNavigateKnowledge={() => navigate("/library/veda")}
       />
 
-      {/* 14. Our Approach / Principles */}
+      {/* 15. OUR APPROACH / PRINCIPLES */}
       <PrinciplesSection />
 
-      {/* 15. The Library is Growing (Roadmap) */}
+      {/* 16. THE LIBRARY IS GROWING — Roadmap */}
       <RoadmapSection />
 
-      {/* 16. Newsletter & Knowledge Updates */}
+      {/* 17. NEWSLETTER & KNOWLEDGE UPDATES */}
       <NewsletterSection />
 
-      {/* 17. Final Call to Action */}
+      {/* 18. FINAL CALL TO ACTION */}
       <FinalCtaSection
         onOpenSearch={onOpenSearch}
         onNavigateKnowledge={() => navigate("/library/veda")}
