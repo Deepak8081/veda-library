@@ -161,13 +161,13 @@ export default function VedaFooter({ onOpenSearch }) {
             <ul className="space-y-2 text-xs font-medium">
               {[
                 { label: "Grantha (ग्रंथ संग्रह)", path: "/library/collections" },
+                { label: "Articles & Blogs (लेख व शोध)", path: "/library/articles" },
                 { label: "Topics (विषय सूची)", path: "/library/knowledge" },
                 { label: "Glossary (शब्दकोश)", path: "/library/knowledge" },
                 { label: "Research (शोध)", path: "/library/knowledge" },
                 { label: "References (संदर्भ)", path: "/library/knowledge" },
                 { label: "Manuscripts & Rare Texts", path: "/library/knowledge" },
-                { label: "Knowledge Connection Graph", path: "/library/knowledge" },
-                { label: "Recently Added Articles", path: "/library/knowledge" }
+                { label: "Knowledge Connection Graph", path: "/library/knowledge" }
               ].map((link, idx) => (
                 <li key={idx}>
                   <Link

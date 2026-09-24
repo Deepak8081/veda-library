@@ -11,6 +11,8 @@ import SubjectDetailPage from "./pages/SubjectDetailPage.jsx";
 import KnowledgePage from "./components/knowledge/KnowledgePage.jsx";
 import CollectionsPage from "./components/collections/CollectionsPage.jsx";
 import ArticleDetailPage from "./components/article/ArticleDetailPage.jsx";
+import BlogListPage from "./pages/BlogListPage.jsx";
+import BlogDetailPage from "./pages/BlogDetailPage.jsx";
 
 // Helper component to ensure smooth scrolling to top on route navigation
 function ScrollToTop() {
@@ -71,6 +73,16 @@ function MainLayout() {
             path="/library"
             element={<HomePage onOpenSearch={handleOpenSearch} />}
           />
+
+          {/* Blogs & Articles Hub */}
+          <Route path="/library/articles" element={<BlogListPage />} />
+          <Route path="/library/blogs" element={<BlogListPage />} />
+          <Route path="/library/articles/:slug" element={<BlogDetailPage />} />
+          <Route path="/library/blogs/:slug" element={<BlogDetailPage />} />
+          <Route path="/articles" element={<BlogListPage />} />
+          <Route path="/blogs" element={<BlogListPage />} />
+          <Route path="/articles/:slug" element={<BlogDetailPage />} />
+          <Route path="/blogs/:slug" element={<BlogDetailPage />} />
 
           {/* Knowledge & Collections Hubs */}
           <Route path="/library/knowledge" element={<KnowledgePage />} />

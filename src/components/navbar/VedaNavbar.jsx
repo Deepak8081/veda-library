@@ -34,6 +34,13 @@ export default function VedaNavbar({
   const getActiveTab = () => {
     const path = location.pathname;
     if (path === "/" || path === "/library" || path === "/library/") return "home";
+    if (
+      path.startsWith("/library/blogs") ||
+      path.startsWith("/library/articles") ||
+      path.startsWith("/blogs") ||
+      path.startsWith("/articles")
+    )
+      return "articles";
     if (path.startsWith("/library/knowledge")) return "explore";
     if (path.startsWith("/library/collections")) return "grantha";
     if (
@@ -59,13 +66,14 @@ export default function VedaNavbar({
     setIsMobileMenuOpen(false);
   };
 
-  // Document-specified nav items: Home · Explore · Grantha · Topics · Mantra & Stotra · Research
+  // Document-specified nav items with Articles / Blogs added
   const navItems = [
     { id: "home", label: "Home", path: "/library" },
     { id: "explore", label: "Explore", path: "/library/knowledge" },
     { id: "grantha", label: "Grantha", path: "/library/collections" },
-    { id: "topics", label: "Topics", path: "/library/knowledge" },
     { id: "mantra-stotra", label: "Mantra & Stotra", path: "/library/mantra-stotra" },
+    { id: "articles", label: "Blogs & Articles", path: "/library/articles" },
+    { id: "topics", label: "Topics", path: "/library/knowledge" },
     { id: "research", label: "Research", path: "/library/knowledge" },
   ];
 
@@ -222,8 +230,9 @@ export default function VedaNavbar({
               { label: "Home (मुख्य पृष्ठ)", path: "/library", icon: BookOpen },
               { label: "Explore (ज्ञान शाखाएँ)", path: "/library/knowledge", icon: Layers },
               { label: "Grantha (ग्रंथ संग्रह)", path: "/library/collections", icon: Scroll },
-              { label: "Topics (विषय सूची)", path: "/library/knowledge", icon: Compass },
               { label: "Mantra & Stotra (मंत्र संग्रह)", path: "/library/mantra-stotra", icon: FileText },
+              { label: "Blogs & Articles (लेख व शोध)", path: "/library/articles", icon: BookOpen },
+              { label: "Topics (विषय सूची)", path: "/library/knowledge", icon: Compass },
               { label: "Research (शोध)", path: "/library/knowledge", icon: Sparkles },
             ].map((link) => {
               const Icon = link.icon;
