@@ -1,7 +1,8 @@
-import React, { useState } from "react";
-import { useParams, useNavigate, Link } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { useParams, useNavigate, useSearchParams, Link } from "react-router-dom";
 import {
   ArrowRight,
+  ArrowLeft,
   BookOpen,
   Sparkles,
   Home,
@@ -12,6 +13,7 @@ import {
   FileText
 } from "lucide-react";
 import { CATEGORIES_DATA } from "../data/categoryTemplatesData.js";
+import { VEDA_HIERARCHY_TREE } from "../data/vedaHierarchyTree.js";
 import bannerSanctum from "../assets/images/library/banners/banner-sanctum.png";
 import bannerTempleGhat from "../assets/images/library/banners/banner-temple-ghat.jpg";
 import rigvedaImg from "../assets/images/library/cards/card-rigveda.jpg";
@@ -33,9 +35,78 @@ const CARD_IMAGES = {
 export default function CategoryLandingPage({ onOpenSearch }) {
   const { category = "veda" } = useParams();
   const navigate = useNavigate();
+  const [searchParams] = useSearchParams();
   const [activeTab, setActiveTab] = useState("All");
+  const [vedaHierarchyPath, setVedaHierarchyPath] = useState(() => {
+    const vedaParam = searchParams.get("veda") || searchParams.get("sub");
+    if (category === "veda" && vedaParam) {
+      const match = VEDA_HIERARCHY_TREE.children.find(
+        (c) => c.id === vedaParam || c.slug === vedaParam
+      );
+      if (match) return [match.id];
+    }
+    return [];
+  });
+
+  useEffect(() => {
+    const vedaParam = searchParams.get("veda") || searchParams.get("sub");
+    if (category === "veda" && vedaParam) {
+      const match = VEDA_HIERARCHY_TREE.children.find(
+        (c) => c.id === vedaParam || c.slug === vedaParam
+      );
+      if (match) {
+        setVedaHierarchyPath([match.id]);
+        return;
+      }
+    }
+    setVedaHierarchyPath([]);
+  }, [category, searchParams]);
 
   const catData = CATEGORIES_DATA[category] || CATEGORIES_DATA["veda"];
+
+  // Resolve current active hierarchical node for Category === "veda"
+  let currentHierarchyNode = VEDA_HIERARCHY_TREE;
+  const hierarchyNodesPath = [];
+
+  if (category === "veda" && vedaHierarchyPath.length > 0) {
+    for (const pathId of vedaHierarchyPath) {
+      if (currentHierarchyNode && currentHierarchyNode.children) {
+        const nextNode = currentHierarchyNode.children.find(
+          (child) => child.id === pathId || child.slug === pathId
+        );
+        if (nextNode) {
+          hierarchyNodesPath.push(nextNode);
+          currentHierarchyNode = nextNode;
+        }
+      }
+    }
+  }
+
+  const isVedaDrilled = category === "veda" && vedaHierarchyPath.length > 0;
+  const displayCards = isVedaDrilled
+    ? (currentHierarchyNode?.children || [])
+    : (catData.subCategories || VEDA_HIERARCHY_TREE.children);
+
+  const handleCardClick = (card) => {
+    if (category === "veda") {
+      if (card.children && card.children.length > 0) {
+        setVedaHierarchyPath((prev) => [...prev, card.id]);
+        const sectionEl = document.getElementById("sub-categories");
+        if (sectionEl) {
+          sectionEl.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+      } else {
+        // Leaf item: Navigate to subject detail reader or subject page
+        const targetSlug =
+          card.slug ||
+          (hierarchyNodesPath[0] && hierarchyNodesPath[0].slug) ||
+          card.id;
+        navigate(`/library/${category}/${targetSlug}`);
+      }
+    } else {
+      navigate(`/library/${category}/${card.slug}`);
+    }
+  };
 
   return (
     <div className="bg-[#fffaf0] min-h-screen">
@@ -52,6 +123,12 @@ export default function CategoryLandingPage({ onOpenSearch }) {
           </Link>
           <span>›</span>
           <span className="text-amber-900 font-bold">{catData.name} ({catData.enName})</span>
+          {isVedaDrilled && hierarchyNodesPath.map((node) => (
+            <React.Fragment key={node.id}>
+              <span>›</span>
+              <span className="text-stone-700 font-medium">{node.name}</span>
+            </React.Fragment>
+          ))}
         </div>
       </div>
 
@@ -122,23 +199,93 @@ export default function CategoryLandingPage({ onOpenSearch }) {
         </section>
 
         {/* 6. Main Sub-Categories / Four Vedas Cards (Section 6) */}
-        <section id="sub-categories">
+        <section id="sub-categories" className="scroll-mt-24">
+          {/* Breadcrumb & Back navigation when drilled into Veda hierarchy */}
+          {isVedaDrilled && (
+            <div className="mb-6 p-4 rounded-2xl bg-amber-50/80 border border-amber-200/90 flex flex-wrap items-center justify-between gap-3 shadow-2xs">
+              <div className="flex flex-wrap items-center gap-2 text-xs">
+                <button
+                  type="button"
+                  onClick={() => setVedaHierarchyPath((prev) => prev.slice(0, -1))}
+                  className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white hover:bg-amber-100/80 text-amber-900 font-bold text-xs border border-amber-300 shadow-2xs transition-colors cursor-pointer"
+                >
+                  <ArrowLeft className="w-3.5 h-3.5" />
+                  <span>पीछे जाएं (Back)</span>
+                </button>
+
+                <span className="text-stone-300">|</span>
+
+                <button
+                  type="button"
+                  onClick={() => setVedaHierarchyPath([])}
+                  className="font-bold text-amber-800 hover:text-amber-950 hover:underline cursor-pointer"
+                >
+                  चारों वेद (All 4 Vedas)
+                </button>
+
+                {hierarchyNodesPath.map((node, index) => {
+                  const isLast = index === hierarchyNodesPath.length - 1;
+                  return (
+                    <React.Fragment key={node.id || index}>
+                      <span className="text-stone-400">›</span>
+                      {isLast ? (
+                        <span className="font-bold text-stone-900 bg-amber-100/90 px-2.5 py-0.5 rounded-md border border-amber-200">
+                          {node.name}
+                        </span>
+                      ) : (
+                        <button
+                          type="button"
+                          onClick={() => setVedaHierarchyPath(vedaHierarchyPath.slice(0, index + 1))}
+                          className="text-stone-600 hover:text-amber-800 hover:underline cursor-pointer"
+                        >
+                          {node.name}
+                        </button>
+                      )}
+                    </React.Fragment>
+                  );
+                })}
+              </div>
+
+              <div className="flex items-center gap-2">
+                <span className="text-[11px] font-semibold text-stone-500">
+                  स्तर {vedaHierarchyPath.length + 1} • {displayCards.length} उपलब्ध
+                </span>
+                <button
+                  type="button"
+                  onClick={() => setVedaHierarchyPath([])}
+                  className="text-[11px] font-bold text-amber-800 hover:text-amber-950 underline cursor-pointer"
+                >
+                  रीसेट करें (Reset)
+                </button>
+              </div>
+            </div>
+          )}
+
           <div className="mb-6">
             <h2 className="font-serif text-2xl sm:text-3xl font-bold text-stone-900">
-              {catData.name} के प्रमुख उप-विभाग एवं शाखाएँ
+              {isVedaDrilled
+                ? currentHierarchyNode.name
+                : `${catData.name} के प्रमुख उप-विभाग एवं शाखाएँ`}
             </h2>
             <p className="text-xs sm:text-sm text-stone-500 font-devanagari mt-1">
-              अपनी रुचि के अनुसार किसी भी शाखा या विषय से शुरुआत करें।
+              {isVedaDrilled
+                ? `${currentHierarchyNode.enName || ""} — नीचे दिए गए उप-विभागों, शाखाओं व ग्रंथों में से चुनें।`
+                : "अपनी रुचि के अनुसार किसी भी शाखा या विषय से शुरुआत करें।"}
             </p>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-            {catData.subCategories.map((sub) => {
-              const imgSrc = CARD_IMAGES[sub.imageKey] || rigvedaImg;
+            {displayCards.map((sub, idx) => {
+              const imgSrc =
+                CARD_IMAGES[sub.imageKey] ||
+                CARD_IMAGES[currentHierarchyNode?.imageKey] ||
+                rigvedaImg;
+              const hasChildren = sub.children && sub.children.length > 0;
+
               return (
                 <div
-                  key={sub.id}
-                  onClick={() => navigate(`/library/${category}/${sub.slug}`)}
+                  key={sub.id || idx}
+                  onClick={() => handleCardClick(sub)}
                   className="group flex flex-col bg-white rounded-2xl border border-stone-200/90 shadow-2xs hover:shadow-lg hover:border-amber-300 transition-all duration-300 overflow-hidden cursor-pointer"
                 >
                   <div className="relative aspect-16/9 overflow-hidden bg-stone-900">
@@ -153,28 +300,46 @@ export default function CategoryLandingPage({ onOpenSearch }) {
                         {sub.priest}
                       </span>
                     )}
+                    {hasChildren && (
+                      <span className="absolute top-2.5 right-2.5 text-[10px] font-bold text-amber-900 bg-amber-100/90 border border-amber-300 px-2 py-0.5 rounded-full shadow-xs backdrop-blur-xs flex items-center gap-1">
+                        <Layers className="w-3 h-3" />
+                        <span>{sub.children.length} शाखाएँ / भाग</span>
+                      </span>
+                    )}
                   </div>
                   <div className="p-4 flex-1 flex flex-col justify-between">
                     <div>
-                      <div className="flex items-center justify-between">
-                        <h3 className="font-serif text-lg font-bold text-stone-900 group-hover:text-amber-800 transition-colors">
+                      <div className="flex items-start justify-between gap-2">
+                        <h3 className="font-serif text-base sm:text-lg font-bold text-stone-900 group-hover:text-amber-800 transition-colors leading-snug">
                           {sub.name}
                         </h3>
-                        <span className="text-[10px] font-semibold px-2 py-0.5 rounded bg-amber-50 text-amber-900 border border-amber-200">
-                          {sub.enName}
-                        </span>
+                        {sub.enName && (
+                          <span className="text-[10px] font-semibold px-2 py-0.5 rounded bg-amber-50 text-amber-900 border border-amber-200 shrink-0 max-w-[120px] truncate text-right">
+                            {sub.enName}
+                          </span>
+                        )}
                       </div>
-                      <p className="text-xs text-stone-600 font-devanagari mt-2 line-clamp-2 leading-relaxed">
-                        {sub.desc}
-                      </p>
-                      <p className="text-[10px] text-stone-400 mt-2 font-medium">
-                        {sub.stats}
-                      </p>
+                      {sub.desc && (
+                        <p className="text-xs text-stone-600 font-devanagari mt-2 line-clamp-2 leading-relaxed">
+                          {sub.desc}
+                        </p>
+                      )}
+                      {sub.stats && (
+                        <p className="text-[10px] text-stone-400 mt-2 font-medium">
+                          {sub.stats}
+                        </p>
+                      )}
                     </div>
 
                     <div className="mt-4 pt-2.5 border-t border-stone-100 flex items-center justify-between text-xs font-bold text-amber-700 group-hover:text-amber-900">
-                      <span>Explore {sub.enName}</span>
-                      <ArrowRight className="w-3.5 h-3.5" />
+                      <span>
+                        {hasChildren
+                          ? `शाखाएँ एवं ग्रंथ देखें (${sub.children.length})`
+                          : sub.enName
+                          ? `Explore ${sub.enName}`
+                          : "ग्रंथ का विवरण देखें"}
+                      </span>
+                      <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-0.5" />
                     </div>
                   </div>
                 </div>

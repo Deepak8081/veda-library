@@ -42,7 +42,7 @@ export default function FourVedasSection({ onNavigateKnowledge }) {
             return (
               <div
                 key={veda.id}
-                onClick={onNavigateKnowledge}
+                onClick={() => onNavigateKnowledge && onNavigateKnowledge(veda.id)}
                 className="group flex flex-col bg-white rounded-xl border border-stone-200/90 shadow-2xs hover:shadow-lg hover:border-amber-300 transition-all duration-300 overflow-hidden cursor-pointer"
               >
                 {/* 16:9 Image Frame */}
@@ -74,6 +74,20 @@ export default function FourVedasSection({ onNavigateKnowledge }) {
                       {veda.desc}
                     </p>
 
+                    {/* Shakha breakdown pills */}
+                    {veda.shakhaList && (
+                      <div className="mt-2.5 flex flex-wrap gap-1">
+                        {veda.shakhaList.slice(0, 3).map((sh, idx) => (
+                          <span
+                            key={idx}
+                            className="text-[9px] font-semibold px-1.5 py-0.5 rounded bg-amber-50 text-amber-900 border border-amber-200/80 font-devanagari truncate max-w-full"
+                          >
+                            {sh}
+                          </span>
+                        ))}
+                      </div>
+                    )}
+
                     <div className="mt-2.5 pt-2 border-t border-stone-100 text-[10px] text-stone-500 space-y-0.5">
                       <p className="truncate">
                         <strong className="text-stone-700">संरचना:</strong> {veda.stats}
@@ -86,10 +100,13 @@ export default function FourVedasSection({ onNavigateKnowledge }) {
 
                   <button
                     type="button"
-                    onClick={onNavigateKnowledge}
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      if (onNavigateKnowledge) onNavigateKnowledge(veda.id);
+                    }}
                     className="mt-3.5 w-full py-1.5 rounded-lg text-center text-xs font-bold bg-amber-50 text-amber-900 border border-amber-200 hover:bg-amber-600 hover:text-white hover:border-amber-600 transition-all flex items-center justify-center gap-1 cursor-pointer"
                   >
-                    <span>Explore {veda.enName}</span>
+                    <span>Explore {veda.enName} & Shakhas</span>
                     <ArrowRight className="w-3 h-3" />
                   </button>
                 </div>

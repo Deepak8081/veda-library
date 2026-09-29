@@ -57,7 +57,7 @@ export default function HomePage({ onOpenSearch }) {
 
       {/* 07. THE FOUR VEDAS */}
       <FourVedasSection
-        onNavigateKnowledge={() => navigate("/library/veda")}
+        onNavigateKnowledge={(vedaId) => navigate(vedaId ? `/library/veda/${vedaId}` : "/library/veda")}
       />
 
       {/* 08. GRANTHA ARCHIVE */}

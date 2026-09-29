@@ -13,9 +13,21 @@ import {
   ExternalLink
 } from "lucide-react";
 import { ARTICLES_DATA, CATEGORIES_DATA, SUBJECTS_DATA } from "../../data/categoryTemplatesData.js";
+import { findNodeById } from "../../data/vedaHierarchyTree.js";
 import cardPujaImg from "../../assets/images/library/cards/card-puja.jpg";
 import cardRigvedaImg from "../../assets/images/library/cards/card-rigveda.jpg";
+import cardYajurvedaImg from "../../assets/images/library/cards/card-yajurveda.jpg";
+import cardSamavedaImg from "../../assets/images/library/cards/card-samaveda.jpg";
+import cardAtharvavedaImg from "../../assets/images/library/cards/card-atharvaveda.jpg";
 import fireRitualImg from "../../assets/images/library/banners/banner-fire-ritual.png";
+
+const CARD_IMAGES = {
+  "card-rigveda.jpg": cardRigvedaImg,
+  "card-yajurveda.jpg": cardYajurvedaImg,
+  "card-samaveda.jpg": cardSamavedaImg,
+  "card-atharvaveda.jpg": cardAtharvavedaImg,
+  "card-puja.jpg": cardPujaImg
+};
 
 export default function ArticleDetailPage({ onNavigateHome, onNavigateKnowledge }) {
   const { category = "puja", subject = "shaiva", article = "rudrabhisheka" } = useParams();
@@ -23,36 +35,132 @@ export default function ArticleDetailPage({ onNavigateHome, onNavigateKnowledge 
   const [activeTab, setActiveTab] = useState("content-1");
   const [saved, setSaved] = useState(false);
 
-  // Dynamic Lookup
-  const articleData =
-    ARTICLES_DATA[article] ||
-    ARTICLES_DATA["rudrabhisheka"] || {
-      title: "Rudrabhisheka",
-      hindiTitle: "रुद्राभिषेक",
-      tags: ["Puja", "Shaiva Tradition", "Ritual"],
-      intro: "रुद्राभिषेक भगवान शिव के रुद्र स्वरूप की उपासना का एक अत्यंत महत्वपूर्ण वैदिक एवं शास्त्रोक्त अनुष्ठान है।",
-      shastricBase: "यजुर्वेद तैत्तिरीय संहिता (रुद्राध्याय ४.५.१)",
+  const subjectKey = `${category}/${subject}`;
+  const subjectData =
+    SUBJECTS_DATA[subjectKey] ||
+    (subject === "shaiva"
+      ? { name: "शैव परंपरा", enName: "Shaiva Tradition" }
+      : subject === "yajurveda"
+      ? { name: "यजुर्वेद", enName: "Yajurveda" }
+      : subject === "rigveda"
+      ? { name: "ऋग्वेद", enName: "Rigveda" }
+      : subject === "samaveda"
+      ? { name: "सामवेद", enName: "Samaveda" }
+      : subject === "atharvaveda"
+      ? { name: "अथर्ववेद", enName: "Atharvaveda" }
+      : null);
+
+  const catData = CATEGORIES_DATA[category] || { name: "वेद", enName: "Veda" };
+
+  // Resolve node from master Veda tree if applicable
+  const treeMatch = findNodeById(article);
+  const foundNode = treeMatch?.node;
+  const ancestors = treeMatch?.ancestors || [];
+  const vedaAncestor = ancestors.find((a) => a.id !== "root");
+  const branchAncestors = ancestors.filter(
+    (a) => a.id !== "root" && a.id !== subject && a.id !== vedaAncestor?.id
+  );
+
+  // Dynamic Lookup with priority:
+  // 1. Explicit in ARTICLES_DATA
+  // 2. Tree Node dynamically synthesized
+  // 3. Fallback to category / subject context
+  let articleData = ARTICLES_DATA[article];
+
+  if (!articleData && foundNode) {
+    articleData = {
+      id: foundNode.id,
+      slug: foundNode.slug || foundNode.id,
+      title: foundNode.enName || foundNode.name,
+      hindiTitle: foundNode.name,
+      contentType: "VEDIC TEXT & LITERATURE",
+      tags: [
+        "Veda",
+        vedaAncestor?.enName || "Shruti",
+        foundNode.stats || "Grantha"
+      ],
+      intro: foundNode.desc,
+      shastricBase: `${vedaAncestor?.name || "वेद"} — ${foundNode.name}। प्रामाणिक वैदिक परंपरा, ऋषि परंपरा एवं शाखा पाठ।`,
       sourceMeta: {
-        grantha: "यजुर्वेद (Krishna Yajurveda)",
-        shakha: "तैत्तिरीय संहिता",
-        kanda: "काण्ड ४, प्रपाठक ५",
-        anuvaka: "११ अनुवाक (श्री रुद्राध्याय)",
-        rishi: "ऋषि: अत्रि/भारद्वाज • देवता: रुद्र"
+        grantha: vedaAncestor ? `${vedaAncestor.name} (${vedaAncestor.enName})` : (subjectData?.name || "वैदिक संहिता"),
+        shakha: branchAncestors.length > 0 ? branchAncestors.map((b) => b.name).join(" › ") : (foundNode.name),
+        kanda: foundNode.stats || "शास्त्रीय विभाजन",
+        anuvaka: "मूल वैदिक पाठ",
+        rishi: vedaAncestor?.priest ? `ऋत्विक: ${vedaAncestor.priest}` : "वैदिक ऋषि परंपरा",
+        devata: "परम ब्रह्म / वैदिक देवता"
       },
       primaryMantra: {
-        sanskrit: "नमस्ते रुद्र मन्यव उतो त इषवे नमः।\nनमस्ते अस्तु धन्वने बाहुभ्यामुत ते नमः॥",
-        ref: "यजुर्वेद १६.१ (रुद्राध्याय प्रथम मंत्र)",
-        translation: "हे रुद्र! आपके क्रोध को नमस्कार है, आपके बाण को नमस्कार है। आपके धनुष और दोनों भुजाओं को बारंबार नमस्कार है।"
+        sanskrit:
+          foundNode.id.includes("rigveda") || foundNode.id.includes("aitareya") || subject === "rigveda"
+            ? "ॐ अग्निमीळे पुरोहितं यज्ञस्य देवमृत्विजम्।\nहोतारं रत्नधातमम्॥"
+            : foundNode.id.includes("yajurveda") || foundNode.id.includes("taittiriya") || subject === "yajurveda"
+            ? "ॐ इषे त्वोर्जे त्वा वायव स्थ देवो वः सविता प्रार्पयतु श्रेष्ठतमाय कर्मणे॥"
+            : foundNode.id.includes("samaveda") || subject === "samaveda"
+            ? "ॐ अग्न आयाहि वीतये गृणानो हव्यदातये। नि होता सत्सि बर्हिषि॥"
+            : "ॐ शं नो देवीरभिष्टये आपो भवन्तु पीतये। शं योरभि स्रवन्तु नः॥",
+        ref: `${foundNode.name} — प्रथम शांति पाठ / मंगलाचरण`,
+        translation: "वैदिक ऋचाओं का पावन मंगलाचरण एवं सर्वकल्याणकारी प्रार्थना।"
+      },
+      relatedArticles: foundNode.children
+        ? foundNode.children.map((c) => ({
+            title: c.enName || c.name,
+            tag: c.stats || "Vedic Text",
+            slug: c.id
+          }))
+        : branchAncestors.length > 0 && branchAncestors[branchAncestors.length - 1].children
+        ? branchAncestors[branchAncestors.length - 1].children
+            .filter((c) => c.id !== foundNode.id)
+            .slice(0, 4)
+            .map((c) => ({
+              title: c.enName || c.name,
+              tag: c.stats || "Vedic Text",
+              slug: c.id
+            }))
+        : [
+            { title: "Purusha Sukta", tag: "Sukta • Rigveda", slug: "purusha-sukta" },
+            { title: "Gayatri Mantra", tag: "Mantra • Rigveda", slug: "gayatri-mantra" }
+          ],
+      relatedGrantha: {
+        name: vedaAncestor ? `${vedaAncestor.name} (${vedaAncestor.enName})` : (subjectData?.name || "Veda"),
+        desc: foundNode.desc
+      },
+      relatedTopics: [
+        vedaAncestor?.name || "वेद",
+        "मंत्र",
+        "संहिता",
+        "ब्राह्मण",
+        "उपनिषद"
+      ]
+    };
+  } else if (!articleData) {
+    articleData = {
+      title: subjectData?.enName || article,
+      hindiTitle: subjectData?.name || article,
+      contentType: "VEDA & GRANTHA",
+      tags: ["Veda", catData.name || "Library"],
+      intro: subjectData?.intro || "वैदिक वांग्मय एवं ग्रंथों का प्रामाणिक अध्ययन।",
+      shastricBase: "वैदिक संहिता, ब्राह्मण, आरण्यक एवं उपनिषद परंपरा।",
+      sourceMeta: {
+        grantha: catData.name,
+        shakha: subjectData?.name || "प्रामाणिक शाखा",
+        kanda: "समग्र वैदिक पाठ",
+        anuvaka: "सूक्त एवं मंत्र",
+        rishi: "वैदिक ऋषि परंपरा",
+        devata: "परम ब्रह्म"
+      },
+      primaryMantra: {
+        sanskrit: "ॐ भूर्भुवः स्वः तत्सवितुर्वरेण्यं भर्गो देवस्य धीमहि धियो यो नः प्रचोदयात्॥",
+        ref: "ऋग्वेद ३.६२.१० / यजुर्वेद ३६.३ — गायत्री महामंत्र",
+        translation: "हम उस सृष्टिकर्ता परम प्रकाशमान परमात्मा के तेज का ध्यान करते हैं, जो हमारी बुद्धियों को सन्मार्ग पर प्रेरित करे।"
       },
       relatedArticles: [
-        { title: "Mahamrityunjaya Mantra", tag: "Mantra • Shaiva", slug: "mahamrityunjaya-mantra" },
-        { title: "Shiva Puja Vidhi", tag: "Puja • Shaiva", slug: "shiva-puja" }
+        { title: "Purusha Sukta", tag: "Sukta", slug: "purusha-sukta" },
+        { title: "Gayatri Mantra", tag: "Mantra", slug: "gayatri-mantra" }
       ],
-      relatedGrantha: { name: "Yajurveda", desc: "Taittiriya Samhita" },
-      relatedTopics: ["Rudra", "Shiva", "Abhisheka", "Mantra", "Yajurveda"]
+      relatedGrantha: { name: catData.name, desc: catData.enName },
+      relatedTopics: ["Veda", "Mantra", "Upasana"]
     };
-
-  const catData = CATEGORIES_DATA[category] || { name: "पूजा", enName: "Puja" };
+  }
 
   const contentsList = [
     { id: "content-1", title: "1. विषय परिचय (Introduction)" },
@@ -67,7 +175,17 @@ export default function ArticleDetailPage({ onNavigateHome, onNavigateKnowledge 
     { id: "content-10", title: "10. इतिहास एवं शोध" }
   ];
 
-  const heroImage = article === "agnisukta" ? cardRigvedaImg : cardPujaImg;
+  const heroImage =
+    CARD_IMAGES[foundNode?.imageKey] ||
+    (category === "veda" && (subject === "rigveda" || article?.includes("rigveda") || article?.includes("aitareya"))
+      ? cardRigvedaImg
+      : category === "veda" && (subject === "yajurveda" || article?.includes("yajurveda") || article?.includes("taittiriya") || article?.includes("madhyandina") || article?.includes("kanva"))
+      ? cardYajurvedaImg
+      : category === "veda" && (subject === "samaveda" || article?.includes("samaveda") || article?.includes("chandogya") || article?.includes("kauthuma"))
+      ? cardSamavedaImg
+      : category === "veda" && (subject === "atharvaveda" || article?.includes("atharvaveda") || article?.includes("shaunaka") || article?.includes("mundaka"))
+      ? cardAtharvavedaImg
+      : cardPujaImg);
 
   return (
     <div className="bg-[#fffaf0] min-h-screen">
@@ -75,7 +193,7 @@ export default function ArticleDetailPage({ onNavigateHome, onNavigateKnowledge 
       <div className="bg-white border-b border-amber-200/70 py-5 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           {/* Breadcrumbs */}
-          <div className="flex items-center gap-2 text-xs font-medium text-stone-500 mb-3">
+          <div className="flex items-center gap-2 text-xs font-medium text-stone-500 mb-3 flex-wrap">
             <Link
               to="/"
               className="hover:text-amber-800 transition-colors flex items-center gap-1 cursor-pointer"
@@ -97,9 +215,26 @@ export default function ArticleDetailPage({ onNavigateHome, onNavigateKnowledge 
             >
               {catData.name || "Category"}
             </Link>
+            {subject && (
+              <>
+                <span>›</span>
+                <Link
+                  to={`/library/${category}/${subject}`}
+                  className="hover:text-amber-800 transition-colors cursor-pointer"
+                >
+                  {subjectData ? `${subjectData.name} (${subjectData.enName})` : subject}
+                </Link>
+              </>
+            )}
+            {branchAncestors.map((branch) => (
+              <React.Fragment key={branch.id}>
+                <span>›</span>
+                <span className="text-stone-600 font-medium">{branch.name}</span>
+              </React.Fragment>
+            ))}
             <span>›</span>
             <span className="text-amber-900 font-semibold">
-              {articleData.title} ({articleData.hindiTitle})
+              {articleData.hindiTitle || articleData.title}
             </span>
           </div>
 
