@@ -440,7 +440,7 @@ export const GRANTHA_ARCHIVE = [
     author: "वैदिक महर्षि परंपरा",
     summary: "ईश, केन, कठ, मुण्डक, माण्डूक्य — आत्मज्ञान व परम ब्रह्म की प्रत्यक्ष अनुभूति।",
     category: "वेदांत / श्रुति",
-    imageKey: "card-rigveda.jpg"
+    imageKey: "card-upanishad.jpg"
   },
   {
     name: "१८ महापुराण",

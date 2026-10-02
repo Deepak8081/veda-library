@@ -1,20 +1,24 @@
 // Master Veda Hierarchical Tree Data Model
-// Exact Client-Provided & Vedic Heritage Portal (vedicheritage.gov.in) Hierarchy:
-// Root (4 Vedas) -> Branches/Shakhas -> Literature/Texts -> Sub-texts/Upanishads
+// Full Vedic Taxonomy:
+// Root (4 Vedas) -> Branches / Recensions (Shakhas) -> Texts (Samhitas, Brahmanas, Aranyakas, Upanishads, Sutras) -> Chapters / Suktas -> Mantras
 
 export const VEDA_HIERARCHY_TREE = {
   id: "root",
   name: "वेद",
   enName: "Veda",
   children: [
+    // ========================================================
+    // 1. RIGVEDA (ऋग्वेद)
+    // ========================================================
     {
       id: "rigveda",
       slug: "rigveda",
       name: "ऋग्वेद",
       enName: "Rigveda",
-      desc: "ऋचाओं और सूक्तों का प्रमुख वैदिक संग्रह। संबंधित मंत्रों, ऋषियों, देवताओं और छंदों को explore करें।",
+      desc: "ऋचाओं और सूक्तों का प्राचीनतम वैदिक संग्रह। स्तुति, ज्ञान, विज्ञान और आध्यात्मिक चेतना का मूल स्रोत।",
       stats: "१० मण्डल • १०२८ सूक्त • १०,५५२ मंत्र",
       priest: "होतृ (Hotri)",
+      badge: "प्रधान श्रुति",
       imageKey: "card-rigveda.jpg",
       children: [
         {
@@ -24,7 +28,8 @@ export const VEDA_HIERARCHY_TREE = {
           desc: "ऋग्वेद की वर्तमान में उपलब्ध मुख्य एवं प्रामाणिक शाखा।",
           stats: "१० मण्डल • १०२८ सूक्त",
           priest: "होतृ (Hotri)",
-          imageKey: "card-rigveda.jpg",
+          badge: "शाखा",
+          imageKey: "card-shakala-shakha.jpg",
           children: [
             {
               id: "rigveda-samhita",
@@ -32,7 +37,91 @@ export const VEDA_HIERARCHY_TREE = {
               enName: "Rigveda Samhita",
               desc: "१० मण्डल, १०२८ सूक्त, १०,५५२ ऋचाएँ — अग्नि सूक्त, पुरुष सूक्त, नासदीय सूक्त, गायत्री मंत्र।",
               stats: "१० मण्डल • १०२८ सूक्त • १०५५२ ऋचाएँ",
-              imageKey: "card-rigveda.jpg"
+              badge: "संहिता ग्रंथ",
+              imageKey: "card-samhita.jpg",
+              children: [
+                {
+                  id: "rv-sukta-1",
+                  name: "१. अग्नि सूक्त (मण्डल १, सूक्त १)",
+                  enName: "Agni Sukta (Mandala 1, Sukta 1)",
+                  desc: "ऋग्वेद का प्रथम सूक्त — ऋषि मधुच्छन्दा वैश्वामित्र कृत ९ ऋचाओं में अग्निदेव की महत्ता।",
+                  stats: "९ मंत्र • गायत्री छंद",
+                  badge: "सूक्त",
+                  imageKey: "card-sukta-agni.jpg",
+                  children: [
+                    {
+                      id: "rv-1-1-1",
+                      name: "मंत्र १.१.१: ॐ अग्निमीळे पुरोहितं...",
+                      enName: "Mantra 1.1.1 (Agnimile Purohitam)",
+                      desc: "यज्ञ के पुरोहित, प्रकाशमान देव, ऋत्विक और रत्नों के धारक अग्निदेव की स्तुति।",
+                      stats: "ऋषि: मधुच्छन्दा • छंद: गायत्री",
+                      badge: "वेदमंत्र",
+                      mantraId: "rv-1-1-1",
+                      imageKey: "card-sukta-agni.jpg"
+                    },
+                    {
+                      id: "rv-1-1-2",
+                      name: "मंत्र १.१.२: अग्निः पूर्वेभिरृषिभिः...",
+                      enName: "Mantra 1.1.2 (Agnih Purvebhir)",
+                      desc: "पुरातन और नवीन दोनों ऋषियों द्वारा पूजित अग्निदेव का आह्वान।",
+                      stats: "ऋषि: मधुच्छन्दा • छंद: गायत्री",
+                      badge: "वेदमंत्र",
+                      mantraId: "rv-1-1-2",
+                      imageKey: "card-sukta-agni.jpg"
+                    },
+                    {
+                      id: "rv-1-1-3",
+                      name: "मंत्र १.१.३: अग्निना रयिमश्नवत्...",
+                      enName: "Mantra 1.1.3 (Agnina Rayim)",
+                      desc: "अग्नि के माध्यम से प्रतिदिन अक्षय यश और वीर संतान की प्राप्ति।",
+                      stats: "ऋषि: मधुच्छन्दा • छंद: गायत्री",
+                      badge: "वेदमंत्र",
+                      mantraId: "rv-1-1-3",
+                      imageKey: "card-sukta-agni.jpg"
+                    }
+                  ]
+                },
+                {
+                  id: "rv-sukta-gayatri",
+                  name: "२. गायत्री महामंत्र (मण्डल ३, सूक्त ६२)",
+                  enName: "Gayatri Mantra (Mandala 3, Sukta 62)",
+                  desc: "वेदमाता गायत्री — सविता देव के परम तेज का ध्यान एवं सद्बुद्धि की प्रार्थना।",
+                  stats: "मंत्र १० • २४ अक्षर",
+                  badge: "महामंत्र",
+                  mantraId: "rv-3-62-10",
+                  imageKey: "card-sukta-gayatri.jpg"
+                },
+                {
+                  id: "rv-sukta-purusha",
+                  name: "३. पुरुष सूक्त (मण्डल १०, सूक्त ९०)",
+                  enName: "Purusha Sukta (Mandala 10, Sukta 90)",
+                  desc: "ब्रह्माण्ड के विराट् पुरुष का स्वरूप और सृष्टि उत्पत्ति का वैदिक विज्ञान।",
+                  stats: "१६ ऋचाएँ • अनुष्टुप् छंद",
+                  badge: "सूक्त",
+                  mantraId: "rv-10-90-1",
+                  imageKey: "card-sukta-purusha.jpg"
+                },
+                {
+                  id: "rv-sukta-nasadiya",
+                  name: "४. नासदीय सूक्त (मण्डल १०, सूक्त १२९)",
+                  enName: "Nasadiya Sukta (Creation Hymn)",
+                  desc: "सृष्टि के पूर्व क्या था? विश्व का सर्वाधिक प्राचीन एवं गूढ़ दार्शनिक सूक्त।",
+                  stats: "७ ऋचाएँ • त्रिष्टुप् छंद",
+                  badge: "दार्शनिक सूक्त",
+                  mantraId: "rv-10-129-1",
+                  imageKey: "card-sukta-nasadiya.jpg"
+                },
+                {
+                  id: "rv-sukta-sangathan",
+                  name: "५. संगठन सूक्त (मण्डल १०, सूक्त १९१)",
+                  enName: "Sangathan Sukta (Unity Hymn)",
+                  desc: "'सं गच्छध्वं सं वदध्वं' — सामूहिक एकता, सद्भाव और विश्व बंधुत्व का संदेश।",
+                  stats: "४ ऋचाएँ • अनुष्टुप् छंद",
+                  badge: "सूक्त",
+                  mantraId: "rv-10-191-2",
+                  imageKey: "card-sukta-samgathan.jpg"
+                }
+              ]
             },
             {
               id: "rigveda-brahmana",
@@ -40,7 +129,8 @@ export const VEDA_HIERARCHY_TREE = {
               enName: "Rigveda Brahmana Texts",
               desc: "यज्ञ-विधान, कर्मकाण्ड एवं वैदिक आख्यानों का विस्तृत निरूपण।",
               stats: "२ ब्राह्मण ग्रंथ",
-              imageKey: "card-rigveda.jpg",
+              badge: "ब्राह्मण ग्रंथ",
+              imageKey: "card-brahmana.jpg",
               children: [
                 {
                   id: "aitareya-brahmana",
@@ -48,7 +138,8 @@ export const VEDA_HIERARCHY_TREE = {
                   enName: "Aitareya Brahmana",
                   desc: "महीदास ऐतरेय कृत — ४० अध्याय (८ पंचिका), सोमयाग व राज्याभिषेक विधान।",
                   stats: "४० अध्याय (८ पंचिका)",
-                  imageKey: "card-rigveda.jpg"
+                  badge: "ब्राह्मण",
+                  imageKey: "card-grantha-aitareya.jpg"
                 },
                 {
                   id: "kaushitaki-brahmana",
@@ -56,7 +147,8 @@ export const VEDA_HIERARCHY_TREE = {
                   enName: "Kaushitaki (Shankhayana) Brahmana",
                   desc: "३० अध्याय — हविर्यज्ञ, सोमयाग एवं ऋत्विजों के आचार-नियम।",
                   stats: "३० अध्याय",
-                  imageKey: "card-rigveda.jpg"
+                  badge: "ब्राह्मण",
+                  imageKey: "card-brahmana.jpg"
                 }
               ]
             },
@@ -66,7 +158,8 @@ export const VEDA_HIERARCHY_TREE = {
               enName: "Rigveda Aranyaka Texts",
               desc: "अरण्य (वन) में चिंतन योग्य दार्शनिक एवं प्राण-विद्या परक ग्रंथ।",
               stats: "२ आरण्यक ग्रंथ",
-              imageKey: "card-rigveda.jpg",
+              badge: "आरण्यक",
+              imageKey: "card-aranyaka.jpg",
               children: [
                 {
                   id: "aitareya-aranyaka",
@@ -74,7 +167,8 @@ export const VEDA_HIERARCHY_TREE = {
                   enName: "Aitareya Aranyaka",
                   desc: "५ आरण्यक — महाव्रत, उक्थ एवं प्राण विद्या का तात्विक चिंतन।",
                   stats: "५ आरण्यक",
-                  imageKey: "card-rigveda.jpg"
+                  badge: "आरण्यक",
+                  imageKey: "card-grantha-aitareya.jpg"
                 },
                 {
                   id: "kaushitaki-aranyaka",
@@ -82,7 +176,8 @@ export const VEDA_HIERARCHY_TREE = {
                   enName: "Kaushitaki Aranyaka",
                   desc: "१५ अध्याय — प्राणोपासना एवं अंतरग्निहोत्र का विधान।",
                   stats: "१५ अध्याय",
-                  imageKey: "card-rigveda.jpg"
+                  badge: "आरण्यक",
+                  imageKey: "card-aranyaka.jpg"
                 }
               ]
             },
@@ -92,15 +187,17 @@ export const VEDA_HIERARCHY_TREE = {
               enName: "Rigveda Upanishad Texts",
               desc: "परम आत्मतत्व एवं ब्रह्मविद्या का अमृतमय उपदेश।",
               stats: "२ मुख्य उपनिषद",
-              imageKey: "card-rigveda.jpg",
+              badge: "उपनिषद",
+              imageKey: "card-upanishad.jpg",
               children: [
                 {
                   id: "aitareya-upanishad",
                   name: "i. ऐतरेय उपनिषद",
                   enName: "Aitareya Upanishad",
-                  desc: "महावाक्य 'प्रज्ञानं ब्रह्म' (चेतना ही ब्रह्म है) — ३ अध्याय, आत्मविद्या।",
+                  desc: "ऋग्वेद का प्रधान उपनिषद — महावाक्य 'प्रज्ञानं ब्रह्म' (चेतना ही ब्रह्म है)।",
                   stats: "३ अध्याय • 'प्रज्ञानं ब्रह्म'",
-                  imageKey: "card-rigveda.jpg"
+                  badge: "मुख्य उपनिषद",
+                  imageKey: "card-grantha-aitareya.jpg"
                 },
                 {
                   id: "kaushitaki-upanishad",
@@ -108,7 +205,8 @@ export const VEDA_HIERARCHY_TREE = {
                   enName: "Kaushitaki Upanishad",
                   desc: "४ अध्याय — देवयान व पितृयान मार्ग, प्राणो ब्रह्म एवं प्रतर्दन विद्या।",
                   stats: "४ अध्याय",
-                  imageKey: "card-rigveda.jpg"
+                  badge: "उपनिषद",
+                  imageKey: "card-upanishad.jpg"
                 }
               ]
             },
@@ -118,7 +216,8 @@ export const VEDA_HIERARCHY_TREE = {
               enName: "Rigveda Kalpa, Sutras & Pratishakhya",
               desc: "श्रौत, गृह्य सूत्र एवं वर्णोच्चारण नियम।",
               stats: "सूत्र एवं प्रातिशाख्य",
-              imageKey: "card-rigveda.jpg",
+              badge: "सूत्र ग्रंथ",
+              imageKey: "card-kalpa.jpg",
               children: [
                 {
                   id: "ashvalayana-shrauta",
@@ -126,7 +225,8 @@ export const VEDA_HIERARCHY_TREE = {
                   enName: "Ashvalayana & Shankhayana Shrautasutra",
                   desc: "होतृ ऋत्विक द्वारा संपन्न किए जाने वाले श्रौत यागों का विधान।",
                   stats: "श्रौतसूत्र",
-                  imageKey: "card-rigveda.jpg"
+                  badge: "कल्पसूत्र",
+                  imageKey: "card-shrautasutra.jpg"
                 },
                 {
                   id: "ashvalayana-grihya",
@@ -134,7 +234,8 @@ export const VEDA_HIERARCHY_TREE = {
                   enName: "Ashvalayana & Paraskara Grihyasutra",
                   desc: "दैनिक पंचमहायज्ञ एवं १६ गृह्य संस्कारों का शास्त्रीय क्रम।",
                   stats: "गृह्यसूत्र",
-                  imageKey: "card-rigveda.jpg"
+                  badge: "कल्पसूत्र",
+                  imageKey: "card-grihyasutra.jpg"
                 },
                 {
                   id: "rigveda-pratishakhya",
@@ -142,7 +243,8 @@ export const VEDA_HIERARCHY_TREE = {
                   enName: "Rigveda Pratishakhya",
                   desc: "महर्षि शौनक कृत — शुद्ध वर्णोच्चारण, स्वर प्रक्रिया एवं संधि नियम।",
                   stats: "उच्चारण शास्त्र",
-                  imageKey: "card-rigveda.jpg"
+                  badge: "प्रातिशाख्य",
+                  imageKey: "card-pratishakhya.jpg"
                 }
               ]
             }
@@ -150,23 +252,32 @@ export const VEDA_HIERARCHY_TREE = {
         }
       ]
     },
+
+    // ========================================================
+    // 2. YAJURVEDA (यजुर्वेद)
+    // ========================================================
     {
       id: "yajurveda",
       slug: "yajurveda",
       name: "यजुर्वेद",
       enName: "Yajurveda",
-      desc: "यज्ञ एवं वैदिक कर्म से संबंधित मंत्रों और पाठ-परंपराओं का संग्रह। शुक्ल और कृष्ण शाखा परंपरा।",
+      desc: "यज्ञ, कर्म एवं अनुष्ठानिक क्रियाओं का वेद। शुक्ल और कृष्ण शाखा परंपरा में विभक्त।",
       stats: "४० अध्याय • १९७५ मंत्र",
       priest: "अध्वर्यु (Adhvaryu)",
+      badge: "कर्मकाण्ड एवं ज्ञान",
       imageKey: "card-yajurveda.jpg",
       children: [
+        // ----------------------------------------------------
+        // A. SHUKLA YAJURVEDA
+        // ----------------------------------------------------
         {
           id: "shukla-yajurveda",
           name: "A. शुक्ल यजुर्वेद (Shukla Yajurveda)",
           enName: "Shukla Yajurveda",
-          desc: "वाजसनेयि परंपरा — माध्यन्दिना शाखा, काण्व शाखा, शतपथ ब्राह्मण एवं सूत्र ग्रंथ।",
+          desc: "वाजसनेयि परंपरा — याज्ञवल्क्य ऋषि द्वारा संकलित विशुद्ध मंत्र भाग।",
           stats: "माध्यन्दिना, काण्व व सूत्र",
           priest: "अध्वर्यु (Adhvaryu)",
+          badge: "मुख्य परंपरा",
           imageKey: "card-yajurveda.jpg",
           children: [
             {
@@ -175,7 +286,8 @@ export const VEDA_HIERARCHY_TREE = {
               enName: "Madhyandina Shakha",
               desc: "उत्तर व मध्य भारत में सर्वाधिक प्रचलित वाजसनेयि शाखा।",
               stats: "४० अध्याय • १९७५ मंत्र",
-              imageKey: "card-yajurveda.jpg",
+              badge: "शाखा",
+              imageKey: "card-madhyandina-shakha.jpg",
               children: [
                 {
                   id: "madhyandina-samhita",
@@ -183,23 +295,68 @@ export const VEDA_HIERARCHY_TREE = {
                   enName: "Madhyandina Samhita (Vajasaneyi)",
                   desc: "४० अध्याय, १९७५ मंत्र — रुद्राध्याय (अध्याय १६), शिवसंकल्प (अध्याय ३४), ईशावास्य (अध्याय ४०)।",
                   stats: "४० अध्याय • १९७५ मंत्र",
-                  imageKey: "card-yajurveda.jpg"
+                  badge: "संहिता",
+                  imageKey: "card-samhita.jpg",
+                  children: [
+                    {
+                      id: "vs-adhyaya-1",
+                      name: "१. अध्याय १: दर्शपूर्णमास याग (इषे त्वोर्जे त्वा...)",
+                      enName: "Adhyaya 1: Darshapurnamasa Yagya",
+                      desc: "यजुर्वेद का प्रथम अध्याय — पवित्र पलाश शाखा छेदन एवं हवि निर्माण।",
+                      stats: "३१ मंत्र",
+                      badge: "अध्याय",
+                      mantraId: "vs-1-1",
+                      imageKey: "card-samhita.jpg"
+                    },
+                    {
+                      id: "vs-adhyaya-16",
+                      name: "२. अध्याय १६: रुद्राध्याय / शतरुद्रिय (नमस्ते रुद्र मन्यव...)",
+                      enName: "Adhyaya 16: Sri Rudram / Shatarudriya",
+                      desc: "भगवान रुद्र के १००+ पावन नामों एवं विश्वरूप की स्तुति (रुद्राभिषेक का मूल आधार)।",
+                      stats: "६६ मंत्र • नमकम-चमकम",
+                      badge: "रुद्राध्याय",
+                      mantraId: "vs-16-1",
+                      imageKey: "card-sukta-rudra.jpg"
+                    },
+                    {
+                      id: "vs-adhyaya-34",
+                      name: "३. अध्याय ३४: शिवसंकल्प सूक्त (तन्मे मनः शिवसंकल्पमस्तु)",
+                      enName: "Adhyaya 34: Shiva Sankalpa Sukta",
+                      desc: "मन की पवित्रता, उदात्त संकल्प एवं मानसिक एकाग्रता का महासूक्त।",
+                      stats: "६ मंत्र",
+                      badge: "सूक्त",
+                      mantraId: "vs-34-1",
+                      imageKey: "card-sukta-mrityunjaya.jpg"
+                    },
+                    {
+                      id: "vs-adhyaya-40",
+                      name: "४. अध्याय ४०: ईशावास्योपनिषद (ईशा वास्यमिदं सर्वं...)",
+                      enName: "Adhyaya 40: Isha Upanishad",
+                      desc: "यजुर्वेद का अंतिम अध्याय — कर्मयोग, त्याग और आत्मज्ञान का मूल आधार।",
+                      stats: "१८ मंत्र",
+                      badge: "उपनिषद",
+                      mantraId: "vs-40-1",
+                      imageKey: "card-grantha-isha.jpg"
+                    }
+                  ]
                 },
                 {
                   id: "madhyandina-shatapatha",
                   name: "ख. शतपथ ब्राह्मण (माध्यन्दिना पाठ)",
                   enName: "Shatapatha Brahmana (Madhyandina)",
-                  desc: "१४ काण्ड, १०० प्रपाठक, ४३८ ब्राह्मण — वैदिक वांग्मय का सबसे विशाल ब्राह्मण।",
+                  desc: "१४ काण्ड, १०० प्रपाठक, ४३८ ब्राह्मण — वैदिक वांग्मय का सबसे विशाल ब्राह्मण ग्रंथ।",
                   stats: "१४ काण्ड • १०० प्रपाठक",
-                  imageKey: "card-yajurveda.jpg"
+                  badge: "ब्राह्मण",
+                  imageKey: "card-grantha-shatapatha.jpg"
                 },
                 {
                   id: "madhyandina-upanishad",
                   name: "ग. उपनिषद (ईशावास्योपनिषद और बृहदारण्यकोपनिषद)",
                   enName: "Upanishads (Isha & Brihadaranyaka)",
-                  desc: "ईशावास्योपनिषद् (४०वाँ अध्याय) और बृहदारण्यकोपनिषद् ('अहं ब्रह्मास्मि')।",
+                  desc: "ईशावास्योपनिषद् और बृहदारण्यकोपनिषद् ('अहं ब्रह्मास्मि')।",
                   stats: "ईश व बृहदारण्यक",
-                  imageKey: "card-yajurveda.jpg"
+                  badge: "उपनिषद",
+                  imageKey: "card-grantha-brihadaranyaka.jpg"
                 }
               ]
             },
@@ -209,7 +366,8 @@ export const VEDA_HIERARCHY_TREE = {
               enName: "Kanva Shakha",
               desc: "दक्षिण व पूर्व भारत में प्रचलित वाजसनेयि शाखा।",
               stats: "४० अध्याय • २०८६ मंत्र",
-              imageKey: "card-yajurveda.jpg",
+              badge: "शाखा",
+              imageKey: "card-kanva-shakha.jpg",
               children: [
                 {
                   id: "kanva-samhita",
@@ -217,7 +375,8 @@ export const VEDA_HIERARCHY_TREE = {
                   enName: "Kanva Samhita",
                   desc: "४० अध्याय, ३२८ अनुवाक, २०८६ मंत्र — काण्व पाठ परंपरा।",
                   stats: "४० अध्याय • २०८६ मंत्र",
-                  imageKey: "card-yajurveda.jpg"
+                  badge: "संहिता",
+                  imageKey: "card-samhita.jpg"
                 },
                 {
                   id: "kanva-shatapatha",
@@ -225,7 +384,8 @@ export const VEDA_HIERARCHY_TREE = {
                   enName: "Shatapatha Brahmana (Kanva)",
                   desc: "१७ काण्ड, १०४ प्रपाठक — काण्व पाठ का शतपथ ब्राह्मण।",
                   stats: "१७ काण्ड • १०४ प्रपाठक",
-                  imageKey: "card-yajurveda.jpg"
+                  badge: "ब्राह्मण",
+                  imageKey: "card-grantha-shatapatha.jpg"
                 },
                 {
                   id: "kanva-upanishad",
@@ -233,7 +393,8 @@ export const VEDA_HIERARCHY_TREE = {
                   enName: "Upanishad Texts (Kanva Tradition)",
                   desc: "काण्व ईशावास्योपनिषद् एवं काण्व बृहदारण्यकोपनिषद्।",
                   stats: "काण्व उपनिषद",
-                  imageKey: "card-yajurveda.jpg"
+                  badge: "उपनिषद",
+                  imageKey: "card-grantha-brihadaranyaka.jpg"
                 }
               ]
             },
@@ -243,58 +404,90 @@ export const VEDA_HIERARCHY_TREE = {
               enName: "Shukla Yajurveda Kalpa & Sutras",
               desc: "पारस्कर गृह्यसूत्र, कात्यायन श्रौतसूत्र, कात्यायन शुल्बसूत्र एवं शुक्ल यजुः प्रातिशाख्य।",
               stats: "पारस्कर, कात्यायन आदि सूत्र",
-              imageKey: "card-yajurveda.jpg"
+              badge: "सूत्र ग्रंथ",
+              imageKey: "card-shrautasutra.jpg"
             }
           ]
         },
+
+        // ----------------------------------------------------
+        // B. KRISHNA YAJURVEDA
+        // ----------------------------------------------------
         {
           id: "krishna-yajurveda",
           name: "B. कृष्ण यजुर्वेद (Krishna Yajurveda)",
           enName: "Krishna Yajurveda",
-          desc: "मंत्र एवं ब्राह्मण गद्य मिश्रित परंपरा — तैत्तिरीय, मैत्रायणी, कठ, कपिष्ठल शाखा।",
-          stats: "तैत्तिरीय, मैत्रायणी, कठ, कपिष्ठल",
+          desc: "चरक परंपरा — मंत्र और ब्राह्मण भाग का संयुक्त संकलन। तैत्तिरीय, मैत्रायणी, कठ एवं कपिष्ठल शाखाएँ।",
+          stats: "४ मुख्य शाखाएँ",
           priest: "अध्वर्यु (Adhvaryu)",
+          badge: "मुख्य परंपरा",
           imageKey: "card-yajurveda.jpg",
           children: [
             {
               id: "taittiriya-shakha",
               name: "1. तैत्तिरीय शाखा (Taittiriya)",
               enName: "Taittiriya Shakha",
-              desc: "दक्षिण भारत में सर्वाधिक व्यापक एवं प्रमुख शाखा।",
-              stats: "७ काण्ड • श्री रुद्राध्याय",
-              imageKey: "card-yajurveda.jpg",
+              desc: "दक्षिण भारत में सर्वाधिक अध्ययन की जाने वाली कृष्ण यजुर्वेद की शाखा।",
+              stats: "७ काण्ड • ४४ प्रपाठक",
+              badge: "शाखा",
+              imageKey: "card-taittiriya-shakha.jpg",
               children: [
                 {
                   id: "taittiriya-samhita",
                   name: "क. तैत्तिरीय संहिता",
                   enName: "Taittiriya Samhita",
-                  desc: "७ काण्ड, ४४ प्रपाठक, ६५१ अनुवाक — श्री रुद्राध्याय (४.५) एवं चमकम् (४.७)।",
+                  desc: "७ काण्ड, ४४ प्रपाठक, ६५१ अनुवाक, २१९८ कंडिकाएँ — दर्शपूर्णमास, सोमयाग, अग्निचयन।",
                   stats: "७ काण्ड • ४४ प्रपाठक",
-                  imageKey: "card-yajurveda.jpg"
+                  badge: "संहिता",
+                  imageKey: "card-samhita.jpg",
+                  children: [
+                    {
+                      id: "ts-kanda-1",
+                      name: "१. काण्ड १: दर्शपूर्णमास व सोमयाग (इषे त्वोर्जे त्वा...)",
+                      enName: "Kanda 1: Darshapurnamasa & Soma Yagya",
+                      desc: "पवित्र काष्ठ छेदन, हवि निर्माण एवं सोमयाग के यजुर्मंत्र।",
+                      stats: "८ प्रपाठक",
+                      badge: "काण्ड",
+                      mantraId: "ts-1-1-1",
+                      imageKey: "card-samhita.jpg"
+                    },
+                    {
+                      id: "ts-kanda-4",
+                      name: "२. काण्ड ४: अग्निचयन एवं श्रीरुद्रम्",
+                      enName: "Kanda 4: Agnichayana & Sri Rudram",
+                      desc: "वेदिका निर्माण, श्येनचिति एवं तैत्तिरीय पाठ का चमकम-नमकम।",
+                      stats: "७ प्रपाठक",
+                      badge: "काण्ड",
+                      imageKey: "card-sukta-rudra.jpg"
+                    }
+                  ]
                 },
                 {
                   id: "taittiriya-brahmana",
                   name: "ख. तैत्तिरीय ब्राह्मण",
                   enName: "Taittiriya Brahmana",
-                  desc: "३ काण्ड (अष्टक), २८ प्रपाठक — नचिकेता उपाख्यान, नक्षत्र विद्या।",
-                  stats: "३ काण्ड (अष्टक)",
-                  imageKey: "card-yajurveda.jpg"
+                  desc: "३ काण्ड — नक्षत्रेष्टि, सौत्रामणी, पुरुषमेध एवं अश्वमेध यागों का विशद वर्णन।",
+                  stats: "३ काण्ड • २८ प्रपाठक",
+                  badge: "ब्राह्मण",
+                  imageKey: "card-brahmana.jpg"
                 },
                 {
                   id: "taittiriya-aranyaka",
                   name: "ग. तैत्तिरीय आरण्यक",
                   enName: "Taittiriya Aranyaka",
-                  desc: "१० प्रपाठक — अरुण प्रपाठक (सूर्य नमस्कार), पञ्चमहायज्ञ।",
+                  desc: "१० प्रपाठक — आरुणेतुक चयन, ब्रह्मयज्ञ एवं पितृमेध। ७-९वाँ प्रपाठक तैत्तिरीय उपनिषद है।",
                   stats: "१० प्रपाठक",
-                  imageKey: "card-yajurveda.jpg"
+                  badge: "आरण्यक",
+                  imageKey: "card-aranyaka.jpg"
                 },
                 {
-                  id: "taittiriya-upanishads",
+                  id: "taittiriya-upanishad-group",
                   name: "घ. उपनिषद (तैत्तिरीय, महानारायण, श्वेताश्वतर)",
-                  enName: "Taittiriya & Associated Upanishads",
-                  desc: "तैत्तिरीय उपनिषद ('सत्यं वद धर्मं चर'), महानारायण उपनिषद, श्वेताश्वतर उपनिषद।",
-                  stats: "३ प्रधान उपनिषद",
-                  imageKey: "card-yajurveda.jpg"
+                  enName: "Taittiriya Upanishad Texts",
+                  desc: "शिक्षावल्ली, ब्रह्मानन्दवल्ली, भृगुवल्ली ('सत्यं वद धर्मं चर') एवं महानारायणोपनिषद।",
+                  stats: "३ प्रमुख उपनिषद",
+                  badge: "उपनिषद",
+                  imageKey: "card-upanishad.jpg"
                 }
               ]
             },
@@ -302,291 +495,265 @@ export const VEDA_HIERARCHY_TREE = {
               id: "maitrayani-shakha",
               name: "2. मैत्रायणी शाखा (Maitrayani Samhita)",
               enName: "Maitrayani Shakha",
-              desc: "गुजरात व महाराष्ट्र परंपरा की प्राचीन शाखा।",
-              stats: "४ काण्ड • मानव सूत्र",
-              imageKey: "card-yajurveda.jpg",
-              children: [
-                {
-                  id: "maitrayani-samhita",
-                  name: "क. मैत्रायणी संहिता व मानव श्रौतसूत्र",
-                  enName: "Maitrayani Samhita & Manava Shrautasutra",
-                  desc: "४ काण्ड, ५४ प्रपाठक एवं मानव श्रौत व गृह्यसूत्र।",
-                  stats: "४ काण्ड • मानव सूत्र",
-                  imageKey: "card-yajurveda.jpg"
-                }
-              ]
+              desc: "४ काण्ड, ५४ प्रपाठक — गुजरात व महाराष्ट्र में सुरक्षित प्राचीन शाखा।",
+              stats: "४ काण्ड • ५४ प्रपाठक",
+              badge: "शाखा",
+              imageKey: "card-samhita.jpg"
             },
             {
-              id: "kathaka-shakha",
+              id: "katha-shakha",
               name: "3. कठ / काठक शाखा (Kathaka Samhita & कठोपनिषद)",
-              enName: "Kathaka Shakha",
-              desc: "कश्मीर व पंजाब परंपरा की शाखा — कठोपनिषद का उद्गम।",
-              stats: "५ खण्ड • कठोपनिषद",
-              imageKey: "card-yajurveda.jpg",
-              children: [
-                {
-                  id: "kathaka-samhita",
-                  name: "क. काठक संहिता",
-                  enName: "Kathaka Samhita",
-                  desc: "५ खण्ड, ४० स्थानक, ३०२८ मंत्र — काठक परंपरा।",
-                  stats: "५ खण्ड • ४० स्थानक",
-                  imageKey: "card-yajurveda.jpg"
-                },
-                {
-                  id: "kathopanishad",
-                  name: "ख. कठोपनिषद (यम-नचिकेता संवाद)",
-                  enName: "Kathopanishad",
-                  desc: "यमराज और बालक नचिकेता का संवाद — 'उत्तिष्ठत जाग्रत प्राप्य वरान्निबोधत'।",
-                  stats: "२ अध्याय • ६ वल्लियाँ",
-                  imageKey: "card-yajurveda.jpg"
-                }
-              ]
+              enName: "Katha (Kathaka) Shakha",
+              desc: "काठक संहिता (५ खंड, ४० स्थानक) एवं विश्वप्रसिद्ध कठोपनिषद (यम-नचिकेता संवाद)।",
+              stats: "काठक संहिता व कठोपनिषद",
+              badge: "शाखा",
+              imageKey: "card-grantha-katha.jpg"
             },
             {
               id: "kapisthala-shakha",
               name: "4. कपिष्ठल शाखा (Kapisthala Samhita)",
               enName: "Kapisthala Shakha",
-              desc: "कुरु-पांचाल क्षेत्र की प्राचीन व दुर्लभ शाखा।",
-              stats: "खंडित संहिता पाठ",
-              imageKey: "card-yajurveda.jpg",
-              children: [
-                {
-                  id: "kapisthala-samhita",
-                  name: "क. कपिष्ठल कठ संहिता (खंडित अंश)",
-                  enName: "Kapisthala Katha Samhita",
-                  desc: "३२ अध्याय (उपलब्ध खंडित भाग) — कुरुक्षेत्र परंपरा।",
-                  stats: "३२ अध्याय (खंडित)",
-                  imageKey: "card-yajurveda.jpg"
-                }
-              ]
+              desc: "८ अष्टक — कपिष्ठल कठ संहिता (खंडित उपलब्ध अंश)।",
+              stats: "८ अष्टक (अपूर्ण)",
+              badge: "शाखा",
+              imageKey: "card-samhita.jpg"
             },
             {
-              id: "krishna-sutras",
+              id: "krishna-kalpa-sutras",
               name: "5. कृष्ण यजुर्वेद के सूत्र ग्रंथ (आपस्तम्ब, बौधायन, मानव कल्पसूत्र)",
-              enName: "Krishna Yajurveda Sutras",
-              desc: "आपस्तम्ब, बौधायन, मानव व कात्यायन कल्प/श्रौत/गृह्यसूत्र।",
-              stats: "आपस्तम्ब, बौधायन आदि सूत्र",
-              imageKey: "card-yajurveda.jpg",
-              children: [
-                {
-                  id: "krishna-kalpa-shrauta-grihya",
-                  name: "क. आपस्तम्ब, बौधायन, मानव कल्प/श्रौत/गृह्यसूत्र",
-                  enName: "Apastamba, Baudhayana & Manava Sutras",
-                  desc: "श्रौत, गृह्य, धर्म एवं शुल्ब सूत्रों की समृद्ध परंपरा — यज्ञवेदिका निर्माण व संस्कार।",
-                  stats: "कल्प, श्रौत, गृह्यसूत्र",
-                  imageKey: "card-yajurveda.jpg"
-                }
-              ]
+              enName: "Krishna Yajurveda Sutra Texts",
+              desc: "बौधायन, आपस्तम्ब, सत्याषाढ़ (हिरण्यकेशी), वैखानस, भारद्वाज, मानव, वाराह कल्पसूत्र।",
+              stats: "श्रौत, गृह्य, धर्म व शुल्बसूत्र",
+              badge: "सूत्र ग्रंथ",
+              imageKey: "card-kalpa.jpg"
             }
           ]
         }
       ]
     },
+
+    // ========================================================
+    // 3. SAMAVEDA (सामवेद)
+    // ========================================================
     {
       id: "samaveda",
       slug: "samaveda",
       name: "सामवेद",
       enName: "Samaveda",
-      desc: "सामगान और वैदिक गायन से संबंधित मंत्र एवं पाठ-परंपरा। आध्यात्मिक माधुर्य का मूल स्रोत।",
-      stats: "१८७५ छंद/साम",
+      desc: "गायकी, संगीतमय ऋचाओं एवं सामगान का दिव्य वेद। भगवान श्रीकृष्ण ने गीता में कहा: 'वेदानां सामवेदोऽस्मि'।",
+      stats: "१८७५ मंत्र • कौथुम, राणायनीय, जैमिनीय",
       priest: "उद्गातृ (Udgatri)",
+      badge: "संगीत एवं उपासना",
       imageKey: "card-samaveda.jpg",
       children: [
         {
           id: "kauthuma-shakha",
-          name: "शाखा: कौथुम (Kauthuma)",
+          name: "A. कौथुम शाखा (Kauthuma)",
           enName: "Kauthuma Shakha",
-          desc: "गुजरात, राजस्थान, उत्तर प्रदेश, बिहार व बंगाल में सर्वाधिक प्रचलित शाखा।",
+          desc: "गुजरात, उत्तर भारत एवं बंगाल में सर्वाधिक प्रचलित सामवेद की शाखा।",
           stats: "पूर्वार्चिक व उत्तरार्चिक",
-          imageKey: "card-samaveda.jpg"
-        },
-        {
-          id: "ranayaniya-shakha",
-          name: "शाखा: राणायनीय (Ranayaniya)",
-          enName: "Ranayaniya Shakha",
-          desc: "महाराष्ट्र, कर्नाटक और आंध्र प्रदेश में प्रचलित साम परंपरा।",
-          stats: "विशिष्ट स्वरांकन",
-          imageKey: "card-samaveda.jpg"
-        },
-        {
-          id: "jaiminiya-shakha",
-          name: "शाखा: जैमिनीय (Jaiminiya)",
-          enName: "Jaiminiya / Talavakara Shakha",
-          desc: "केरल (नम्बूदिरी) व तमिलनाडु में संरक्षित दुर्लभ परंपरा।",
-          stats: "केन उपनिषद का मूल स्रोत",
-          imageKey: "card-samaveda.jpg"
-        },
-        {
-          id: "samaveda-general",
-          name: "सामवेद वांग्मय का सामान्य वर्गीकरण (सभी शाखाओं के लिए)",
-          enName: "Samaveda General Literature Classification",
-          desc: "संहिता, ८ ब्राह्मण, आरण्यक, उपनिषद एवं कल्प/सूत्र/गान ग्रंथ।",
-          stats: "सभी शाखाओं के ग्रंथ",
-          imageKey: "card-samaveda.jpg",
+          badge: "शाखा",
+          imageKey: "card-kauthuma-shakha.jpg",
           children: [
             {
-              id: "samaveda-samhita",
-              name: "क. सामवेद संहिता (पूर्वार्चिक और उत्तरार्चिक मंत्र)",
-              enName: "Samaveda Samhita",
-              desc: "पूर्वार्चिक (५८५ साम) एवं उत्तरार्चिक (१२२५ साम) — कुल १८७५ मंत्र।",
-              stats: "१८७५ साम / छंद",
-              imageKey: "card-samaveda.jpg"
-            },
-            {
-              id: "samaveda-brahmana",
-              name: "ख. ब्राह्मण ग्रंथ (ताण्ड्य, षड्विंश, सामविधान आदि 8 ब्राह्मण)",
-              enName: "Samaveda Brahmana Texts (8 Brahmanas)",
-              desc: "ताण्ड्य (पञ्चविंश) महाब्राह्मण, षड्विंश, सामविधान, आर्षेय, देवताध्याय, छांदोग्य, संहितोपनिषद, वंश ब्राह्मण।",
-              stats: "८ ब्राह्मण ग्रंथ",
-              imageKey: "card-samaveda.jpg"
-            },
-            {
-              id: "samaveda-aranyaka",
-              name: "ग. आरण्यक ग्रंथ (जैमिनीय / तवलकार आरण्यक)",
-              enName: "Samaveda Aranyaka Texts",
-              desc: "जैमिनीय (तवलकार) आरण्यक व छांदोग्य आरण्यक।",
-              stats: "तवलकार आरण्यक",
-              imageKey: "card-samaveda.jpg"
-            },
-            {
-              id: "samaveda-upanishad",
-              name: "घ. उपनिषद ग्रंथ (छान्दोग्य उपनिषद और केनोपनिषद)",
-              enName: "Samaveda Principal Upanishads",
-              desc: "छान्दोग्य उपनिषद ('तत्त्वमसि') एवं केन उपनिषद ('केनेषितं पतति')।",
-              stats: "२ मुख्य उपनिषद",
-              imageKey: "card-samaveda.jpg",
+              id: "kauthuma-samhita",
+              name: "क. कौथुम सामवेद संहिता",
+              enName: "Kauthuma Samaveda Samhita",
+              desc: "पूर्वार्चिक (६ प्रपाठक, ६५० ऋचाएँ) और उत्तरार्चिक (९ प्रपाठक, १२२५ ऋचाएँ)।",
+              stats: "१८७५ मंत्र",
+              badge: "संहिता",
+              imageKey: "card-samhita.jpg",
               children: [
                 {
-                  id: "chandogya-upanishad",
-                  name: "i. छान्दोग्य उपनिषद (सबसे विशाल व महत्वपूर्ण)",
-                  enName: "Chandogya Upanishad",
-                  desc: "८ प्रपाठक — ॐकार उद्गीथ, शाण्डिल्य विद्या, तत्त्वमसि महावाक्य, सनत्कुमार-नारद संवाद।",
-                  stats: "८ प्रपाठक • 'तत्त्वमसि'",
-                  imageKey: "card-samaveda.jpg"
-                },
-                {
-                  id: "kena-upanishad",
-                  name: "ii. केनोपनिषद (तवलकार उपनिषद)",
-                  enName: "Kena Upanishad",
-                  desc: "४ खण्ड — 'केनेषितं पतति प्रेषितं मनः', यक्ष उपाख्यान एवं उमा हैमवती संवाद।",
-                  stats: "४ खण्ड",
-                  imageKey: "card-samaveda.jpg"
+                  id: "sv-purvarchika-1",
+                  name: "१. पूर्वार्चिक: आग्नेय पर्व (अग्न आयाहि वीतये...)",
+                  enName: "Purvarchika: Agneya Parva",
+                  desc: "सामवेद का प्रथम मंगलाचरण मंत्र — उद्गाता द्वारा अग्निदेव का संगीतमय आवाहन।",
+                  stats: "प्रपाठक १ • मंत्र १.१",
+                  badge: "पर्व",
+                  mantraId: "sv-1-1-1",
+                  imageKey: "card-sukta-agni.jpg"
                 }
               ]
             },
             {
-              id: "samaveda-kalpa-sutras",
-              name: "ङ. सामवेद के सूत्र व गान ग्रंथ (ग्रामगेय गान, अरण्यगेय गान, गोभिल गृह्यसूत्र)",
-              enName: "Samaveda Sutras & Gana Texts",
-              desc: "ग्रामगेय गान, अरण्यगेय गान, ऊह गान, ऊह्य गान, लाट्यायन, द्राह्यायण श्रौतसूत्र, गोभिल गृह्यसूत्र, पुष्पसूत्र।",
-              stats: "गान, सूत्र एवं पुष्पसूत्र",
-              imageKey: "card-samaveda.jpg"
+              id: "kauthuma-brahmanas",
+              name: "ख. कौथुम ब्राह्मण ग्रंथ (ताण्ड्य, षड्विंश, सामविधान आदि ८ ब्राह्मण)",
+              enName: "Kauthuma Brahmana Texts (8 Brahmanas)",
+              desc: "ताण्ड्य (पंचविंश/महाब्राह्मण), षड्विंश, सामविधान, आर्षेय, देवताध्याय, उपनिषद्, संहितोपनिषद्, वंश ब्राह्मण।",
+              stats: "८ ब्राह्मण ग्रंथ",
+              badge: "ब्राह्मण",
+              imageKey: "card-brahmana.jpg"
+            },
+            {
+              id: "kauthuma-upanishad",
+              name: "ग. उपनिषद (छान्दोग्य उपनिषद)",
+              enName: "Chandogya Upanishad",
+              desc: "सामवेद का सबसे विशाल उपनिषद — महावाक्य 'तत्त्वमसि' (वह तुम ही हो), उद्गीथ उपासना एवं शांडिल्य विद्या।",
+              stats: "८ प्रपाठक • 'तत्त्वमसि'",
+              badge: "मुख्य उपनिषद",
+              imageKey: "card-grantha-chandogya.jpg"
             }
           ]
+        },
+        {
+          id: "ranayaniya-shakha",
+          name: "B. राणायनीय शाखा (Ranayaniya)",
+          enName: "Ranayaniya Shakha",
+          desc: "महाराष्ट्र, कर्नाटक एवं उड़ीसा में प्रचलित सामवेद की शाखा।",
+          stats: "द्राConnection व गान परंपरा",
+          badge: "शाखा",
+          imageKey: "card-samaveda.jpg"
+        },
+        {
+          id: "jaiminiya-shakha",
+          name: "C. जैमिनीय / तवलकार शाखा (Jaiminiya)",
+          enName: "Jaiminiya Shakha",
+          desc: "तमिलनाडु व केरल में सुरक्षित शाखा — जैमिनीय संहिता, ब्राह्मण, आरण्यक एवं केनोपनिषद।",
+          stats: "संहिता, ब्राह्मण, आरण्यक, केनोपनिषद",
+          badge: "शाखा",
+          imageKey: "card-jaiminiya-shakha.jpg",
+          children: [
+            {
+              id: "kena-upanishad",
+              name: "i. केनोपनिषद (तवलकार उपनिषद)",
+              enName: "Kena Upanishad",
+              desc: "'केनेषितं पतति प्रेषितं मनः' — यक्ष उपाख्यान, मन और प्राण का प्रेरक परम ब्रह्म।",
+              stats: "४ खंड",
+              badge: "उपनिषद",
+              imageKey: "card-upanishad.jpg"
+            }
+          ]
+        },
+        {
+          id: "samaveda-sutras",
+          name: "D. सामवेद के सूत्र व गान ग्रंथ (ग्रामगेय गान, अरण्यगेय गान, गोभिल गृह्यसूत्र)",
+          enName: "Samaveda Sutras & Gana Texts",
+          desc: "लाट्यायन, द्राह्यायण श्रौतसूत्र, गोभिल, खादिर गृह्यसूत्र, पुष्पसूत्र एवं साम प्रातिशाख्य।",
+          stats: "गान व सूत्र ग्रंथ",
+          badge: "सूत्र व गान",
+          imageKey: "card-chhanda.jpg"
         }
       ]
     },
+
+    // ========================================================
+    // 4. ATHARVAVEDA (अथर्ववेद)
+    // ========================================================
     {
       id: "atharvaveda",
       slug: "atharvaveda",
       name: "अथर्ववेद",
       enName: "Atharvaveda",
-      desc: "विविध वैदिक मंत्रों और जीवन से संबंधित विषयों की सामग्री का संग्रह। राष्ट्र सूक्त व भैषज्य विद्या।",
+      desc: "ब्रह्मवेद — आयुर्वेद, भैषज्य, शांति-पौष्टिक कर्म, राष्ट्र-रक्षा, गणित, वास्तु एवं गूढ़ अध्यात्म का संग्रह।",
       stats: "२० काण्ड • ७३० सूक्त • ५,९७७ मंत्र",
       priest: "ब्रह्मा (Brahma)",
+      badge: "ब्रह्मवेद एवं विज्ञान",
       imageKey: "card-atharvaveda.jpg",
       children: [
         {
           id: "shaunaka-shakha",
-          name: "शाखा: शौनक शाखा (Shaunaka)",
+          name: "A. शौनक शाखा (Shaunaka)",
           enName: "Shaunaka Shakha",
-          desc: "वर्तमान में सर्वाधिक प्रचलित एवं पूर्ण उपलब्ध अथर्ववेद परंपरा।",
-          stats: "२० काण्ड • ७३० सूक्त",
-          imageKey: "card-atharvaveda.jpg",
+          desc: "अथर्ववेद की वर्तमान में पूर्णतः उपलब्ध एवं सर्वाधिक प्रचलित शाखा।",
+          stats: "२० काण्ड • ७३० सूक्त • ५९७७ मंत्र",
+          badge: "शाखा",
+          imageKey: "card-shaunaka-shakha.jpg",
           children: [
             {
               id: "shaunaka-samhita",
               name: "क. शौनक अथर्ववेद संहिता",
-              enName: "Shaunaka Samhita",
-              desc: "२० काण्ड, ७३० सूक्त, ५९७७ मंत्र — पृथ्वी सूक्त (१२.१), भैषज्य सूक्त, काल सूक्त।",
-              stats: "२० काण्ड • ७३० सूक्त • ५९७७ मंत्र",
-              imageKey: "card-atharvaveda.jpg"
+              enName: "Shaunaka Atharvaveda Samhita",
+              desc: "२० काण्ड, ७३० सूक्त, ५९७७ मंत्र — पृथ्वी सूक्त (काण्ड १२), काल सूक्त (काण्ड १९), स्कम्भ सूक्त (काण्ड १०)।",
+              stats: "२० काण्ड • ७३० सूक्त",
+              badge: "संहिता",
+              imageKey: "card-samhita.jpg",
+              children: [
+                {
+                  id: "av-kanda-1",
+                  name: "१. काण्ड १: मेधाजनन / त्रिसप्त सूक्त (ये त्रिषप्ताः परियन्ति...)",
+                  enName: "Kanda 1: Medhajanana / Trisapta Sukta",
+                  desc: "अथर्ववेद का प्रथम सूक्त — वाणी के स्वामी से बुद्धि, बल और मेधा की प्रार्थना।",
+                  stats: "४ मंत्र",
+                  badge: "सूक्त",
+                  mantraId: "av-1-1-1",
+                  imageKey: "card-sukta-vak.jpg"
+                },
+                {
+                  id: "av-prithvi-sukta",
+                  name: "२. काण्ड १२: भूमि सूक्त / पृथ्वी सूक्त (माता भूमिः पुत्रोऽहं पृथिव्याः)",
+                  enName: "Kanda 12: Bhumi Sukta (Earth Anthem)",
+                  desc: "विश्व का प्रथम पर्यावरण एवं राष्ट्रगीत — 'धरती मेरी माता है और मैं इसका पुत्र हूँ'।",
+                  stats: "६३ ऋचाएँ",
+                  badge: "सूक्त",
+                  imageKey: "card-sukta-prithvi.jpg"
+                }
+              ]
             },
             {
               id: "shaunaka-sutras",
               name: "ख. प्रातिशाख्य व कल्पसूत्र (वैतान श्रौतसूत्र, कौशिक गृह्यसूत्र)",
-              enName: "Pratishakhya & Kalpasutras",
-              desc: "वैतान श्रौतसूत्र, कौशिक गृह्यसूत्र (भैषज्य, शांतिक कर्म) एवं शौनक प्रातिशाख्य।",
-              stats: "वैतान, कौशिक सूत्र",
-              imageKey: "card-atharvaveda.jpg"
+              enName: "Shaunaka Sutras & Pratishakhya",
+              desc: "वैतान श्रौतसूत्र (ब्रह्मा ऋत्विक के कार्य), कौशिक गृह्यसूत्र (भैषज्य, शांति, पौष्टिक विधान) एवं अथर्व प्रातिशाख्य।",
+              stats: "वैतान व कौशिक सूत्र",
+              badge: "सूत्र ग्रंथ",
+              imageKey: "card-shrautasutra.jpg"
             }
           ]
         },
         {
           id: "paippalada-shakha",
-          name: "शाखा: पिप्पलाद शाखा (Paippalada)",
+          name: "B. पिप्पलाद शाखा (Paippalada)",
           enName: "Paippalada Shakha",
-          desc: "महर्षि पिप्पलाद द्वारा प्रवर्तित — ओडिशा व कश्मीर परंपरा।",
-          stats: "२० काण्ड",
-          imageKey: "card-atharvaveda.jpg",
-          children: [
-            {
-              id: "paippalada-samhita",
-              name: "क. पिप्पलाद संहिता",
-              enName: "Paippalada Samhita",
-              desc: "२० काण्ड — दुर्लभ ताड़पत्रों में सुरक्षित विशिष्ट अथर्व परंपरा।",
-              stats: "२० काण्ड",
-              imageKey: "card-atharvaveda.jpg"
-            }
-          ]
+          desc: "उड़ीसा, झारखंड एवं कश्मीर में सुरक्षित दुर्लभ शाखा (२० काण्ड)।",
+          stats: "२० काण्ड • पिप्पलाद संहिता",
+          badge: "शाखा",
+          imageKey: "card-paippalada-shakha.jpg"
         },
         {
-          id: "atharvaveda-general",
-          name: "अथर्ववेद वांग्मय का सामान्य वर्गीकरण",
-          enName: "Atharvaveda General Literature Classification",
-          desc: "संहिता, गोपथ ब्राह्मण, आरण्यक परंपरा, ३ प्रधान उपनिषद एवं सूत्र ग्रंथ।",
-          stats: "ब्राह्मण, आरण्यक, उपनिषद व सूत्र",
+          id: "atharvaveda-general-literature",
+          name: "C. अथर्ववेद वांग्मय का सामान्य वर्गीकरण",
+          enName: "Atharvaveda General Literature",
+          desc: "गोपथ ब्राह्मण, मुण्डक, माण्डूक्य, प्रश्नोपनिषद एवं कल्पसूत्र।",
+          stats: "ब्राह्मण, उपनिषद एवं सूत्र",
+          badge: "वांग्मय",
           imageKey: "card-atharvaveda.jpg",
           children: [
-            {
-              id: "atharvaveda-samhita-general",
-              name: "क. अथर्ववेद संहिता (शौनक और पिप्पलाद संहिताएं)",
-              enName: "Atharvaveda Samhitas (Shaunaka & Paippalada)",
-              desc: "शौनक संहिता (२० काण्ड, ७३० सूक्त) एवं पिप्पलाद संहिता।",
-              stats: "शौनक व पिप्पलाद संहिता",
-              imageKey: "card-atharvaveda.jpg"
-            },
             {
               id: "gopatha-brahmana",
               name: "ख. ब्राह्मण ग्रंथ (केवल एक: गोपथ ब्राह्मण / Gopatha Brahmana)",
               enName: "Gopatha Brahmana",
-              desc: "पूर्व गोपथ (५ प्रपाठक) व उत्तर गोपथ (६ प्रपाठक) — एकमात्र उपलब्ध अथर्व ब्राह्मण।",
-              stats: "पूर्व व उत्तर गोपथ (११ प्रपाठक)",
-              imageKey: "card-atharvaveda.jpg"
+              desc: "पूर्व गोपथ (५ प्रपाठक) एवं उत्तर गोपथ (६ प्रपाठक) — ब्रह्मा ऋत्विक के कर्त्तव्य एवं ओंकार महिमा।",
+              stats: "११ प्रपाठक (पूर्व व उत्तर)",
+              badge: "ब्राह्मण",
+              imageKey: "card-brahmana.jpg"
             },
             {
-              id: "atharvaveda-aranyaka",
+              id: "atharvaveda-aranyaka-note",
               name: "ग. आरण्यक ग्रंथ (अथर्ववेद का कोई स्वतंत्र आरण्यक उपलब्ध नहीं है)",
-              enName: "Atharvaveda Aranyaka (None Independent)",
-              desc: "वैदिक हेरिटेज पोर्टल (vedicheritage.gov.in) एवं परंपरा के अनुसार अथर्ववेद का कोई स्वतंत्र आरण्यक उपलब्ध नहीं है; इसके दार्शनिक तत्व उपनिषदों में समाहित हैं।",
-              stats: "कोई स्वतंत्र आरण्यक नहीं",
-              imageKey: "card-atharvaveda.jpg"
+              enName: "Atharvaveda Aranyaka Note",
+              desc: "प्रामाणिक वैदिक परंपरा के अनुसार अथर्ववेद का कोई स्वतंत्र आरण्यक नहीं है; इसका दार्शनिक भाग सीधे उपनिषदों में निहित है।",
+              stats: "उपनिषदों में समाहित",
+              badge: "विशेष संदर्भ",
+              imageKey: "card-aranyaka.jpg"
             },
             {
-              id: "atharvaveda-upanishad",
+              id: "atharvaveda-upanishads",
               name: "घ. उपनिषद ग्रंथ (मुण्डकोपनिषद, माण्डूक्य उपनिषद, प्रश्नोपनिषद)",
-              enName: "Atharvaveda Principal Upanishads",
-              desc: "मुण्डकोपनिषद ('सत्यमेव जयते'), माण्डूक्योपनिषद ('अयमात्मा ब्रह्म') एवं प्रश्नोपनिषद।",
+              enName: "Atharvaveda Major Upanishads",
+              desc: "मुण्डकोपनिषद ('सत्यमेव जयते'), माण्डूक्य उपनिषद ('अयमात्मा ब्रह्म') एवं प्रश्नोपनिषद (६ आध्यात्मिक प्रश्न)।",
               stats: "३ प्रधान उपनिषद",
-              imageKey: "card-atharvaveda.jpg",
+              badge: "मुख्य उपनिषद",
+              imageKey: "card-upanishad.jpg",
               children: [
                 {
                   id: "mundaka-upanishad",
                   name: "i. मुण्डकोपनिषद",
                   enName: "Mundaka Upanishad",
-                  desc: "'सत्यमेव जयते नानृतम्' — परा व अपरा विद्या, जीवात्मा-परमात्मा का पक्षी रूपक।",
+                  desc: "'सत्यमेव जयते नानृतम्' — परा व अपरा विद्या, जीवात्मा-परमात्मा का दो पक्षी रूपक।",
                   stats: "३ मुण्डक • ६४ मंत्र",
-                  imageKey: "card-atharvaveda.jpg"
+                  badge: "उपनिषद",
+                  imageKey: "card-grantha-mundaka.jpg"
                 },
                 {
                   id: "mandukya-upanishad",
@@ -594,7 +761,8 @@ export const VEDA_HIERARCHY_TREE = {
                   enName: "Mandukya Upanishad",
                   desc: "'अयमात्मा ब्रह्म' — ॐकार एवं चेतना की चार अवस्थाएँ (जाग्रत, स्वप्न, सुषुप्ति, तुरीय)।",
                   stats: "१२ मंत्र • चेतना की ४ अवस्थाएँ",
-                  imageKey: "card-atharvaveda.jpg"
+                  badge: "उपनिषद",
+                  imageKey: "card-grantha-mandukya.jpg"
                 },
                 {
                   id: "prashna-upanishad",
@@ -602,17 +770,10 @@ export const VEDA_HIERARCHY_TREE = {
                   enName: "Prashna Upanishad",
                   desc: "महर्षि पिप्पलाद और ६ ऋषियों के ६ गूढ़ आध्यात्मिक प्रश्न व समाधान।",
                   stats: "६ प्रश्न व उत्तर",
-                  imageKey: "card-atharvaveda.jpg"
+                  badge: "उपनिषद",
+                  imageKey: "card-upanishad.jpg"
                 }
               ]
-            },
-            {
-              id: "atharvaveda-sutras",
-              name: "ङ. सूत्र ग्रंथ (वैतान श्रौतसूत्र, कौशिक गृह्यसूत्र)",
-              enName: "Atharvaveda Sutra Texts",
-              desc: "वैतान श्रौतसूत्र (ब्रह्मा ऋत्विक के कार्य) एवं कौशिक गृह्यसूत्र (भैषज्य, शांति, पौष्टिक कर्म)।",
-              stats: "वैतान व कौशिक सूत्र",
-              imageKey: "card-atharvaveda.jpg"
             }
           ]
         }
@@ -637,7 +798,7 @@ export function getNodeByPath(pathIds = []) {
 // Helper function to recursively find any node by ID or slug with ancestors
 export function findNodeById(id, current = VEDA_HIERARCHY_TREE, ancestors = []) {
   if (!id) return null;
-  if (current.id === id || current.slug === id) {
+  if (current.id === id || current.slug === id || current.mantraId === id) {
     return { node: current, ancestors };
   }
   if (current.children) {

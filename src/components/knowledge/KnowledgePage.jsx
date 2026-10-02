@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useMemo } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import {
   BookOpen,
@@ -6,7 +6,9 @@ import {
   Home,
   Sparkles,
   Layers,
-  ChevronRight
+  ChevronRight,
+  Search,
+  X
 } from "lucide-react";
 import { KNOWLEDGE_BRANCHES } from "../../data/knowledgePageData.js";
 import { SACRED_ICON_MAP } from "../common/SacredIcons.jsx";
@@ -16,6 +18,7 @@ import bannerTempleGhat from "../../assets/images/library/banners/banner-temple-
 export default function KnowledgePage({ onNavigateHome }) {
   const navigate = useNavigate();
   const [selectedBranchId, setSelectedBranchId] = useState("all");
+  const [searchQuery, setSearchQuery] = useState("");
 
   const handleCardClick = (cardId) => {
     if (cardId === "veda") {
@@ -33,10 +36,37 @@ export default function KnowledgePage({ onNavigateHome }) {
     }
   };
 
-  const filteredBranches =
-    selectedBranchId === "all"
-      ? KNOWLEDGE_BRANCHES
-      : KNOWLEDGE_BRANCHES.filter((b) => b.id === selectedBranchId);
+  const filteredBranches = useMemo(() => {
+    return KNOWLEDGE_BRANCHES.map((b) => {
+      if (selectedBranchId !== "all" && b.id !== selectedBranchId) {
+        return null;
+      }
+      if (!searchQuery.trim()) return b;
+      const q = searchQuery.toLowerCase().trim();
+      const matchBranch =
+        b.title.toLowerCase().includes(q) ||
+        b.hindiTitle.toLowerCase().includes(q) ||
+        b.subtitle.toLowerCase().includes(q) ||
+        (b.subItems && b.subItems.some((s) => s.toLowerCase().includes(q)));
+
+      const matchingCards = b.cards.filter((c) => {
+        return (
+          c.title.toLowerCase().includes(q) ||
+          c.hindiTitle.toLowerCase().includes(q) ||
+          c.desc.toLowerCase().includes(q) ||
+          (c.badge && c.badge.toLowerCase().includes(q))
+        );
+      });
+
+      if (matchBranch || matchingCards.length > 0) {
+        return {
+          ...b,
+          cards: matchBranch && matchingCards.length === 0 ? b.cards : matchingCards
+        };
+      }
+      return null;
+    }).filter(Boolean);
+  }, [selectedBranchId, searchQuery]);
 
   return (
     <div className="bg-[#fffaf0] min-h-screen">
@@ -82,44 +112,88 @@ export default function KnowledgePage({ onNavigateHome }) {
         </div>
       </div>
 
-      {/* 2. Sleek Horizontal Scrollable Filter Chips (100% Mobile Friendly - No Rigid Sidebar) */}
-      <div className="sticky top-16 z-30 bg-[#fffdfa]/95 backdrop-blur-md border-b border-amber-200/80 py-3 px-4 sm:px-6 lg:px-8 shadow-2xs">
-        <div className="max-w-7xl mx-auto flex items-center gap-2 overflow-x-auto no-scrollbar py-0.5">
-          <button
-            type="button"
-            onClick={() => setSelectedBranchId("all")}
-            className={`px-3.5 py-1.5 rounded-full text-xs font-semibold whitespace-nowrap transition-all cursor-pointer ${
-              selectedBranchId === "all"
-                ? "bg-amber-700 text-white shadow-xs font-bold"
-                : "bg-white text-stone-700 border border-stone-200 hover:border-amber-300 hover:bg-amber-50"
-            }`}
-          >
-            All Branches (सभी १२ शाखाएँ)
-          </button>
+      {/* 2. Sleek Horizontal Scrollable Filter Chips + Search Input */}
+      <div className="sticky top-16 z-30 bg-[#fffdfa]/95 backdrop-blur-md border-b border-amber-200/80 py-2.5 px-4 sm:px-6 lg:px-8 shadow-2xs">
+        <div className="max-w-7xl mx-auto flex flex-col md:flex-row md:items-center justify-between gap-3">
+          {/* Filter Chips */}
+          <div className="flex items-center gap-1.5 overflow-x-auto no-scrollbar py-0.5 flex-1">
+            <button
+              type="button"
+              onClick={() => setSelectedBranchId("all")}
+              className={`px-3.5 py-1.5 rounded-full text-xs font-semibold whitespace-nowrap transition-all cursor-pointer shrink-0 ${
+                selectedBranchId === "all"
+                  ? "bg-amber-700 text-white shadow-xs font-bold"
+                  : "bg-white text-stone-700 border border-stone-200 hover:border-amber-300 hover:bg-amber-50"
+              }`}
+            >
+              All Branches (सभी १२ शाखाएँ)
+            </button>
 
-          {KNOWLEDGE_BRANCHES.map((b) => {
-            const isSelected = selectedBranchId === b.id;
-            return (
+            {KNOWLEDGE_BRANCHES.map((b) => {
+              const isSelected = selectedBranchId === b.id;
+              return (
+                <button
+                  key={b.id}
+                  type="button"
+                  onClick={() => setSelectedBranchId(b.id)}
+                  className={`px-3.5 py-1.5 rounded-full text-xs font-semibold whitespace-nowrap transition-all cursor-pointer shrink-0 ${
+                    isSelected
+                      ? "bg-amber-700 text-white shadow-xs font-bold"
+                      : "bg-white text-stone-700 border border-stone-200 hover:border-amber-300 hover:bg-amber-50"
+                  }`}
+                >
+                  {b.title} ({b.hindiTitle})
+                </button>
+              );
+            })}
+          </div>
+
+          {/* Quick Search */}
+          <div className="relative min-w-[200px] sm:min-w-[260px] shrink-0">
+            <Search className="w-3.5 h-3.5 text-stone-400 absolute left-3 top-1/2 -translate-y-1/2" />
+            <input
+              type="text"
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              placeholder="ज्ञान शाखा या विषय खोजें..."
+              className="w-full pl-8 pr-7 py-1.5 rounded-xl text-xs bg-white border border-stone-200 focus:border-amber-400 focus:outline-none placeholder:text-stone-400 font-devanagari shadow-2xs"
+            />
+            {searchQuery && (
               <button
-                key={b.id}
                 type="button"
-                onClick={() => setSelectedBranchId(b.id)}
-                className={`px-3.5 py-1.5 rounded-full text-xs font-semibold whitespace-nowrap transition-all cursor-pointer ${
-                  isSelected
-                    ? "bg-amber-700 text-white shadow-xs font-bold"
-                    : "bg-white text-stone-700 border border-stone-200 hover:border-amber-300 hover:bg-amber-50"
-                }`}
+                onClick={() => setSearchQuery("")}
+                className="p-1 text-stone-400 hover:text-stone-700 absolute right-2 top-1/2 -translate-y-1/2 cursor-pointer"
               >
-                {b.title} ({b.hindiTitle})
+                <X className="w-3.5 h-3.5" />
               </button>
-            );
-          })}
+            )}
+          </div>
         </div>
       </div>
 
       {/* 3. Main Content: Flowing Knowledge Sections */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 space-y-12">
-        {filteredBranches.map((branch) => (
+        {filteredBranches.length === 0 ? (
+          <div className="p-12 text-center bg-white rounded-3xl border border-stone-200 shadow-2xs space-y-3">
+            <p className="font-serif text-lg font-bold text-stone-800">
+              खोजे गए शब्द के अनुसार कोई ज्ञान शाखा अथवा विषय नहीं मिला।
+            </p>
+            <p className="text-xs text-stone-500 font-devanagari">
+              कृपया भिन्न कीवर्ड टाइप करें या फ़िल्टर रीसेट करें।
+            </p>
+            <button
+              type="button"
+              onClick={() => {
+                setSelectedBranchId("all");
+                setSearchQuery("");
+              }}
+              className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-amber-600 text-white text-xs font-bold shadow-xs hover:bg-amber-700 cursor-pointer"
+            >
+              फ़िल्टर रीसेट करें (Reset Filter)
+            </button>
+          </div>
+        ) : (
+          filteredBranches.map((branch) => (
           <section
             key={branch.id}
             id={branch.id}
@@ -226,7 +300,7 @@ export default function KnowledgePage({ onNavigateHome }) {
               </div>
             )}
           </section>
-        ))}
+        )))}
 
         {/* Sacred Quote Card */}
         <div className="relative rounded-3xl overflow-hidden border border-amber-200/80 shadow-xs bg-gradient-to-r from-amber-50/90 via-[#fff8eb] to-amber-50/90 p-6 sm:p-8 text-center">

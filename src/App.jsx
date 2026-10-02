@@ -11,6 +11,7 @@ import SubjectDetailPage from "./pages/SubjectDetailPage.jsx";
 import KnowledgePage from "./components/knowledge/KnowledgePage.jsx";
 import CollectionsPage from "./components/collections/CollectionsPage.jsx";
 import ArticleDetailPage from "./components/article/ArticleDetailPage.jsx";
+import MantraReaderPage from "./pages/MantraReaderPage.jsx";
 import BlogListPage from "./pages/BlogListPage.jsx";
 import BlogDetailPage from "./pages/BlogDetailPage.jsx";
 
@@ -112,7 +113,21 @@ function MainLayout() {
             }
           />
 
-          {/* Page 4: Universal Detail Reader Page (e.g. /library/puja/shaiva/rudrabhisheka, /library/veda/rigveda/agnisukta) */}
+          {/* Page 4: Standard Mantra Reader Experience */}
+          <Route
+            path="/library/mantra/:mantraId"
+            element={<MantraReaderPage onOpenSearch={() => setIsSearchOpen(true)} />}
+          />
+          <Route
+            path="/mantra/:mantraId"
+            element={<MantraReaderPage onOpenSearch={() => setIsSearchOpen(true)} />}
+          />
+          <Route
+            path="/library/:category/:subject/mantra/:mantraId"
+            element={<MantraReaderPage onOpenSearch={() => setIsSearchOpen(true)} />}
+          />
+
+          {/* Page 5: Universal Detail Reader Page (e.g. /library/puja/shaiva/rudrabhisheka, /library/veda/rigveda/agnisukta) */}
           <Route
             path="/library/:category/:subject/:article"
             element={<ArticleDetailPage />}

@@ -6,7 +6,7 @@ import { GRANTHA_ARCHIVE } from "../../data/libraryHomeData.js";
 import gitaImg from "../../assets/images/library/cards/card-gita.jpg";
 import ramayanaImg from "../../assets/images/library/cards/card-ramayana.jpg";
 import mahabharataImg from "../../assets/images/library/cards/card-mahabharata.jpg";
-import upanishadImg from "../../assets/images/library/cards/card-rigveda.jpg";
+import upanishadImg from "../../assets/images/library/cards/card-upanishad.jpg";
 import puranaImg from "../../assets/images/library/cards/card-purana.jpg";
 import astrologyImg from "../../assets/images/library/cards/card-astrology.jpg";
 import samskaraImg from "../../assets/images/library/cards/card-samskara.jpg";
@@ -16,7 +16,7 @@ const GRANTHA_IMAGES = {
   "card-gita.jpg": gitaImg,
   "card-ramayana.jpg": ramayanaImg,
   "card-mahabharata.jpg": mahabharataImg,
-  "card-rigveda.jpg": upanishadImg,
+  "card-upanishad.jpg": upanishadImg,
   "card-purana.jpg": puranaImg,
   "card-astrology.jpg": astrologyImg,
   "card-samskara.jpg": samskaraImg,

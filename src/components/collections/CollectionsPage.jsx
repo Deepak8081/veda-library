@@ -17,7 +17,9 @@ import {
   Tag,
   ArrowLeft,
   Share2,
-  Bookmark
+  Bookmark,
+  X,
+  Filter
 } from "lucide-react";
 
 import { COLLECTIONS_LIST, getCollectionById } from "../../data/collectionsData";
@@ -41,12 +43,35 @@ export default function CollectionsPage({ onSelectArticle }) {
   const [activeTab, setActiveTab] = useState("all");
   const [searchQuery, setSearchQuery] = useState("");
   const [copiedNotification, setCopiedNotification] = useState(false);
+  const [itemSearchQuery, setItemSearchQuery] = useState("");
+  const [itemTypeFilter, setItemTypeFilter] = useState("all");
 
   // If a specific collection ID is passed in the URL, load its deep-dive view
   const currentCollection = useMemo(() => {
     if (!collectionId) return null;
     return getCollectionById(collectionId);
   }, [collectionId]);
+
+  const availableItemTypes = useMemo(() => {
+    if (!currentCollection || !currentCollection.items) return [];
+    return Array.from(new Set(currentCollection.items.map((i) => i.type).filter(Boolean)));
+  }, [currentCollection]);
+
+  const filteredCollectionItems = useMemo(() => {
+    if (!currentCollection || !currentCollection.items) return [];
+    return currentCollection.items.filter((item) => {
+      if (itemTypeFilter !== "all" && item.type !== itemTypeFilter) return false;
+      if (!itemSearchQuery.trim()) return true;
+      const q = itemSearchQuery.toLowerCase().trim();
+      return (
+        item.title.toLowerCase().includes(q) ||
+        (item.hindiTitle && item.hindiTitle.toLowerCase().includes(q)) ||
+        (item.desc && item.desc.toLowerCase().includes(q)) ||
+        (item.reference && item.reference.toLowerCase().includes(q)) ||
+        (item.type && item.type.toLowerCase().includes(q))
+      );
+    });
+  }, [currentCollection, itemSearchQuery, itemTypeFilter]);
 
   // Filter collections by tab and search
   const filteredCollections = useMemo(() => {
@@ -175,7 +200,7 @@ export default function CollectionsPage({ onSelectArticle }) {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {/* Left Column: Articles & Featured Items */}
             <div className="lg:col-span-2 space-y-6">
-              <div className="flex items-center justify-between border-b border-stone-200 pb-3">
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between border-b border-stone-200 pb-3 gap-2">
                 <div>
                   <h2 className="font-serif text-2xl font-bold text-stone-900">
                     Included Scriptures & Articles
@@ -184,14 +209,86 @@ export default function CollectionsPage({ onSelectArticle }) {
                     इस संग्रह के अंतर्गत उपलब्ध प्रामाणिक ग्रंथ, सूक्त, मंत्र एवं आलेख
                   </p>
                 </div>
-                <span className="text-xs font-bold text-amber-800 bg-amber-50 border border-amber-200 px-3 py-1 rounded-full">
-                  {currentCollection.items.length} Featured Texts
+                <span className="text-xs font-bold text-amber-800 bg-amber-50 border border-amber-200 px-3 py-1 rounded-full shrink-0 self-start sm:self-auto">
+                  {filteredCollectionItems.length} / {currentCollection.items.length} Texts
                 </span>
               </div>
 
+              {/* Items Filter & Search Strip */}
+              {currentCollection.items.length > 2 && (
+                <div className="p-3 rounded-xl bg-white border border-amber-200/80 shadow-2xs flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3">
+                  {/* Item Type Pills */}
+                  {availableItemTypes.length > 1 && (
+                    <div className="flex items-center gap-1.5 overflow-x-auto pb-1 sm:pb-0 scrollbar-none text-xs">
+                      <button
+                        type="button"
+                        onClick={() => setItemTypeFilter("all")}
+                        className={`px-3 py-1 rounded-full text-xs font-semibold transition-colors cursor-pointer whitespace-nowrap ${
+                          itemTypeFilter === "all"
+                            ? "bg-amber-700 text-white font-bold shadow-2xs"
+                            : "bg-amber-50 text-stone-700 hover:bg-amber-100 border border-amber-200/60"
+                        }`}
+                      >
+                        सभी ({currentCollection.items.length})
+                      </button>
+                      {availableItemTypes.map((t) => (
+                        <button
+                          key={t}
+                          type="button"
+                          onClick={() => setItemTypeFilter(t)}
+                          className={`px-3 py-1 rounded-full text-xs font-semibold transition-colors cursor-pointer whitespace-nowrap ${
+                            itemTypeFilter === t
+                              ? "bg-amber-700 text-white font-bold shadow-2xs"
+                              : "bg-amber-50 text-stone-700 hover:bg-amber-100 border border-amber-200/60"
+                          }`}
+                        >
+                          {t}
+                        </button>
+                      ))}
+                    </div>
+                  )}
+
+                  {/* Item Search Input */}
+                  <div className="relative min-w-[180px] sm:min-w-[220px]">
+                    <Search className="w-3.5 h-3.5 text-stone-400 absolute left-3 top-1/2 -translate-y-1/2" />
+                    <input
+                      type="text"
+                      value={itemSearchQuery}
+                      onChange={(e) => setItemSearchQuery(e.target.value)}
+                      placeholder="संग्रह में खोजें..."
+                      className="w-full pl-8 pr-7 py-1 rounded-lg text-xs bg-[#fffaf0] border border-stone-200 focus:border-amber-400 focus:outline-none placeholder:text-stone-400 font-devanagari"
+                    />
+                    {itemSearchQuery && (
+                      <button
+                        type="button"
+                        onClick={() => setItemSearchQuery("")}
+                        className="p-1 text-stone-400 hover:text-stone-700 absolute right-2 top-1/2 -translate-y-1/2 cursor-pointer"
+                      >
+                        <X className="w-3.5 h-3.5" />
+                      </button>
+                    )}
+                  </div>
+                </div>
+              )}
+
               {/* Items Cards */}
-              <div className="space-y-4">
-                {currentCollection.items.map((item) => (
+              {filteredCollectionItems.length === 0 ? (
+                <div className="p-8 text-center bg-white rounded-2xl border border-stone-200 shadow-2xs space-y-2">
+                  <p className="text-sm font-semibold text-stone-700">कोई ग्रंथ अथवा आलेख नहीं मिला।</p>
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setItemTypeFilter("all");
+                      setItemSearchQuery("");
+                    }}
+                    className="text-xs text-amber-700 hover:text-amber-900 underline font-bold cursor-pointer"
+                  >
+                    फ़िल्टर रीसेट करें
+                  </button>
+                </div>
+              ) : (
+                <div className="space-y-4">
+                  {filteredCollectionItems.map((item) => (
                   <div
                     key={item.id}
                     className="group bg-white p-5 rounded-2xl border border-stone-200/90 shadow-2xs hover:shadow-md hover:border-amber-400 transition-all"
@@ -244,6 +341,7 @@ export default function CollectionsPage({ onSelectArticle }) {
                   </div>
                 ))}
               </div>
+              )}
             </div>
 
             {/* Right Column: Taxonomy Divisions & Tags */}

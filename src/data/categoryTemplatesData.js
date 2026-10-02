@@ -4,6 +4,8 @@
 // Page 3: /library/:category/:subject
 // Page 4: /library/:category/:subject/:article
 
+import { COMPREHENSIVE_ARTICLES_DATA } from "./vedicArticlesData.js";
+
 export const CATEGORIES_DATA = {
   veda: {
     id: "veda",
@@ -144,7 +146,7 @@ export const CATEGORIES_DATA = {
         enName: "Shiva Mantras & Stotras",
         desc: "महामृत्युंजय, शिव तांडव, रुद्राष्टकम एवं पञ्चाक्षर मंत्र।",
         stats: "२५+ स्तोत्र व मंत्र",
-        imageKey: "card-puja.jpg"
+        imageKey: "card-sukta-rudra.jpg"
       },
       {
         id: "vishnu",
@@ -153,7 +155,7 @@ export const CATEGORIES_DATA = {
         enName: "Vishnu Mantras & Stotras",
         desc: "विष्णु सहस्रनाम, नारायण कवच, द्वादशाक्षर मंत्र।",
         stats: "२०+ स्तोत्र व मंत्र",
-        imageKey: "card-gita.jpg"
+        imageKey: "card-sukta-purusha.jpg"
       },
       {
         id: "devi",
@@ -162,7 +164,7 @@ export const CATEGORIES_DATA = {
         enName: "Devi Mantras & Suktas",
         desc: "श्री सूक्त, दुर्गा सप्तशती, ललिता सहस्रनाम।",
         stats: "३०+ स्तोत्र व मंत्र",
-        imageKey: "card-samskara.jpg"
+        imageKey: "card-sukta-vak.jpg"
       },
       {
         id: "gayatri",
@@ -171,7 +173,7 @@ export const CATEGORIES_DATA = {
         enName: "Vaidika Shanti & Gayatri",
         desc: "महाशांति पाठ, गायत्री, पवमान व हिरण्यगर्भ सूक्त।",
         stats: "१५+ वैदिक सूक्त",
-        imageKey: "card-rigveda.jpg"
+        imageKey: "card-sukta-gayatri.jpg"
       }
     ],
     topics: ["गायत्री", "महामृत्युंजय", "शांति", "आरती", "कवच", "सहस्रनाम", "सूक्त", "बीज मंत्र"],
@@ -224,7 +226,7 @@ export const CATEGORIES_DATA = {
         enName: "Shaiva Puja & Abhisheka",
         desc: "शिवलिंग पूजन, पंचामृत अभिषेक, बिल्व पत्र समर्पण एवं रुद्राध्याय।",
         stats: "११ अनुवाक",
-        imageKey: "card-puja.jpg"
+        imageKey: "deity-shiva.jpg"
       },
       {
         id: "shodashopachara",
@@ -233,7 +235,7 @@ export const CATEGORIES_DATA = {
         enName: "Shodashopachara Vidhi",
         desc: "आवाहन, आसन, पाद्य, अर्घ्य, आचमन, स्नान, वस्त्र, यज्ञोपवीत, गंध, पुष्प, धूप, दीप, नैवेद्य, ताम्बूल, प्रदक्षिणा, नमस्कार।",
         stats: "१६ उपचार",
-        imageKey: "card-samskara.jpg"
+        imageKey: "card-puja.jpg"
       }
     ],
     topics: ["रुद्राभिषेक", "कलश", "पंचामृत", "बिल्व पत्र", "आरती", "षोडशोपचार"],
@@ -330,7 +332,7 @@ export const CATEGORIES_DATA = {
         enName: "Navagraha Sciences",
         desc: "सूर्य, चंद्र, मंगल, बुध, गुरु, शुक्र, शनि, राहु, केतु का स्वरूप व फल।",
         stats: "९ ग्रह",
-        imageKey: "card-astrology.jpg"
+        imageKey: "card-jyotisha.jpg"
       }
     ],
     topics: ["सूर्य", "चंद्र", "नक्षत्र", "लग्न", "राशि", "महादशा", "मुहूर्त"],
@@ -367,10 +369,10 @@ export const CATEGORIES_DATA = {
     introHeading: "वेदाङ्ग — वेदों के षडङ्ग",
     introText: "वेदाङ्ग वेदों के अर्थ को समझने तथा यज्ञ आदि कर्मों के यथार्थ अनुष्ठान के लिए अनिवार्य छह विद्याएँ हैं।",
     subCategories: [
-      { id: "shiksha", slug: "shiksha", name: "शिक्षा (Phonetics)", enName: "Shiksha", desc: "वर्णोच्चारण एवं स्वर विज्ञान", stats: "पाणिनीय शिक्षा", imageKey: "card-rigveda.jpg" },
-      { id: "vyakarana", slug: "vyakarana", name: "व्याकरण (Grammar)", enName: "Vyakarana", desc: "पाणिनीय अष्टाध्यायी एवं पद रचना", stats: "८ अध्याय", imageKey: "card-samaveda.jpg" },
-      { id: "kalpa", slug: "kalpa", name: "कल्प (Ritual Codes)", enName: "Kalpa", desc: "श्रौत, गृह्य, धर्म व शुल्ब सूत्र", stats: "४ सूत्र भेद", imageKey: "card-yagya-fire.jpg" },
-      { id: "chandas", slug: "chandas", name: "छंद (Metrics)", enName: "Chandas", desc: "गायत्री, त्रिष्टुप, जगती आदि वैदिक छंद", stats: "पिङ्गल सूत्र", imageKey: "card-atharvaveda.jpg" }
+      { id: "shiksha", slug: "shiksha", name: "शिक्षा (Phonetics)", enName: "Shiksha", desc: "वर्णोच्चारण एवं स्वर विज्ञान", stats: "पाणिनीय शिक्षा", imageKey: "card-shiksha.jpg" },
+      { id: "vyakarana", slug: "vyakarana", name: "व्याकरण (Grammar)", enName: "Vyakarana", desc: "पाणिनीय अष्टाध्यायी एवं पद रचना", stats: "८ अध्याय", imageKey: "card-vyakarana.jpg" },
+      { id: "kalpa", slug: "kalpa", name: "कल्प (Ritual Codes)", enName: "Kalpa", desc: "श्रौत, गृह्य, धर्म व शुल्ब सूत्र", stats: "४ सूत्र भेद", imageKey: "card-kalpa.jpg" },
+      { id: "chandas", slug: "chandas", name: "छंद (Metrics)", enName: "Chandas", desc: "गायत्री, त्रिष्टुप, जगती आदि वैदिक छंद", stats: "पिङ्गल सूत्र", imageKey: "card-chhanda.jpg" }
     ],
     topics: ["पाणिनि", "अष्टाध्यायी", "स्वरित", "उदात्त", "श्रौतसूत्र", "शुल्बसूत्र", "गायत्री छंद"],
     featuredKnowledge: [
@@ -393,8 +395,8 @@ export const CATEGORIES_DATA = {
     introHeading: "उपनिषद — वेदान्त तत्वज्ञान",
     introText: "उपनिषद वेदों का अंतिम भाग (वेदांत) हैं, जिनमें जीव, जगत और ब्रह्म के तात्विक स्वरूप की गूढ़ व्याख्या की गई है।",
     subCategories: [
-      { id: "isha", slug: "isha", name: "ईशावास्योपनिषद्", enName: "Isha Upanishad", desc: "ईशावास्यमिदं सर्वं — यजुर्वेद १८ मंत्र", stats: "१८ मंत्र", imageKey: "card-gita.jpg" },
-      { id: "mandukya", slug: "mandukya", name: "माण्डूक्योपनिषद्", enName: "Mandukya Upanishad", desc: "ॐकार एवं चेतना की चार अवस्थाएँ", stats: "१२ मंत्र", imageKey: "card-purana.jpg" }
+      { id: "isha", slug: "isha", name: "ईशावास्योपनिषद्", enName: "Isha Upanishad", desc: "ईशावास्यमिदं सर्वं — यजुर्वेद १८ मंत्र", stats: "१८ मंत्र", imageKey: "card-grantha-isha.jpg" },
+      { id: "mandukya", slug: "mandukya", name: "माण्डूक्योपनिषद्", enName: "Mandukya Upanishad", desc: "ॐकार एवं चेतना की चार अवस्थाएँ", stats: "१२ मंत्र", imageKey: "card-grantha-mandukya.jpg" }
     ],
     topics: ["आत्मन्", "ब्रह्मन्", "सत्यमेव जयते", "तत्त्वमसि", "अहं ब्रह्मास्मि", "मोक्ष"],
     featuredKnowledge: [
@@ -417,8 +419,8 @@ export const CATEGORIES_DATA = {
     introHeading: "षड्दर्शन परंपरा",
     introText: "दृश्यते अनेन इति दर्शनम् — जिसके द्वारा परम सत्य का साक्षात्कार हो, वह दर्शन है।",
     subCategories: [
-      { id: "yoga", slug: "yoga", name: "योग दर्शन", enName: "Yoga Darshana", desc: "महर्षि पतंजलि कृत योगसूत्र व अष्टांग योग", stats: "४ पाद", imageKey: "card-samskara.jpg" },
-      { id: "vedanta", slug: "vedanta", name: "वेदांत दर्शन", enName: "Vedanta Darshana", desc: "ब्रह्मसूत्र, अद्वैत, विशिष्टाद्वैत व द्वैत", stats: "४ अध्याय", imageKey: "card-gita.jpg" }
+      { id: "yoga", slug: "yoga", name: "योग दर्शन", enName: "Yoga Darshana", desc: "महर्षि पतंजलि कृत योगसूत्र व अष्टांग योग", stats: "४ पाद", imageKey: "card-aranyaka.jpg" },
+      { id: "vedanta", slug: "vedanta", name: "वेदांत दर्शन", enName: "Vedanta Darshana", desc: "ब्रह्मसूत्र, अद्वैत, विशिष्टाद्वैत व द्वैत", stats: "४ अध्याय", imageKey: "card-upanishad.jpg" }
     ],
     topics: ["अष्टांग योग", "समाधि", "प्रकृति", "पुरुष", "प्रमाण", "माया"],
     featuredKnowledge: [
@@ -441,7 +443,7 @@ export const CATEGORIES_DATA = {
     introHeading: "धर्मो रक्षति रक्षितः",
     introText: "धारणाद् धर्म इत्याहुः धर्मो धारयते प्रजाः — जो संपूर्ण सृष्टि एवं समाज को धारण करता है, वह धर्म है।",
     subCategories: [
-      { id: "smriti", slug: "smriti", name: "धर्मशास्त्र एवं स्मृतियाँ", enName: "Dharmashastras", desc: "मनु, याज्ञवल्क्य व पराशर स्मृति", stats: "सदाचार", imageKey: "card-mahabharata.jpg" }
+      { id: "smriti", slug: "smriti", name: "धर्मशास्त्र एवं स्मृतियाँ", enName: "Dharmashastras", desc: "मनु, याज्ञवल्क्य व पराशर स्मृति", stats: "सदाचार", imageKey: "card-dharmasutra.jpg" }
     ],
     topics: ["सत्य", "अहिंसा", "सदाचार", "पुरुषार्थ", "कर्तव्य"],
     featuredKnowledge: [
@@ -487,7 +489,7 @@ export const CATEGORIES_DATA = {
     introHeading: "वैदिक एवं स्मार्त देव परंपरा",
     introText: "एकं सद्विप्रा बहुधा वदन्ति — एक ही परमसत्य को ऋषियों ने विविध नामों और स्वरूपों में वर्णित किया है।",
     subCategories: [
-      { id: "panchayatana", slug: "panchayatana", name: "स्मार्त पंचायतन", enName: "Panchayatana", desc: "सूर्य, गणेश, देवी, रुद्र व विष्णु", stats: "५ देव स्वरूप", imageKey: "card-purana.jpg" }
+      { id: "panchayatana", slug: "panchayatana", name: "स्मार्त पंचायतन", enName: "Panchayatana", desc: "सूर्य, गणेश, देवी, रुद्र व विष्णु", stats: "५ देव स्वरूप", imageKey: "deity-panchayatana.jpg" }
     ],
     topics: ["शिव", "विष्णु", "दुर्गा", "गणेश", "सूर्य", "अग्नि", "इंद्र"],
     featuredKnowledge: [
@@ -514,7 +516,8 @@ export const SUBJECTS_DATA = {
       mandalCount: "10 मण्डल",
       suktaCount: "1,028 सूक्त",
       mantraCount: "10,552 मंत्र",
-      chiefPriest: "होतृ (Hotri)"
+      chiefPriest: "होतृ (Hotri)",
+      chiefRishis: "मधुच्छन्दा, विश्वामित्र, वसिष्ठ, अत्रि, भारद्वाज, गृत्समद, कण्व"
     },
     navTabs: ["Overview", "Texts", "Structure", "Mantra & Sukta", "Rishi & Devata", "Articles", "Grantha", "References"],
     overviewText: "ऋग्वेद सनातन ज्ञान परंपरा का प्राचीनतम ग्रंथ है। इसमें १० मण्डलों में १०२८ सूक्त और १०,५५२ ऋचाएँ संकलित हैं। महर्षि विश्वामित्र, वसिष्ठ, भारद्वाज, अत्रि आदि ऋषियों द्वारा साक्षात्कृत ये मंत्र अग्नि, इंद्र, सूर्य, वरुण, उषा आदि देवों के स्वरूप और ब्रह्मांडीय सत्यों का उद्घाटन करते हैं।",
@@ -524,13 +527,29 @@ export const SUBJECTS_DATA = {
       { num: "10,552", title: "मंत्र / ऋचा", desc: "स्वर-युक्त विशुद्ध वैदिक ऋचाएँ" }
     ],
     availableTexts: [
-      { title: "मण्डल १", desc: "अग्नि, इंद्र, मरुत, अश्विनी सूक्त (१९१ सूक्त)" },
-      { title: "मण्डल २", desc: "ग़त्समद ऋषि कुल सूक्त (४३ सूक्त)" },
-      { title: "मण्डल ३", desc: "विश्वामित्र ऋषि कुल — गायत्री महामंत्र (६२ सूक्त)" },
-      { title: "मण्डल ७", desc: "वसिष्ठ ऋषि कुल — महामृत्युंजय मंत्र (१०४ सूक्त)" },
-      { title: "मण्डल १०", desc: "पुरुष सूक्त, नासदीय सूक्त, विवाह सूक्त (१९१ सूक्त)" }
+      { title: "मण्डल १", desc: "विविध ऋषि कुल (मधुच्छन्दा, मेधातिथि, दीर्घतमा, अगस्त्य आदि) • १९१ सूक्त, २००६ मंत्र — अग्नि, इंद्र, मरुत, अश्विनी सूक्त", mantraId: "rv-1-1-1", slug: "mandala-1" },
+      { title: "मण्डल २", desc: "गृत्समद ऋषि कुल (भार्गव-शौनक) • ४३ सूक्त, ४२९ मंत्र — इंद्र, अग्नि, रुद्र सूक्त", slug: "mandala-2" },
+      { title: "मण्डल ३", desc: "विश्वामित्र ऋषि कुल (गाथिन) • ६२ सूक्त, ६१७ मंत्र — गायत्री महामंत्र (३.६२.१०), अग्नि, इंद्र", mantraId: "rv-3-62-10", slug: "mandala-3" },
+      { title: "मण्डल ४", desc: "वामदेव गौतम ऋषि कुल • ५८ सूक्त, ५८९ मंत्र — अग्नि, इंद्र, ऋभु, उषा, घृत सूक्त", slug: "mandala-4" },
+      { title: "मण्डल ५", desc: "अत्रि भौम ऋषि कुल (अत्रि, पौरोहित) • ८७ सूक्त, ७२७ मंत्र — अग्नि, इंद्र, मरुत, विश्वेदेवा", slug: "mandala-5" },
+      { title: "मण्डल ६", desc: "भारद्वाज बार्हस्पत्य ऋषि कुल • ७५ सूक्त, ७६५ मंत्र — इंद्र, अग्नि, सरस्वती, पूषा", slug: "mandala-6" },
+      { title: "मण्डल ७", desc: "वसिष्ठ मैत्रावरुणि ऋषि कुल • १०४ सूक्त, ८४१ मंत्र — महामृत्युंजय मंत्र (७.५९.१२), वरुण, अग्नि, इंद्र", mantraId: "rv-7-59-12", slug: "mandala-7" },
+      { title: "मण्डल ८", desc: "काण्व एवं प्रगाथ ऋषि कुल • १०३ सूक्त, १७१६ मंत्र — इंद्र, अग्नि, बालखिल्य ११ सूक्त (८.४९-५९)", slug: "mandala-8" },
+      { title: "मण्डल ९", desc: "पवमान सोम मण्डल (विविध ऋषि) • ११४ सूक्त, ११०८ मंत्र — समस्त सूक्त केवल सोम देव को समर्पित", slug: "mandala-9" },
+      { title: "मण्डल १०", desc: "त्रित आप्त्य, नारायण, प्रजापति, श्रद्धा आदि • १९१ सूक्त, १७५४ मंत्र — पुरुष सूक्त (१०.९०), नासदीय सूक्त (१०.१२९), संगठन सूक्त (१०.१९१), विवाह सूक्त (१०.८५), नदी सूक्त (१०.७५)", mantraId: "rv-10-90-1", slug: "mandala-10" }
     ],
-    rishis: ["विश्वामित्र", "वसिष्ठ", "भारद्वाज", "अत्रि", "कश्यप", "गौतम", "जमदग्नि", "दीर्घतमा"],
+    rishis: [
+      "मधुच्छन्दा वैश्वामित्र (मण्डल १)",
+      "गृत्समद भार्गव (मण्डल २)",
+      "विश्वामित्र गाथिन (मण्डल ३)",
+      "वामदेव गौतम (मण्डल ४)",
+      "अत्रि भौम (मण्डल ५)",
+      "भारद्वाज बार्हस्पत्य (मण्डल ६)",
+      "वसिष्ठ मैत्रावरुणि (मण्डल ७)",
+      "कण्व व प्रगाथ (मण्डल ८)",
+      "पवमान सोम द्रष्टा (मण्डल ९)",
+      "नारायण, त्रित आप्त्य, अगस्त्य, दीर्घतमा (मण्डल १०)"
+    ],
     devatas: ["अग्नि", "इंद्र", "सूर्य", "सोम", "वरुण", "उषा", "रुद्र", "विष्णु", "मरुत"],
     articles: [
       {
@@ -547,17 +566,47 @@ export const SUBJECTS_DATA = {
       },
       {
         id: "gayatri-mantra",
-        title: "गायत्री मंत्र (३.६२.१०) का विशुद्ध वैदिक स्वरूप",
+        title: "गायत्री महामंत्र (३.६२.१०) का विशुद्ध वैदिक स्वरूप",
         desc: "सवितृ देव की उपासना, ऋषि-विश्वामित्र एवं गायत्री छंद का समन्वय।",
         slug: "gayatri-mantra"
+      },
+      {
+        id: "mahamrityunjaya-mantra",
+        title: "महामृत्युंजय मंत्र (७.५९.१२)",
+        desc: "त्र्यम्बकं यजामहे — अकाल मृत्यु निवारक, अमृतत्व प्रदायक शिव मंत्र।",
+        slug: "mahamrityunjaya-mantra"
+      },
+      {
+        id: "nasadiya-sukta",
+        title: "नासदीय सूक्त (१०.१२९) — सृष्टि उत्पत्ति",
+        desc: "नासदासीन्नो सदासीत्तदानीं — ब्रह्मांड की उत्पत्ति का परम दार्शनिक चिंतन।",
+        slug: "nasadiya-sukta"
+      },
+      {
+        id: "samgathan-sukta",
+        title: "संगठन सूक्त (१०.१९१) — 'सं गच्छध्वम्'",
+        desc: "समानो मन्त्रः समितिः समानी — ऋग्वेद का अमर वैश्विक एकता संदेश।",
+        slug: "samgathan-sukta"
+      },
+      {
+        id: "vak-sukta",
+        title: "वाक् सूक्त / देवी सूक्त (१०.१२५)",
+        desc: "अहं रुद्रेभिर्वसुभिश्चरामि — वागाम्भृणी द्वारा दृष्ट शाक्त परंपरा का मूल।",
+        slug: "vak-sukta"
+      },
+      {
+        id: "hiranyagarbha-sukta",
+        title: "हिरण्यगर्भ सूक्त (१०.१२१)",
+        desc: "कस्मै देवाय हविषा विधेम — ज्योतिर्मय प्रजापति की वैदिक स्तुति।",
+        slug: "hiranyagarbha-sukta"
       }
     ],
     relatedGranthas: [
-      { name: "शाकल संहिता", type: "संहिता", author: "महर्षि शाकल्य" },
-      { name: "ऐतरेय ब्राह्मण", type: "ब्राह्मण", author: "महीदास ऐतरेय" },
-      { name: "ऐतरेय आरण्यक", type: "आरण्यक", author: "वैदिक परंपरा" },
-      { name: "ऐतरेयोपनिषद्", type: "उपनिषद", author: "प्रस्थानत्रयी" },
-      { name: "सायण भाष्य (माधवीय धातुवृत्ति)", type: "भाष्य", author: "सायणाचार्य" }
+      { name: "शाकल संहिता", type: "संहिता", author: "महर्षि शाकल्य", slug: "shakala-samhita" },
+      { name: "ऐतरेय ब्राह्मण", type: "ब्राह्मण", author: "महीदास ऐतरेय", slug: "aitareya-brahmana" },
+      { name: "ऐतरेय आरण्यक", type: "आरण्यक", author: "वैदिक परंपरा", slug: "aitareya-aranyaka" },
+      { name: "ऐतरेयोपनिषद्", type: "उपनिषद", author: "प्रस्थानत्रयी ('प्रज्ञानं ब्रह्म')", slug: "aitareya-upanishad" },
+      { name: "सायण भाष्य (माधवीय धातुवृत्ति)", type: "भाष्य", author: "सायणाचार्य", slug: "sayana-bhashya" }
     ],
     relatedSubjects: [
       { name: "यजुर्वेद", slug: "yajurveda", desc: "शुक्ल व कृष्ण शाखा, शतपथ ब्राह्मण" },
@@ -580,7 +629,8 @@ export const SUBJECTS_DATA = {
       mandalCount: "२ मुख्य धाराएँ",
       suktaCount: "४० अध्याय (शुक्ल) • ७ काण्ड (तैत्तिरीय)",
       mantraCount: "१९७५+ मंत्र (शुक्ल) • २१९८ (कृष्ण)",
-      chiefPriest: "अध्वर्यु (Adhvaryu)"
+      chiefPriest: "अध्वर्यु (Adhvaryu)",
+      chiefRishis: "याज्ञवल्क्य, तित्तिरि, वैशम्पायन, कठ, कात्यायन, पारस्कर, बौधायन"
     },
     navTabs: ["Overview", "Shukla Yajurveda", "Krishna Yajurveda", "Structure", "Texts", "Rishi & Devata", "Articles", "Grantha"],
     overviewText: "यजुर्वेद यज्ञीय क्रियाओं का मार्गदर्शक वेद है। शुक्ल यजुर्वेद में महर्षि याज्ञवल्क्य द्वारा सूर्यदेव से साक्षात्कृत शुद्ध मंत्र भाग संकलित है (माध्यन्दिना एवं काण्व शाखा), जिसके साथ विशाल शतपथ ब्राह्मण और ईश तथा बृहदारण्यक जैसे प्रधान उपनिषद आते हैं। कृष्ण यजुर्वेद में तैत्तिरीय, मैत्रायणी, कठ एवं कपिष्ठल शाखाएँ हैं जिनमें श्री रुद्राध्याय, तैत्तिरीय ब्राह्मण, तैत्तिरीय आरण्यक और कठोपनिषद सम्मिलित हैं।",
@@ -620,15 +670,17 @@ export const SUBJECTS_DATA = {
       }
     ],
     relatedGranthas: [
-      { name: "वाजसनेयि माध्यन्दिना संहिता", type: "संहिता", author: "महर्षि याज्ञवल्क्य" },
-      { name: "शतपथ ब्राह्मण", type: "ब्राह्मण", author: "याज्ञवल्क्य परंपरा" },
-      { name: "तैत्तिरीय संहिता", type: "संहिता", author: "ऋषि तित्तिरि" },
-      { name: "ईशावास्योपनिषद्", type: "उपनिषद", author: "प्रस्थानत्रयी" },
-      { name: "बृहदारण्यकोपनिषद्", type: "उपनिषद", author: "प्रस्थानत्रयी" },
-      { name: "कठोपनिषद", type: "उपनिषद", author: "यम-नचिकेता संवाद" },
-      { name: "पारस्कर गृह्यसूत्र", type: "गृह्यसूत्र", author: "महर्षि पारस्कर" },
-      { name: "कात्यायन श्रौत व शुल्बसूत्र", type: "सूत्र", author: "महर्षि कात्यायन" },
-      { name: "बौधायन श्रौत व शुल्बसूत्र", type: "सूत्र", author: "महर्षि बौधायन" }
+      { name: "वाजसनेयि माध्यन्दिना संहिता", type: "संहिता", author: "महर्षि याज्ञवल्क्य", slug: "shukla-yajurveda" },
+      { name: "शतपथ ब्राह्मण", type: "ब्राह्मण", author: "याज्ञवल्क्य परंपरा", slug: "shatapatha-brahmana" },
+      { name: "तैत्तिरीय संहिता", type: "संहिता", author: "ऋषि तित्तिरि", slug: "taittiriya-samhita" },
+      { name: "तैत्तिरीय ब्राह्मण", type: "ब्राह्मण", author: "तित्तिरि परंपरा", slug: "taittiriya-brahmana" },
+      { name: "तैत्तिरीय आरण्यक", type: "आरण्यक", author: "तित्तिरि परंपरा", slug: "taittiriya-aranyaka" },
+      { name: "ईशावास्योपनिषद्", type: "उपनिषद", author: "प्रस्थानत्रयी", slug: "isha-upanishad" },
+      { name: "बृहदारण्यकोपनिषद्", type: "उपनिषद", author: "प्रस्थानत्रयी", slug: "brihadaranyaka-upanishad" },
+      { name: "कठोपनिषद्", type: "उपनिषद", author: "यम-नचिकेता संवाद", slug: "katha-upanishad" },
+      { name: "तैत्तिरीयोपनिषद्", type: "उपनिषद", author: "प्रस्थानत्रयी", slug: "taittiriya-upanishad" },
+      { name: "श्वेताश्वतरोपनिषद्", type: "उपनिषद", author: "महर्षि श्वेताश्वतर", slug: "shvetashvatara-upanishad" },
+      { name: "बौधायन शुल्बसूत्र", type: "शुल्बसूत्र", author: "महर्षि बौधायन", slug: "baudhayana-sulbasutra" }
     ],
     relatedSubjects: [
       { name: "ऋग्वेद", slug: "rigveda", desc: "शाकल शाखा, १० मण्डल, १०२८ सूक्त" },
@@ -651,7 +703,8 @@ export const SUBJECTS_DATA = {
       mandalCount: "२ आर्चिक (पूर्वार्चिक व उत्तरार्चिक)",
       suktaCount: "१८७५ साम / छंद",
       mantraCount: "१५०४ ऋक्-आधारित • ९९ मौलिक",
-      chiefPriest: "उद्गातृ (Udgatri)"
+      chiefPriest: "उद्गातृ (Udgatri)",
+      chiefRishis: "जैमिनि, सुकर्मा, कौथुम, राणायन, उद्दालक आरुणि, सत्यकाम जाबाल"
     },
     navTabs: ["Overview", "3 Shakhas", "Unified Literature", "Brahmanas", "Upanishads", "Music & Svaras", "Articles"],
     overviewText: "सामवेद ऋचाओं का संगीतमय गायन (उद्गीथ) है। इसके प्रमुख तीन शाखा विभाग हैं: कौथुम शाखा (उत्तर-पश्चिम-पूर्व भारत), राणायनीय शाखा (महाराष्ट्र-कर्नाटक), और जैमिनीय/तवलकार शाखा (केरल-तमिलनाडु)। सामवेद के ८-९ ब्राह्मण हैं (ताण्ड्य, षड्विंश, सामविधान, आर्षेय, देवताध्याय, छांदोग्य, संहितोपनिषद, वंश, जैमिनीय), और इसके अंतर्गत छान्दोग्योपनिषद् ('तत्त्वमसि') एवं केनोपनिषद् ('केनेषितं पतति...') जैसे अत्यंत महत्वपूर्ण उपनिषद आते हैं।",
@@ -663,10 +716,9 @@ export const SUBJECTS_DATA = {
     availableTexts: [
       { title: "सामवेद संहिता (पूर्वार्चिक)", desc: "६ प्रपाठक (आग्नेय, ऐन्द्र, पवमान, आरण्य पर्व - ५८५ छंद)" },
       { title: "सामवेद संहिता (उत्तरार्चिक)", desc: "९ प्रपाठक, २१ अध्याय (१२२५ मंत्र)" },
-      { title: "ताण्ड्य महाब्राह्मण (पञ्चविंश)", desc: "२५ अध्याय (व्रात्यस्तोम एवं सोमयाग विधान)" },
-      { title: "षड्विंश ब्राह्मण (अद्भुत ब्राह्मण)", desc: "६ प्रपाठक (प्राकृतिक उत्पात शांति विधान)" },
-      { title: "छान्दोग्य उपनिषद", desc: "८ प्रपाठक — ॐकार उद्गीथ, शाण्डिल्य विद्या, तत्त्वमसि, सनत्कुमार-नारद संवाद" },
-      { title: "केन उपनिषद (तवलकार उपनिषद)", desc: "४ खण्ड — यक्ष उपाख्यान एवं ब्रह्मचेतना" }
+      { title: "ताण्ड्य महाब्राह्मण (पञ्चविंश)", desc: "२५ अध्याय (व्रात्यस्तोम एवं सोमयाग विधान)", slug: "tandya-mahabrahmana" },
+      { title: "छान्दोग्य उपनिषद", desc: "८ प्रपाठक — ॐकार उद्गीथ, शाण्डिल्य विद्या, तत्त्वमसि, सनत्कुमार-नारद संवाद", slug: "chandogya-upanishad" },
+      { title: "केन उपनिषद (तवलकार उपनिषद)", desc: "४ खण्ड — यक्ष उपाख्यान एवं ब्रह्मचेतना", slug: "kena-upanishad" }
     ],
     rishis: ["जैमिनि", "सुकर्मा", "कौथुम", "राणायन", "उद्दालक आरुणि", "श्वेतकेतु", "सत्यकाम जाबाल", "सनत्कुमार"],
     devatas: ["सोम", "अग्नि", "इंद्र", "सविता", "वायु", "प्रजापति"],
@@ -684,20 +736,16 @@ export const SUBJECTS_DATA = {
         slug: "kena-upanishad"
       },
       {
-        id: "samaveda-svara-sangeet",
-        title: "सामगान और भारतीय शास्त्रीय संगीत का उद्गम",
-        desc: "सप्त स्वरों (कृष्त, प्रथम, द्वितीय, तृतीय, चतुर्थ, मन्द्र, अतिस्वार्य) का वैज्ञानिक आधार।",
-        slug: "samaveda-svara-sangeet"
+        id: "tandya-mahabrahmana",
+        title: "ताण्ड्य महाब्राह्मण (पञ्चविंश ब्राह्मण)",
+        desc: "२५ प्रपाठकों में विस्तृत व्रात्यस्तोम एवं सोमयाग साम-गान विधान।",
+        slug: "tandya-mahabrahmana"
       }
     ],
     relatedGranthas: [
-      { name: "कौथुम सामवेद संहिता", type: "संहिता", author: "महर्षि कौथुम" },
-      { name: "ताण्ड्य महाब्राह्मण", type: "ब्राह्मण", author: "वैदिक परंपरा" },
-      { name: "छान्दोग्य उपनिषद", type: "उपनिषद", author: "प्रस्थानत्रयी" },
-      { name: "केनोपनिषद्", type: "उपनिषद", author: "प्रस्थानत्रयी" },
-      { name: "गोभिल गृह्यसूत्र", type: "गृह्यसूत्र", author: "महर्षि गोभिल" },
-      { name: "गौतम धर्मसूत्र", type: "धर्मसूत्र", author: "महर्षि गौतम" },
-      { name: "पुष्पसूत्र व नारदीय शिक्षा", type: "लक्षण ग्रंथ", author: "महर्षि नारद" }
+      { name: "ताण्ड्य महाब्राह्मण", type: "ब्राह्मण", author: "वैदिक परंपरा", slug: "tandya-mahabrahmana" },
+      { name: "छान्दोग्य उपनिषद", type: "उपनिषद", author: "प्रस्थानत्रयी ('तत्त्वमसि')", slug: "chandogya-upanishad" },
+      { name: "केनोपनिषद्", type: "उपनिषद", author: "प्रस्थानत्रयी", slug: "kena-upanishad" }
     ],
     relatedSubjects: [
       { name: "ऋग्वेद", slug: "rigveda", desc: "मूल मंत्र एवं सूक्त संग्रह" },
@@ -720,7 +768,8 @@ export const SUBJECTS_DATA = {
       mandalCount: "२० काण्ड",
       suktaCount: "७३० सूक्त",
       mantraCount: "५,९७७ मंत्र",
-      chiefPriest: "ब्रह्मा (Brahma - सर्वयज्ञ निरीक्षक)"
+      chiefPriest: "ब्रह्मा (Brahma - सर्वयज्ञ निरीक्षक)",
+      chiefRishis: "अथर्वा, अंगिरा, भृगु, पिप्पलाद, शौनक, कौशिक"
     },
     navTabs: ["Overview", "Shaunaka Shakha", "Paippalada Shakha", "Prithvi Sukta", "Brahmanas", "Upanishads", "Articles"],
     overviewText: "अथर्ववेद को 'ब्रह्मवेद' भी कहा जाता है क्योंकि इसका मुख्य ऋत्विक 'ब्रह्मा' होता है, जो संपूर्ण यज्ञ की देखरेख करता है। शौनक शाखा में २० काण्ड, ७३० सूक्त और ५९७७ मंत्र हैं। इसमें प्रसिद्ध पृथ्वी सूक्त (भूमि सूक्त १२.१ - 'माता भूमिः पुत्रोऽहं पृथिव्याः'), गोपथ ब्राह्मण, तथा मुण्डक उपनिषद ('सत्यमेव जयते'), माण्डूक्य उपनिषद ('अयमात्मा ब्रह्म'), और प्रश्न उपनिषद जैसे विश्वप्रसिद्ध दार्शनिक ग्रंथ समाहित हैं।",
@@ -731,12 +780,13 @@ export const SUBJECTS_DATA = {
     ],
     availableTexts: [
       { title: "शौनक संहिता (काण्ड १ - २०)", desc: "२० काण्ड, ३४ प्रपाठक, १११ अनुवाक, ७३० सूक्त, ५,९७७ मंत्र" },
-      { title: "पृथ्वी सूक्त (भूमि सूक्त १२.१)", desc: "६३ ऋचाएँ — पर्यावरण, मातृभूमि व राष्ट्रभक्ति का अमर सूक्त" },
-      { title: "गोपथ ब्राह्मण (पूर्व व उत्तर)", desc: "११ प्रपाठक (५ पूर्व + ६ उत्तर) — यज्ञ व ॐकार माहात्म्य" },
-      { title: "मुण्डक उपनिषद", desc: "३ मुण्डक, ६ खण्ड — 'सत्यमेव जयते नानृतम्', परा-अपरा विद्या, द्वौ सुपर्णा" },
-      { title: "माण्डूक्य उपनिषद", desc: "१२ मंत्र — ॐकार, जाग्रत-स्वप्न-सुषुप्ति-तुरीय, 'अयमात्मा ब्रह्म'" },
-      { title: "प्रश्न उपनिषद", desc: "६ प्रश्न — महर्षि पिप्पलाद और ६ ऋषियों का आध्यात्मिक संवाद" },
-      { title: "कौशिक गृह्यसूत्र व वैतान श्रौतसूत्र", desc: "शांतिक-पौष्टिक, भैषज्य एवं गृह्य संस्कार विधान" }
+      { title: "पृथ्वी सूक्त (भूमि सूक्त १२.१)", desc: "६३ ऋचाएँ — पर्यावरण, मातृभूमि व राष्ट्रभक्ति का अमर सूक्त", slug: "prithvi-sukta" },
+      { title: "गोपथ ब्राह्मण (पूर्व व उत्तर)", desc: "११ प्रपाठक (५ पूर्व + ६ उत्तर) — यज्ञ व ॐकार माहात्म्य", slug: "gopatha-brahmana" },
+      { title: "मुण्डक उपनिषद", desc: "३ मुण्डक, ६ खण्ड — 'सत्यमेव जयते नानृतम्', परा-अपरा विद्या, द्वौ सुपर्णा", slug: "mundaka-upanishad" },
+      { title: "माण्डूक्य उपनिषद", desc: "१२ मंत्र — ॐकार, जाग्रत-स्वप्न-सुषुप्ति-तुरीय, 'अयमात्मा ब्रह्म'", slug: "mandukya-upanishad" },
+      { title: "प्रश्न उपनिषद", desc: "६ प्रश्न — महर्षि पिप्पलाद और ६ ऋषियों का आध्यात्मिक संवाद", slug: "prashna-upanishad" },
+      { title: "कौशिक गृह्यसूत्र", desc: "शांतिक-पौष्टिक, भैषज्य एवं गृह्य संस्कार विधान", slug: "kaushika-sutra" },
+      { title: "वैतान श्रौतसूत्र", desc: "अथर्ववेदीय श्रौत याग व ब्रह्मा ऋत्विक विधान", slug: "vaitana-shrautasutra" }
     ],
     rishis: ["अथर्वा", "अंगिरा", "भृगु", "पिप्पलाद", "शौनक", "कौशिक"],
     devatas: ["ब्रह्म", "वरुण", "अग्नि", "इंद्र", "काल", "स्कम्भ", "पृथ्वी माता", "रोहित"],
@@ -758,17 +808,21 @@ export const SUBJECTS_DATA = {
         title: "माण्डूक्योपनिषद् एवं ॐकार चेतना",
         desc: "जाग्रत, स्वप्न, सुषुप्ति और तुरीय अवस्था का ॐकार के अक्षरों द्वारा विश्लेषण।",
         slug: "mandukya-upanishad"
+      },
+      {
+        id: "prashna-upanishad",
+        title: "प्रश्नोपनिषद् — महर्षि पिप्पलाद संवाद",
+        desc: "६ ऋषियों के सृष्टि, प्राण, रयि और षोडशकल पुरुष विषयक ६ दार्शनिक प्रश्न।",
+        slug: "prashna-upanishad"
       }
     ],
     relatedGranthas: [
-      { name: "शौनक अथर्ववेद संहिता", type: "संहिता", author: "महर्षि शौनक" },
-      { name: "पैप्पलाद संहिता", type: "संहिता", author: "महर्षि पिप्पलाद" },
-      { name: "गोपथ ब्राह्मण", type: "ब्राह्मण", author: "ऋषि गोपथ" },
-      { name: "मुण्डक उपनिषद", type: "उपनिषद", author: "प्रस्थानत्रयी" },
-      { name: "माण्डूक्य उपनिषद", type: "उपनिषद", author: "प्रस्थानत्रयी" },
-      { name: "प्रश्न उपनिषद", type: "उपनिषद", author: "प्रस्थानत्रयी" },
-      { name: "कौशिक गृह्यसूत्र", type: "गृह्यसूत्र", author: "महर्षि कौशिक" },
-      { name: "वैतान श्रौतसूत्र", type: "श्रौतसूत्र", author: "वैदिक परंपरा" }
+      { name: "गोपथ ब्राह्मण", type: "ब्राह्मण", author: "ऋषि गोपथ", slug: "gopatha-brahmana" },
+      { name: "मुण्डक उपनिषद", type: "उपनिषद", author: "प्रस्थानत्रयी ('सत्यमेव जयते')", slug: "mundaka-upanishad" },
+      { name: "माण्डूक्य उपनिषद", type: "उपनिषद", author: "प्रस्थानत्रयी ('अयमात्मा ब्रह्म')", slug: "mandukya-upanishad" },
+      { name: "प्रश्न उपनिषद", type: "उपनिषद", author: "प्रस्थानत्रयी", slug: "prashna-upanishad" },
+      { name: "कौशिक सूत्र", type: "गृह्यसूत्र", author: "महर्षि कौशिक", slug: "kaushika-sutra" },
+      { name: "वैतान श्रौतसूत्र", type: "श्रौतसूत्र", author: "शौनक परंपरा", slug: "vaitana-shrautasutra" }
     ],
     relatedSubjects: [
       { name: "ऋग्वेद", slug: "rigveda", desc: "१० मण्डल, १०२८ सूक्त" },
@@ -815,10 +869,10 @@ export const SUBJECTS_DATA = {
       { id: "shatapatha-brahmana", title: "शतपथ ब्राह्मण", desc: "१४ काण्डों का महाग्रंथ", slug: "shatapatha-brahmana" }
     ],
     relatedGranthas: [
-      { name: "वाजसनेयि संहिता", type: "संहिता", author: "याज्ञवल्क्य" },
-      { name: "शतपथ ब्राह्मण", type: "ब्राह्मण", author: "याज्ञवल्क्य" },
-      { name: "ईशावास्योपनिषद्", type: "उपनिषद", author: "प्रस्थानत्रयी" },
-      { name: "बृहदारण्यकोपनिषद्", type: "उपनिषद", author: "प्रस्थानत्रयी" }
+      { name: "वाजसनेयि संहिता", type: "संहिता", author: "याज्ञवल्क्य", slug: "shakala-samhita" },
+      { name: "शतपथ ब्राह्मण", type: "ब्राह्मण", author: "याज्ञवल्क्य", slug: "shatapatha-brahmana" },
+      { name: "ईशावास्योपनिषद्", type: "उपनिषद", author: "प्रस्थानत्रयी", slug: "isha-upanishad" },
+      { name: "बृहदारण्यकोपनिषद्", type: "उपनिषद", author: "प्रस्थानत्रयी", slug: "brihadaranyaka-upanishad" }
     ],
     relatedSubjects: [
       { name: "कृष्ण यजुर्वेद", slug: "krishna-yajurveda", desc: "तैत्तिरीय, मैत्रायणी, कठ शाखा" }
@@ -862,9 +916,9 @@ export const SUBJECTS_DATA = {
       { id: "rudrabhisheka", title: "रुद्राभिषेक विधान", desc: "तैत्तिरीय संहिता रुद्राध्याय", slug: "rudrabhisheka" }
     ],
     relatedGranthas: [
-      { name: "तैत्तिरीय संहिता", type: "संहिता", author: "तित्तिरि" },
-      { name: "तैत्तिरीय उपनिषद", type: "उपनिषद", author: "प्रस्थानत्रयी" },
-      { name: "कठोपनिषद", type: "उपनिषद", author: "यम-नचिकेता" }
+      { name: "तैत्तिरीय संहिता", type: "संहिता", author: "तित्तिरि", slug: "taittiriya-samhita" },
+      { name: "तैत्तिरीय उपनिषद", type: "उपनिषद", author: "प्रस्थानत्रयी", slug: "isha-upanishad" },
+      { name: "कठोपनिषद", type: "उपनिषद", author: "यम-नचिकेता", slug: "isha-upanishad" }
     ],
     relatedSubjects: [
       { name: "शुक्ल यजुर्वेद", slug: "shukla-yajurveda", desc: "माध्यन्दिना व काण्व शाखा" }
@@ -896,8 +950,8 @@ export const SUBJECTS_DATA = {
       }
     ],
     relatedGranthas: [
-      { name: "कृष्ण यजुर्वेद तैत्तिरीय संहिता", type: "श्रुति", author: "वैदिक परंपरा" },
-      { name: "शिव पुराण (विद्येश्वर संहिता)", type: "पुराण", author: "महर्षि वेदव्यास" }
+      { name: "कृष्ण यजुर्वेद तैत्तिरीय संहिता", type: "श्रुति", author: "वैदिक परंपरा", slug: "taittiriya-samhita" },
+      { name: "शिव पुराण (विद्येश्वर संहिता)", type: "पुराण", author: "महर्षि वेदव्यास", slug: "rudrabhisheka" }
     ]
   },
   "veda/rudrabhisheka": {
@@ -966,100 +1020,15 @@ export const SUBJECTS_DATA = {
       }
     ],
     relatedGranthas: [
-      { name: "यजुर्वेद तैत्तिरीय संहिता", type: "संहिता", author: "महर्षि याज्ञवल्क्य / वैशम्पायन परंपरा" },
-      { name: "शुक्ल यजुर्वेद वाजसनेयि संहिता (अध्याय १६)", type: "संहिता", author: "महर्षि याज्ञवल्क्य" },
-      { name: "शिव पुराण (विद्येश्वर संहिता)", type: "पुराण", author: "महर्षि वेदव्यास" }
+      { name: "यजुर्वेद तैत्तिरीय संहिता", type: "संहिता", author: "महर्षि याज्ञवल्क्य / वैशम्पायन परंपरा", slug: "taittiriya-samhita" },
+      { name: "शुक्ल यजुर्वेद वाजसनेयि संहिता (अध्याय १६)", type: "संहिता", author: "महर्षि याज्ञवल्क्य", slug: "shakala-samhita" },
+      { name: "शिव पुराण (विद्येश्वर संहिता)", type: "पुराण", author: "महर्षि वेदव्यास", slug: "rudrabhisheka" }
     ]
   }
 };
 
 // Article Detail Data for Page 4: /library/:category/:subject/:article
 export const ARTICLES_DATA = {
-  "rudrabhisheka": {
-    id: "rudrabhisheka",
-    slug: "rudrabhisheka",
-    categorySlug: "puja",
-    subjectSlug: "shaiva",
-    title: "Rudrabhisheka",
-    hindiTitle: "रुद्राभिषेक",
-    contentType: "PUJA & RITUAL",
-    updatedDate: "20 September 2026",
-    tags: ["Puja", "Shaiva Tradition", "Ritual"],
-    badges: [
-      { label: "Source Verified", type: "verified" },
-      { label: "Collected", type: "neutral" },
-      { label: "Under Review", type: "review" },
-      { label: "Tradition Verified", type: "neutral" },
-      { label: "Library Approved", type: "approved" }
-    ],
-    intro: "रुद्राभिषेक भगवान शिव के रुद्र स्वरूप की उपासना का एक महत्वपूर्ण वैदिक एवं शास्त्रोक्त अनुष्ठान है। इसमें विशेष द्रव्यों द्वारा शिवलिंग पर जल, दुग्ध, घृत आदि से अभिषेक किया जाता है, जो आत्मिक शांति और आध्यात्मिक शुद्धि का कारण माना जाता है।",
-    etymology: [
-      { term: "रुद्र", meaning: "'रुद्' धातु से व्युत्पन्न, दुःख नाशक व कल्याणकारी शिव स्वरूप।" },
-      { term: "अभिषेक", meaning: "'अभि + षिच्' धातु, जिसका अर्थ है पवित्र द्रव्यों से स्नान कराना।" }
-    ],
-    shastricBase: "यजुर्वेद तैत्तिरीय संहिता (रुद्राध्याय ४.५.१), शतपथ ब्राह्मण, स्कन्द पुराण।",
-    sourceMeta: {
-      grantha: "यजुर्वेद (Krishna Yajurveda)",
-      shakha: "तैत्तिरीय संहिता",
-      kanda: "काण्ड ४, प्रपाठक ५",
-      anuvaka: "११ अनुवाक (श्री रुद्राध्याय)",
-      rishi: "ऋषि: अत्रि / भारद्वाज",
-      devata: "देवता: रुद्र"
-    },
-    primaryMantra: {
-      sanskrit: "नमस्ते रुद्र मन्यव उतो त इषवे नमः।\nनमस्ते अस्तु धन्वने बाहुभ्यामुत ते नमः॥",
-      ref: "यजुर्वेद १६.१ (रुद्राध्याय प्रथम मंत्र)",
-      translation: "हे रुद्र! आपके क्रोध को नमस्कार है, आपके बाण को नमस्कार है। आपके धनुष और दोनों भुजाओं को बारंबार नमस्कार है।"
-    },
-    relatedArticles: [
-      { title: "Mahamrityunjaya Mantra", tag: "Mantra • Shaiva", slug: "mahamrityunjaya-mantra" },
-      { title: "Shiva Puja Vidhi", tag: "Puja • Shaiva", slug: "shiva-puja" },
-      { title: "Bilva Patra Mahatmya", tag: "Puja • Shaiva", slug: "bilva-patra" },
-      { title: "Rudra Sukta", tag: "Mantra • Vedic", slug: "rudra-sukta" }
-    ],
-    relatedGrantha: { name: "Yajurveda", desc: "Taittiriya Samhita" },
-    relatedTopics: ["Rudra", "Shiva", "Abhisheka", "Mantra", "Yajurveda"]
-  },
-  "agnisukta": {
-    id: "agnisukta",
-    slug: "agnisukta",
-    categorySlug: "veda",
-    subjectSlug: "rigveda",
-    title: "Agni Sukta",
-    hindiTitle: "अग्नि सूक्त (ऋग्वेद १.१)",
-    contentType: "VEDIC TEXT / SUKTA",
-    updatedDate: "20 September 2026",
-    tags: ["Veda", "Rigveda", "Sukta"],
-    badges: [
-      { label: "Source Verified", type: "verified" },
-      { label: "Library Approved", type: "approved" }
-    ],
-    intro: "अग्नि सूक्त ऋग्वेद का सर्वप्रथम सूक्त है (मण्डल १, सूक्त १)। इसमें ९ ऋचाएँ हैं। इसके ऋषि मधुच्छन्दा वैश्वामित्र हैं और देवता अग्नि हैं। छंद गायत्री है।",
-    etymology: [
-      { term: "अग्नि", meaning: "'अग्' धातु से व्युत्पन्न, जो आगे ले जाने वाला, प्रकाशक व अग्रणी है।" },
-      { term: "पुरोहित", meaning: "यज्ञ के अग्रभाग में स्थापित, देवों का आह्वान करने वाला।" }
-    ],
-    shastricBase: "ऋग्वेद संहिता प्रथम मण्डल प्रथम सूक्त, सायण भाष्य, स्कंदस्वामी भाष्य।",
-    sourceMeta: {
-      grantha: "ऋग्वेद (Rigveda)",
-      shakha: "शाकल संहिता",
-      kanda: "मण्डल १, सूक्त १",
-      anuvaka: "९ ऋचाएँ (मंत्र १-९)",
-      rishi: "ऋषि: मधुच्छन्दा वैश्वामित्र",
-      devata: "देवता: अग्नि",
-      chandas: "छंद: गायत्री"
-    },
-    primaryMantra: {
-      sanskrit: "ॐ अग्निमीळे पुरोहितं यज्ञस्य देवमृत्विजम्।\nहोतारं रत्नधातमम्॥",
-      ref: "ऋग्वेद १.१.१ (प्रथम ऋचा)",
-      translation: "मैं यज्ञ के पुरोहित, दिव्य दीप्तिमान, ऋत्विक और प्रचुर रत्नों (श्रेष्ठ संपदाओं) को धारण कराने वाले अग्निदेव की स्तुति करता हूँ।"
-    },
-    relatedArticles: [
-      { title: "Purusha Sukta", tag: "Sukta • Rigveda", slug: "purusha-sukta" },
-      { title: "Gayatri Mantra", tag: "Mantra • Rigveda", slug: "gayatri-mantra" },
-      { title: "Rigveda Structure", tag: "Article • Veda", slug: "rigveda-structure" }
-    ],
-    relatedGrantha: { name: "Rigveda", desc: "Shakala Samhita" },
-    relatedTopics: ["Agni", "Yagya", "Rigveda", "Madhucchanda", "Gayatri"]
-  }
+  ...COMPREHENSIVE_ARTICLES_DATA
 };
+
