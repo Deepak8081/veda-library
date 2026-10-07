@@ -17,6 +17,7 @@ import {
 } from "lucide-react";
 import { SUBJECTS_DATA, CATEGORIES_DATA } from "../data/categoryTemplatesData.js";
 import { VEDA_HIERARCHY_TREE } from "../data/vedaHierarchyTree.js";
+import VedicLibraryService from "../services/vedicLibraryService.js";
 import bannerRigveda from "../assets/images/library/banners/banner-rigveda.jpg";
 import bannerYajurveda from "../assets/images/library/banners/banner-yajurveda.jpg";
 import bannerSamaveda from "../assets/images/library/banners/banner-samaveda.jpg";
@@ -176,6 +177,7 @@ export default function SubjectDetailPage({ onOpenSearch }) {
   const [granthaFilterType, setGranthaFilterType] = useState("all");
   const [granthaSearch, setGranthaSearch] = useState("");
   const [textSearch, setTextSearch] = useState("");
+  const [liveData, setLiveData] = useState(null);
 
   useEffect(() => {
     setDrillPath([]);
@@ -184,18 +186,40 @@ export default function SubjectDetailPage({ onOpenSearch }) {
     setGranthaFilterType("all");
     setGranthaSearch("");
     setTextSearch("");
+
+    let isMounted = true;
+    if (category === "veda") {
+      VedicLibraryService.getVedaBySlug(subject)
+        .then((res) => {
+          if (isMounted && res) {
+            setLiveData(res);
+          }
+        })
+        .catch(() => {});
+    } else {
+      setLiveData(null);
+    }
+
+    return () => {
+      isMounted = false;
+    };
   }, [category, subject]);
 
   const key = `${category}/${subject}`;
-  const subjectData = SUBJECTS_DATA[key] || SUBJECTS_DATA["veda/rigveda"];
+  const subjectData = liveData?.subjectData || SUBJECTS_DATA[key] || SUBJECTS_DATA["veda/rigveda"];
   const catData = CATEGORIES_DATA[category] || CATEGORIES_DATA["veda"];
 
   // Find Veda root node in hierarchy tree
-  const currentVedaNode =
+  const fallbackVedaNode =
     category === "veda"
       ? VEDA_HIERARCHY_TREE.children.find(
           (v) => v.id === subject || v.slug === subject
         ) || VEDA_HIERARCHY_TREE.children[0]
+      : null;
+
+  const currentVedaNode =
+    category === "veda"
+      ? (liveData?.treeNode || fallbackVedaNode)
       : null;
 
   // Resolve active drill down node within the subject

@@ -27,6 +27,7 @@ import {
 } from "lucide-react";
 import { getMantraById, ALL_VEDIC_MANTRAS } from "../data/vedicMantrasData.js";
 import { findNodeById } from "../data/vedaHierarchyTree.js";
+import VedicLibraryService from "../services/vedicLibraryService.js";
 import bannerRigveda from "../assets/images/library/banners/banner-rigveda.jpg";
 import bannerYajurveda from "../assets/images/library/banners/banner-yajurveda.jpg";
 import bannerSamaveda from "../assets/images/library/banners/banner-samaveda.jpg";
@@ -59,8 +60,26 @@ export default function MantraReaderPage({ onOpenSearch }) {
   const [finderQuery, setFinderQuery] = useState("");
   const [finderVeda, setFinderVeda] = useState("all");
   const [siblingSearch, setSiblingSearch] = useState("");
+  const [liveMantra, setLiveMantra] = useState(null);
 
-  const mantra = getMantraById(mantraId) || ALL_VEDIC_MANTRAS[0];
+  // Fetch live mantra from backend on mantraId change
+  useEffect(() => {
+    let isMounted = true;
+    VedicLibraryService.getMantraById(mantraId)
+      .then((res) => {
+        if (isMounted && res && res.mantra) {
+          setLiveMantra(res.mantra);
+        }
+      })
+      .catch(() => {});
+
+    return () => {
+      isMounted = false;
+    };
+  }, [mantraId]);
+
+  const fallbackMantra = getMantraById(mantraId) || ALL_VEDIC_MANTRAS[0];
+  const mantra = liveMantra || fallbackMantra;
 
   const matchingMantras = useMemo(() => {
     return ALL_VEDIC_MANTRAS.filter((m) => {
@@ -119,10 +138,13 @@ export default function MantraReaderPage({ onOpenSearch }) {
   };
 
   const siblingMantras = useMemo(() => {
+    if (mantra.siblings && Array.isArray(mantra.siblings) && mantra.siblings.length > 0) {
+      return mantra.siblings;
+    }
     return (mantra.chapterMantraIds || [])
       .map((id) => getMantraById(id))
       .filter(Boolean);
-  }, [mantra.chapterMantraIds]);
+  }, [mantra.siblings, mantra.chapterMantraIds]);
 
   const filteredSiblings = useMemo(() => {
     if (!siblingSearch.trim()) return siblingMantras;
