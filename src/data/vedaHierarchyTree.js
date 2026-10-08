@@ -566,13 +566,33 @@ export const VEDA_HIERARCHY_TREE = {
               children: [
                 {
                   id: "sv-purvarchika-1",
-                  name: "१. पूर्वार्चिक: आग्नेय पर्व (अग्न आयाहि वीतये...)",
+                  name: "१. पूर्वार्चिक: आग्नेय पर्व (अग्न आ याहि वीतये...)",
                   enName: "Purvarchika: Agneya Parva",
                   desc: "सामवेद का प्रथम मंगलाचरण मंत्र — उद्गाता द्वारा अग्निदेव का संगीतमय आवाहन।",
                   stats: "प्रपाठक १ • मंत्र १.१",
                   badge: "पर्व",
                   mantraId: "sv-1-1-1",
                   imageKey: "card-sukta-agni.jpg"
+                },
+                {
+                  id: "sv-purvarchika-2",
+                  name: "२. पूर्वार्चिक: ऐन्द्र पर्व (त्वमग्ने यज्ञानां...)",
+                  enName: "Purvarchika: Aindra Parva",
+                  desc: "इन्द्र व अग्नि स्तुति सामगान — दिव्य तेज एवं सामर्थ्य का सामगान।",
+                  stats: "प्रपाठक १ • मंत्र १.२",
+                  badge: "पर्व",
+                  mantraId: "sv-1-1-2",
+                  imageKey: "card-sukta-agni.jpg"
+                },
+                {
+                  id: "sv-uttararchika-1",
+                  name: "३. उत्तरार्चिक: पवमान काण्ड (उच्चा ते जातमन्धसो...)",
+                  enName: "Uttararchika: Pavamana Kanda",
+                  desc: "पवमान सोम का दिव्य सामगान — आत्मिक आनंद एवं अमृतत्व का गान।",
+                  stats: "प्रपाठक २ • मंत्र २.१",
+                  badge: "पर्व",
+                  mantraId: "sv-2-1-1",
+                  imageKey: "card-sukta-soma.jpg"
                 }
               ]
             },
@@ -686,7 +706,18 @@ export const VEDA_HIERARCHY_TREE = {
                   desc: "विश्व का प्रथम पर्यावरण एवं राष्ट्रगीत — 'धरती मेरी माता है और मैं इसका पुत्र हूँ'।",
                   stats: "६३ ऋचाएँ",
                   badge: "सूक्त",
+                  mantraId: "av-12-1-12",
                   imageKey: "card-sukta-prithvi.jpg"
+                },
+                {
+                  id: "av-shanti-sukta",
+                  name: "३. काण्ड १९: विश्व शांति सूक्त (द्यौः शान्तिरन्तरिक्षं शान्तिः...)",
+                  enName: "Kanda 19: Vishva Shanti Sukta",
+                  desc: "समस्त ब्रह्माण्ड, प्रकृति और मानव जाति में वैश्विक शांति की प्रार्थना।",
+                  stats: "१४ मंत्र",
+                  badge: "सूक्त",
+                  mantraId: "av-19-9-14",
+                  imageKey: "card-sukta-shanti.jpg"
                 }
               ]
             },
