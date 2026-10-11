@@ -153,7 +153,7 @@ export default function FeaturedBlogCard({ blog }) {
             <div className="absolute inset-0 bg-gradient-to-t from-[#140b06]/80 via-transparent to-transparent" />
             <div className="absolute bottom-3 left-3 right-3 flex items-center justify-between text-[11px] text-amber-200 font-devanagari font-semibold bg-black/50 backdrop-blur-md px-3 py-1.5 rounded-xl border border-amber-500/30">
               <span>प्रामाणिक वैदिक शोध संग्रह</span>
-              <span className="font-mono text-amber-400 font-bold">ॐ</span>
+              <span className="text-amber-400 font-bold">✦</span>
             </div>
           </Link>
         </div>
