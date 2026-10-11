@@ -136,16 +136,16 @@ export default function PuranaItihasaPage({ onOpenSearch }) {
   return (
     <div className="bg-[#fffaf0] min-h-screen text-stone-900 pb-20">
       {/* 1. Scholarly Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-r from-[#170e07] via-[#2c1a0e] to-[#140b05] text-white py-12 sm:py-16 px-4 sm:px-6 lg:px-8 border-b border-amber-900/60 shadow-xl">
-        {/* Sacred Temple Background Image */}
+      <section className="relative overflow-hidden bg-gradient-to-r from-[#120c06] via-[#1a1008] to-[#0f0804] text-white py-12 sm:py-16 px-4 sm:px-6 lg:px-8 border-b border-amber-900/60 shadow-xl">
+        {/* Sacred Temple Background Image with Rich Black Overlay */}
         <div className="absolute inset-0 z-0">
           <img
             src={bannerTempleGhat}
             alt="Vedic Temple Heritage"
-            className="w-full h-full object-cover object-center opacity-65 scale-102 transition-transform duration-1000"
+            className="w-full h-full object-cover object-center opacity-70 scale-102 transition-transform duration-1000"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#140b05]/95 via-[#1c1108]/50 to-[#140b05]/30" />
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-amber-500/10 via-transparent to-[#140b05]/60" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/65 to-black/45" />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/75 via-black/40 to-black/70" />
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto">
