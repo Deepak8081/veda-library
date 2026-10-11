@@ -261,69 +261,71 @@ export default function UpanishadDarshanaPage({ onOpenSearch }) {
   return (
     <div className="bg-[#fffaf0] min-h-screen text-stone-900 pb-20">
       {/* 1. Scholarly Hero Section */}
-      <div className="relative bg-gradient-to-r from-[#fff9eb] via-[#fffdf5] to-[#fef5dc] text-stone-900 py-12 sm:py-16 px-4 sm:px-6 lg:px-8 border-b-2 border-amber-200/90 overflow-hidden shadow-xs">
-        <div className="absolute inset-0 z-0 opacity-15 mix-blend-multiply">
+      <section className="relative overflow-hidden bg-gradient-to-r from-[#170e07] via-[#2c1a0e] to-[#140b05] text-white py-12 sm:py-16 px-4 sm:px-6 lg:px-8 border-b border-amber-900/60 shadow-xl">
+        {/* Sacred Sanctum Background Image */}
+        <div className="absolute inset-0 z-0">
           <img
             src={bannerSanctum}
             alt="Sacred Upanishad Sanctum"
-            className="w-full h-full object-cover object-center"
+            className="w-full h-full object-cover object-center opacity-65 scale-102 transition-transform duration-1000"
           />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#140b05]/95 via-[#1c1108]/50 to-[#140b05]/30" />
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-amber-500/10 via-transparent to-[#140b05]/60" />
         </div>
-        <div className="absolute inset-0 bg-gradient-to-t from-[#fff9eb]/90 via-[#fffdf5]/60 to-white/70 z-0" />
 
         <div className="relative z-10 max-w-7xl mx-auto">
           {/* Breadcrumb */}
-          <div className="flex items-center gap-2 text-xs text-amber-900/80 mb-4 font-serif font-medium">
-            <Link to="/" className="hover:text-amber-950 hover:underline">
+          <div className="flex items-center gap-2 text-xs text-amber-300/90 mb-4 font-serif">
+            <Link to="/" className="hover:text-amber-200">
               होम
             </Link>
             <span>/</span>
-            <Link to="/library" className="hover:text-amber-950 hover:underline">
+            <Link to="/library" className="hover:text-amber-200">
               वैदिक ज्ञानकोष
             </Link>
             <span>/</span>
-            <span className="text-amber-950 font-bold">
+            <span className="text-amber-100 font-semibold">
               उपनिषद् एवं दर्शन
             </span>
           </div>
 
           <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6">
             <div className="max-w-3xl">
-              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-amber-100/90 text-amber-950 border border-amber-300/80 mb-3 shadow-2xs">
-                <Brain className="w-3.5 h-3.5 text-amber-700" />
+              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider bg-amber-500/20 text-amber-300 border border-amber-500/40 mb-3 backdrop-blur-xs">
+                <Brain className="w-3.5 h-3.5 text-amber-300" />
                 <span>UPANISHAD & DARSHANA PHILOSOPHY</span>
               </span>
 
-              <h1 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-amber-950 mb-3">
+              <h1 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-white mb-3 drop-shadow-md">
                 उपनिषद् एवं दर्शन
-                <span className="block text-xl sm:text-2xl font-normal text-amber-900/90 mt-1 font-sans">
+                <span className="block text-xl sm:text-2xl font-normal text-amber-200/95 mt-1 font-sans">
                   The Pinnacle of Vedic Non-Dual Realization & The Six Astika
                   Systems
                 </span>
               </h1>
 
-              <p className="text-stone-700 text-sm sm:text-base font-devanagari leading-relaxed">
+              <p className="text-amber-100/90 text-sm sm:text-base font-devanagari leading-relaxed drop-shadow-xs">
                 वेदों का ज्ञानकाण्ड (वेदान्त) और भारतीय मेधा के ६ सर्वोच्च
                 दार्शनिक तंत्र — आत्मा, परमात्मा, संसार और मुक्ति के परम सत्य का
                 वैज्ञानिक, तार्किक एवं अपरोक्षानुभूतिपरक निरूपण।
               </p>
 
-              {/* Shanti Invocation Banner */}
-              <div className="mt-5 p-3.5 rounded-xl bg-gradient-to-r from-[#fff7e0] via-[#fffdf4] to-[#fef4d6] border-2 border-amber-300/90 text-amber-950 text-xs sm:text-sm font-devanagari leading-relaxed shadow-2xs">
+              {/* Shanti Invocation Banner (YELLOW / WHITE THEME - NO BLACK) */}
+              <div className="mt-5 p-3.5 rounded-xl bg-gradient-to-r from-[#fff9ea] via-[#fffbf0] to-[#fef5db] border-2 border-amber-300/90 text-amber-950 text-xs sm:text-sm font-devanagari leading-relaxed shadow-lg backdrop-blur-md">
                 <span className="font-bold text-amber-900 block mb-0.5">
                   ॐ पूर्णमदः पूर्णमिदं पूर्णात्पूर्णमुदच्यते। पूर्णस्य
                   पूर्णमादाय पूर्णमेवावशिष्यते॥
                 </span>
-                <span className="text-amber-800/80 text-xs font-medium">
+                <span className="text-amber-800/90 text-xs font-semibold">
                   — ईशावास्य / बृहदारण्यक उपनिषद् शांति पाठ (परब्रह्म की अखंड
                   पूर्णता)
                 </span>
               </div>
             </div>
 
-            {/* Metrics Badge Box */}
+            {/* Metrics Badge Box (YELLOW / WHITE THEME - NO BLACK) */}
             <div className="grid grid-cols-2 sm:grid-cols-2 gap-3 w-full lg:w-auto self-stretch lg:self-auto text-center">
-              <div className="bg-white/95 backdrop-blur-md border-2 border-amber-200/90 rounded-2xl p-4 shadow-xs hover:border-amber-400 hover:shadow-md transition-all text-center">
+              <div className="bg-white/95 backdrop-blur-md border-2 border-amber-200/90 rounded-2xl p-4 shadow-lg hover:border-amber-400 hover:shadow-xl transition-all text-center">
                 <div className="font-serif text-2xl sm:text-3xl font-extrabold text-amber-800">
                   ११
                 </div>
@@ -334,7 +336,7 @@ export default function UpanishadDarshanaPage({ onOpenSearch }) {
                   शंकर भाष्य युक्त
                 </div>
               </div>
-              <div className="bg-white/95 backdrop-blur-md border-2 border-amber-200/90 rounded-2xl p-4 shadow-xs hover:border-amber-400 hover:shadow-md transition-all text-center">
+              <div className="bg-white/95 backdrop-blur-md border-2 border-amber-200/90 rounded-2xl p-4 shadow-lg hover:border-amber-400 hover:shadow-xl transition-all text-center">
                 <div className="font-serif text-2xl sm:text-3xl font-extrabold text-amber-800">
                   ४
                 </div>
@@ -345,7 +347,7 @@ export default function UpanishadDarshanaPage({ onOpenSearch }) {
                   चार वेदों के सूत्र
                 </div>
               </div>
-              <div className="bg-white/95 backdrop-blur-md border-2 border-amber-200/90 rounded-2xl p-4 shadow-xs hover:border-amber-400 hover:shadow-md transition-all text-center">
+              <div className="bg-white/95 backdrop-blur-md border-2 border-amber-200/90 rounded-2xl p-4 shadow-lg hover:border-amber-400 hover:shadow-xl transition-all text-center">
                 <div className="font-serif text-2xl sm:text-3xl font-extrabold text-amber-800">
                   ६
                 </div>
@@ -356,7 +358,7 @@ export default function UpanishadDarshanaPage({ onOpenSearch }) {
                   आस्तिक दर्शन परंपरा
                 </div>
               </div>
-              <div className="bg-white/95 backdrop-blur-md border-2 border-amber-200/90 rounded-2xl p-4 shadow-xs hover:border-amber-400 hover:shadow-md transition-all text-center">
+              <div className="bg-white/95 backdrop-blur-md border-2 border-amber-200/90 rounded-2xl p-4 shadow-lg hover:border-amber-400 hover:shadow-xl transition-all text-center">
                 <div className="font-serif text-2xl sm:text-3xl font-extrabold text-amber-800">
                   १०८
                 </div>
@@ -370,7 +372,7 @@ export default function UpanishadDarshanaPage({ onOpenSearch }) {
             </div>
           </div>
         </div>
-      </div>
+      </section>
 
       {/* 2. Interactive Navigation Tabs */}
       <div className="sticky top-16 z-30 bg-white/95 backdrop-blur-md border-b border-stone-200 px-4 sm:px-6 lg:px-8 py-3 shadow-2xs">
