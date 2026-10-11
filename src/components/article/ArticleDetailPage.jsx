@@ -239,9 +239,17 @@ export default function ArticleDetailPage({ onNavigateHome, onNavigateKnowledge 
         { title: "Gayatri Mantra", tag: "Mantra", slug: "gayatri-mantra" }
       ],
       relatedGrantha: { name: catData.name, desc: catData.enName },
-      relatedTopics: ["Veda", "Mantra", "Upasana"]
     };
   }
+
+  const effectiveCategory = articleData?.categorySlug || category;
+  const effectiveSubject = articleData?.subjectSlug || subject;
+  const effectiveSubjectKey = `${effectiveCategory}/${effectiveSubject}`;
+  const effectiveSubjectData =
+    SUBJECTS_DATA[effectiveSubjectKey] ||
+    SUBJECTS_DATA[effectiveSubject] ||
+    subjectData;
+  const effectiveCatData = CATEGORIES_DATA[effectiveCategory] || catData;
 
   const hasAllMantras = articleData.allMantras && articleData.allMantras.length > 0;
 
@@ -316,7 +324,7 @@ export default function ArticleDetailPage({ onNavigateHome, onNavigateKnowledge 
       : []),
     { id: "content-6", title: "6. संबंधित देव एवं दार्शनिक प्रतीक", shortTitle: "६. देव/प्रतीक" },
     { id: "content-7", title: "7. परंपरा, शाखा एवं भौगोलिक संदर्भ", shortTitle: "७. परंपरा" },
-    { id: "content-8", title: "8. शास्त्रीय विधि, विनियोग एवं याज्ञिक प्रयोग", shortTitle: "८. विधि/प्रयोग", badge: articleData.adhyayas30 ? "३० अध्याय" : articleData.abhishekaDravyas ? "१२ द्रव्य" : null },
+    { id: "content-8", title: "8. शास्त्रीय विधि, विनियोग एवं याज्ञिक प्रयोग", shortTitle: "८. विधि/प्रयोग", badge: articleData.adhyayas30 ? "३० अध्याय" : articleData.abhishekaDravyas ? "१२ द्रव्य" : articleData.prashna6Summary ? "६ प्रश्न" : null },
     { id: "content-9", title: "9. विभिन्न परंपराओं में अंतर", shortTitle: "९. तुलना" },
     { id: "content-10", title: "10. इतिहास, पांडुलिपि एवं शोध", shortTitle: "१०. इतिहास" }
   ];
@@ -366,19 +374,19 @@ export default function ArticleDetailPage({ onNavigateHome, onNavigateKnowledge 
             </Link>
             <span>›</span>
             <Link
-              to={`/library/${category}`}
+              to={`/library/${effectiveCategory}`}
               className="hover:text-amber-800 transition-colors cursor-pointer"
             >
-              {catData.name || "Category"}
+              {effectiveCatData.name || "Category"}
             </Link>
-            {subject && (
+            {effectiveSubject && (
               <>
                 <span>›</span>
                 <Link
-                  to={`/library/${category}/${subject}`}
+                  to={`/library/${effectiveCategory}/${effectiveSubject}`}
                   className="hover:text-amber-800 transition-colors cursor-pointer truncate max-w-[120px] sm:max-w-none"
                 >
-                  {subjectData ? `${subjectData.name} (${subjectData.enName})` : subject}
+                  {effectiveSubjectData ? `${effectiveSubjectData.name} (${effectiveSubjectData.enName})` : effectiveSubject}
                 </Link>
               </>
             )}
@@ -966,16 +974,24 @@ export default function ArticleDetailPage({ onNavigateHome, onNavigateKnowledge 
                     <span>2. शब्द का अर्थ एवं व्युत्पत्ति</span>
                     <span className="text-[11px] font-normal text-stone-400">Etymology</span>
                   </h2>
-                  <div className="p-3.5 sm:p-4 rounded-xl bg-amber-50/50 border border-amber-100 text-xs sm:text-sm font-devanagari space-y-2 text-stone-800">
-                    {articleData.etymology ? (
+                  <div className="p-3.5 sm:p-4 rounded-xl bg-amber-50/50 border border-amber-100 text-xs sm:text-sm font-devanagari space-y-2.5 text-stone-800">
+                    {articleData.etymology && articleData.etymology.length > 0 ? (
                       articleData.etymology.map((et, idx) => (
-                        <p key={idx} className="break-words">
-                          • <strong>{et.term}:</strong> {et.meaning}
-                        </p>
+                        <div
+                          key={idx}
+                          className="flex flex-col sm:flex-row sm:items-start gap-1.5 sm:gap-2.5 pb-2 border-b border-amber-100/60 last:border-0 last:pb-0"
+                        >
+                          <span className="font-bold text-amber-950 bg-amber-100/90 px-2 py-0.5 rounded text-xs shrink-0 self-start border border-amber-200">
+                            {et.term}
+                          </span>
+                          <span className="text-stone-700 leading-relaxed break-words">
+                            {et.meaning}
+                          </span>
+                        </div>
                       ))
                     ) : (
-                      <p className="break-words">
-                        • <strong>मूल धातु:</strong> वैदिक संस्कृत व्याकरण एवं निरुक्त के अनुसार विशिष्ट व्युत्पत्ति।
+                      <p className="break-words text-stone-600">
+                        वैदिक संस्कृत व्याकरण (पाणिनीय अष्टाध्यायी) एवं यास्क मुनि कृत निरुक्त के अनुसार विशिष्ट नामकरण एवं शास्त्रीय व्युत्पत्ति।
                       </p>
                     )}
                   </div>
@@ -1133,10 +1149,41 @@ export default function ArticleDetailPage({ onNavigateHome, onNavigateKnowledge 
                     <span className="text-[11px] font-normal text-stone-400">Ritual Application</span>
                   </h2>
                   <div className="p-3.5 sm:p-4 rounded-xl bg-amber-50/40 border border-amber-100 text-xs sm:text-sm font-devanagari space-y-2 text-stone-800 leading-relaxed">
-                    <p className="break-words">
+                    <p className="break-words whitespace-pre-wrap">
                       {articleData.vidhiUsage || "वैदिक संहिताओं के मंत्रों का उपयोग श्रौत यज्ञों तथा स्मार्त संस्कारों एवं नित्य स्वाध्याय में शास्त्रोक्त विधि से किया जाता है।"}
                     </p>
                   </div>
+
+                  {/* Step-by-Step Vidhi Sequence */}
+                  {articleData.vidhiSteps && articleData.vidhiSteps.length > 0 && (
+                    <div className="space-y-3 pt-2">
+                      <h3 className="text-xs sm:text-sm font-bold text-amber-950 font-devanagari flex items-center gap-1.5">
+                        <Sparkles className="w-4 h-4 text-amber-600" />
+                        <span>शास्त्रीय अनुष्ठान क्रम एवं विधि सोपान (Step-by-Step Vidhi Sequence)</span>
+                      </h3>
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-2.5">
+                        {articleData.vidhiSteps.map((step, sIdx) => (
+                          <div
+                            key={sIdx}
+                            className="p-3 bg-white rounded-xl border border-amber-200/80 shadow-2xs text-xs font-devanagari space-y-1.5"
+                          >
+                            <div className="flex items-center gap-2 border-b border-amber-100 pb-1">
+                              <span className="w-5 h-5 rounded-full bg-amber-800 text-white flex items-center justify-center font-bold text-[10px] shrink-0">
+                                {step.step || sIdx + 1}
+                              </span>
+                              <strong className="text-amber-950 font-bold">{step.name}</strong>
+                            </div>
+                            <p className="text-stone-700 leading-relaxed text-[11px]">{step.desc}</p>
+                            {step.mantra && (
+                              <p className="text-[10px] text-amber-900 bg-amber-50/70 p-1.5 rounded italic break-words">
+                                {step.mantra}
+                              </p>
+                            )}
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  )}
 
                   {/* Rudrabhisheka Specific 12 Abhisheka Dravyas */}
                   {articleData.abhishekaDravyas && articleData.abhishekaDravyas.length > 0 && (
@@ -1188,6 +1235,39 @@ export default function ArticleDetailPage({ onNavigateHome, onNavigateKnowledge 
                               <strong className="text-stone-900">{a.name}: </strong>
                               <span className="text-stone-700">{a.desc}</span>
                             </div>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+
+                  {/* Prashna Upanishad 6 Questions Breakdown */}
+                  {articleData.prashna6Summary && articleData.prashna6Summary.length > 0 && (
+                    <div className="space-y-3 pt-2">
+                      <h3 className="text-xs sm:text-sm font-bold text-amber-950 font-devanagari flex items-center gap-1.5">
+                        <Layers className="w-4 h-4 text-amber-600" />
+                        <span>महर्षि पिप्पलाद एवं षट् ऋषियों के ६ दार्शनिक प्रश्नोत्तर (षट् प्रश्न संवाद)</span>
+                      </h3>
+                      <div className="space-y-2">
+                        {articleData.prashna6Summary.map((q, qIdx) => (
+                          <div
+                            key={qIdx}
+                            className="p-3 bg-amber-50/50 rounded-xl border border-amber-200 text-xs font-devanagari space-y-1.5"
+                          >
+                            <div className="flex items-center justify-between border-b border-amber-200/60 pb-1">
+                              <span className="font-bold text-amber-950 flex items-center gap-1.5">
+                                <span className="w-5 h-5 rounded-full bg-amber-800 text-white flex items-center justify-center font-bold text-[10px]">
+                                  {q.qNum}
+                                </span>
+                                <span>प्रश्न {q.qNum} — ऋषि {q.rishi}</span>
+                              </span>
+                            </div>
+                            <p className="text-stone-900 font-medium">
+                              <strong className="text-amber-900">जिज्ञासा (प्रश्न): </strong>{q.question}
+                            </p>
+                            <p className="text-stone-700">
+                              <strong className="text-emerald-900">पिप्पलाद समाधान (उत्तर): </strong>{q.answer}
+                            </p>
                           </div>
                         ))}
                       </div>
@@ -1534,10 +1614,20 @@ export default function ArticleDetailPage({ onNavigateHome, onNavigateKnowledge 
                     <span className="text-[11px] font-normal text-stone-400">Comparative Analysis</span>
                   </h2>
                   <div className="p-3.5 sm:p-4 rounded-xl bg-stone-50 border border-stone-200 text-xs sm:text-sm font-devanagari space-y-2 text-stone-800 leading-relaxed">
-                    <p className="break-words">
+                    <p className="break-words whitespace-pre-wrap">
                       {articleData.traditionsDifferences || "ऋग्वेद की शाकल और बाष्कल शाखाओं में तथा शुक्ल व कृष्ण यजुर्वेद में सूक्ष्म पाठ भेद प्राप्त होते हैं।"}
                     </p>
                   </div>
+                  {articleData.traditionsComparison && articleData.traditionsComparison.length > 0 && (
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2.5 pt-1">
+                      {articleData.traditionsComparison.map((tc, tcIdx) => (
+                        <div key={tcIdx} className="p-3 bg-white rounded-xl border border-stone-200 shadow-2xs font-devanagari text-xs space-y-1">
+                          <strong className="text-amber-900 font-bold block border-b border-stone-100 pb-1">{tc.tradition}</strong>
+                          <p className="text-stone-700 text-[11px] leading-relaxed">{tc.text}</p>
+                        </div>
+                      ))}
+                    </div>
+                  )}
                 </div>
 
                 {/* Section 10: इतिहास एवं शोध */}
@@ -1547,10 +1637,20 @@ export default function ArticleDetailPage({ onNavigateHome, onNavigateKnowledge 
                     <span className="text-[11px] font-normal text-stone-400">Manuscripts & Modern Study</span>
                   </h2>
                   <div className="p-3.5 sm:p-4 rounded-xl bg-amber-50/40 border border-amber-100 text-xs sm:text-sm font-devanagari space-y-2 text-stone-800 leading-relaxed">
-                    <p className="break-words">
+                    <p className="break-words whitespace-pre-wrap">
                       {articleData.historyResearch || "यूनेस्को द्वारा ऋग्वेद की पांडुलिपियों को 'विश्व धरोहर' (Memory of the World) के रूप में मान्यता प्राप्त है। महर्षि यास्क के निरुक्त से लेकर सायणाचार्य के माधवीय भाष्य तक इसकी निरंतर प्रामाणिक व्याख्या की गई है।"}
                     </p>
                   </div>
+                  {articleData.historyResearchDetails && articleData.historyResearchDetails.length > 0 && (
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 pt-1">
+                      {articleData.historyResearchDetails.map((hr, hrIdx) => (
+                        <div key={hrIdx} className="p-3 bg-white rounded-xl border border-amber-200/80 shadow-2xs font-devanagari text-xs space-y-1">
+                          <strong className="text-amber-950 font-bold block border-b border-amber-100 pb-1">{hr.title}</strong>
+                          <p className="text-stone-700 text-[11px] leading-relaxed">{hr.desc}</p>
+                        </div>
+                      ))}
+                    </div>
+                  )}
                 </div>
               </>
             )}

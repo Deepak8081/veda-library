@@ -23,6 +23,23 @@ export default function KnowledgePage({ onNavigateHome }) {
   const handleCardClick = (cardId) => {
     if (cardId === "veda") {
       navigate("/library/veda");
+    } else if (cardId === "mahapuranas") {
+      navigate("/library/purana");
+    } else if (cardId === "ramayana") {
+      navigate("/library/itihasa?tab=ramayana");
+    } else if (cardId === "mahabharata" || cardId === "gita") {
+      navigate("/library/itihasa?tab=mahabharata");
+    } else if (cardId === "upanishad") {
+      navigate("/library/upanishad");
+    } else if (
+      cardId === "samkhya" ||
+      cardId === "yoga" ||
+      cardId === "nyaya" ||
+      cardId === "vaisheshika" ||
+      cardId === "mimamsa" ||
+      cardId === "vedanta"
+    ) {
+      navigate("/library/darshana");
     } else if (cardId === "rudrabhisheka") {
       navigate("/library/puja/shaiva/rudrabhisheka");
     } else if (cardId === "gayatri" || cardId === "mahamrityunjaya") {

@@ -98,6 +98,11 @@ export const VedicLibraryService = {
             quickInfo: vedaData.quickInfo || fallbackSubject.quickInfo,
             rishis: Array.isArray(vedaData.rishis) && vedaData.rishis.length > 0 ? vedaData.rishis : fallbackSubject.rishis,
             deities: Array.isArray(vedaData.deities) && vedaData.deities.length > 0 ? vedaData.deities : fallbackSubject.deities,
+            devatas: (Array.isArray(vedaData.deities) && vedaData.deities.length > 0)
+              ? vedaData.deities
+              : (Array.isArray(vedaData.devatas) && vedaData.devatas.length > 0)
+                ? vedaData.devatas
+                : fallbackSubject.devatas,
             availableTexts: Array.isArray(vedaData.availableTexts) && vedaData.availableTexts.length > 0 ? vedaData.availableTexts : fallbackSubject.availableTexts,
             relatedGranthas: Array.isArray(vedaData.relatedGranthas) && vedaData.relatedGranthas.length > 0 ? vedaData.relatedGranthas : fallbackSubject.relatedGranthas,
           };
@@ -128,10 +133,17 @@ export const VedicLibraryService = {
 
     // Local fallback
     const key = `veda/${slug}`;
-    const subjectData = SUBJECTS_DATA[key] || SUBJECTS_DATA["veda/rigveda"];
+    const subjectData =
+      SUBJECTS_DATA[key] ||
+      SUBJECTS_DATA[slug] ||
+      (slug === "rigveda" ? SUBJECTS_DATA["veda/rigveda"] : null);
     const treeNode =
       VEDA_HIERARCHY_TREE.children.find((v) => v.id === slug || v.slug === slug) ||
-      VEDA_HIERARCHY_TREE.children[0];
+      (slug === "rigveda" ? VEDA_HIERARCHY_TREE.children[0] : null);
+
+    if (!subjectData && !treeNode) {
+      return null;
+    }
 
     return {
       subjectData,

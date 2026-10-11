@@ -5,6 +5,13 @@
 // Page 4: /library/:category/:subject/:article
 
 import { COMPREHENSIVE_ARTICLES_DATA } from "./vedicArticlesData.js";
+import {
+  PURANA_CATEGORY_DATA,
+  ITIHASA_CATEGORY_DATA,
+  UPANISHAD_EXPANDED_CATEGORY_DATA,
+  DARSHANA_EXPANDED_CATEGORY_DATA,
+  GRANTHA_SUBJECTS_DATA
+} from "./granthaCategoryData.js";
 
 export const CATEGORIES_DATA = {
   veda: {
@@ -380,54 +387,10 @@ export const CATEGORIES_DATA = {
     ],
     faqs: [{ q: "वेदाङ्ग कितने हैं?", a: "वेदाङ्ग छह हैं: शिक्षा, कल्प, व्याकरण, निरुक्त, छंद और ज्योतिष।" }]
   },
-  upanishad: {
-    id: "upanishad",
-    slug: "upanishad",
-    name: "उपनिषद",
-    enName: "The Upanishads",
-    eyebrow: "VEDA LIBRARY",
-    description: "ईश, केन, कठ, मुण्डक, माण्डूक्य, तैत्तिरीय, ऐतरेय, छांदोग्य, बृहदारण्यक आदि प्रधान उपनिषद।",
-    detailedDescription: "ब्रह्मविद्या, आत्मज्ञान और परम सत्य की दार्शनिक मीमांसा का अमृत संग्रह।",
-    quickStats: "१०८ उपनिषद • १० मुख्य उपनिषद • प्रस्थानत्रयी",
-    exploreBy: "Upanishad · Shakha · Rishi · Mahavakya · Advaita",
-    primaryCta: "Explore Principal Upanishads →",
-    secondaryCta: "Browse Mahavakyas →",
-    introHeading: "उपनिषद — वेदान्त तत्वज्ञान",
-    introText: "उपनिषद वेदों का अंतिम भाग (वेदांत) हैं, जिनमें जीव, जगत और ब्रह्म के तात्विक स्वरूप की गूढ़ व्याख्या की गई है।",
-    subCategories: [
-      { id: "isha", slug: "isha", name: "ईशावास्योपनिषद्", enName: "Isha Upanishad", desc: "ईशावास्यमिदं सर्वं — यजुर्वेद १८ मंत्र", stats: "१८ मंत्र", imageKey: "card-grantha-isha.jpg" },
-      { id: "mandukya", slug: "mandukya", name: "माण्डूक्योपनिषद्", enName: "Mandukya Upanishad", desc: "ॐकार एवं चेतना की चार अवस्थाएँ", stats: "१२ मंत्र", imageKey: "card-grantha-mandukya.jpg" }
-    ],
-    topics: ["आत्मन्", "ब्रह्मन्", "सत्यमेव जयते", "तत्त्वमसि", "अहं ब्रह्मास्मि", "मोक्ष"],
-    featuredKnowledge: [
-      { id: "isha-upanishad", title: "ईशावास्योपनिषद्", enTitle: "Isha Upanishad", type: "Upanishad • Shukla Yajurveda", desc: "त्यागपूर्वक भोग का सनातन संदेश", subjectSlug: "isha", articleSlug: "isha" }
-    ],
-    faqs: [{ q: "मुख्य उपनिषद कितने हैं?", a: "आदि शंकराचार्य द्वारा भाष्य किए गए १० प्रमुख उपनिषद (दशोपनिषद) सर्वाधिक प्रसिद्ध हैं।" }]
-  },
-  darshana: {
-    id: "darshana",
-    slug: "darshana",
-    name: "दर्शन शास्त्र",
-    enName: "Shad Darshana (Six Schools)",
-    eyebrow: "VEDA LIBRARY",
-    description: "सांख्य, योग, न्याय, वैशेषिक, मीमांसा और वेदांत—भारतीय दर्शन की छह आस्तिक धाराएँ।",
-    detailedDescription: "कपिल, पतंजलि, गौतम, कणाद, जैमिनि और बादरायण की दार्शनिक सूत्र परंपरा।",
-    quickStats: "६ आस्तिक दर्शन • प्रस्थानत्रयी • तत्व मीमांसा",
-    exploreBy: "Darshana · Acharya · Sutra · Bhashya · Pramana",
-    primaryCta: "Explore Six Schools →",
-    secondaryCta: "Browse Yogasutras →",
-    introHeading: "षड्दर्शन परंपरा",
-    introText: "दृश्यते अनेन इति दर्शनम् — जिसके द्वारा परम सत्य का साक्षात्कार हो, वह दर्शन है।",
-    subCategories: [
-      { id: "yoga", slug: "yoga", name: "योग दर्शन", enName: "Yoga Darshana", desc: "महर्षि पतंजलि कृत योगसूत्र व अष्टांग योग", stats: "४ पाद", imageKey: "card-aranyaka.jpg" },
-      { id: "vedanta", slug: "vedanta", name: "वेदांत दर्शन", enName: "Vedanta Darshana", desc: "ब्रह्मसूत्र, अद्वैत, विशिष्टाद्वैत व द्वैत", stats: "४ अध्याय", imageKey: "card-upanishad.jpg" }
-    ],
-    topics: ["अष्टांग योग", "समाधि", "प्रकृति", "पुरुष", "प्रमाण", "माया"],
-    featuredKnowledge: [
-      { id: "patanjali-yoga", title: "पतंजलि योगसूत्र", enTitle: "Patanjali Yogasutras", type: "Darshana • Yoga", desc: "योगश्चित्तवृत्तिनिरोधः — मन के निग्रह की विद्या", subjectSlug: "yoga", articleSlug: "yogasutra" }
-    ],
-    faqs: [{ q: "षड्दर्शन क्या हैं?", a: "सांख्य, योग, न्याय, वैशेषिक, मीमांसा और वेदांत।" }]
-  },
+  purana: PURANA_CATEGORY_DATA,
+  itihasa: ITIHASA_CATEGORY_DATA,
+  upanishad: UPANISHAD_EXPANDED_CATEGORY_DATA,
+  darshana: DARSHANA_EXPANDED_CATEGORY_DATA,
   dharma: {
     id: "dharma",
     slug: "dharma",
@@ -1024,7 +987,8 @@ export const SUBJECTS_DATA = {
       { name: "शुक्ल यजुर्वेद वाजसनेयि संहिता (अध्याय १६)", type: "संहिता", author: "महर्षि याज्ञवल्क्य", slug: "shakala-samhita" },
       { name: "शिव पुराण (विद्येश्वर संहिता)", type: "पुराण", author: "महर्षि वेदव्यास", slug: "rudrabhisheka" }
     ]
-  }
+  },
+  ...GRANTHA_SUBJECTS_DATA
 };
 
 // Article Detail Data for Page 4: /library/:category/:subject/:article

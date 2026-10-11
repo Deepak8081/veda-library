@@ -1,157 +1,601 @@
-import React, { useState } from "react";
-import { ArrowRight, Volume2, Sparkles, Copy, Check, ChevronDown, ChevronUp } from "lucide-react";
-import { MANTRA_CATEGORIES, FEATURED_MANTRAS } from "../../data/libraryHomeData.js";
+import React, { useState, useEffect, useMemo } from "react";
+import { useNavigate } from "react-router-dom";
+import {
+  ArrowRight,
+  Volume2,
+  VolumeX,
+  Sparkles,
+  Copy,
+  Check,
+  Languages,
+  BookOpen,
+  Flame,
+  ChevronDown,
+  ChevronUp,
+  Feather
+} from "lucide-react";
+import { getMantraById } from "../../data/vedicMantrasData.js";
+
+// Curated Sacred Mahamantras & Stotras for Home Experience
+const SACRED_HOME_MANTRAS_CONFIG = [
+  // 1. वैदिक महामंत्र
+  {
+    id: "rv-7-59-12",
+    category: "वैदिक महामंत्र",
+    title: "महामृत्युंजय महामंत्र",
+    sourceBadge: "ऋग्वेद ७.५९.१२ — संजीवनी महामंत्र",
+    featuredTag: "संजीवनी महामंत्र",
+    spiritualPurport: "अकाल मृत्यु, भय एवं दैहिक-दैविक-भौतिक तापों का शमन; साधक को आरोग्य, दीर्घायु एवं अमृतत्व (मोक्ष) की प्राप्ति।",
+    shortSource: "ऋग्वेद (शाकल शाखा)"
+  },
+  {
+    id: "rv-3-62-10",
+    category: "वैदिक महामंत्र",
+    title: "गायत्री महामंत्र",
+    sourceBadge: "ऋग्वेद ३.६२.१० / यजुर्वेद ३६.३ — वेदमाता महामंत्र",
+    featuredTag: "वेदमाता महामंत्र",
+    spiritualPurport: "सविता नारायण के दिव्य तेज द्वारा साधक की मेधा, प्रज्ञा और अंतःप्रेरणा की जागृति; सनातन संस्कृति का परम गुरुमंत्र।",
+    shortSource: "ऋग्वेद / यजुर्वेद"
+  },
+  {
+    id: "rv-1-1-1",
+    category: "वैदिक महामंत्र",
+    title: "अग्नि सूक्त (प्रथम ऋचा)",
+    sourceBadge: "ऋग्वेद १.१.१ — मंगलाचरण ऋचा",
+    featuredTag: "ऋग्वेद प्रथम ऋचा",
+    spiritualPurport: "यज्ञिय चेतना और अंतःअग्नि का प्रज्वलन; सर्वविध ज्ञान, ऐश्वर्य, सद्गुण एवं दिव्य तेज का मंगलाचरण।",
+    shortSource: "ऋग्वेद मण्डल १"
+  },
+  {
+    id: "rv-10-90-1",
+    category: "वैदिक महामंत्र",
+    title: "पुरुष सूक्त (विराट् पुरुष)",
+    sourceBadge: "ऋग्वेद १०.९०.१ — विराट् ब्रह्माण्ड सूक्त",
+    featuredTag: "विराट् ब्रह्माण्ड सूक्त",
+    spiritualPurport: "समस्त चराचर सृष्टि में एक ही परम विराट् चेतना का दर्शन — अनेकता में एकात्मता का मूल वैदिक आधार।",
+    shortSource: "ऋग्वेद मण्डल १०"
+  },
+
+  // 2. उपनिषद महावाक्य
+  {
+    id: "up-kena-1",
+    category: "उपनिषद महावाक्य",
+    title: "केनोपनिषद् (जिज्ञासा मन्त्र)",
+    sourceBadge: "सामवेद तलवकार — केनोपनिषद् १.१",
+    featuredTag: "सामवेद उपनिषद्",
+    spiritualPurport: "मन, वाणी, प्राण और नेत्रों के परे जो मूल प्रकाशक चैतन्य तत्व है, उस अविनाशी ब्रह्म की आध्यात्मिक जिज्ञासा।",
+    shortSource: "केनोपनिषद् (सामवेद)"
+  },
+  {
+    id: "vs-40-1",
+    category: "उपनिषद महावाक्य",
+    title: "ईशावास्योपनिषद् (ईशा वास्यमिदम्)",
+    sourceBadge: "शुक्ल यजुर्वेद वाजसनेयि — ईशावास्योपनिषद् ४०.१",
+    featuredTag: "ईशावास्य महावाक्य",
+    spiritualPurport: "सम्पूर्ण ब्रह्माण्ड में ईश्वर की व्याप्ति का अनुभव करते हुए अनासक्त भाव से त्यागपूर्वक जीवन जीने का शाश्वत संदेश।",
+    shortSource: "ईशावास्योपनिषद्"
+  },
+  {
+    id: "up-mandukya-1",
+    category: "उपनिषद महावाक्य",
+    title: "माण्डूक्योपनिषद् (अयमात्मा ब्रह्म)",
+    sourceBadge: "अथर्ववेद शौनक — माण्डूक्योपनिषद् १-२",
+    featuredTag: "अयमात्मा ब्रह्म",
+    spiritualPurport: "समस्त अस्तित्व ओंकार है, और यह जीवात्मा ही साक्षात् ब्रह्म है ('अयमात्मा ब्रह्म' — अथर्ववेदीय महावाक्य)।",
+    shortSource: "माण्डूक्योपनिषद्"
+  },
+  {
+    id: "up-tait-1-11",
+    category: "उपनिषद महावाक्य",
+    title: "तैत्तिरीयोपनिषद् (दीक्षांत उपदेश)",
+    sourceBadge: "कृष्ण यजुर्वेद तैत्तिरीय — शिक्षावल्ली १.११",
+    featuredTag: "दीक्षांत अनुशासन",
+    spiritualPurport: "सत्यं वद, धर्मं चर — गुरुकुल का सार्वकालिक अनुशासन; सदाचार, स्वाध्याय व माता-पिता-गुरु को देवतुल्य मानना।",
+    shortSource: "तैत्तिरीयोपनिषद्"
+  },
+  {
+    id: "up-chandogya-6-8-7",
+    category: "उपनिषद महावाक्य",
+    title: "छान्दोग्योपनिषद् (तत्त्वमसि महावाक्य)",
+    sourceBadge: "सामवेद कौथुम — छान्दोग्योपनिषद् ६.८.७",
+    featuredTag: "तत्त्वमसि महावाक्य",
+    spiritualPurport: "जो यह परम सूक्ष्म सत्य तत्व है, वही संपूर्ण विश्व का आत्मस्वरूप है; 'हे श्वेतकेतु! वह ब्रह्म तू ही है' (तत्त्वमसि)।",
+    shortSource: "छान्दोग्योपनिषद्"
+  },
+
+  // 3. गीता एवं स्तोत्र
+  {
+    id: "bg-2-47",
+    category: "गीता एवं स्तोत्र",
+    title: "श्रीमद्भगवद्गीता (कर्मण्येवाधिकारस्ते)",
+    sourceBadge: "महाभारत भीष्मपर्व — गीता २.४७",
+    featuredTag: "निष्काम कर्मयोग",
+    spiritualPurport: "कर्म पर तुम्हारा अधिकार है, फल पर कभी नहीं — फल की आसक्ति और अकर्मण्यता दोनों से मुक्त होकर निष्काम कर्मयोग।",
+    shortSource: "श्रीमद्भगवद्गीता"
+  },
+  {
+    id: "vr-aditya-hridaya",
+    category: "गीता एवं स्तोत्र",
+    title: "आदित्य हृदय स्तोत्र",
+    sourceBadge: "वाल्मीकि रामायण — युद्धकाण्ड सर्ग १०५",
+    featuredTag: "विजय प्रदाता स्तोत्र",
+    spiritualPurport: "सूर्य नारायण की उपासना से आंतरिक दुर्बलताओं, भय व समस्त शत्रुओं पर विजय; अक्षय तेज और ऊर्जा की प्राप्ति।",
+    shortSource: "वाल्मीकि रामायण"
+  },
+  {
+    id: "vs-36-17",
+    category: "गीता एवं स्तोत्र",
+    title: "वैदिक विश्व शान्ति पाठ",
+    sourceBadge: "शुक्ल यजुर्वेद वाजसनेयि — अध्याय ३६.१७",
+    featuredTag: "वैदिक शान्ति पाठ",
+    spiritualPurport: "द्युलोक, अंतरिक्ष, पृथ्वी, जल, औषधियों व ब्रह्माण्ड के समस्त घटकों में अखंड शांति और विश्व कल्याण की वैदिक प्रार्थना।",
+    shortSource: "वाजसनेयि संहिता"
+  }
+];
+
+const CATEGORY_TABS = [
+  { id: "all", label: "समस्त महामंत्र", count: 12 },
+  { id: "vedic", label: "वैदिक महामंत्र", count: 4 },
+  { id: "upanishad", label: "उपनिषद महावाक्य", count: 5 },
+  { id: "gita_stotra", label: "गीता एवं स्तोत्र", count: 3 }
+];
 
 export default function MantraStotraSection({ onNavigateKnowledge }) {
-  const [activeCategory, setActiveCategory] = useState("वैदिक मंत्र");
-  const [showAll, setShowAll] = useState(false);
-  const [copiedIndex, setCopiedIndex] = useState(null);
+  const navigate = useNavigate();
 
-  const handleCopy = (text, index, e) => {
+  // State Management
+  const [activeCategoryTab, setActiveCategoryTab] = useState("all");
+  const [copiedId, setCopiedId] = useState(null);
+  const [playingId, setPlayingId] = useState(null);
+  const [globalIast, setGlobalIast] = useState(false);
+  const [cardIastState, setCardIastState] = useState({});
+  const [fontSizeIndex, setFontSizeIndex] = useState(1); // 0: Normal, 1: Medium, 2: Large
+  const [showAllMantras, setShowAllMantras] = useState(false);
+
+  // Font sizing styles for Devanagari Sanskrit text
+  const fontSizes = [
+    { label: "अ", title: "सामान्य अक्षर", shlokaClass: "text-base sm:text-lg leading-relaxed sm:leading-[2]" },
+    { label: "अ+", title: "मध्यम अक्षर", shlokaClass: "text-lg sm:text-xl lg:text-[22px] leading-loose sm:leading-[2.2]" },
+    { label: "अ++", title: "वृहत् अक्षर", shlokaClass: "text-xl sm:text-2xl lg:text-[26px] leading-[2.2] sm:leading-[2.4]" }
+  ];
+
+  // Enrich items with verified Shastric data from library dataset
+  const enrichedMantras = useMemo(() => {
+    return SACRED_HOME_MANTRAS_CONFIG.map((cfg) => {
+      const live = getMantraById(cfg.id);
+      return {
+        ...cfg,
+        sanskrit: live?.sanskrit || "",
+        transliteration: live?.transliteration || "",
+        hindiTranslation: live?.hindiTranslation || "",
+        rishi: live?.rishi || "वैदिक ऋषि परंपरा",
+        devata: live?.devata || "परमात्मा / अभीष्ट देव",
+        chhanda: live?.chhanda || "वैदिक छंद",
+        sectionRef: live?.sectionRef || cfg.sourceBadge
+      };
+    });
+  }, []);
+
+  // Filter based on active category
+  const filteredMantras = useMemo(() => {
+    if (activeCategoryTab === "all") return enrichedMantras;
+    if (activeCategoryTab === "vedic") {
+      return enrichedMantras.filter((m) => m.category === "वैदिक महामंत्र");
+    }
+    if (activeCategoryTab === "upanishad") {
+      return enrichedMantras.filter((m) => m.category === "उपनिषद महावाक्य");
+    }
+    if (activeCategoryTab === "gita_stotra") {
+      return enrichedMantras.filter((m) => m.category === "गीता एवं स्तोत्र");
+    }
+    return enrichedMantras;
+  }, [activeCategoryTab, enrichedMantras]);
+
+  // Display limit for "समस्त महामंत्र": initial 4 cards or expand to all
+  const displayedMantras = useMemo(() => {
+    if (activeCategoryTab !== "all") {
+      return filteredMantras;
+    }
+    return showAllMantras ? filteredMantras : filteredMantras.slice(0, 4);
+  }, [activeCategoryTab, filteredMantras, showAllMantras]);
+
+  // Copy shloka text to clipboard
+  const handleCopy = (text, id, e) => {
     if (e) e.stopPropagation();
     navigator.clipboard.writeText(text);
-    setCopiedIndex(index);
-    setTimeout(() => setCopiedIndex(null), 2000);
+    setCopiedId(id);
+    setTimeout(() => setCopiedId(null), 2200);
   };
 
-  const displayedMantras = showAll ? FEATURED_MANTRAS : FEATURED_MANTRAS.slice(0, 3);
+  // Toggle individual card IAST transliteration
+  const toggleCardIast = (id, e) => {
+    if (e) e.stopPropagation();
+    setCardIastState((prev) => ({
+      ...prev,
+      [id]: prev[id] === undefined ? !globalIast : !prev[id]
+    }));
+  };
+
+  // Web Speech API: Chanting Audio Pronunciation
+  const handleToggleSpeech = (mantra, e) => {
+    if (e) e.stopPropagation();
+    if (typeof window === "undefined" || !("speechSynthesis" in window)) {
+      alert("आपके ब्राउज़र में Web Speech Synthesis उपलब्ध नहीं है।");
+      return;
+    }
+
+    if (playingId === mantra.id) {
+      window.speechSynthesis.cancel();
+      setPlayingId(null);
+      return;
+    }
+
+    window.speechSynthesis.cancel();
+
+    // Clean Vedic svara combining accents and verse numbering for crystal clear TTS pronunciation
+    const cleanSpeechText = mantra.sanskrit
+      .replace(/[\u0951\u0952\u1CD0-\u1CFF\u0331\u0300-\u036F]/g, "")
+      .replace(/[।॥०-९0-9|]/g, " ")
+      .replace(/\s+/g, " ")
+      .trim();
+
+    const utterance = new SpeechSynthesisUtterance(cleanSpeechText);
+    utterance.rate = 0.82; // Calm, respectful chanting pace
+    utterance.pitch = 1.0;
+
+    const voices = window.speechSynthesis.getVoices() || [];
+    const devanagariVoice =
+      voices.find((v) => v.lang.startsWith("sa") || v.lang.startsWith("hi")) || null;
+
+    if (devanagariVoice) {
+      utterance.voice = devanagariVoice;
+    } else {
+      utterance.lang = "hi-IN";
+    }
+
+    utterance.onend = () => setPlayingId(null);
+    utterance.onerror = () => setPlayingId(null);
+
+    setPlayingId(mantra.id);
+    window.speechSynthesis.speak(utterance);
+  };
+
+  // Stop speech if unmounted
+  useEffect(() => {
+    return () => {
+      if (typeof window !== "undefined" && "speechSynthesis" in window) {
+        window.speechSynthesis.cancel();
+      }
+    };
+  }, []);
+
+  // Navigate to full mantra reader page
+  const handleOpenMantraReader = (id, e) => {
+    if (e) e.stopPropagation();
+    if (playingId) {
+      window.speechSynthesis.cancel();
+      setPlayingId(null);
+    }
+    navigate(`/library/mantra/${id}`);
+  };
 
   return (
-    <section id="mantras" className="py-12 sm:py-16 bg-[#fffaf0] border-b border-amber-200/50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
-        <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-6 gap-3">
+    <section id="mantras" className="py-14 sm:py-20 bg-[#fffaf0] border-b border-amber-200/60 relative overflow-hidden">
+      {/* Subtle traditional sacred background motif */}
+      <div className="absolute top-0 right-0 w-96 h-96 bg-amber-200/10 rounded-full blur-3xl pointer-events-none -mr-20 -mt-20" />
+      <div className="absolute bottom-0 left-0 w-96 h-96 bg-orange-200/10 rounded-full blur-3xl pointer-events-none -ml-20 -mb-20" />
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        {/* Section Header */}
+        <div className="flex flex-col lg:flex-row lg:items-end justify-between mb-8 gap-5 pb-6 border-b border-amber-200/50">
           <div>
-            <div className="flex items-center gap-1.5 mb-1">
-              <span className="w-1.5 h-1.5 rounded-full bg-amber-500" />
-              <span className="text-[11px] font-bold uppercase tracking-widest text-amber-800">
-                DIVINE VIBRATIONS
+            <div className="flex items-center gap-2 mb-1.5">
+              <span className="w-2 h-2 rounded-full bg-amber-600 animate-pulse" />
+              <span className="text-[11px] sm:text-xs font-bold uppercase tracking-widest text-amber-800">
+                DIVINE VIBRATIONS • नित्य स्वाध्याय एवं साधना
               </span>
             </div>
-            <h2 className="font-serif text-2xl sm:text-3xl font-bold text-stone-900">
+            <h2 className="font-serif text-2xl sm:text-3xl lg:text-4xl font-bold text-stone-900 tracking-tight">
               Mantra, Sukta & Stotra
             </h2>
-            <p className="text-xs sm:text-sm text-stone-600 font-devanagari mt-0.5">
-              वैदिक मंत्रों, सूक्तों, स्तोत्रों और प्रार्थनाओं का structured collection। शुद्ध स्वर, पदच्छेद व अर्थ सहित।
+            <p className="text-xs sm:text-sm text-stone-700 font-devanagari mt-1 max-w-3xl leading-relaxed">
+              वैदिक महामंत्र, उपनिषद महावाक्य एवं पावन स्तोत्र संग्रह। शुद्ध सस्वर वैदिक पाठ, पदच्छेद, ऋषि-देवता परिचय, उच्चारित ध्वनि एवं प्रामाणिक आध्यात्मिक भावार्थ सहित।
             </p>
           </div>
 
-          <div className="flex items-center gap-2 self-start sm:self-auto">
-            {/* Dynamic View All (6 Mantras) / Show Less Toggle Button */}
+          {/* Header Controls: Font Size Scaler + IAST Toggle + View Archive Link */}
+          <div className="flex flex-wrap items-center gap-2.5 sm:gap-3 self-start lg:self-auto">
+            {/* Font Sizing Toggle (Devanagari Readability Control) */}
+            <div className="flex items-center bg-white/90 border border-amber-300/80 rounded-xl p-1 shadow-2xs">
+              <span className="text-[11px] font-medium text-stone-600 px-2 font-devanagari hidden sm:inline">
+                अक्षर आकार:
+              </span>
+              {fontSizes.map((f, idx) => (
+                <button
+                  key={idx}
+                  type="button"
+                  onClick={() => setFontSizeIndex(idx)}
+                  title={f.title}
+                  className={`px-2.5 py-1 rounded-lg text-xs font-devanagari font-bold transition-all cursor-pointer ${
+                    fontSizeIndex === idx
+                      ? "bg-amber-700 text-white shadow-2xs"
+                      : "text-stone-700 hover:bg-amber-50"
+                  }`}
+                >
+                  {f.label}
+                </button>
+              ))}
+            </div>
+
+            {/* Global IAST Transliteration Toggle */}
             <button
               type="button"
-              onClick={() => setShowAll((prev) => !prev)}
-              className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-semibold px-3 py-1.5 rounded-full bg-amber-100/70 hover:bg-amber-200/80 text-amber-950 border border-amber-300/70 transition-all cursor-pointer shadow-2xs"
+              onClick={() => {
+                const next = !globalIast;
+                setGlobalIast(next);
+                // Reset card overrides so global state applies everywhere
+                setCardIastState({});
+              }}
+              className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-semibold border transition-all cursor-pointer shadow-2xs ${
+                globalIast
+                  ? "bg-amber-800 text-white border-amber-800"
+                  : "bg-white/90 text-stone-700 border-amber-300/80 hover:bg-amber-50"
+              }`}
             >
-              <span>{showAll ? "Show Less (३ मुख्य मंत्र)" : "View All (६+ मंत्र व स्तोत्र)"}</span>
-              {showAll ? (
-                <ChevronUp className="w-3.5 h-3.5 text-amber-900" />
-              ) : (
-                <ChevronDown className="w-3.5 h-3.5 text-amber-900" />
-              )}
+              <Languages className="w-3.5 h-3.5" />
+              <span>IAST लिप्यांतरण {globalIast ? "चालू" : "दिखाएं"}</span>
             </button>
 
-            {/* Direct Link to Mantra Archive */}
+            {/* View Full Mantra Library */}
             <button
               type="button"
-              onClick={onNavigateKnowledge}
-              className="inline-flex items-center gap-1 text-xs sm:text-sm font-semibold text-amber-800 hover:text-amber-950 px-2 py-1 transition-colors cursor-pointer group"
+              onClick={onNavigateKnowledge || (() => navigate("/library/mantra-stotra"))}
+              className="inline-flex items-center gap-1 text-xs sm:text-sm font-bold text-amber-800 hover:text-amber-950 px-2.5 py-1.5 transition-colors cursor-pointer group"
             >
-              <span>All Mantras</span>
+              <span>सम्पूर्ण मंत्र संग्रह</span>
               <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
             </button>
           </div>
         </div>
 
-        {/* Category Filter Pills */}
-        <div className="flex flex-wrap items-center gap-1.5 mb-8">
-          {MANTRA_CATEGORIES.map((cat) => (
-            <button
-              key={cat}
-              type="button"
-              onClick={() => setActiveCategory(cat)}
-              className={`px-3 py-1 rounded-full text-xs font-medium transition-all cursor-pointer ${
-                activeCategory === cat
-                  ? "bg-amber-700 text-white shadow-xs font-bold"
-                  : "bg-white text-stone-700 border border-stone-200 hover:border-amber-300 hover:bg-amber-50"
-              }`}
-            >
-              {cat}
-            </button>
-          ))}
+        {/* Category Filtering Tabs */}
+        <div className="flex flex-wrap items-center gap-2 mb-8">
+          {CATEGORY_TABS.map((tab) => {
+            const isActive = activeCategoryTab === tab.id;
+            return (
+              <button
+                key={tab.id}
+                type="button"
+                onClick={() => {
+                  setActiveCategoryTab(tab.id);
+                  if (playingId) {
+                    window.speechSynthesis.cancel();
+                    setPlayingId(null);
+                  }
+                }}
+                className={`px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all duration-200 cursor-pointer flex items-center gap-2 ${
+                  isActive
+                    ? "bg-gradient-to-r from-amber-800 to-amber-700 text-white shadow-md shadow-amber-900/15 border border-amber-700"
+                    : "bg-white/90 text-stone-700 border border-amber-200/80 hover:border-amber-400 hover:bg-amber-50/70"
+                }`}
+              >
+                <span>{tab.label}</span>
+                <span
+                  className={`text-[11px] font-bold px-1.5 py-0.5 rounded-full ${
+                    isActive ? "bg-white/20 text-white" : "bg-amber-100 text-amber-900"
+                  }`}
+                >
+                  {tab.count}
+                </span>
+              </button>
+            );
+          })}
         </div>
 
-        {/* Featured Mantras Grid (3 cards default, 6 cards when View All clicked) */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 animate-fadeIn">
-          {displayedMantras.map((mantra, idx) => (
-            <div
-              key={idx}
-              className="group flex flex-col justify-between p-4 sm:p-5 rounded-2xl bg-white border border-amber-200/80 shadow-2xs hover:shadow-md hover:border-amber-400 transition-all duration-300"
-            >
-              <div>
-                {/* Header Meta */}
-                <div className="flex items-center justify-between pb-2.5 border-b border-amber-100 mb-3">
-                  <div>
-                    <h3 className="font-serif text-lg font-bold text-stone-900 group-hover:text-amber-800 transition-colors">
-                      {mantra.title}
-                    </h3>
-                    <span className="text-[11px] text-amber-800/80 font-medium">
-                      {mantra.source}
+        {/* Mantra Cards Grid (High contrast, crystal-clear typography, sacred borders) */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-7 animate-fadeIn">
+          {displayedMantras.map((mantra) => {
+            const isCardIastActive =
+              cardIastState[mantra.id] !== undefined
+                ? cardIastState[mantra.id]
+                : globalIast;
+            const isPlayingThis = playingId === mantra.id;
+            const isCopied = copiedId === mantra.id;
+
+            return (
+              <div
+                key={mantra.id}
+                className="group flex flex-col justify-between rounded-2xl bg-gradient-to-b from-[#fffefc] via-white to-[#fffdf7] border-2 border-amber-200/90 hover:border-amber-400/90 shadow-xs hover:shadow-xl transition-all duration-300 relative overflow-hidden p-5 sm:p-6"
+              >
+                {/* Sacred Top Accent Line */}
+                <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-amber-400/30 via-amber-600 to-amber-400/30 group-hover:from-amber-500 group-hover:via-amber-700 group-hover:to-amber-500 transition-all" />
+
+                <div>
+                  {/* Card Header: Category Badge + Source + Action Quick Icons */}
+                  <div className="flex items-start justify-between gap-2 pb-3 border-b border-amber-100/90">
+                    <div className="flex flex-wrap items-center gap-1.5">
+                      <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-md bg-amber-100/90 border border-amber-300/80 text-amber-950 text-[11px] font-bold">
+                        <Flame className="w-3 h-3 text-amber-700" />
+                        {mantra.featuredTag}
+                      </span>
+                      <span className="text-[11px] sm:text-xs font-semibold text-amber-900/90 font-devanagari">
+                        {mantra.sourceBadge}
+                      </span>
+                    </div>
+
+                    <div className="flex items-center gap-1.5 shrink-0">
+                      {/* Individual IAST Toggle Button */}
+                      <button
+                        type="button"
+                        onClick={(e) => toggleCardIast(mantra.id, e)}
+                        title={isCardIastActive ? "Hide IAST transliteration" : "Show IAST transliteration"}
+                        className={`px-2 py-1 rounded-lg border text-[11px] font-medium flex items-center gap-1 transition-colors cursor-pointer ${
+                          isCardIastActive
+                            ? "bg-amber-100 text-amber-950 border-amber-300 font-bold"
+                            : "bg-stone-50/80 text-stone-600 border-stone-200 hover:bg-amber-50 hover:text-amber-900"
+                        }`}
+                      >
+                        <Languages className="w-3 h-3" />
+                        <span>IAST</span>
+                      </button>
+
+                      {/* Quick Copy Button */}
+                      <button
+                        type="button"
+                        onClick={(e) => handleCopy(mantra.sanskrit, mantra.id, e)}
+                        title="Copy Sanskrit text"
+                        className="p-1.5 rounded-lg border border-stone-200 hover:border-amber-300 bg-stone-50/80 hover:bg-amber-50 text-stone-600 hover:text-amber-900 transition-colors cursor-pointer"
+                      >
+                        {isCopied ? (
+                          <Check className="w-3.5 h-3.5 text-emerald-600" />
+                        ) : (
+                          <Copy className="w-3.5 h-3.5" />
+                        )}
+                      </button>
+                    </div>
+                  </div>
+
+                  {/* Shastra Meta Tags: Rishi, Devata, Chhanda */}
+                  <div className="flex flex-wrap items-center gap-1.5 mt-3 mb-2 text-[11px] sm:text-xs text-stone-600 font-devanagari">
+                    <span className="px-2 py-0.5 rounded-md bg-amber-50/70 border border-amber-200/60">
+                      ऋषि: <strong className="text-stone-800 font-semibold">{mantra.rishi}</strong>
+                    </span>
+                    <span className="px-2 py-0.5 rounded-md bg-amber-50/70 border border-amber-200/60">
+                      देवता: <strong className="text-stone-800 font-semibold">{mantra.devata}</strong>
+                    </span>
+                    <span className="px-2 py-0.5 rounded-md bg-amber-50/70 border border-amber-200/60">
+                      छंद: <strong className="text-stone-800 font-semibold">{mantra.chhanda}</strong>
                     </span>
                   </div>
+
+                  {/* Title */}
+                  <h3 className="font-serif text-lg sm:text-xl font-bold text-stone-900 group-hover:text-amber-900 transition-colors mt-2 mb-3">
+                    {mantra.title}
+                  </h3>
+
+                  {/* Sacred Sanskrit Text Box (Framed with sacred gold border & high-contrast Devanagari) */}
+                  <div className="rounded-xl bg-[#fffdf8] border-2 border-amber-200/90 shadow-2xs p-4 sm:p-5 relative my-3">
+                    {/* Devanagari Shloka with authentic Vedic Svara markings */}
+                    <p
+                      className={`font-devanagari font-bold text-stone-950 text-center whitespace-pre-line tracking-wide select-text ${fontSizes[fontSizeIndex].shlokaClass}`}
+                    >
+                      {mantra.sanskrit}
+                    </p>
+
+                    {/* IAST Transliteration Box (Toggleable per card or globally) */}
+                    {isCardIastActive && mantra.transliteration && (
+                      <div className="mt-3.5 pt-3 border-t border-amber-200/80 bg-amber-50/50 rounded-lg p-2.5 text-center transition-all animate-fadeIn">
+                        <span className="text-[10px] font-sans uppercase font-bold text-amber-800 tracking-wider block mb-1">
+                          IAST Roman Transliteration
+                        </span>
+                        <p className="font-serif italic text-xs sm:text-sm text-stone-800 leading-relaxed tracking-wide select-text whitespace-pre-line">
+                          {mantra.transliteration}
+                        </p>
+                      </div>
+                    )}
+                  </div>
+
+                  {/* Concise Hindi Bhavartha */}
+                  <div className="mt-3.5 space-y-2">
+                    <p className="text-xs sm:text-sm text-stone-700 font-devanagari leading-relaxed">
+                      <strong className="text-stone-900 font-bold">भावार्थ: </strong>
+                      {mantra.hindiTranslation}
+                    </p>
+
+                    {/* Highlighted Spiritual Purport (आध्यात्मिक मर्म / फलश्रुति) */}
+                    <div className="p-3 rounded-xl bg-gradient-to-r from-amber-50/90 via-orange-50/70 to-amber-50/90 border border-amber-200/80 text-amber-950 text-xs sm:text-[13px] font-devanagari flex items-start gap-2 shadow-2xs">
+                      <Sparkles className="w-4 h-4 text-amber-600 mt-0.5 shrink-0" />
+                      <div className="leading-relaxed">
+                        <strong className="text-amber-900 font-bold">आध्यात्मिक मर्म: </strong>
+                        {mantra.spiritualPurport}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Card Action Footer Bar */}
+                <div className="mt-5 pt-3.5 border-t border-amber-100/90 flex flex-wrap items-center justify-between gap-2.5">
+                  <div className="flex items-center gap-2">
+                    {/* 1. उच्चारण सुनें (Listen Chanting Pronunciation via Web Speech API) */}
+                    <button
+                      type="button"
+                      onClick={(e) => handleToggleSpeech(mantra, e)}
+                      className={`inline-flex items-center gap-1.5 px-3 py-1.5 sm:px-3.5 sm:py-2 rounded-xl text-xs font-bold transition-all cursor-pointer shadow-2xs ${
+                        isPlayingThis
+                          ? "bg-amber-600 text-white animate-pulse"
+                          : "bg-amber-100/80 hover:bg-amber-200 text-amber-950 border border-amber-300/80"
+                      }`}
+                    >
+                      {isPlayingThis ? (
+                        <>
+                          <VolumeX className="w-3.5 h-3.5" />
+                          <span>रोकें (Chanting...)</span>
+                        </>
+                      ) : (
+                        <>
+                          <Volume2 className="w-3.5 h-3.5 text-amber-800" />
+                          <span>उच्चारण सुनें</span>
+                        </>
+                      )}
+                    </button>
+
+                    {/* 2. कॉपी (Copy Mantra text) */}
+                    <button
+                      type="button"
+                      onClick={(e) => handleCopy(mantra.sanskrit, mantra.id, e)}
+                      className="inline-flex items-center gap-1 px-2.5 py-1.5 sm:py-2 rounded-xl text-xs font-semibold bg-white hover:bg-amber-50 text-stone-700 hover:text-amber-950 border border-amber-200/80 transition-colors cursor-pointer"
+                    >
+                      {isCopied ? (
+                        <>
+                          <Check className="w-3.5 h-3.5 text-emerald-600" />
+                          <span className="text-emerald-700 font-bold">कॉपी हुआ</span>
+                        </>
+                      ) : (
+                        <>
+                          <Copy className="w-3.5 h-3.5 text-stone-500" />
+                          <span>कॉपी</span>
+                        </>
+                      )}
+                    </button>
+                  </div>
+
+                  {/* 3. पूर्ण भावार्थ व जप विधि (Read Full Meaning & Japa Details -> /library/mantra/${m.id}) */}
                   <button
                     type="button"
-                    onClick={(e) => handleCopy(mantra.sanskrit, idx, e)}
-                    title="Copy Sanskrit text"
-                    className="p-1.5 rounded-full hover:bg-amber-50 text-stone-400 hover:text-amber-800 transition-colors cursor-pointer"
+                    onClick={(e) => handleOpenMantraReader(mantra.id, e)}
+                    className="inline-flex items-center gap-1.5 px-3.5 py-1.5 sm:py-2 rounded-xl text-xs sm:text-sm font-bold bg-gradient-to-r from-amber-700 to-amber-800 hover:from-amber-800 hover:to-amber-900 text-white shadow-xs hover:shadow-md transition-all cursor-pointer group"
                   >
-                    {copiedIndex === idx ? (
-                      <Check className="w-4 h-4 text-emerald-600" />
-                    ) : (
-                      <Copy className="w-4 h-4" />
-                    )}
+                    <BookOpen className="w-3.5 h-3.5" />
+                    <span>पूर्ण भावार्थ व जप विधि</span>
+                    <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
                   </button>
                 </div>
-
-                {/* Shastric Meta Badges */}
-                <div className="flex flex-wrap gap-1 mb-3 text-[10px] text-stone-500">
-                  <span className="px-1.5 py-0.5 rounded bg-stone-100">
-                    ऋषि: <strong className="text-stone-700">{mantra.rishi}</strong>
-                  </span>
-                  <span className="px-1.5 py-0.5 rounded bg-stone-100">
-                    देवता: <strong className="text-stone-700">{mantra.devata}</strong>
-                  </span>
-                  <span className="px-1.5 py-0.5 rounded bg-stone-100">
-                    छंद: <strong className="text-stone-700">{mantra.chandas}</strong>
-                  </span>
-                </div>
-
-                {/* Sacred Sanskrit Text */}
-                <div className="p-3.5 rounded-xl bg-[#fffdf8] border border-amber-100/90 text-stone-900 mb-3 shadow-2xs">
-                  <p className="font-devanagari text-sm sm:text-base font-bold leading-relaxed text-amber-950 text-center whitespace-pre-line">
-                    {mantra.sanskrit}
-                  </p>
-                </div>
-
-                {/* Translation */}
-                <p className="text-[11px] text-stone-600 font-devanagari leading-relaxed line-clamp-3">
-                  <strong className="text-stone-700">भावार्थ:</strong> {mantra.translation}
-                </p>
               </div>
-
-              <div className="mt-4 pt-2.5 border-t border-stone-100 flex items-center justify-between">
-                <button
-                  type="button"
-                  onClick={onNavigateKnowledge}
-                  className="text-xs font-bold text-amber-700 hover:text-amber-900 flex items-center gap-1 transition-colors cursor-pointer"
-                >
-                  <span>Explore Recitation & Details</span>
-                  <ArrowRight className="w-3.5 h-3.5" />
-                </button>
-              </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
+
+        {/* View All / Show Less Toggle (Active when "समस्त महामंत्र" selected) */}
+        {activeCategoryTab === "all" && (
+          <div className="mt-8 flex justify-center">
+            <button
+              type="button"
+              onClick={() => setShowAllMantras((prev) => !prev)}
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white border border-amber-300 hover:border-amber-500 text-amber-950 font-bold text-xs sm:text-sm shadow-xs hover:shadow-md hover:bg-amber-50 transition-all cursor-pointer"
+            >
+              <span>
+                {showAllMantras
+                  ? "संक्षिप्त दृश्य (४ मुख्य महामंत्र)"
+                  : "समस्त १२ महामंत्र व स्तोत्र देखें (View All 12 Mantras)"}
+              </span>
+              {showAllMantras ? (
+                <ChevronUp className="w-4 h-4 text-amber-800" />
+              ) : (
+                <ChevronDown className="w-4 h-4 text-amber-800" />
+              )}
+            </button>
+          </div>
+        )}
       </div>
     </section>
   );

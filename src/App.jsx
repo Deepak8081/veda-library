@@ -14,6 +14,10 @@ import ArticleDetailPage from "./components/article/ArticleDetailPage.jsx";
 import MantraReaderPage from "./pages/MantraReaderPage.jsx";
 import BlogListPage from "./pages/BlogListPage.jsx";
 import BlogDetailPage from "./pages/BlogDetailPage.jsx";
+import PuranaItihasaPage from "./pages/PuranaItihasaPage.jsx";
+import UpanishadDarshanaPage from "./pages/UpanishadDarshanaPage.jsx";
+import ScriptureChapterIndexPage from "./pages/ScriptureChapterIndexPage.jsx";
+import BhagavataChapterDetailPage from "./pages/BhagavataChapterDetailPage.jsx";
 
 // Helper component to ensure smooth scrolling to top on route navigation
 function ScrollToTop() {
@@ -93,13 +97,63 @@ function MainLayout() {
             element={<CollectionsPage />}
           />
 
+          {/* Dedicated Purana & Itihasa Experience */}
+          <Route
+            path="/library/purana-itihasa"
+            element={<PuranaItihasaPage onOpenSearch={handleOpenSearch} />}
+          />
+          <Route
+            path="/library/purana"
+            element={<PuranaItihasaPage onOpenSearch={handleOpenSearch} />}
+          />
+          <Route
+            path="/library/itihasa"
+            element={<PuranaItihasaPage onOpenSearch={handleOpenSearch} />}
+          />
+          <Route
+            path="/purana-itihasa"
+            element={<PuranaItihasaPage onOpenSearch={handleOpenSearch} />}
+          />
+          <Route
+            path="/purana"
+            element={<PuranaItihasaPage onOpenSearch={handleOpenSearch} />}
+          />
+          <Route
+            path="/itihasa"
+            element={<PuranaItihasaPage onOpenSearch={handleOpenSearch} />}
+          />
+
+          {/* Dedicated Upanishad & Darshana Experience */}
+          <Route
+            path="/library/upanishad-darshana"
+            element={<UpanishadDarshanaPage onOpenSearch={handleOpenSearch} />}
+          />
+          <Route
+            path="/library/upanishad"
+            element={<UpanishadDarshanaPage onOpenSearch={handleOpenSearch} />}
+          />
+          <Route
+            path="/library/darshana"
+            element={<UpanishadDarshanaPage onOpenSearch={handleOpenSearch} />}
+          />
+          <Route
+            path="/upanishad-darshana"
+            element={<UpanishadDarshanaPage onOpenSearch={handleOpenSearch} />}
+          />
+          <Route
+            path="/upanishad"
+            element={<UpanishadDarshanaPage onOpenSearch={handleOpenSearch} />}
+          />
+          <Route
+            path="/darshana"
+            element={<UpanishadDarshanaPage onOpenSearch={handleOpenSearch} />}
+          />
+
           {/* Page 2: Category Landing Page (e.g. /library/veda, /library/mantra-stotra, /library/puja) */}
           <Route
             path="/library/:category"
             element={
-              <CategoryLandingPage
-                onOpenSearch={() => setIsSearchOpen(true)}
-              />
+              <CategoryLandingPage onOpenSearch={() => setIsSearchOpen(true)} />
             }
           />
 
@@ -107,24 +161,37 @@ function MainLayout() {
           <Route
             path="/library/:category/:subject"
             element={
-              <SubjectDetailPage
-                onOpenSearch={() => setIsSearchOpen(true)}
-              />
+              <SubjectDetailPage onOpenSearch={() => setIsSearchOpen(true)} />
             }
           />
 
           {/* Page 4: Standard Mantra Reader Experience */}
           <Route
             path="/library/mantra/:mantraId"
-            element={<MantraReaderPage onOpenSearch={() => setIsSearchOpen(true)} />}
+            element={
+              <MantraReaderPage onOpenSearch={() => setIsSearchOpen(true)} />
+            }
           />
           <Route
             path="/mantra/:mantraId"
-            element={<MantraReaderPage onOpenSearch={() => setIsSearchOpen(true)} />}
+            element={
+              <MantraReaderPage onOpenSearch={() => setIsSearchOpen(true)} />
+            }
           />
           <Route
             path="/library/:category/:subject/mantra/:mantraId"
-            element={<MantraReaderPage onOpenSearch={() => setIsSearchOpen(true)} />}
+            element={
+              <MantraReaderPage onOpenSearch={() => setIsSearchOpen(true)} />
+            }
+          />
+
+          <Route
+            path="/library/purana/shrimad-bhagavata/skandha-11/:chapter"
+            element={<BhagavataChapterDetailPage />}
+          />
+          <Route
+            path="/library/purana/shrimad-bhagavata/skandha-11"
+            element={<ScriptureChapterIndexPage />}
           />
 
           {/* Page 5: Universal Detail Reader Page (e.g. /library/puja/shaiva/rudrabhisheka, /library/veda/rigveda/agnisukta) */}

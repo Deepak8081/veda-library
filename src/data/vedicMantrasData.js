@@ -1,7 +1,7 @@
 /**
  * Authentic Vedic Mantras Dataset
  * Sourced from the Government of India's Vedic Heritage Portal (vedicheritage.gov.in)
- * 3-Language translations (Hindi, English, Hinglish) & Padapatha
+ * 3-Language translations (Hindi, English, Hinglish), Padapatha, Anvaya, Viniyoga, Bhashya & Sadhana Phala
  */
 
 export const ALL_VEDIC_MANTRAS = [
@@ -71,7 +71,11 @@ export const ALL_VEDIC_MANTRAS = [
       "rv-1-1-9"
     ],
     "orderIndex": 1,
-    "status": "ACTIVE"
+    "status": "ACTIVE",
+    "anvaya": "यज्ञस्य पुरोहितं देवम् ऋत्विजं होतारं रत्नधातमम् अग्निम् ईळे।",
+    "viniyoga": "ॐ अस्य श्रीअग्निसूक्तस्य मधुच्छन्दा वैश्वामित्र ऋषिः, गायत्री छन्दः, अग्निर्देवता, अग्न्याधाने प्रातर्होमे च विनियोगः।",
+    "bhashyaSummary": "सायण भाष्य: 'ईळे' का अर्थ स्तुति करता हूँ (स्तौमि)। अग्नि यज्ञ का पुरोहित है (अग्रणी रहकर कल्याण करने वाला)। देवम् अर्थात दानादि गुणों से युक्त दिव्य शक्ति। ऋत्विजम् अर्थात समयानुकूल याजन कराने वाला। होतारम् अर्थात हवि ग्रहण कराने वाला। रत्नधातमम् अर्थात श्रेष्ठतम आध्यात्मिक व भौतिक रत्नों का धारक व प्रदाता।",
+    "sadhanaPhala": "यज्ञीय तेज, आरोग्य, नेतृत्व क्षमता और जीवन में प्रथम प्रेरक शक्ति (Divine Will) के जागरण हेतु नित्य पाठ।"
   },
   {
     "id": "rv-1-1-2",
@@ -290,7 +294,11 @@ export const ALL_VEDIC_MANTRAS = [
       "rv-3-62-10"
     ],
     "orderIndex": 7,
-    "status": "ACTIVE"
+    "status": "ACTIVE",
+    "anvaya": "तत् सवितुः देवस्य वरेण्यं भर्गः धीमहि, यः नः धियः प्रचोदयात्।",
+    "viniyoga": "ॐ अस्य श्रीगायत्रीमन्त्रस्य विश्वामित्र ऋषिः, निचृद् गायत्री छन्दः, सविता देवता, जपे विनियोगः।",
+    "bhashyaSummary": "सायणाचार्य एवं महर्षि दयानन्द भाष्य: 'सविता' सर्वोत्पादक एवं प्रेरक परब्रह्म का नाम है। 'वरेण्यं' वरण करने योग्य सर्वश्रेष्ठ दिव्य तेज। 'भर्गः' अविद्या और पापों को भस्म करने वाला प्रकाश। 'धीमहि' हम अपनी बुद्धि में धारण करते हैं। 'धियः' हमारी प्रज्ञा और सत्कर्मों को। 'प्रचोदयात्' परमात्मा श्रेष्ठ सन्मार्ग में प्रेरित करे।",
+    "sadhanaPhala": "त्रिकाल संध्या (प्रातः, मध्याह्न, सायं) में गायत्री जप करने से पापनाश, आत्मिक ओज, ब्रह्मतेज और दिव्य प्रज्ञा का जागरण होता है। यह समस्त वेदों की जननी मानी गई है।"
   },
   {
     "id": "rv-7-59-12",
@@ -361,7 +369,11 @@ export const ALL_VEDIC_MANTRAS = [
       "rv-7-59-12"
     ],
     "orderIndex": 8,
-    "status": "ACTIVE"
+    "status": "ACTIVE",
+    "anvaya": "सुगन्धिं पुष्टिवर्धनं त्र्यम्बकं यजामहे। उर्वारुकम् इव बन्धनात् मृत्योः मुक्षीय, अमृतात् मा (मुक्षीय)।",
+    "viniyoga": "ॐ अस्य श्रीमहामृत्युञ्जयमन्त्रस्य वसिष्ठ ऋषिः, अनुष्टुप् छन्दः, श्रीत्र्यम्बकरुद्रो देवता, ह्रीं बीजं, श्रीं शक्तिः, मम सर्वारिष्टनिवारणार्थे अकालमृत्युहरणार्थे जपे विनियोगः।",
+    "bhashyaSummary": "सायणाचार्य एवं अभिनवगुप्त भाष्य: 'त्र्यम्बक' का अर्थ तीन लोकों (भूः, भुवः, स्वः) के पिता, अथवा सत्त्व-रज-तम के प्रेरक परमेश्वर शिव हैं। 'सुगन्धि' आत्मिक ज्ञान का दिव्य सौरभ है। 'पुष्टि' जीवात्मा के ओज और बल की वृद्धि है। जैसे पका हुआ ककड़ी/खरबूजा अपनी डाल को बिना कोई कष्ट दिए स्वयं छूट जाता है, वैसे ही देहमुक्त होने पर साधक अमृत (मोक्ष) में लीन हो, मृत्योन्मुखी न बने।",
+    "sadhanaPhala": "१,२५,००० जप से महामृत्युंजय अनुष्ठान सिद्ध होता है। यह मन्त्र समस्त रोगों, अकाल मृत्यु भय, ग्रहदोष निवारण तथा मोक्ष प्रदायक संजीवनी महामन्त्र है। प्रातःकाल पूर्वमुखी होकर रुद्राक्ष माला से जप का विधान है।"
   },
   {
     "id": "rv-10-90-1",
@@ -438,7 +450,11 @@ export const ALL_VEDIC_MANTRAS = [
       "rv-10-90-16"
     ],
     "orderIndex": 9,
-    "status": "ACTIVE"
+    "status": "ACTIVE",
+    "anvaya": "सहस्रशीर्षा सहस्राक्षः सहस्रपात् पुरुषः सः भूमिं विश्वतः वृत्वा दशाङ्गुलम् अत्यतिष्ठत्।",
+    "viniyoga": "ॐ अस्य श्रीपुरुषसूक्तस्य नारायण ऋषिः, अनुष्टुप् छन्दः, परमपुरुषो परमात्मा देवता, पुरुषमेधे विष्णुयागे च विनियोगः।",
+    "bhashyaSummary": "सायण एवं महीधर भाष्य: 'सहस्र' का अर्थ 'अनन्त' (अपरिमित) है। समस्त जीवों के सिर, आँखें और चरण उस विराट् पुरुष के ही हैं। वह सम्पूर्ण ब्रह्माण्ड को व्याप्त कर उससे भी दस अंगुल (अनन्त कोटि परे) स्थित है अर्थात् वह विश्वरूप भी है और विश्वातीत भी।",
+    "sadhanaPhala": "भगवान् महाविष्णु की षोडशोपचार पूजा में १६ ऋचाओं से अभिषेक का विधान है। चित्त की शुद्धि, सर्वैश्वर्य प्राप्ति एवं परमपद की प्राप्ति होती है।"
   },
   {
     "id": "vs-1-1",
@@ -770,7 +786,11 @@ export const ALL_VEDIC_MANTRAS = [
       "vs-40-1"
     ],
     "orderIndex": 10,
-    "status": "ACTIVE"
+    "status": "ACTIVE",
+    "anvaya": "जगत्यां यत् किञ्च जगत् इदं सर्वम् ईशा वास्यम्। तेन त्यक्तेन भुञ्जीथाः, कस्यचित् धनं मा गृधः।",
+    "viniyoga": "ॐ अस्य ईशावास्योपनिषदः दध्यङ्ङाथर्वण ऋषिः, अनुष्टुप् छन्दः, आत्मा परब्रह्म देवता, आत्मज्ञाने संन्यासनिष्ठायै च विनियोगः।",
+    "bhashyaSummary": "आदि शंकराचार्य भाष्य: इस चराचर जगत् में जो कुछ भी गतिमान पदार्थ है, वह सब परमेश्वर से आच्छादित (व्याप्त) है। अतः त्यागभाव से (आसक्ति छोड़कर) उसका उपभोग करो। किसी के भी धन या ऐश्वर्य का लोभ मत करो क्योंकि वास्तविक भोक्ता और स्वामी केवल वही एक ब्रह्म है।",
+    "sadhanaPhala": "निष्काम कर्मयोग और संन्यास भावना का समन्वय। मोह, शोक और लोभ से विमुक्ति।"
   },
   {
     "id": "ts-1-1-1",
@@ -2193,7 +2213,11 @@ export const ALL_VEDIC_MANTRAS = [
       "rv-10-129-7"
     ],
     "orderIndex": 14,
-    "status": "ACTIVE"
+    "status": "ACTIVE",
+    "anvaya": "तदानीम् असत् नो आसीत्, सत् नो (आसीत्), रजः नो आसीत्, परः यत् व्योम (तत् अपि) नो (आसीत्)। किम् आवरीवः? कुह? कस्य शर्मन्? अम्भः किम् आसीत् गहनं गभीरम्?",
+    "viniyoga": "ॐ अस्य नासदीयसूक्तस्य प्रजापतिः परमेष्ठी ऋषिः, त्रिष्टुप् छन्दः, भाववृत्तं परमात्मा देवता, सृष्टिचिन्तने विनियोगः।",
+    "bhashyaSummary": "सायण एवं श्री अरविन्द भाष्य: सृष्टि से पूर्व व्यक्त (सत्) भी नहीं था और अव्यक्त शून्य (असत्) भी नहीं था। दिक् और काल का विभाजन नहीं था। केवल एक अनिर्वचनीय परम तत्त्व अपनी ही माया शक्ति से बिना वायु के श्वास ले रहा था ('आनीदवातं स्वधया तदेकम्')।",
+    "sadhanaPhala": "अद्वैत ब्रह्मज्ञान, सृष्टि के रहस्य का बोध और चित्त की गहनतम समाधि अवस्था की प्राप्ति।"
   },
   {
     "id": "rv-10-129-7",
@@ -3187,8 +3211,8 @@ export const ALL_VEDIC_MANTRAS = [
     "status": "ACTIVE"
   },
   {
-    "id": "yj-36-17",
-    "slug": "yj-36-17",
+    "id": "vs-36-17",
+    "slug": "vs-36-17",
     "vedaId": "yajurveda",
     "nodeId": "yj-adhyaya-36",
     "vedaName": "यजुर्वेद (Yajurveda)",
@@ -3257,7 +3281,11 @@ export const ALL_VEDIC_MANTRAS = [
     ],
     "shastricContext": "सनातन वैदिक संस्कृति का सार्वभौमिक शांति पाठ। पर्यावरण, ब्रह्माण्ड और मानव चेतना के मध्य सामंजस्य का परम सूत्र।",
     "orderIndex": 8,
-    "status": "ACTIVE"
+    "status": "ACTIVE",
+    "anvaya": "द्यौः शान्तिः, अन्तरिक्षं शान्तिः, पृथिवी शान्तिः, आपः शान्तिः, ओषधयः शान्तिः, वनस्पतयः शान्तिः, विश्वे देवाः शान्तिः, ब्रह्म शान्तिः, सर्वं शान्तिः, शान्तिः एव शान्तिः, सा मा शान्तिः एधि।",
+    "viniyoga": "ॐ अस्य शान्तिमन्त्रस्य दध्यङ्ङाथर्वण ऋषिः, निचृत् स्वराट् छन्दः, विश्वे देवा देवता, विश्वशान्त्यर्थे कर्मसमाप्तौ च विनियोगः।",
+    "bhashyaSummary": "उव्वट एवं महीधर भाष्य: द्युलोक, अन्तरिक्ष, पृथ्वी, जल, औषधियाँ, वनस्पतियाँ, देवगण और परब्रह्म — सम्पूर्ण सृष्टि की समस्त शक्तियाँ परस्पर सामंजस्य और शान्ति में रहें। वह शान्ति मेरे अन्तःकरण में भी प्रविष्ट होकर मुझे शान्त करे।",
+    "sadhanaPhala": "समस्त त्रिविध तापों (आधिदैविक, आधिभौतिक, आध्यात्मिक) का शमन एवं परिवार व पर्यावरण में शांति स्थापना।"
   },
   {
     "id": "yj-40-1",
@@ -4799,16 +4827,2060 @@ export const ALL_VEDIC_MANTRAS = [
     ],
     "orderIndex": 11,
     "status": "ACTIVE"
+  },
+  {
+    "id": "up-kena-1",
+    "slug": "up-kena-1",
+    "vedaId": "samaveda",
+    "nodeId": "up-kena-1",
+    "vedaName": "सामवेद (Samaveda)",
+    "shakha": "तलवकार / जैमिनीय शाखा",
+    "textName": "केनोपनिषद् (तलवकारोपनिषद्)",
+    "sectionRef": "प्रथम खण्ड, मन्त्र १",
+    "mantraNumber": "१.१",
+    "rishi": "महर्षि तलवकार / जैमिनि",
+    "devata": "परब्रह्म (चेतना का मूल प्रेरक तत्त्व)",
+    "chhanda": "अनुष्टुप् (८+८+८+८ = ३२ वर्ण)",
+    "svara": "सस्वर वैदिक उपनिषद् पाठ",
+    "sanskrit": "ॐ केनेषि॑तं पतति॒ प्रेषि॑तं॒ मनः॑ केन॑ प्रा॒णः प्र॑थ॒मः प्रैति॑ यु॒क्तः।\nकेनेषि॑तां वा॒चमि॒मां व॑दन्ति॒ चक्षुः॒ श्रोत्रं॒ क उ॑ दे॒वो यु॑नक्ति॥१॥",
+    "transliteration": "oṃ keneṣitaṃ patati preṣitaṃ manaḥ kena prāṇaḥ prathamaḥ praiti yuktaḥ |\nkeneṣitāṃ vācam imāṃ vadanti cakṣuḥ śrotraṃ ka u devo yunakti || 1 ||",
+    "hindiTranslation": "किसकी इच्छा या प्रेरणा से प्रेरित होकर यह मन विषयों की ओर दौड़ता है? किसके द्वारा नियुक्त होकर यह प्रथम मुख्य प्राण अपनी गति करता है? किसकी प्रेरणा से मनुष्य इस वाणी को बोलते हैं? और कौन सा दिव्य प्रकाशमय देव आँखों और कानों को अपने-अपने विषयों में प्रवृत्त करता है?",
+    "englishTranslation": "By whose will and direction does the mind alight upon its objects? By whose behest does the primary life-breath (Prana) proceed on its journey? Prompted by whom do people speak this speech? And what effulgent God directs the eye and the ear?",
+    "hinglishTranslation": "Kiski iccha aur prerna se man vishayon ki taraf daudta hai? Kiske nirdesh par mukhya Praan gati karta hai? Kiske prerit karne par log vaani bolte hain? Aur kaun sa divya Dev aankh aur kaan ko apne karyon me lagata hai?",
+    "padapatha": [
+      {
+        "word": "केन",
+        "meaning": "किसके द्वारा / किसकी इच्छा से"
+      },
+      {
+        "word": "इषितम्",
+        "meaning": "चाहा हुआ / प्रेरित"
+      },
+      {
+        "word": "पतति",
+        "meaning": "दौड़ता है / गिरता है"
+      },
+      {
+        "word": "प्रेषितम्",
+        "meaning": "भेजा हुआ"
+      },
+      {
+        "word": "मनः",
+        "meaning": "मन"
+      },
+      {
+        "word": "केन",
+        "meaning": "किसके द्वारा"
+      },
+      {
+        "word": "प्राणः",
+        "meaning": "मुख्य प्राण"
+      },
+      {
+        "word": "प्रथमः",
+        "meaning": "सर्वप्रथम गतिशील"
+      },
+      {
+        "word": "प्रैति",
+        "meaning": "आगे बढ़ता है"
+      },
+      {
+        "word": "युक्तः",
+        "meaning": "नियुक्त होकर"
+      },
+      {
+        "word": "केन",
+        "meaning": "किसके द्वारा"
+      },
+      {
+        "word": "इषिताम्",
+        "meaning": "इच्छित होकर"
+      },
+      {
+        "word": "वाचम्",
+        "meaning": "वाणी को"
+      },
+      {
+        "word": "इमाम्",
+        "meaning": "इस"
+      },
+      {
+        "word": "वदन्ति",
+        "meaning": "बोलते हैं"
+      },
+      {
+        "word": "चक्षुः",
+        "meaning": "नेत्र को"
+      },
+      {
+        "word": "श्रोत्रम्",
+        "meaning": "कर्ण को"
+      },
+      {
+        "word": "कः",
+        "meaning": "कौन"
+      },
+      {
+        "word": "उ",
+        "meaning": "भला"
+      },
+      {
+        "word": "देवः",
+        "meaning": "प्रकाशमान देव"
+      },
+      {
+        "word": "युनक्ति",
+        "meaning": "प्रवृत्त करता है"
+      }
+    ],
+    "shastricContext": "केनोपनिषद् का यह मंगलाचरण एवं प्रारंभिक जिज्ञासा मन्त्र है। यहाँ शिष्य गुरु से अन्तःकरण और इन्द्रियों के उस परम प्रेरक चेतन तत्त्व (ब्रह्म) के विषय में प्रश्न पूछता है जो 'श्रोत्रस्य श्रोत्रं मनसो मनो यद् वाचो ह वाचं' (कानों का कान, मन का मन, वाणी की वाणी) है।",
+    "audioUrl": null,
+    "previousId": "av-19-9-1",
+    "nextId": "up-katha-1-3-14",
+    "chapterMantraIds": [
+      "up-kena-1"
+    ],
+    "orderIndex": 21,
+    "status": "ACTIVE",
+    "anvaya": "मनः केन इषितं प्रेषितं पतति? प्राणः प्रथमः प्रयुक्तः केन एति? इमां वाचं केन इषितां वदन्ति? चक्षुः श्रोत्रं कः उ देवः युनक्ति?",
+    "viniyoga": "ॐ अस्य केनोपनिषदः तलवकार ऋषिः, अनुष्टुप् छन्दः, निर्गुणं परब्रह्म देवता, ब्रह्मजिज्ञासायां विनियोगः।",
+    "bhashyaSummary": "आदि शंकराचार्य (पदभाष्य): शिष्य गुरु से पूछता है—किसकी इच्छा और प्रेरणा से यह मन अपने विषयों की ओर दौड़ता है? किसके आदेश से प्रथम मुख्य प्राण अपने कार्य में प्रवृत्त होता है? वह कौन सा अदृश्य देव है जो आँखों और कानों को देखने-सुनने में नियुक्त करता है? उत्तर में गुरु कहते हैं—वह 'श्रोत्रस्य श्रोत्रं मनसो मनो'—कानों का कान और मन का मन वह परब्रह्म है।",
+    "sadhanaPhala": "इन्द्रियों के अहंकार का नाश, आत्म-अवलोकन की तीक्ष्णता तथा ब्रह्मविद्या की प्राप्ति।"
+  },
+  {
+    "id": "up-katha-1-3-14",
+    "slug": "up-katha-1-3-14",
+    "vedaId": "yajurveda",
+    "nodeId": "up-katha-1-3",
+    "vedaName": "कृष्ण यजुर्वेद (Krishna Yajurveda)",
+    "shakha": "कठ शाखा",
+    "textName": "कठोपनिषद् (Katha Upanishad)",
+    "sectionRef": "प्रथमाध्याय, तृतीया वल्ली, मन्त्र १४",
+    "mantraNumber": "१.३.१४",
+    "rishi": "यमराज (उपदेशक) - नचिकेता (जिज्ञासु)",
+    "devata": "आत्मतत्त्व / परब्रह्म (Supreme Self)",
+    "chhanda": "त्रिष्टुप् / अनुष्टुप्",
+    "svara": "सस्वर वैदिक उपनिषद् पाठ",
+    "sanskrit": "ॐ उत्ति॑ष्ठत॒ जाग्र॑त प्रा॒प्य व॑रा॒न्निबो॑धत।\nक्षु॒रस्य॒ धारा॒ निशि॑ता दु॒रत्य॑या दु॒र्गं पथ॒स्तत्क॒वयो॑ वदन्ति॥१४॥",
+    "transliteration": "oṃ uttiṣṭhata jāgrata prāpya varān nibodhata |\nkṣurasya dhārā niśitā duratyayā durgaṃ pathas tat kavayo vadanti || 14 ||",
+    "hindiTranslation": "उठो! जागो! और श्रेष्ठ आत्मज्ञानी महापुरुषों के समीप जाकर उस परम आत्मतत्त्व को भली-भांति जानो। तत्त्वदर्शी कवियों/ऋषियों का कथन है कि वह आत्म-साक्षात्कार का मार्ग छुरे की तीक्ष्ण (पैनी) धार के समान अत्यंत दुर्गम और कठिन है।",
+    "englishTranslation": "Arise! Awake! Approach the exalted spiritual masters and realize the Supreme Truth. The wise sages declare that the path of spiritual liberation is as sharp as the edge of a razor, arduous and difficult to traverse.",
+    "hinglishTranslation": "Utho! Jaago! Aur shreshth gyanis/gurus ke paas jakar us aatma-tatva ko samjho. Rishi log kehte hain ki aatmagyan ka marg ustre/chhure ki dhaar ke saman atyant kathin aur durghat hai.",
+    "padapatha": [
+      {
+        "word": "उत्तिष्ठत",
+        "meaning": "उठो (अज्ञान की निद्रा त्यागो)"
+      },
+      {
+        "word": "जाग्रत",
+        "meaning": "जागो (चेतन व जागरूक बनो)"
+      },
+      {
+        "word": "प्राप्य",
+        "meaning": "प्राप्त करके / शरण में जाकर"
+      },
+      {
+        "word": "वरान्",
+        "meaning": "श्रेष्ठ ज्ञानियों / सद्गुरुओं को"
+      },
+      {
+        "word": "निबोधत",
+        "meaning": "आत्मज्ञान को जानो"
+      },
+      {
+        "word": "क्षुरस्य",
+        "meaning": "छुरे / उस्तरे की"
+      },
+      {
+        "word": "धारा",
+        "meaning": "तीक्ष्ण धार"
+      },
+      {
+        "word": "निशिता",
+        "meaning": "पैनी की हुई"
+      },
+      {
+        "word": "दुरत्यया",
+        "meaning": "कठिनाई से पार करने योग्य"
+      },
+      {
+        "word": "दुर्गम्",
+        "meaning": "अत्यंत दुर्गम"
+      },
+      {
+        "word": "पथः",
+        "meaning": "मार्ग को"
+      },
+      {
+        "word": "तत्",
+        "meaning": "उसे"
+      },
+      {
+        "word": "कवयः",
+        "meaning": "तत्त्वदर्शी मनीषी / ऋषि"
+      },
+      {
+        "word": "वदन्ति",
+        "meaning": "कहते हैं"
+      }
+    ],
+    "shastricContext": "कठोपनिषद् का यह उद्घोष स्वामी विवेकानंद का सर्वाधिक प्रिय जीवन-मंत्र था—'Arise, Awake, and stop not till the goal is reached!'। यह संसार के प्रमाद से जाग्रत होकर ब्रह्म-साक्षात्कार का सार्वकालिक आह्वान है।",
+    "audioUrl": null,
+    "previousId": "up-kena-1",
+    "nextId": "up-mandukya-1",
+    "chapterMantraIds": [
+      "up-katha-1-3-14"
+    ],
+    "orderIndex": 22,
+    "status": "ACTIVE"
+  },
+  {
+    "id": "up-mandukya-1",
+    "slug": "up-mandukya-1",
+    "vedaId": "atharvaveda",
+    "nodeId": "up-mandukya",
+    "vedaName": "अथर्ववेद (Atharvaveda)",
+    "shakha": "शौनक शाखा",
+    "textName": "माण्डूक्योपनिषद् (Mandukya Upanishad)",
+    "sectionRef": "मन्त्र १ एवं २ (महावाक्य)",
+    "mantraNumber": "१-२",
+    "rishi": "महर्षि मण्डूक / वरुण",
+    "devata": "ओंकार एवं तुरीय परब्रह्म (AUM & The Transcendental Fourth)",
+    "chhanda": "ब्राह्मण गद्य-मन्त्र",
+    "svara": "सस्वर वैदिक उपनिषद् पाठ",
+    "sanskrit": "ॐ इत्येतदक्षरमिदँ सर्वं तस्योपव्याख्यानं भूतं भवद् भविष्यदिति सर्वमोंकार एव।\nसर्वं ह्येतद् ब्रह्म अयमात्मा ब्रह्म सोऽयमात्मा चतुष्पात्॥",
+    "transliteration": "oṃ ity etad akṣaram idaṃ sarvaṃ tasyopavyākhyānaṃ bhūtaṃ bhavad bhaviṣyad iti sarvam oṃkāra eva |\nsarvaṃ hy etad brahma ayam ātmā brahma so'yam ātmā catuṣpāt ||",
+    "hindiTranslation": "ॐ — यह अविनाशी अक्षर ही यह सब कुछ है। जो कुछ भूतकाल में था, जो वर्तमान में है, और जो भविष्य में होगा—वह सब ओंकार ही है। यह सब कुछ निश्चय ही ब्रह्म है। यह अंतरात्मा ही ब्रह्म है (अयमात्मा ब्रह्म - महावाक्य)। वह यह आत्मा चार पादों (जाग्रत, स्वप्न, सुषुप्ति, तुरीय) वाला है।",
+    "englishTranslation": "OM — this imperishable syllable is all this. All that is past, present, and future is indeed OM. All this is verily Brahman. This Self is Brahman (Ayam Atma Brahma - Atharvavedic Mahavakya). This Atman has four quarters (waking, dreaming, deep sleep, and the transcendental Turiya).",
+    "hinglishTranslation": "OM yeh avinashi akshar hi sab kuch hai. Jo beeta, jo hai, aur jo hoga—sab Omkar hai. Sab kuch Brahma hai, aur yeh antar-aatma hi Brahma hai (Ayam Atma Brahma). Yeh aatma 4 charano waala hai.",
+    "padapatha": [
+      {
+        "word": "ॐ",
+        "meaning": "परब्रह्म का वाचक प्रणव"
+      },
+      {
+        "word": "इति",
+        "meaning": "इस प्रकार"
+      },
+      {
+        "word": "एतत्",
+        "meaning": "यह"
+      },
+      {
+        "word": "अक्षरम्",
+        "meaning": "अविनाशी शब्द"
+      },
+      {
+        "word": "इदम्",
+        "meaning": "यह"
+      },
+      {
+        "word": "सर्वम्",
+        "meaning": "सब कुछ"
+      },
+      {
+        "word": "सर्वम्",
+        "meaning": "समस्त अस्तित्व"
+      },
+      {
+        "word": "हि",
+        "meaning": "निश्चय ही"
+      },
+      {
+        "word": "एतत्",
+        "meaning": "यह"
+      },
+      {
+        "word": "ब्रह्म",
+        "meaning": "परब्रह्म"
+      },
+      {
+        "word": "अयम्",
+        "meaning": "यह प्रत्यक्ष"
+      },
+      {
+        "word": "आत्मा",
+        "meaning": "अंतरात्मा"
+      },
+      {
+        "word": "ब्रह्म",
+        "meaning": "ब्रह्म ही है"
+      },
+      {
+        "word": "सः",
+        "meaning": "वह"
+      },
+      {
+        "word": "चतुष्पात्",
+        "meaning": "चार पादों (अवस्थाओं) वाला है"
+      }
+    ],
+    "shastricContext": "अथर्ववेदीय माण्डूक्योपनिषद् का यह प्रमुख सूत्र सनातन धर्म के चार महावाक्यों में से एक—'अयमात्मा ब्रह्म' (साक्षात्कार वाक्य) का मूल स्रोत है। मुक्तिकोपनिषद् के अनुसार 'माण्डूक्यमेवमेवालं मुमुक्षूणां विमुक्तये'—मोक्ष चाहने वालों के लिए केवल माण्डूक्य उपनिषद् ही पर्याप्त है।",
+    "audioUrl": null,
+    "previousId": "up-katha-1-3-14",
+    "nextId": "up-tait-1-11",
+    "chapterMantraIds": [
+      "up-mandukya-1"
+    ],
+    "orderIndex": 23,
+    "status": "ACTIVE",
+    "anvaya": "ओम् इति एतत् अक्षरम् इदं सर्वम्। तस्य उपव्याख्यानम्। भूतं भवत् भविष्यत् इति सर्वम् ओंकारः एव। यत् च अन्यत् त्रिकालातीतं तत् अपि ओंकारः एव। सर्वं हि एतत् ब्रह्म। अयम् आत्मा ब्रह्म। सः अयम् आत्मा चतुष्पात्।",
+    "viniyoga": "ॐ अस्य माण्डूक्योपनिषदः वरुणात्मजः भृगुः ऋषिः, यजुः छन्दः, ओंकारप्रतिपाद्यं परब्रह्म देवता, तुरीयब्रह्मसाक्षात्कारे विनियोगः।",
+    "bhashyaSummary": "गौडपादाचार्य एवं शंकराचार्य भाष्य: ॐकार ही समस्त सृष्टि का मूल है। यह आत्मा चार अवस्थाओं वाला है—जाग्रत् (वैश्वानर), स्वप्न (तैजस), सुषुप्ति (प्राज्ञ), और तुरीय (शांत, शिव, अद्वैत)। 'अयमात्मा ब्रह्म' यह अथर्ववेद का महावाक्य है।",
+    "sadhanaPhala": "तुरीयावस्था (गहनतम समाधि) की प्राप्ति, ॐकार साधना की सिद्धि और मोक्ष।"
+  },
+  {
+    "id": "up-tait-1-11",
+    "slug": "up-tait-1-11",
+    "vedaId": "yajurveda",
+    "nodeId": "up-tait-shiksha",
+    "vedaName": "कृष्ण यजुर्वेद (Krishna Yajurveda)",
+    "shakha": "तैत्तिरीय शाखा",
+    "textName": "तैत्तिरीय उपनिषद् (शिक्षावल्ली - दीक्षांत उपदेश)",
+    "sectionRef": "शिक्षावल्ली, एकादशोऽनुवाकः, मन्त्र १-२",
+    "mantraNumber": "१.११.१-२",
+    "rishi": "महर्षि त्रिशंकु / वैशम्पायन",
+    "devata": "सत्य, धर्म, मातृ-पितृ-आचार्य देवत्व",
+    "chhanda": "ब्राह्मण गद्य-अनुवाक",
+    "svara": "सस्वर तैत्तिरीय वैदिक पाठ",
+    "sanskrit": "ॐ वेदमनूच्याचार्योऽन्तेवासिनमनुशास्ति।\nसत्यं वद। धर्मं चर। स्वाध्यायान्मा प्रमदः।\nमातृदेवो भव। पितृदेवो भव। आचार्यदेवो भव। अतिथिदेवो भव॥",
+    "transliteration": "oṃ vedam anūcyācāryo'ntevāsinam anuśāsti |\nsatyaṃ vada | dharmaṃ cara | svādhyāyān mā pramadaḥ |\nmātṛdevo bhava | pitṛdevo bhava | ācāryadevo bhava | atithidevo bhava ||",
+    "hindiTranslation": "वेद का अध्ययन कराकर आचार्य गुरुकुल से विदा होते हुए अंतवासी शिष्य को उपदेश देते हैं: सत्य बोलो। धर्म का आचरण करो। स्वाध्याय (आत्म-अध्ययन) में कभी प्रमाद मत करो। माता को देवता तुल्य मानो। पिता को देवता तुल्य मानो। आचार्य (गुरु) को देवता तुल्य मानो। अतिथि को देवता तुल्य मानो।",
+    "englishTranslation": "Having taught the Vedas, the preceptor imparts this final counsel to the departing disciple: Speak the truth. Walk in the path of Dharma (righteousness). Never neglect self-study and contemplation. Treat your mother as God. Treat your father as God. Treat your teacher as God. Treat your guest as God.",
+    "hinglishTranslation": "Veda padhaane ke baad Guru shishya ko dikshant updesh dete hain: Satya bolo, Dharma ka aacharan karo, Svadhyaay me aalas mat karo. Mata ko devta maano, Pita ko devta maano, Guru ko devta maano, aur Atithi ko devta maano.",
+    "padapatha": [
+      {
+        "word": "सत्यम्",
+        "meaning": "सत्य को"
+      },
+      {
+        "word": "वद",
+        "meaning": "बोलो"
+      },
+      {
+        "word": "धर्मम्",
+        "meaning": "कर्तव्य व धर्म का"
+      },
+      {
+        "word": "चर",
+        "meaning": "आचरण करो"
+      },
+      {
+        "word": "स्वाध्यायात्",
+        "meaning": "शास्त्र अध्ययन व आत्मचिंतन से"
+      },
+      {
+        "word": "मा",
+        "meaning": "मत"
+      },
+      {
+        "word": "प्रमदः",
+        "meaning": "प्रमाद / आलस्य करो"
+      },
+      {
+        "word": "मातृऽदेवः",
+        "meaning": "माता ही जिसकी देव है, ऐसा"
+      },
+      {
+        "word": "भव",
+        "meaning": "बनो"
+      },
+      {
+        "word": "पितृऽदेवः",
+        "meaning": "पिता ही जिसकी देव है"
+      },
+      {
+        "word": "भव",
+        "meaning": "बनो"
+      },
+      {
+        "word": "आचार्यऽदेवः",
+        "meaning": "सद्गुरु ही जिसकी देव है"
+      },
+      {
+        "word": "भव",
+        "meaning": "बनो"
+      },
+      {
+        "word": "अतिथिऽदेवः",
+        "meaning": "अतिथि ही जिसकी देव है"
+      },
+      {
+        "word": "भव",
+        "meaning": "बनो"
+      }
+    ],
+    "shastricContext": "प्राचीन भारत के गुरुकुलों का यह अमर 'दीक्षांत भाषण' (Convocation Address) है। इसमें जीवन के नैतिक, सामाजिक एवं आध्यात्मिक आचरण के शाश्वत सूत्रों का प्रतिपादन किया गया है।",
+    "audioUrl": null,
+    "previousId": "up-mandukya-1",
+    "nextId": "up-ait-3-1-3",
+    "chapterMantraIds": [
+      "up-tait-1-11"
+    ],
+    "orderIndex": 24,
+    "status": "ACTIVE",
+    "anvaya": "सत्यं वद। धर्मं चर। स्वाध्यायात् मा प्रमदः। आचार्याय प्रियं धनम् आहृत्य प्रजातन्तुं मा व्यवच्छेत्सीः। सत्यात् न प्रमदितव्यम्। धर्मात् न प्रमदितव्यम्। मातृदेवः भव। पितृदेवः भव। आचार्यदेवः भव। अतिथिदेवः भव।",
+    "viniyoga": "ॐ अस्य तैत्तिरीयोपनिषदः त्रिशङ्कुराचार्य ऋषिः, यजुः छन्दः, परमात्मा देवता, सदाचारजीवने विनियोगः।",
+    "bhashyaSummary": "शंकराचार्य भाष्य: अध्ययन पूर्ण होने के पश्चात् गुरु शिष्य को दीक्षांत उपदेश देते हैं। सत्य बोलो, धर्म का आचरण करो, स्वाध्याय में प्रमाद मत करो। माता, पिता, आचार्य और अतिथि को देवता समान समझकर उनका सत्कार करो।",
+    "sadhanaPhala": "चारित्रिक शुद्धि, कुल की प्रतिष्ठा, सामाजिक प्रतिष्ठा और धर्मानुकूल जीवन।"
+  },
+  {
+    "id": "up-ait-3-1-3",
+    "slug": "up-ait-3-1-3",
+    "vedaId": "rigveda",
+    "nodeId": "up-aitareya",
+    "vedaName": "ऋग्वेद (Rigveda)",
+    "shakha": "शाकल / ऐतरेय शाखा",
+    "textName": "ऐतरेय उपनिषद् (Aitareya Upanishad)",
+    "sectionRef": "अध्याय ३, खण्ड १, मन्त्र ३ (महावाक्य)",
+    "mantraNumber": "३.१.३",
+    "rishi": "महर्षि महीदास ऐतरेय",
+    "devata": "विशुद्ध प्रज्ञान / परब्रह्म (Pure Consciousness as Brahman)",
+    "chhanda": "ब्राह्मण गद्य-मन्त्र",
+    "svara": "सस्वर वैदिक पाठ",
+    "sanskrit": "ॐ एष ब्रह्मैष इन्द्र एष प्रजापतिरेते सर्वे देवा इमानि च पञ्चमहाभूतानि...\nसर्वं तत्प्रज्ञानेत्रं प्रज्ञाने प्रतिष्ठितं प्रज्ञानेत्रो लोकः प्रज्ञा प्रतिष्ठा प्रज्ञानं ब्रह्म॥",
+    "transliteration": "oṃ eṣa brahmaiṣa indra eṣa prajāpatir ete sarve devā imāni ca pañcamahābhūtāni ... |\nsarvaṃ tat prajñānetraṃ prajñāne pratiṣṭhitaṃ prajñānetro lokaḥ prajñā pratiṣṭhā prajñānaṃ brahma ||",
+    "hindiTranslation": "यह (चेतना) ही ब्रह्मा है, यही इंद्र है, यही प्रजापति है, यही समस्त देवगण हैं और यही पृथ्वी, जल, तेज, वायु, आकाश—पाँचों महाभूत हैं। यह संपूर्ण विश्व प्रज्ञा (चेतना) द्वारा ही संचालित है, प्रज्ञा में ही प्रतिष्ठित है। प्रज्ञा ही सबका आधार है, और वह 'प्रज्ञान ही परब्रह्म है' (प्रज्ञानं ब्रह्म - ऋग्वेदीय महावाक्य)।",
+    "englishTranslation": "This Consciousness is Brahma, this is Indra, this is Prajapati; all these gods, and these five great elements... All this is guided by Consciousness, supported by Consciousness. Consciousness is the ultimate foundation. Consciousness is Brahman (Prajnanam Brahma - Rigvedic Mahavakya).",
+    "hinglishTranslation": "Yeh chetna hi Brahma hai, yahi Indra, yahi sabhi devta aur paanchon tatva hain. Sab kuch Prajna (Supreme Consciousness) se chalta hai aur usi me sthit hai. Prajna hi aadhar hai, aur 'Prajnanam Brahma'—Chetna hi Param Brahma hai.",
+    "padapatha": [
+      {
+        "word": "सर्वम्",
+        "meaning": "समस्त ब्रह्माण्ड"
+      },
+      {
+        "word": "तत्",
+        "meaning": "वह"
+      },
+      {
+        "word": "प्रज्ञाऽनेत्रम्",
+        "meaning": "चेतनारूपी नेत्र से संचालित"
+      },
+      {
+        "word": "प्रज्ञाने",
+        "meaning": "विशुद्ध चेतना में"
+      },
+      {
+        "word": "प्रतिष्ठितम्",
+        "meaning": "प्रतिष्ठित / टिका हुआ"
+      },
+      {
+        "word": "प्रज्ञा",
+        "meaning": "सर्वव्यापक चेतना"
+      },
+      {
+        "word": "प्रतिष्ठा",
+        "meaning": "परम आधार"
+      },
+      {
+        "word": "प्रज्ञानम्",
+        "meaning": "विशुद्ध चैतन्य (Pure Consciousness)"
+      },
+      {
+        "word": "ब्रह्म",
+        "meaning": "परब्रह्म परमात्मा है"
+      }
+    ],
+    "shastricContext": "ऋग्वेद का लक्षण महावाक्य—'प्रज्ञानं ब्रह्म'। यह ब्रह्म के स्वरूप की यथार्थ परिभाषा देता है कि संपूर्ण ब्रह्माण्ड की आधारभूत सत्ता कोई जड़ पदार्थ नहीं, अपितु सर्वव्यापी परम चेतना (Supreme Consciousness) है।",
+    "audioUrl": null,
+    "previousId": "up-tait-1-11",
+    "nextId": "up-chandogya-6-8-7",
+    "chapterMantraIds": [
+      "up-ait-3-1-3"
+    ],
+    "orderIndex": 25,
+    "status": "ACTIVE",
+    "anvaya": "सर्वं तत् प्रज्ञानेत्रं प्रज्ञाने प्रतिष्ठितं प्रज्ञानेत्रः लोकः प्रज्ञा प्रतिष्ठा प्रज्ञानं ब्रह्म।",
+    "viniyoga": "ॐ अस्य ऐतरेयोपनिषदः महिदास ऐतरेय ऋषिः, अनुष्टुप् छन्दः, प्रज्ञानस्वरूपं परब्रह्म देवता, प्रज्ञानब्रह्मसाक्षात्कारे विनियोगः।",
+    "bhashyaSummary": "ऋग्वेद का महावाक्य: 'प्रज्ञानं ब्रह्म'—जो विशुद्ध चैतन्य समस्त प्राणियों में बुद्धि, ज्ञान, चक्षु, श्रोत्र आदि के रूप में प्रकाशित हो रहा है, वही चैतन्य परब्रह्म है। चैतन्य ही इस सम्पूर्ण विश्व की आधारशिला है।",
+    "sadhanaPhala": "चेतना का उच्चतर स्तरों पर जागरण और अद्वैत आत्मसाक्षात्कार।"
+  },
+  {
+    "id": "up-chandogya-6-8-7",
+    "slug": "up-chandogya-6-8-7",
+    "vedaId": "samaveda",
+    "nodeId": "up-chandogya",
+    "vedaName": "सामवेद (Samaveda)",
+    "shakha": "कौथुम शाखा",
+    "textName": "छान्दोग्य उपनिषद् (Chandogya Upanishad)",
+    "sectionRef": "प्रपाठक ६, खण्ड ८, मन्त्र ७ (महावाक्य)",
+    "mantraNumber": "६.८.७",
+    "rishi": "महर्षि उद्दालक आरुणि (उपदेशक) - श्वेतकेतु (शिष्य)",
+    "devata": "सद्ब्रह्म (The Subtle Reality / Ultimate Truth)",
+    "chhanda": "ब्राह्मण उपनिषद् गद्य-मन्त्र",
+    "svara": "सस्वर सामवेदीय पाठ",
+    "sanskrit": "ॐ स य एषोऽणिमैतदात्म्यमिदँ सर्वं तत्सत्यँ स आत्मा तत्त्वमसि श्वेतकेतो इति॥",
+    "transliteration": "oṃ sa ya eṣo'ṇimaitadātmyam idaṃ sarvaṃ tat satyaṃ sa ātmā tat tvam asi śvetaketo iti ||",
+    "hindiTranslation": "वह जो यह अतिसूक्ष्म तत्व है, यह समस्त जगत उसी आत्मस्वरूप से युक्त है। वही एकमात्र सत्य है, वही अंतरात्मा है; और हे श्वेतकेतु! 'वह परमात्मा तू ही है' (तत्त्वमसि - सामवेदीय उपदेश महावाक्य)।",
+    "englishTranslation": "That which is the subtlest essence—in It all that exists has its self. That is the Truth. That is the Atman in all. And 'That Thou Art', O Shvetaketu! (Tat Tvam Asi - Samavedic Instruction Mahavakya).",
+    "hinglishTranslation": "Wo jo sabse sookshma tatva hai, poora vishva usi aatma se bana hai. Wahi satya hai, wahi aatma hai; aur he Shvetaketu! 'Wo Parmatma tu hi hai' (Tat Tvam Asi).",
+    "padapatha": [
+      {
+        "word": "सः",
+        "meaning": "वह"
+      },
+      {
+        "word": "यः",
+        "meaning": "जो"
+      },
+      {
+        "word": "एषः",
+        "meaning": "यह"
+      },
+      {
+        "word": "अणिमा",
+        "meaning": "अत्यंत सूक्ष्म मूल कारण"
+      },
+      {
+        "word": "एतत्ऽआत्म्यम्",
+        "meaning": "उसी के आत्मस्वरूप वाला"
+      },
+      {
+        "word": "इदम्",
+        "meaning": "यह"
+      },
+      {
+        "word": "सर्वम्",
+        "meaning": "समस्त संसार"
+      },
+      {
+        "word": "तत्",
+        "meaning": "वह"
+      },
+      {
+        "word": "सत्यम्",
+        "meaning": "अविनाशी परम सत्य"
+      },
+      {
+        "word": "सः",
+        "meaning": "वही"
+      },
+      {
+        "word": "आत्मा",
+        "meaning": "सबकी अंतरात्मा है"
+      },
+      {
+        "word": "तत्",
+        "meaning": "वह ब्रह्म"
+      },
+      {
+        "word": "त्वम्",
+        "meaning": "तू"
+      },
+      {
+        "word": "असि",
+        "meaning": "है"
+      },
+      {
+        "word": "श्वेतकेतो",
+        "meaning": "हे श्वेतकेतु!"
+      }
+    ],
+    "shastricContext": "सामवेद का अमर 'उपदेश महावाक्य'—'तत्त्वमसि'। महर्षि उद्दालक आरुणि ने अपने पुत्र श्वेतकेतु को वटवृक्ष के बीज और जल में घुले नमक के दृष्टांत देकर ९ बार समझाया कि समस्त उपाधियों के परे जीव और ब्रह्म का वास्तविक चैतन्य स्वरूप एक ही है।",
+    "audioUrl": null,
+    "previousId": "up-ait-3-1-3",
+    "nextId": "up-brihad-1-4-10",
+    "chapterMantraIds": [
+      "up-chandogya-6-8-7"
+    ],
+    "orderIndex": 26,
+    "status": "ACTIVE",
+    "anvaya": "सः यः एषः अणिमा एतदात्म्यम् इदं सर्वं तत् सत्यं सः आत्मा तत्त्वमसि श्वेतकेतो इति।",
+    "viniyoga": "ॐ अस्य छान्दोग्योपनिषदः उद्दालक आरुणिः ऋषिः, यजुः छन्दः, अद्वितीयं परब्रह्म देवता, तत्त्वमसि महावाक्यसाक्षात्कारे विनियोगः।",
+    "bhashyaSummary": "सामवेद का महावाक्य: उद्दालक ऋषि अपने पुत्र श्वेतकेतु को समझाते हैं—जैसे नमक जल में घुल जाने पर दिखाई नहीं देता परंतु कण-कण में विद्यमान रहता है, वैसे ही यह सूक्ष्म आत्मतत्त्व सम्पूर्ण जगत् में व्याप्त है। 'तत्त्वमसि'—हे श्वेतकेतु! वह सूक्ष्म सत्य तुम ही हो।",
+    "sadhanaPhala": "अज्ञान और द्वैत-भ्रम का समूल नाश, परमानन्द की अनुभूति।"
+  },
+  {
+    "id": "up-brihad-1-4-10",
+    "slug": "up-brihad-1-4-10",
+    "vedaId": "yajurveda",
+    "nodeId": "up-brihadaranyaka",
+    "vedaName": "शुक्ल यजुर्वेद (Shukla Yajurveda)",
+    "shakha": "काण्व / माध्यन्दिन शाखा",
+    "textName": "बृहदारण्यक उपनिषद् (Brihadaranyaka Upanishad)",
+    "sectionRef": "प्रथमाध्याय, चतुर्थ ब्राह्मण, मन्त्र १० एवं पावमान मन्त्र",
+    "mantraNumber": "१.४.१० / १.३.२८",
+    "rishi": "महर्षि याज्ञवल्क्य",
+    "devata": "अखंड परब्रह्म एवं आत्म-साक्षात्कार",
+    "chhanda": "ब्राह्मण गद्य एवं त्रिष्टुप्",
+    "svara": "सस्वर वैदिक उपनिषद् पाठ",
+    "sanskrit": "ॐ ब्रह्म वा इदमग्र आसीत् तदात्मानमेवावेत् अहं ब्रह्मास्मीति तस्मात्तत्सर्वमभवत्।\nॐ असतो मा सद्गमय तमसो मा ज्योतिर्गमय मृत्योर्मा अमृतं गमय॥",
+    "transliteration": "oṃ brahma vā idam agra āsīt tad ātmānam evāvet ahaṃ brahmāsmīti tasmāt tat sarvam abhavat |\noṃ asato mā sad gamaya tamaso mā jyotir gamaya mṛtyor mā amṛtaṃ gamaya ||",
+    "hindiTranslation": "सृष्टि के प्रारंभ में यह केवल ब्रह्म ही था। उसने अपने आपको ही जाना कि 'मैं ब्रह्म हूँ' (अहं ब्रह्मास्मि - यजुर्वेदीय अनुभव महावाक्य); अतः वह सर्वस्वरूप हो गया। हे परमात्मा! मुझे असत्य से सत्य की ओर ले चलो, मुझे अंधकार (अज्ञान) से प्रकाश (ज्ञान) की ओर ले चलो, और मुझे मृत्यु से अमृतत्व (मोक्ष) की ओर ले चलो।",
+    "englishTranslation": "In the beginning, this universe was Brahman alone. It knew itself only as: 'I am Brahman' (Aham Brahmasmi - Yajurvedic Experience Mahavakya); therefore It became all. Lead me from the unreal to the real! Lead me from darkness into light! Lead me from death into immortality!",
+    "hinglishTranslation": "Shuruat mein yeh keval Brahma hi tha. Usne khud ko jana ki 'Main hi Brahma hoon' (Aham Brahmasmi); isse wo sab kuch ban gaya. Hey Prabhu! Mujhe asatya se satya ki or, andhere se divya prakash ki or, aur mrityu se amritatva (Moksha) ki or le chalo.",
+    "padapatha": [
+      {
+        "word": "ब्रह्म",
+        "meaning": "परब्रह्म"
+      },
+      {
+        "word": "अहम्",
+        "meaning": "मैं"
+      },
+      {
+        "word": "ब्रह्म",
+        "meaning": "ब्रह्म"
+      },
+      {
+        "word": "अस्मि",
+        "meaning": "हूँ"
+      },
+      {
+        "word": "असतः",
+        "meaning": "मिथ्या / असत्य से"
+      },
+      {
+        "word": "मा",
+        "meaning": "मुझको"
+      },
+      {
+        "word": "सत्",
+        "meaning": "शाश्वत सत्य की ओर"
+      },
+      {
+        "word": "गमय",
+        "meaning": "ले चलो"
+      },
+      {
+        "word": "तमसः",
+        "meaning": "अज्ञानरूपी अंधकार से"
+      },
+      {
+        "word": "ज्योतिः",
+        "meaning": "आत्मज्ञान के प्रकाश की ओर"
+      },
+      {
+        "word": "गमय",
+        "meaning": "ले चलो"
+      },
+      {
+        "word": "मृत्योः",
+        "meaning": "संसार और मृत्यु से"
+      },
+      {
+        "word": "अमृतम्",
+        "meaning": "अमृतत्व व मोक्ष की ओर"
+      },
+      {
+        "word": "गमय",
+        "meaning": "ले चलो"
+      }
+    ],
+    "shastricContext": "बृहदारण्यक उपनिषद् का 'अनुभव महावाक्य' (अहं ब्रह्मास्मि) और सर्वाधिक प्रसिद्ध सार्वभौमिक प्रार्थना 'पावमान अभ्यारोह मन्त्र' (असतो मा सद्गमय)। यह जीव की अविद्या के बंधनों से विमुक्ति और स्वरूप-प्रतिष्ठा का सर्वोच्च उद्घोष है।",
+    "audioUrl": null,
+    "previousId": "up-chandogya-6-8-7",
+    "nextId": "bg-2-47",
+    "chapterMantraIds": [
+      "up-brihad-1-4-10"
+    ],
+    "orderIndex": 27,
+    "status": "ACTIVE",
+    "anvaya": "ब्रह्म वा इदम् अग्रे आसीत्, तत् आत्मानम् एव अवेत्, अहं ब्रह्मास्मि इति। तस्मात् तत् सर्वम् अभवत्। असतो मा सद्गमय, तमसो मा ज्योतिर्गमय, मृत्योर्मा अमृतं गमय।",
+    "viniyoga": "ॐ अस्य बृहदारण्यकोपनिषदः महर्षिः याज्ञवल्क्यः ऋषिः, बृहती छन्दः, प्रत्यगभिन्नं परब्रह्म देवता, पूर्णब्रह्मभावे विनियोगः।",
+    "bhashyaSummary": "शुक्ल यजुर्वेद का महावाक्य: 'अहं ब्रह्मास्मि'—यह साधक की अनुभूतिपरक उद्घोषणा है कि मेरी वास्तविक सत्ता यह नश्वर शरीर नहीं अपितु सर्वव्यापी सच्चिदानन्द ब्रह्म है। 'असतो मा सद्गमय' प्रार्थना है कि मुझे असत्य से सत्य, अंधकार से प्रकाश और मृत्यु से अमृतत्व की ओर ले चलो।",
+    "sadhanaPhala": "भय और मृत्यु का निवारण, मोक्ष पद की प्राप्ति।"
+  },
+  {
+    "id": "bg-2-47",
+    "slug": "bg-2-47",
+    "vedaId": "yajurveda",
+    "nodeId": "bg-adhyaya-2",
+    "vedaName": "प्रस्थानत्रयी - स्मृति प्रस्थान (Bhagavad Gita)",
+    "shakha": "महाभारत भीष्मपर्व (श्रीमद्भगवद्गीता)",
+    "textName": "श्रीमद्भगवद्गीता (सांख्ययोग)",
+    "sectionRef": "अध्याय २, श्लोक ४७",
+    "mantraNumber": "२.४७",
+    "rishi": "महर्षि वेदव्यास / भगवान श्रीकृष्ण (वक्ता) - अर्जुन (श्रोता)",
+    "devata": "कर्मयोग एवं निष्काम कर्म (Selfless Action)",
+    "chhanda": "अनुष्टुप् (८+८+८+८ = ३२ वर्ण)",
+    "svara": "शास्त्रीय गीता गान",
+    "sanskrit": "कर्मण्येवाधिकारस्ते मा फलेषु कदाचन।\nमा कर्मफलहेतुर्भूर्मा ते सङ्गोऽस्त्वकर्मणि॥४७॥",
+    "transliteration": "karmaṇy evādhikāras te mā phaleṣu kadācana |\nmā karmaphalahetur bhūr mā te saṅgo'stv akarmaṇi || 47 ||",
+    "hindiTranslation": "तुम्हारा अधिकार केवल कर्म करने में ही है, उसके फलों में कभी नहीं। इसलिए तुम कर्मों के फल की वासना (आसक्ति) वाले मत बनो, और न ही तुम्हारी कर्म न करने (अकर्मण्यता/आलस्य) में प्रीति हो।",
+    "englishTranslation": "Your right is to action alone, never to its fruits. Let not the fruits of action be your motive, nor let your attachment be to inaction.",
+    "hinglishTranslation": "Tumhara adhikar sirf nishkaam karm karne par hai, uske phal par kabhi nahi. Isliye karmfal ki aashakti mat rakho, aur na hi aalas me padkar karm chhodne ka vichar karo.",
+    "padapatha": [
+      {
+        "word": "कर्मणि",
+        "meaning": "कर्तव्य कर्म करने में"
+      },
+      {
+        "word": "एव",
+        "meaning": "ही"
+      },
+      {
+        "word": "अधिकारः",
+        "meaning": "तुम्हारा अधिकार"
+      },
+      {
+        "word": "ते",
+        "meaning": "तुम्हारा"
+      },
+      {
+        "word": "मा",
+        "meaning": "कभी नहीं"
+      },
+      {
+        "word": "फलेषु",
+        "meaning": "कर्म के फलों में"
+      },
+      {
+        "word": "कदाचन",
+        "meaning": "किसी भी काल में"
+      },
+      {
+        "word": "मा",
+        "meaning": "मत"
+      },
+      {
+        "word": "कर्मऽफलऽहेतुः",
+        "meaning": "कर्मफल का कारण / आकांक्षी"
+      },
+      {
+        "word": "भूः",
+        "meaning": "बनो"
+      },
+      {
+        "word": "मा",
+        "meaning": "न"
+      },
+      {
+        "word": "ते",
+        "meaning": "तुम्हारी"
+      },
+      {
+        "word": "सङ्गः",
+        "meaning": "आसक्ति"
+      },
+      {
+        "word": "अस्तु",
+        "meaning": "हो"
+      },
+      {
+        "word": "अकर्मणि",
+        "meaning": "कर्म त्यागने / अकर्मण्यता में"
+      }
+    ],
+    "shastricContext": "श्रीमद्भगवद्गीता का सबसे प्रसिद्ध सूत्र। निष्काम कर्मयोग का यह मूल आधार है, जो सिखाता है कि कर्तापन और फल की आसक्ति त्यागकर ईश्वरार्पण बुद्धि से कर्तव्य पालन करना ही चित्त शुद्धि और मोक्ष का साधन है।",
+    "audioUrl": null,
+    "previousId": "up-brihad-1-4-10",
+    "nextId": "bg-4-7",
+    "chapterMantraIds": [
+      "bg-2-47"
+    ],
+    "orderIndex": 28,
+    "status": "ACTIVE",
+    "anvaya": "कर्मणि एव ते अधिकारः (अस्तु), फलेषु कदाचन मा (अस्तु)। कर्मफलहेतुः मा भूः, ते अकर्मणि सङ्गः मा अस्तु।",
+    "viniyoga": "ॐ अस्य श्रीमद्भगवद्गीताशास्त्रस्य भगवान् श्रीकृष्ण ऋषिः, अनुष्टुप् छन्दः, श्रीकृष्ण परमात्मा देवता, निष्कामकर्मयोगसिद्धये विनियोगः।",
+    "bhashyaSummary": "आदि शंकराचार्य एवं रामानुजाचार्य भाष्य: तुम्हारा अधिकार केवल कर्तव्य कर्म करने में है, उसके परिणामों में नहीं। कर्मफल की इच्छा से कर्म में प्रवृत्त मत होओ, और न ही अकर्मण्यता (कर्म त्यागने) में तुम्हारी आसक्ति हो। यही गीता का निष्काम कर्मयोग का आधारभूत सूत्र है।",
+    "sadhanaPhala": "तनाव, चिंता और विफलता के भय से मुक्ति। कर्म करते हुए भी बन्धन से छूटकर अन्तःकरण की परम शुद्धि।"
+  },
+  {
+    "id": "bg-4-7",
+    "slug": "bg-4-7",
+    "vedaId": "yajurveda",
+    "nodeId": "bg-adhyaya-4",
+    "vedaName": "प्रस्थानत्रयी - स्मृति प्रस्थान (Bhagavad Gita)",
+    "shakha": "महाभारत भीष्मपर्व (श्रीमद्भगवद्गीता)",
+    "textName": "श्रीमद्भगवद्गीता (ज्ञानकर्मसंन्यासयोग)",
+    "sectionRef": "अध्याय ४, श्लोक ७-८",
+    "mantraNumber": "४.७",
+    "rishi": "महर्षि वेदव्यास / भगवान श्रीकृष्ण",
+    "devata": "परमात्मा का अवतार एवं धर्म-संस्थापन",
+    "chhanda": "अनुष्टुप् (८+८+८+८ = ३२ वर्ण)",
+    "svara": "शास्त्रीय गीता गान",
+    "sanskrit": "यदा यदा हि धर्मस्य ग्लानिर्भवति भारत।\nअभ्युत्थानमधर्मस्य तदात्मानं सृजाम्यहम्॥७॥\nपरित्राणाय साधूनां विनाशाय च दुष्कृताम्।\nधर्मसंस्थापनार्थाय सम्भवामि युगे युगे॥८॥",
+    "transliteration": "yadā yadā hi dharmasya glānir bhavati bhārata |\nabhyutthānam adharmasya tadātmānaṃ sṛjāmy aham || 7 ||\nparitrāṇāya sādhūnāṃ vināśāya ca duṣkṛtām |\ndharmasaṃsthāpanārthāya sambhavāmi yuge yuge || 8 ||",
+    "hindiTranslation": "हे भारत (अर्जुन)! जब-जब धर्म की हानि (ग्लानि) होती है और अधर्म का उत्थान (अभ्युत्थान) होता है, तब-तब मैं अपने साकार रूप को प्रकट करता हूँ। सज्जनों की रक्षा के लिए, दुष्टों के विनाश के लिए, और धर्म की भली-भांति स्थापना करने के लिए मैं प्रत्येक युग में प्रकट होता हूँ।",
+    "englishTranslation": "Whenever there is a decline of righteousness and an ascendance of unrighteousness, O Bharata, then I manifest Myself. For the protection of the virtuous, for the destruction of evil-doers, and for the firm re-establishment of Dharma, I incarnate age after age.",
+    "hinglishTranslation": "Jab jab dharma ki hani hoti hai aur adharma badhta hai, tab tab main swayam ko prakat karta hoon. Sajjano ki raksha, dushton ke naash aur dharma ki sthapna ke liye main har yug me avtar leta hoon.",
+    "padapatha": [
+      {
+        "word": "यदा यदा",
+        "meaning": "जब-जब"
+      },
+      {
+        "word": "हि",
+        "meaning": "निश्चय ही"
+      },
+      {
+        "word": "धर्मस्य",
+        "meaning": "धर्म की"
+      },
+      {
+        "word": "ग्लानिः",
+        "meaning": "हानि / पतन"
+      },
+      {
+        "word": "भवति",
+        "meaning": "होता है"
+      },
+      {
+        "word": "भारत",
+        "meaning": "हे अर्जुन!"
+      },
+      {
+        "word": "अभ्युत्थानम्",
+        "meaning": "वृद्धि / उत्थान"
+      },
+      {
+        "word": "अधर्मस्य",
+        "meaning": "अधर्म का"
+      },
+      {
+        "word": "तदा",
+        "meaning": "तब"
+      },
+      {
+        "word": "आत्मानम्",
+        "meaning": "अपने स्वरूप को"
+      },
+      {
+        "word": "सृजामि",
+        "meaning": "प्रकट करता हूँ"
+      },
+      {
+        "word": "अहम्",
+        "meaning": "मैं"
+      },
+      {
+        "word": "परित्राणाय",
+        "meaning": "पूर्ण रक्षा के लिए"
+      },
+      {
+        "word": "साधूनाम्",
+        "meaning": "सज्जनों / संतों की"
+      },
+      {
+        "word": "विनाशाय",
+        "meaning": "विनाश हेतु"
+      },
+      {
+        "word": "च",
+        "meaning": "और"
+      },
+      {
+        "word": "दुष्कृताम्",
+        "meaning": "दुष्ट पापियों के"
+      },
+      {
+        "word": "धर्मऽसंस्थापनऽअर्थाय",
+        "meaning": "धर्म की सुदृढ़ स्थापना के लिए"
+      },
+      {
+        "word": "सम्भवामि",
+        "meaning": "अवतार लेता हूँ"
+      },
+      {
+        "word": "युगे युगे",
+        "meaning": "युग-युग में"
+      }
+    ],
+    "shastricContext": "ईश्वरीय अवतार का सार्वभौमिक सिद्धांत (Doctrine of Divine Incarnation)। यह श्लोक आश्वस्त करता है कि अंधकार कितना भी घनीभूत क्यों न हो, धर्म की पुनर्स्थापना हेतु परम शक्ति का अवतरण सुनिश्चित है।",
+    "audioUrl": null,
+    "previousId": "bg-2-47",
+    "nextId": "bg-18-66",
+    "chapterMantraIds": [
+      "bg-4-7"
+    ],
+    "orderIndex": 29,
+    "status": "ACTIVE",
+    "anvaya": "भारत! यदा यदा हि धर्मस्य ग्लानिः, अधर्मस्य च अभ्युत्थानं भवति, तदा अहम् आत्मानं सृजामि।",
+    "viniyoga": "ॐ अस्य श्रीकृष्णवचनस्य श्रीकृष्ण ऋषिः, अनुष्टुप् छन्दः, अवतारस्वरूपो भगवान् देवता, धर्मरक्षायां विनियोगः।",
+    "bhashyaSummary": "श्रीधर स्वामी एवं ज्ञानेश्वर भाष्य: जब-जब धर्म की हानि होती है और अधर्म का बोलबाला बढ़ जाता है, तब-तब सज्जनों की रक्षा, दुष्टों के संहार और सनातन धर्म की पुनः प्रतिष्ठा के लिए भगवान् स्वयं साकार रूप में अवतरित होते हैं।",
+    "sadhanaPhala": "ईश्वर के अवतार रहस्य का बोध और विपत्ति में ईश्वर-आश्रय की अटूट श्रद्धा।"
+  },
+  {
+    "id": "bg-18-66",
+    "slug": "bg-18-66",
+    "vedaId": "yajurveda",
+    "nodeId": "bg-adhyaya-18",
+    "vedaName": "प्रस्थानत्रयी - स्मृति प्रस्थान (Bhagavad Gita)",
+    "shakha": "महाभारत भीष्मपर्व (श्रीमद्भगवद्गीता)",
+    "textName": "श्रीमद्भगवद्गीता (मोक्षसंन्यासयोग)",
+    "sectionRef": "अध्याय १८, श्लोक ६६ (चरम श्लोक)",
+    "mantraNumber": "१८.६६",
+    "rishi": "महर्षि वेदव्यास / भगवान श्रीकृष्ण",
+    "devata": "शरणागति एवं परम मोक्ष (Absolute Surrender to the Supreme Lord)",
+    "chhanda": "अनुष्टुप् (८+८+८+८ = ३२ वर्ण)",
+    "svara": "शास्त्रीय गीता गान",
+    "sanskrit": "सर्वधर्मान्परित्यज्य मामेकं शरणं व्रज।\nअहं त्वा सर्वपापेभ्यो मोक्षयिष्यामि मा शुचः॥६६॥",
+    "transliteration": "sarvadharmān parityajya mām ekaṃ śaraṇaṃ vraja |\nahaṃ tvā sarvapāpebhyo mokṣayiṣyāmi mā śucaḥ || 66 ||",
+    "hindiTranslation": "समस्त धर्मों (विधि-निषेधों, कर्तृत्व-भाव और अन्य आश्रयों) का परित्याग करके केवल मुझ एक सर्वव्यापी परमात्मा की शरण में आ जाओ। मैं तुम्हें समस्त पापों और बंधनों से मुक्त कर दूँगा; तुम शोक मत करो।",
+    "englishTranslation": "Abandoning all duties and doctrines of religion, surrender unto Me alone. I shall liberate you from all sins and bondages; do not grieve.",
+    "hinglishTranslation": "Sabhi dharmo aur vidhiyon ko chhodkar sirf meri sharan me aa jao. Main tumhe sabhi paapo se mukt kar doonga; shok mat karo.",
+    "padapatha": [
+      {
+        "word": "सर्वऽधर्मान्",
+        "meaning": "समस्त धर्मों / कर्तापन के भावों को"
+      },
+      {
+        "word": "परित्यज्य",
+        "meaning": "पूर्णतः त्याग कर"
+      },
+      {
+        "word": "माम्",
+        "meaning": "मुझ"
+      },
+      {
+        "word": "एकम्",
+        "meaning": "एक परमात्मा की"
+      },
+      {
+        "word": "शरणम्",
+        "meaning": "शरण में"
+      },
+      {
+        "word": "व्रज",
+        "meaning": "आ जाओ"
+      },
+      {
+        "word": "अहम्",
+        "meaning": "मैं"
+      },
+      {
+        "word": "त्वा",
+        "meaning": "तुम्हें"
+      },
+      {
+        "word": "सर्वऽपापेभ्यः",
+        "meaning": "समस्त पापों व बंधनों से"
+      },
+      {
+        "word": "मोक्षयिष्यामि",
+        "meaning": "मुक्त कर दूँगा"
+      },
+      {
+        "word": "मा",
+        "meaning": "मत"
+      },
+      {
+        "word": "शुचः",
+        "meaning": "शोक करो"
+      }
+    ],
+    "shastricContext": "श्रीमद्भगवद्गीता का 'चरम श्लोक' (Charama Shloka)। रामानुजाचार्य, वल्लभाचार्य और चैतन्य महाप्रभु के अनुसार शरणागति (प्रपत्ति) का यह सर्वोच्च उपदेश है जहाँ साधक अपने अहंकार को परमात्मा के श्रीचरणों में समर्पित कर परम अभय पद पाता है।",
+    "audioUrl": null,
+    "previousId": "bg-4-7",
+    "nextId": "vr-aditya-hridaya",
+    "chapterMantraIds": [
+      "bg-18-66"
+    ],
+    "orderIndex": 30,
+    "status": "ACTIVE",
+    "anvaya": "सर्वधर्मान् परित्यज्य माम् एकं शरणं व्रज। अहं त्वा सर्वपापेभ्यः मोक्षयिष्यामि, मा शुचः।",
+    "viniyoga": "ॐ अस्य चरमश्लोकस्य श्रीकृष्ण ऋषिः, अनुष्टुप् छन्दः, परमपुरुषोत्तमः श्रीकृष्णो देवता, शरणागतिसिद्धये विनियोगः।",
+    "bhashyaSummary": "रामानुजाचार्य (प्रपत्ति/शरणागति भाष्य): समस्त कर्मों, धर्मों और उपाधियों का अहंकार त्यागकर केवल एक मुझ परमेश्वर की अनन्य शरण में आ जाओ। मैं तुम्हें समस्त पापों और बंधनों से मुक्त कर दूँगा, शोक मत करो। यह गीता का अंतिम और परम गुह्यतम उपदेश (चरम श्लोक) है।",
+    "sadhanaPhala": "परम शांति, सर्वपाप मुक्ति और भगवत्-शरणागति द्वारा मोक्ष की प्राप्ति।"
+  },
+  {
+    "id": "vr-aditya-hridaya",
+    "slug": "vr-aditya-hridaya",
+    "vedaId": "rigveda",
+    "nodeId": "vr-yuddha-kanda",
+    "vedaName": "वाल्मीकि रामायण (इतिहास - आदिकाव्य)",
+    "shakha": "युद्धकाण्ड, सर्ग १०५",
+    "textName": "श्रीमद्वाल्मीकि रामायण (आदित्य हृदय स्तोत्र)",
+    "sectionRef": "युद्धकाण्ड, सर्ग १०५, श्लोक १-२ एवं मुख्य मन्त्र",
+    "mantraNumber": "१०५.१-२",
+    "rishi": "महर्षि अगस्त्य (उपदेशक)",
+    "devata": "भगवान सूर्य नारायण (आदित्य - सर्वतेजोमय परमात्मा)",
+    "chhanda": "अनुष्टुप् (८+८+८+८ = ३२ वर्ण)",
+    "svara": "शास्त्रीय स्तोत्र गान",
+    "sanskrit": "ततो युद्धपरिश्रान्तं समरे चिन्तया स्थितम्।\nरावणं चाग्रतो दृष्ट्वा युद्धाय समुपस्थितम्॥\nदैवतैश्च समागम्य द्रष्टुमभ्यागतो रणम्।\nउपागम्याब्रवीद्राममगस्त्यो भगवान् ऋषिः॥\nआदित्यहृदयं पुण्यं सर्वशत्रुविनाशनम्।\nजयावहं जपेन्नित्यमक्षय्यं परमं शिवम्॥",
+    "transliteration": "tato yuddhapariśrāntaṃ samare cintayā sthitam |\nrāvaṇaṃ cāgrato dṛṣṭvā yuddhāya samupasthitam ||\ndaivataiś ca samāgamya draṣṭum abhyāgato raṇam |\nupāgamyābravīd rāmam agastyo bhagavān ṛṣiḥ ||\nādityahṛdayaṃ puṇyaṃ sarvaśatruvināśanam |\njayāvahaṃ japen nityam akṣayyaṃ paramaṃ śivam ||",
+    "hindiTranslation": "उधर युद्धभूमि में रावण को पुनः युद्ध हेतु तत्पर देखकर और श्रीराम को थका हुआ तथा रणचिंता में स्थित देखकर, देवों के साथ युद्ध देखने आए परम पूज्य महर्षि अगस्त्य ने भगवान श्रीराम के निकट जाकर कहा: 'हे राम! यह पवित्र 'आदित्य हृदय स्तोत्र' सुनो जो समस्त शत्रुओं का नाश करने वाला, विजय प्रदान करने वाला, नित्य अक्षय और परम कल्याणकारी है।'",
+    "englishTranslation": "Seeing Sri Rama exhausted in the battlefield and absorbed in thought, while Ravana stood before Him ready for combat, the revered sage Agastya, who had arrived with the gods to witness the cosmic duel, approached Rama and said: 'O Rama, listen to this sacred Aditya Hridaya, which destroys all adversaries, brings victory, and is eternal and supremely auspicious.'",
+    "hinglishTranslation": "Yuddha sthal par Ravan ko saamne dekhkar aur Shri Ram ko thaka hua dekhkar, Maharshi Agastya ne Ram ji ke paas jakar kaha: 'Hey Ram! Yeh pavitra Aditya Hridaya Stotra suno jo sabhi shatruon ka naash karne waala, vijay dilane waala aur parama kalyankari hai.'",
+    "padapatha": [
+      {
+        "word": "युद्धऽपरिश्रान्तम्",
+        "meaning": "युद्ध से थके हुए"
+      },
+      {
+        "word": "चिन्तया",
+        "meaning": "गंभीर विचार में"
+      },
+      {
+        "word": "स्थितम्",
+        "meaning": "खड़े हुए"
+      },
+      {
+        "word": "रावणम्",
+        "meaning": "रावण को"
+      },
+      {
+        "word": "अग्रतः",
+        "meaning": "सम्मुख"
+      },
+      {
+        "word": "दृष्ट्वा",
+        "meaning": "देखकर"
+      },
+      {
+        "word": "अगस्त्यः",
+        "meaning": "महर्षि अगस्त्य"
+      },
+      {
+        "word": "ऋषिः",
+        "meaning": "तपस्वी मुनि"
+      },
+      {
+        "word": "आदित्यऽहृदयम्",
+        "meaning": "सूर्य के हृदय/रहस्यभूत स्तोत्र को"
+      },
+      {
+        "word": "पुण्यम्",
+        "meaning": "अत्यंत पवित्र"
+      },
+      {
+        "word": "सर्वऽशत्रुऽविनाशनम्",
+        "meaning": "समस्त आंतरिक व बाह्य शत्रुओं का नाशक"
+      },
+      {
+        "word": "जयऽआवहम्",
+        "meaning": "निश्चय ही विजय दिलाने वाला"
+      },
+      {
+        "word": "परमम्",
+        "meaning": "सर्वोच्च"
+      },
+      {
+        "word": "शिवम्",
+        "meaning": "कल्याणप्रद"
+      }
+    ],
+    "shastricContext": "वाल्मीकि रामायण के युद्धकाण्ड का परम सिद्ध सूर्य महामंत्र। रावण वध से पूर्व भगवान श्रीराम ने महर्षि अगस्त्य के उपदेश से इसका तीन बार आचमन सहित जप किया था जिससे उन्हें अमोघ ऊर्जा और विजय प्राप्त हुई।",
+    "audioUrl": null,
+    "previousId": "bg-18-66",
+    "nextId": "ys-1-1",
+    "chapterMantraIds": [
+      "vr-aditya-hridaya"
+    ],
+    "orderIndex": 31,
+    "status": "ACTIVE",
+    "anvaya": "ततो युद्धपरिश्रान्तं समरे चिन्तया स्थितम्। रावणं चाग्रतो दृष्ट्वा युद्धाय समुपस्थितम्। दैवतैश्च समागम्य द्रष्टुमभ्यागतो रणम्। उपागम्याब्रवीद्राममगस्त्यो भगवानृषिः॥",
+    "viniyoga": "ॐ अस्य श्रीआदित्यहृदयस्तोत्रस्य अगस्त्यो भगवानृषिः, अनुष्टुप् छन्दः, श्रीसूर्यनारायणो देवता, ॐ बीजं, घृणिः शक्तिः, सर्वशत्रुजयसिद्धये आदित्यहृदयस्तोत्रजपे विनियोगः।",
+    "bhashyaSummary": "वाल्मीकि रामायण युद्धकाण्ड १०५ सर्ग: जब प्रभु श्री राम रावण से युद्ध में चिन्तित और थके हुए थे, तब महर्षि अगस्त्य ने उपस्थित होकर यह परम गोपनीय आदित्य हृदय स्तोत्र प्रदान किया। यह समस्त शत्रुओं का नाश करने वाला, अक्षय विजय और आरोग्य प्रदायक सूर्य महास्तोत्र है।",
+    "sadhanaPhala": "समस्त शत्रुओं पर विजय, नेत्र रोगों व हृदय रोगों का निवारण, सरकारी व कानूनी कार्यों में सफलता और आत्मविश्वास की वृद्धि।"
+  },
+  {
+    "id": "ys-1-1",
+    "slug": "ys-1-1",
+    "vedaId": "atharvaveda",
+    "nodeId": "ys-samadhi-pada",
+    "vedaName": "षड्दर्शन - योग दर्शन (Yoga Darshana)",
+    "shakha": "पातञ्जल योगसूत्र (समाधि पाद)",
+    "textName": "पातञ्जल योगसूत्र (समाधि पाद - प्रथम सूत्र)",
+    "sectionRef": "समाधि पाद, सूत्र १",
+    "mantraNumber": "१.१",
+    "rishi": "महर्षि पतञ्जलि (आदिशेष अवतार)",
+    "devata": "योग एवं अंतःकरण शुद्धि (The Discipline of Yoga)",
+    "chhanda": "सूत्र शैली (अल्पक्षरमसंदिग्धम्)",
+    "svara": "शास्त्रीय सूत्र पाठ",
+    "sanskrit": "ॐ अथ योगानुशासनम्॥१॥",
+    "transliteration": "oṃ atha yogānuśāsanam || 1 ||",
+    "hindiTranslation": "अब (अधिकार प्राप्त जिज्ञासु साधक के लिए) योग के शास्त्रीय अनुशासन और साधना-मार्ग का प्रारंभ किया जाता है।",
+    "englishTranslation": "Now, therefore, begins the authoritative instruction and spiritual discipline of Yoga.",
+    "hinglishTranslation": "Ab yogyata praapt sadhak ke liye Yoga ka shastriya anushasan aur sadhna marg aarambh hota hai.",
+    "padapatha": [
+      {
+        "word": "अथ",
+        "meaning": "अब / मंगलमय शुभारंभ / पात्रता के अनंतर"
+      },
+      {
+        "word": "योग",
+        "meaning": "चित्त की एकाग्रता / परमात्मा से मिलन"
+      },
+      {
+        "word": "अनुशासनम्",
+        "meaning": "गुरु परंपरा से प्राप्त विधिवत मार्गदर्शन व अनुशासन"
+      }
+    ],
+    "shastricContext": "पातंजल योगसूत्र का प्रथम मंगलाचरण सूत्र। व्यास भाष्य के अनुसार 'अथ' शब्द मंगल का प्रतीक है और यह दर्शाता है कि चित्त शुद्धि के लिए पूर्व-साधना (वैराग्य व विवेक) करने के उपरांत अब योग का प्रत्यक्ष साक्षात्कार मार्ग खोला जा रहा है।",
+    "audioUrl": null,
+    "previousId": "vr-aditya-hridaya",
+    "nextId": "ys-1-2",
+    "chapterMantraIds": [
+      "ys-1-1",
+      "ys-1-2"
+    ],
+    "orderIndex": 32,
+    "status": "ACTIVE",
+    "anvaya": "अथ योगानुशासनम्।",
+    "viniyoga": "ॐ अस्य पातञ्जलयोगसूत्रस्य महर्षिः पतञ्जलिः ऋषिः, सूत्र छन्दः, ईश्वरः परमात्मा देवता, योगविद्यारम्भे विनियोगः।",
+    "bhashyaSummary": "व्यास भाष्य: 'अथ' शब्द मंगलवाचक, आनन्तर्य (अधिकार प्राप्ति के उपरान्त) और अनुशासन के आरम्भ का द्योतक है। यह सूत्र संकेत करता है कि चित्त के प्रमादों से ऊपर उठकर योग के क्रियात्मक अनुशासन में प्रवेश का यह शुभ काल है।",
+    "sadhanaPhala": "योग साधना के प्रति दृढ़ संकल्प, मानसिक अनुशासन और समाधि का मार्ग प्रशस्त होना।"
+  },
+  {
+    "id": "ys-1-2",
+    "slug": "ys-1-2",
+    "vedaId": "atharvaveda",
+    "nodeId": "ys-samadhi-pada",
+    "vedaName": "षड्दर्शन - योग दर्शन (Yoga Darshana)",
+    "shakha": "पातञ्जल योगसूत्र (समाधि पाद)",
+    "textName": "पातञ्जल योगसूत्र (योग का लक्षण सूत्र)",
+    "sectionRef": "समाधि पाद, सूत्र २",
+    "mantraNumber": "१.२",
+    "rishi": "महर्षि पतञ्जलि",
+    "devata": "कैवल्य एवं निर्विकल्प समाधि (Cessation of Mental Fluctuations)",
+    "chhanda": "सूत्र शैली",
+    "svara": "शास्त्रीय सूत्र पाठ",
+    "sanskrit": "ॐ योगश्चित्तवृत्तिनिरोधः॥२॥",
+    "transliteration": "oṃ yogaś citta-vṛtti-nirodhaḥ || 2 ||",
+    "hindiTranslation": "चित्त (मन, बुद्धि और अहंकार) की वृत्तियों (विचार-तरंगों और चंचल प्रवृत्तियों) का पूर्ण निरोध (शांत व विलीन हो जाना) ही 'योग' है।",
+    "englishTranslation": "Yoga is the intentional restraint and complete cessation of the fluctuations and modifications of the mind-stuff (chitta).",
+    "hinglishTranslation": "Chitta (mann, buddhi, ahankar) ki chanchal tarangon aur vritiyon ka shaant ho jana hi 'Yoga' hai.",
+    "padapatha": [
+      {
+        "word": "योगः",
+        "meaning": "योग (स्वरूप में स्थिति / समाधि)"
+      },
+      {
+        "word": "चित्त",
+        "meaning": "अंतःकरण (मन + बुद्धि + अहंकार)"
+      },
+      {
+        "word": "वृत्ति",
+        "meaning": "विचार, संस्कार व मानसिक हलचल"
+      },
+      {
+        "word": "निरोधः",
+        "meaning": "पूर्ण रूप से शांत व लय हो जाना"
+      }
+    ],
+    "shastricContext": "योग दर्शन का हृदय एवं केंद्रीय परिभाषा-सूत्र। इसके अगले ही सूत्र (१.३) में फल बताया गया है: 'तदा द्रष्टुः स्वरूपेऽवस्थानम्'—वृत्तियों के निरुद्ध होने पर द्रष्टा आत्मा अपने वास्तविक शुद्ध, आनंदमय सच्चिदानंद स्वरूप में स्थित हो जाता है।",
+    "audioUrl": null,
+    "previousId": "ys-1-1",
+    "nextId": "bs-1-1-1",
+    "chapterMantraIds": [
+      "ys-1-1",
+      "ys-1-2"
+    ],
+    "orderIndex": 33,
+    "status": "ACTIVE",
+    "anvaya": "योगः चित्तवृत्तिनिरोधः।",
+    "viniyoga": "ॐ अस्य योगलक्षणसूत्रस्य महर्षिः पतञ्जलिः ऋषिः, सूत्र छन्दः, ईश्वरः परमात्मा देवता, चित्तवृत्तिनिरोधाय विनियोगः।",
+    "bhashyaSummary": "व्यास भाष्य: चित्त की समस्त वृत्तियों (प्रमाण, विपर्यय, विकल्प, निद्रा, स्मृति) का अभ्यास और वैराग्य द्वारा पूर्ण निरोध ही 'योग' है। वृत्तियों के शांत होने पर जीवात्मा अपने वास्तविक साक्षी स्वरूप में स्थित हो जाता है।",
+    "sadhanaPhala": "मानसिक विक्षेपों का शमन, परम एकाग्रता, अतीन्द्रिय ज्ञान और कैवल्य (मोक्ष) की प्राप्ति।"
+  },
+  {
+    "id": "bs-1-1-1",
+    "slug": "bs-1-1-1",
+    "vedaId": "rigveda",
+    "nodeId": "bs-samanvaya-adhyaya",
+    "vedaName": "प्रस्थानत्रयी - न्याय प्रस्थान (वेदान्त दर्शन)",
+    "shakha": "बादरायण ब्रह्मसूत्र (समन्वयाध्याय)",
+    "textName": "ब्रह्मसूत्र / वेदान्त सूत्र (Brahma Sutras)",
+    "sectionRef": "अध्याय १, पाद १, सूत्र १",
+    "mantraNumber": "१.१.१",
+    "rishi": "महर्षि बादरायण वेदव्यास",
+    "devata": "जिज्ञास्य परब्रह्म (Inquiry into the Supreme Brahman)",
+    "chhanda": "सूत्र शैली",
+    "svara": "शास्त्रीय वेदान्त सूत्र पाठ",
+    "sanskrit": "ॐ अथातो ब्रह्मजिज्ञासा॥१॥",
+    "transliteration": "oṃ athāto brahma-jijñāsā || 1 ||",
+    "hindiTranslation": "अब (साधन-चतुष्टय सम्पन्न होने के उपरांत), इसलिए (क्योंकि कर्म के फल अनित्य हैं और केवल ब्रह्मज्ञान से ही शाश्वत मोक्ष संभव है) परब्रह्म को जानने की जिज्ञासा (अन्वेषण) करनी चाहिए।",
+    "englishTranslation": "Now, therefore, arises the earnest inquiry into the nature of Brahman (the Ultimate Supreme Reality).",
+    "hinglishTranslation": "Ab (aatmik yogyata praapt karne ke baad), isliye (kyunki sansaar kshanik hai) Param Brahma ko jaan-ne ki jigyasa karni chahiye.",
+    "padapatha": [
+      {
+        "word": "अथ",
+        "meaning": "अब (साधन चतुष्टय विवेक-वैराग्य-षट्सम्पत्ति-मुमुक्षुत्व के अनंतर)"
+      },
+      {
+        "word": "अतः",
+        "meaning": "अतः / इस कारण से (कर्मफल की अनित्यता देखकर)"
+      },
+      {
+        "word": "ब्रह्म",
+        "meaning": "अनादि-अनंत सच्चिदानंद परब्रह्म की"
+      },
+      {
+        "word": "जिज्ञासा",
+        "meaning": "जानने की प्रबल इच्छा व अन्वेषण"
+      }
+    ],
+    "shastricContext": "वेदान्त दर्शन (उत्तर मीमांसा) का प्रथम एवं सर्वाधिक गौरवशाली सूत्र। आदि शंकराचार्य, रामानुजाचार्य और मध्वाचार्य सभी प्रमुख आचार्यों ने अपने भाष्यों का शुभारंभ इसी सूत्र से किया है। यह सूत्र मानव जीवन का परम प्रयोजन ब्रह्म-साक्षात्कार निर्धारित करता है।",
+    "audioUrl": null,
+    "previousId": "ys-1-2",
+    "nextId": "rv-1-1-1",
+    "chapterMantraIds": [
+      "bs-1-1-1"
+    ],
+    "orderIndex": 34,
+    "status": "ACTIVE",
+    "anvaya": "अथ अतः ब्रह्मजिज्ञासा।",
+    "viniyoga": "ॐ अस्य वेदान्तदर्शनस्य महर्षिः बादरायण वेदव्यासः ऋषिः, सूत्र छन्दः, जिज्ञास्यं परब्रह्म देवता, वेदान्तविचारे विनियोगः।",
+    "bhashyaSummary": "आदि शंकर, रामानुज, मध्व भाष्य: 'अथ' साधन-चतुष्टय (विवेक, वैराग्य, शम-दमादि, मुमुक्षुत्व) की प्राप्ति के पश्चात्। 'अतः' क्योंकि कर्म-फल नश्वर है और ब्रह्म-ज्ञान ही नित्य अमृत प्रदान करता है। इसलिए अब परब्रह्म की जिज्ञासा और विचार करना चाहिए।",
+    "sadhanaPhala": "तत्वज्ञान की तृष्णा की तृप्ति, भ्रम का निवारण और परम सत्य का साक्षात् बोध।"
+  },
+  {
+    "id": "rv-khila-shri-sukta",
+    "slug": "shri-suktam",
+    "vedaId": "rigveda",
+    "nodeId": "rv-khila",
+    "vedaName": "ऋग्वेद परिशिष्ट (Rigveda Khila)",
+    "shakha": "शाकल शाखा परिशिष्ट",
+    "textName": "श्री सूक्तम् (लक्ष्मी महासूक्त)",
+    "sectionRef": "ऋग्वेद खिल सूक्त, ऋचा १",
+    "mantraNumber": "खिल १.१",
+    "rishi": "आनन्द, कर्दम, चिक्लीत, इन्दिरासुताः ऋषयः",
+    "devata": "श्रीमहाholders: हिरण्यमयी महालक्ष्मी",
+    "chhanda": "अनुष्टुप् (८+८+८+८ = ३२ वर्ण)",
+    "svara": "सस्वर वैदिक पाठ (उदात्त, अनुदात्त, स्वरित)",
+    "sanskrit": "ॐ हिर॑ण्यवर्णां॒ हरि॑णीं सु॒वर्ण॑रजत॒स्रजा॑म्।\nच॒न्द्रां हि॒रण्म॑यीं ल॒क्ष्मीं जात॑वेदो म॒ आव॑ह॥१॥",
+    "transliteration": "oṃ hiraṇyavarṇāṃ hariṇīṃ suvarṇarajatasrajām |\ncandrāṃ hiraṇmayīṃ lakṣmīṃ jātavedo ma āvaha || 1 ||",
+    "anvaya": "जातवेदः! हिरण्यवर्णां हरिणीं सुवर्णरजतस्रजां चन्द्रां हिरण्मयीं लक्ष्मीं मे आवह।",
+    "viniyoga": "ॐ अस्य श्रीसूक्तस्य आनन्दकर्दमचिक्लीतेन्दिरासुता ऋषयः, अनुष्टुप् छन्दः, अग्निर्हिरण्यमयी महालक्ष्मीर्देवता, श्रीं बीजं, ह्रीं शक्तिः, सर्वैश्वर्यसमृद्धिप्राप्त्यर्थे जपे विनियोगः।",
+    "hindiTranslation": "हे सर्वज्ञ अग्निदेव! सुवर्ण के समान कान्ति वाली, पाप-कष्ट हरने वाली, सोने और चाँदी के हारों से अलंकृत, चन्द्रमा के समान आह्लादक एवं हिरण्मयी श्रीलक्ष्मी को मेरे पास ले आइए।",
+    "englishTranslation": "O Agni, all-knowing fire, invoke for me Goddess Lakshmi, of golden hue, pleasing as the cooling moon, adorned with garlands of gold and silver, the embodiment of auspicious fortune and spiritual wealth.",
+    "hinglishTranslation": "Hey Sarvagya Agni Dev! Sone jaisi chamak wali, shanti dene wali, chandi-sone ke haaron se saji hui divya Mahalakshmi ko hamare kalyan hetu yahan aamantrit kijiye.",
+    "padapatha": [
+      {
+        "word": "हिर॑ण्यऽवर्णां",
+        "meaning": "सुवर्ण जैसी कान्ति वाली"
+      },
+      {
+        "word": "हरि॑णीम्",
+        "meaning": "दुःख-दारिद्र्य हरने वाली"
+      },
+      {
+        "word": "सु॒वर्ण॑ऽरजत॒ऽस्रजा॑म्",
+        "meaning": "स्वर्ण व रजत की माला धारण करने वाली"
+      },
+      {
+        "word": "च॒न्द्राम्",
+        "meaning": "चन्द्रमा के समान शीतल व आह्लाददायिनी"
+      },
+      {
+        "word": "हि॒रण्म॑यीम्",
+        "meaning": "सुवर्णमयी तेजस्विनी"
+      },
+      {
+        "word": "ल॒क्ष्मीम्",
+        "meaning": "महालक्ष्मी को"
+      },
+      {
+        "word": "जात॑वेदः",
+        "meaning": "हे सर्वज्ञ अग्निदेव!"
+      },
+      {
+        "word": "मे",
+        "meaning": "मेरे लिए"
+      },
+      {
+        "word": "आ",
+        "meaning": "यहाँ"
+      },
+      {
+        "word": "व॒ह॒",
+        "meaning": "ले आइए / उपस्थित कीजिए"
+      }
+    ],
+    "bhashyaSummary": "ऋग्वेद खिल सूक्त एवं सायणाचार्य भाष्य: श्री सूक्त वैदिक वांग्मय में महालक्ष्मी का सर्वप्रधान सूक्त है। इसमें अग्निदेव को माध्यम बनाकर ऐश्वर्य, यश, आरोग्य, तेज और निष्पाप समृद्धि की अधिष्ठात्री महालक्ष्मी का आह्वान किया जाता है।",
+    "sadhanaPhala": "प्रतिदिन श्री सूक्त के १६ मन्त्रों का पाठ अथवा बिल्वपत्र/कमलगट्टे से हवन करने से दारिद्र्य का समूल नाश, व्यापार में वृद्धि और गृह में अखण्ड शान्ति की प्राप्ति होती है।",
+    "shastricContext": "ऋग्वेद के खिल-भाग में प्रतिष्ठित १६ ऋचाओं का अति पावन श्रीसूक्त। दीपावली, नवरात्र एवं शुक्रवार की साधना में इसका पाठ सर्वोत्तम माना जाता है।",
+    "audioUrl": null,
+    "previousId": "rv-10-191-4",
+    "nextId": "ganapati-mula-mantra",
+    "chapterMantraIds": [
+      "rv-khila-shri-sukta"
+    ],
+    "orderIndex": 71,
+    "status": "ACTIVE"
+  },
+  {
+    "id": "ganapati-mula-mantra",
+    "slug": "ganesha-mantra",
+    "vedaId": "rigveda",
+    "nodeId": "ganapati-sukta",
+    "vedaName": "गणपति अथर्वशीर्ष एवं वैदिक मन्त्र",
+    "shakha": "अथर्ववेदीय / शुक्लयजुर्वेदीय",
+    "textName": "गणपति मन्त्र एवं गणेश गायत्री",
+    "sectionRef": "अथर्वशीर्ष मन्त्र ८ / यजुर्वेद",
+    "mantraNumber": "८",
+    "rishi": "गणक ऋषि",
+    "devata": "महागणपति (विघ्नहर्ता)",
+    "chhanda": "निचृद् गायत्री",
+    "svara": "वैदिक स्वर पाठ",
+    "sanskrit": "ॐ गं गणपतये नमः।\nॐ तत्पुरुषाय विद्महे वक्रतुण्डाय धीमहि। तन्नो दन्तिः प्रचोदयात्॥",
+    "transliteration": "oṃ gaṃ gaṇapataye namaḥ |\noṃ tatpuruṣāya vidmahe vakratuṇḍāya dhīmahi | tanno dantiḥ pracodayāt ||",
+    "anvaya": "ॐ गं गणपतये नमः। तत्पुरुषाय विद्महे, वक्रतुण्डाय धीमहि, दन्तिः नः तत् प्रचोदयात्।",
+    "viniyoga": "ॐ अस्य श्रीगणपतिमन्त्रस्य गणक ऋषिः, निचृद् गायत्री छन्दः, महागणपतिर्देवता, गं बीजं, नमः शक्तिः, सर्वविघ्ननिवारणार्थे कार्यसिद्धये जपे विनियोगः।",
+    "hindiTranslation": "ॐ गं गणपतये नमः। हम उन परम पुरुष श्रीगणेश को जानते हैं, वक्र सूंड वाले मंगलमूर्ति का ध्यान करते हैं; वे एकदंत भगवान् गणेश हमें सद्बुद्धि एवं ज्ञान के मार्ग में प्रेरित करें।",
+    "englishTranslation": "Om Gam Ganapataye Namah. May we realize that Supreme Being; we meditate upon the one with the curved trunk. May the single-tusked Lord Ganesha illuminate and inspire our intellect.",
+    "hinglishTranslation": "Om Gam Ganapataye Namah. Hum sabhi vighnon ko door karne wale Lord Ganesha ka dhyan karte hain. Bhagwan Ganesh hamari buddhi ko sahi raste par guide karein.",
+    "padapatha": [
+      {
+        "word": "ॐ",
+        "meaning": "परब्रह्म ओंकार"
+      },
+      {
+        "word": "गं",
+        "meaning": "गणेश बीज मन्त्र"
+      },
+      {
+        "word": "गणपतये",
+        "meaning": "देवगणों के स्वामी को"
+      },
+      {
+        "word": "नमः",
+        "meaning": "सादर नमन"
+      },
+      {
+        "word": "तत्पुरुषाय",
+        "meaning": "उस परम पुरुष को"
+      },
+      {
+        "word": "विद्महे",
+        "meaning": "हम जानते हैं"
+      },
+      {
+        "word": "वक्रतुण्डाय",
+        "meaning": "घुमावदार सूंड वाले देव का"
+      },
+      {
+        "word": "धीमहि",
+        "meaning": "ध्यान करते हैं"
+      },
+      {
+        "word": "दन्तिः",
+        "meaning": "एकदंत भगवान्"
+      },
+      {
+        "word": "प्रचोदयात्",
+        "meaning": "सन्मार्ग में प्रेरित करें"
+      }
+    ],
+    "bhashyaSummary": "गणपति अथर्वशीर्ष भाष्य: 'गं' बीज मन्त्र समस्त विघ्नों, ग्रहदोषों और नकारात्मक ऊर्जा का संहारक है। गणेशजी मूलाधार चक्र के अधिष्ठाता हैं, अतः उनकी उपासना से कुंडलिनी साधना और भौतिक कार्यों दोनों में पूर्ण सफलता मिलती है।",
+    "sadhanaPhala": "किसी भी शुभ कार्य के आरम्भ में १०८ बार जप करने से सभी विघ्न दूर होते हैं, विद्या और बुद्धि में प्रखरता आती है।",
+    "shastricContext": "सनातन धर्म के पंचदेवों में प्रथम पूज्य श्रीगणेश का बीज मन्त्र एवं गणेश गायत्री मन्त्र।",
+    "audioUrl": null,
+    "previousId": "rv-khila-shri-sukta",
+    "nextId": "stotra-shiva-tandava",
+    "chapterMantraIds": [
+      "ganapati-mula-mantra"
+    ],
+    "orderIndex": 72,
+    "status": "ACTIVE"
+  },
+  {
+    "id": "stotra-shiva-tandava",
+    "slug": "shiva-tandava-stotram",
+    "vedaId": "purana",
+    "nodeId": "shiva-purana",
+    "vedaName": "शिव महापुराण एवं रावण कृत स्तोत्र",
+    "shakha": "शैव परम्परा",
+    "textName": "शिव ताण्डव स्तोत्रम्",
+    "sectionRef": "प्रथम श्लोक",
+    "mantraNumber": "१",
+    "rishi": "दशानन रावण",
+    "devata": "ताण्डव नृत्यरत भगवान् नटराज (सदाशिव)",
+    "chhanda": "पंचचामर छन्द (१६ वर्ण)",
+    "svara": "लयबद्ध ताल पाठ",
+    "sanskrit": "जटाटवीगलज्जलप्रवाहपावितस्थले\nगलेऽवलम्ब्य लम्बितां भुजङ्गतुङ्गमालिकाम्।\nडमड्डमड्डमड्डमन्निनादवड्डमर्वयं\nचकार चण्डताण्डवं तनोतु नः शिवः शिवम्॥१॥",
+    "transliteration": "jaṭāṭavī-galaj-jala-pravāha-pāvita-sthale\ngale'valambya lambitāṃ bhujaṅga-tuṅga-mālikām |\nḍamaḍ-ḍamaḍ-ḍamaḍ-ḍaman-ninādavad-ḍamarvayaṃ\ncakāra caṇḍa-tāṇḍavaṃ tanotu naḥ śivaḥ śivam || 1 ||",
+    "anvaya": "जटा-अटवी-गलत्-जल-प्रवाह-पावित-स्थले गले लम्बितां तुङ्ग-भुजङ्ग-मालिकाम् अवलम्ब्य, डमत्-डमत्-डमत्-डमत्-निनादवत् डमरुम् (वाद्यमानः) चण्ड-ताण्डवं चकार, सः शिवः नः शिवं तनोतु।",
+    "viniyoga": "ॐ अस्य श्रीशिवताण्डवस्तोत्रस्य दशानन ऋषिः, पञ्चचामरं छन्दः, श्रीसदाशिवो देवता, शिवप्रीत्यर्थे जपे विनियोगः।",
+    "hindiTranslation": "जिनकी सघन जटारूपी वन से प्रवाहित गंगाजी की धाराओं से जिनका कण्ठ-प्रदेश पवित्र है, जिन्होंने अपने गले में विशाल सर्पों की माला धारण कर रखी है, और जो 'डम-डम-डम-डम' बजते हुए डमरू के साथ प्रचण्ड ताण्डव नृत्य कर रहे हैं—वे कल्याणकारी भगवान् शिव हमारे लिए परम कल्याण का विस्तार करें।",
+    "englishTranslation": "With His neck consecrated by the flow of water cascading from the thick forest of His matted hair, wearing the lofty serpent as a garland around His throat, and whose damaru resonates with the vibrant beats of 'damad damad', may Lord Shiva, who performs the cosmic furious dance, bestow auspiciousness and liberation upon us.",
+    "hinglishTranslation": "Jinki ghani jataon se nikalti Ganga ji se pavitra hua kanth hai, gale mein sarp-mala dharit hai, aur damroo ki dam-dam aawaz par prachand Tandav nritya karte hain—wo Bhagwan Shiv hamara kalyan karein.",
+    "padapatha": [
+      {
+        "word": "जटाऽअटवी",
+        "meaning": "जटारूपी सघन वन से"
+      },
+      {
+        "word": "गलत्ऽजलऽप्रवाह",
+        "meaning": "गिरते हुए गंगाजल के प्रवाह से"
+      },
+      {
+        "word": "पावितऽस्थले",
+        "meaning": "पवित्र किए गए गले वाले"
+      },
+      {
+        "word": "भुजङ्गऽतुङ्गऽमालिकाम्",
+        "meaning": "विशाल सर्प की माला को"
+      },
+      {
+        "word": "डमड्डमत्",
+        "meaning": "डमरू की गूंजती ध्वनि"
+      },
+      {
+        "word": "चण्डऽताण्डवम्",
+        "meaning": "प्रचण्ड ताण्डव नृत्य"
+      },
+      {
+        "word": "तनोतु",
+        "meaning": "विस्तार करें / प्रदान करें"
+      },
+      {
+        "word": "शिवः",
+        "meaning": "कल्याणमय शिव"
+      },
+      {
+        "word": "शिवम्",
+        "meaning": "परम कल्याण"
+      }
+    ],
+    "bhashyaSummary": "शिव पुराण: रावण ने जब कैलाश पर्वत को उठाने का दुस्साहस किया और भगवान् शिव ने अंगुष्ठ मात्र से पर्वत को दबाया, तब रावण ने पश्चात्ताप व अनन्य भक्ति में इस अप्रतिम छन्दोबद्ध स्तोत्र की रचना की। इसकी ध्वनि तरंगें भय, अहंकार और पापों का संहार करती हैं।",
+    "sadhanaPhala": "शिव ताण्डव स्तोत्र के नित्य पाठ से वाक्-सिद्धि, संगीत व कला में निपुणता, शत्रुभय का नाश और भगवान् शिव की अनन्य कृपा प्राप्त होती है।",
+    "shastricContext": "संस्कृत साहित्य का सबसे ओजस्वी एवं काव्यात्मक स्तोत्र जो नादब्रह्म का प्रत्यक्ष साक्षात्कार कराता है।",
+    "audioUrl": null,
+    "previousId": "ganapati-mula-mantra",
+    "nextId": "stotra-rudrashtakam",
+    "chapterMantraIds": [
+      "stotra-shiva-tandava"
+    ],
+    "orderIndex": 73,
+    "status": "ACTIVE"
+  },
+  {
+    "id": "stotra-rudrashtakam",
+    "slug": "rudrashtakam",
+    "vedaId": "itihasa",
+    "nodeId": "ramcharitmanas",
+    "vedaName": "श्रीरामचरितमानस (उत्तरकाण्ड)",
+    "shakha": "गोस्वामी तुलसीदास कृत",
+    "textName": "श्री रुद्राष्टकम् (नमामीशमीशान)",
+    "sectionRef": "उत्तरकाण्ड, छन्द १",
+    "mantraNumber": "१",
+    "rishi": "गोस्वामी तुलसीदास / काकभुशुण्डि गुरु",
+    "devata": "भगवान् सदाशिव ईशान",
+    "chhanda": "भुजंगप्रयात छन्द",
+    "svara": "गेय भक्ति पाठ",
+    "sanskrit": "नमामीशमीशान निर्वाणरूपं\nविभुं व्यापकं ब्रह्मवेदस्वरूपम्।\nनिजं निर्गुणं निर्विकल्पं निरीहं\nचिदाकाशमाकाशवासं भजेऽहम्॥१॥",
+    "transliteration": "namāmīśam-īśāna nirvāṇa-rūpaṃ\nvibhuṃ vyāpakaṃ brahma-veda-svarūpam |\nnijaṃ nirguṇaṃ nirvikalpaṃ nirīhaṃ\ncidākāśam-ākāśa-vāsaṃ bhaje'ham || 1 ||",
+    "anvaya": "निर्वाणरूपं विभुं व्यापकं ब्रह्मवेदस्वरूपम् ईशानम् ईशं नमामि। निजं निर्गुणं निर्विकल्पं निरीहं चिदाकाशम् आकाशवासं भजे अहम्।",
+    "viniyoga": "ॐ अस्य श्रीरुद्राष्टकस्तोत्रस्य तुलसीदास ऋषिः, भुजङ्गप्रयातं छन्दः, श्रीसदाशिवो देवता, शिवभक्तिप्राप्त्यर्थे जपे विनियोगः।",
+    "hindiTranslation": "हे ईशान! हे मुक्तिस्वरूप, सर्वसमर्थ, सर्वव्यापी, ब्रह्म और वेद के साक्षात् स्वरूप परमेश्वर! मैं आपको प्रणाम करता हूँ। जो अपने निज स्वरूप में स्थित, तीनों गुणों से परे, निर्विकल्प, इच्छारहित, विशुद्ध चिदाकाश रूप और आकाश के समान निर्लेप हैं—उन सदाशिव का मैं भजन करता हूँ।",
+    "englishTranslation": "I bow to Lord Shiva, the ruler of all, the embodiment of ultimate liberation (Nirvana), all-pervading, the very essence of Brahman and the Vedas. I worship Him who is established in His own glory, beyond attributes, free from change and desire, the luminous sky of pure consciousness.",
+    "hinglishTranslation": "Moksha roop, sarvavyapi, Vedon ke saakshaat roop Bhagwan Shiv ko main pranam karta hoon. Jo gunon se pare, shuddh chetna roop hain, un sadashiv ka main dhyan karta hoon.",
+    "padapatha": [
+      {
+        "word": "नमामि",
+        "meaning": "मैं नमन करता हूँ"
+      },
+      {
+        "word": "ईशम्",
+        "meaning": "परमेश्वर को"
+      },
+      {
+        "word": "ईशान",
+        "meaning": "हे सर्वदिशाओं के स्वामी!"
+      },
+      {
+        "word": "निर्वाणऽरूपम्",
+        "meaning": "मोक्ष स्वरूप"
+      },
+      {
+        "word": "विभुम्",
+        "meaning": "सर्वसमर्थ प्रभु"
+      },
+      {
+        "word": "व्यापकम्",
+        "meaning": "सर्वत्र व्याप्त"
+      },
+      {
+        "word": "ब्रह्मऽवेदऽस्वरूपम्",
+        "meaning": "वेद व ब्रह्म के साक्षात् विग्रह"
+      },
+      {
+        "word": "निर्गुणम्",
+        "meaning": "त्रिगुणों से अतीत"
+      },
+      {
+        "word": "चिदाकाशम्",
+        "meaning": "चेतन आकाश रूप"
+      },
+      {
+        "word": "भजे",
+        "meaning": "भजन करता हूँ"
+      }
+    ],
+    "bhashyaSummary": "रामचरितमानस उत्तरकाण्ड: जब काकभुशुण्डि जी के गुरु ने शिव मन्दिर में शिवजी के क्रोध को शांत करने हेतु यह स्तुति की, तब भगवान् शिव परम प्रसन्न हुए। यह स्तुति वेदान्त के निर्गुण ब्रह्म और भक्ति के सगुण शिव का अद्भुत समन्वय है।",
+    "sadhanaPhala": "रुद्राष्टकम् के नित्य पाठ से भगवान् शिव की परम प्रीति प्राप्त होती है, गुरु-अपराध और जन्म-जन्मान्तर के पाप भस्म हो जाते हैं।",
+    "shastricContext": "सनातन भक्ति धारा का सर्वाधिक लोकप्रिय और मधुर शिव स्तोत्र।",
+    "audioUrl": null,
+    "previousId": "stotra-shiva-tandava",
+    "nextId": "stotra-madhurashtakam",
+    "chapterMantraIds": [
+      "stotra-rudrashtakam"
+    ],
+    "orderIndex": 74,
+    "status": "ACTIVE"
+  },
+  {
+    "id": "stotra-madhurashtakam",
+    "slug": "madhurashtakam",
+    "vedaId": "purana",
+    "nodeId": "bhagavata-purana",
+    "vedaName": "श्रीमद्भागवत एवं पुष्टिमार्ग स्तोत्र",
+    "shakha": "शुद्धाद्वैत परम्परा",
+    "textName": "मधुराष्टकम् (अधरं मधुरं)",
+    "sectionRef": "प्रथम श्लोक",
+    "mantraNumber": "१",
+    "rishi": "जगद्गुरु श्रीमद्वल्लभाचार्य",
+    "devata": "मधुराधिपति नन्दनन्दन श्रीकृष्ण",
+    "chhanda": "तोडक छन्द",
+    "svara": "मधुर राग पाठ",
+    "sanskrit": "अधरं मधुरं वदनं मधुरं\nनयनं मधुरं हसितं मधुरम्।\nहृदयं मधुरं गमनं मधुरं\nमधुराधिपतेरखिलं मधुरम्॥१॥",
+    "transliteration": "adharaṃ madhuraṃ vadanaṃ madhuraṃ\nnayanaṃ madhuraṃ hasitaṃ madhuram |\nhṛdayaṃ madhuraṃ gamanaṃ madhuraṃ\nmadhurādhipater-akhilaṃ madhuram || 1 ||",
+    "anvaya": "मधुराधिपतेः अधरं मधुरं, वदनं मधुरं, नयनं मधुरं, हसितं मधुरं, हृदयं मधुरं, गमनं मधुरं, अखिलं मधुरम्।",
+    "viniyoga": "ॐ अस्य श्रीमथुराष्टकस्तोत्रस्य वल्लभाचार्य ऋषिः, तोटकं छन्दः, श्रीमधुराधिपतिः श्रीकृष्णो देवता, कृष्णप्रेमलक्षणभक्तिप्राप्त्यर्थे जपे विनियोगः।",
+    "hindiTranslation": "मधुर्य के स्वामी भगवान् श्रीकृष्ण के होंठ मधुर हैं, मुखड़ा मधुर है, नेत्र मधुर हैं, मुस्कान मधुर है, हृदय मधुर है, चाल मधुर है—मधुराधिपति श्रीकृष्ण का सब कुछ ही मधुर और आनन्दमय है।",
+    "englishTranslation": "Sweet are His lips, sweet is His countenance, sweet are His lotus eyes, sweet is His gentle smile, sweet is His heart, and sweet is His walking—everything about the Lord of sweetness, Sri Krishna, is thoroughly sweet and divine.",
+    "hinglishTranslation": "Shri Krishna ke hoth madhur hain, chehra madhur hai, aakhein madhur hain, hansi madhur hai, hriday madhur hai—Madhurata ke swami Shri Krishna ka sab kuch anupam madhur hai.",
+    "padapatha": [
+      {
+        "word": "अधरम्",
+        "meaning": "होंठ"
+      },
+      {
+        "word": "मधुरम्",
+        "meaning": "अति मधुर व प्रिय"
+      },
+      {
+        "word": "वदनम्",
+        "meaning": "मुखमण्डल"
+      },
+      {
+        "word": "नयनम्",
+        "meaning": "कमलनयन"
+      },
+      {
+        "word": "हसितम्",
+        "meaning": "मनोहर मुस्कान"
+      },
+      {
+        "word": "हृदयम्",
+        "meaning": "प्रेममय हृदय"
+      },
+      {
+        "word": "गमनम्",
+        "meaning": "मन्द-मन्द चाल"
+      },
+      {
+        "word": "मधुराधिपतेः",
+        "meaning": "माधुर्य के स्वामी का"
+      },
+      {
+        "word": "अखिलम्",
+        "meaning": "समस्त अंग व लीलाएँ"
+      }
+    ],
+    "bhashyaSummary": "वल्लभाचार्य कृत मधुराष्टकम् जीवात्मा को भगवान् के साथ विशुद्ध प्रेमानन्द (माधुर्य रस) से जोड़ता है। इसमें भय या विधि-निषेध का नहीं, अपितु केवल परमात्मा के प्रति निष्काम आकर्षण का गान है।",
+    "sadhanaPhala": "मन के अवसाद, कठोरता और क्रोध का शमन; हृदय में माधुर्य, कोमलता और ईश्वर-प्रेम का अविर्भाव।",
+    "shastricContext": "वैष्णव भक्ति साहित्य का परम प्रिय स्तोत्र जो श्रीकृष्ण के माधुर्य रूप का साक्षात् गान करता है।",
+    "audioUrl": null,
+    "previousId": "stotra-rudrashtakam",
+    "nextId": "stotra-achyutashtakam",
+    "chapterMantraIds": [
+      "stotra-madhurashtakam"
+    ],
+    "orderIndex": 75,
+    "status": "ACTIVE"
+  },
+  {
+    "id": "stotra-achyutashtakam",
+    "slug": "achyutashtakam",
+    "vedaId": "purana",
+    "nodeId": "vishnu-purana",
+    "vedaName": "विष्णु स्तोत्र रत्नावली",
+    "shakha": "आदि शंकर परम्परा",
+    "textName": "अच्युताष्टकम्",
+    "sectionRef": "प्रथम श्लोक",
+    "mantraNumber": "१",
+    "rishi": "आदि शंकराचार्य",
+    "devata": "अच्युत अनन्त गोविन्द (भगवान् विष्णु / राम / कृष्ण)",
+    "chhanda": "भुजंगप्रयात छन्द",
+    "svara": "भक्ति संकीर्तन पाठ",
+    "sanskrit": "अच्युतं केशवं रामनारायणं\nकृष्णदामोदरं वासुदेवं हरिम्।\nश्रीधरं माधवं गोपिकावल्लभं\nजानकीनायकं रामचंद्रं भजे॥१॥",
+    "transliteration": "acyutaṃ keśavaṃ rāma-nārāyaṇaṃ\nkṛṣṇa-dāmodaraṃ vāsudevaṃ harim |\nśrīdharaṃ mādhavaṃ gopikā-vallabhaṃ\njānakī-nāyakaṃ rāmacandraṃ bhaje || 1 ||",
+    "anvaya": "अच्युतं केशवं रामनारायणं कृष्णदामोदरं वासुदेवं हरिं श्रीधरं माधवं गोपिकावल्लभं जानकीनायकं रामचंद्रं (अहं) भजे।",
+    "viniyoga": "ॐ अस्य श्रीअच्युताष्टकस्तोत्रस्य आदि शंकराचार्य ऋषिः, भुजङ्गप्रयातं छन्दः, भगवान् नारायणो देवता, विष्णुभक्तिप्राप्त्यर्थे जपे विनियोगः।",
+    "hindiTranslation": "मैं अच्युत (अविनाशी), केशव, राम, नारायण, कृष्ण, दामोदर, वासुदेव, हरि, श्रीधर, माधव, गोपियों के प्रियतम और जानकी के पति प्रभु श्री रामचन्द्र का अनन्य भाव से भजन करता हूँ।",
+    "englishTranslation": "I sing praises of the infallible Achyuta, Keshava, Rama, Narayana, Krishna, Damodara, Vasudeva, Hari, Shridhara, Madhava, the beloved of Gopis, and the Lord of Janaki, Sri Ramachandra.",
+    "hinglishTranslation": "Main Achyut, Keshav, Ram, Narayan, Krishna, Damodar, Vasudev, Hari, Shridhar, Madhav aur Sita-pati Shri Ram ka nitya dhyan aur bhajan karta hoon.",
+    "padapatha": [
+      {
+        "word": "अच्युतम्",
+        "meaning": "जो कभी च्युत (नष्ट) न हो"
+      },
+      {
+        "word": "केशवम्",
+        "meaning": "केशी दैत्य का वध करने वाले"
+      },
+      {
+        "word": "रामनारायणम्",
+        "meaning": "श्रीराम व नारायण"
+      },
+      {
+        "word": "कृष्णदामोदरम्",
+        "meaning": "श्रीकृष्ण व दामोदर"
+      },
+      {
+        "word": "वासुदेवम्",
+        "meaning": "वसुदेव के पुत्र"
+      },
+      {
+        "word": "हरिम्",
+        "meaning": "पापों का हरण करने वाले"
+      },
+      {
+        "word": "श्रीधरम्",
+        "meaning": "लक्ष्मी को वक्षस्थल पर धारण करने वाले"
+      },
+      {
+        "word": "जानकीनायकम्",
+        "meaning": "माता सीता के स्वामी"
+      },
+      {
+        "word": "भजे",
+        "meaning": "मैं भजन करता हूँ"
+      }
+    ],
+    "bhashyaSummary": "आदि शंकराचार्य कृत अच्युताष्टकम् भगवान् के अनन्त नामों का नाम-संकीर्तन मन्त्र है। कलियुग में केवल भगवन्नाम संकीर्तन ही समस्त पापों से मुक्ति और मोक्ष का सुगम साधन कहा गया है।",
+    "sadhanaPhala": "प्रातःकाल पाठ करने से समस्त पापों का क्षय, चित्त की एकाग्रता और अन्तःकरण में दिव्य शान्ति की प्राप्ति होती है।",
+    "shastricContext": "अद्वैत वेदान्त के प्रवर्तक आदि शंकराचार्य की अनन्य भगवद्-भक्ति का सजीव प्रमाण।",
+    "audioUrl": null,
+    "previousId": "stotra-madhurashtakam",
+    "nextId": "stotra-vishnu-dhyana",
+    "chapterMantraIds": [
+      "stotra-achyutashtakam"
+    ],
+    "orderIndex": 76,
+    "status": "ACTIVE"
+  },
+  {
+    "id": "stotra-vishnu-dhyana",
+    "slug": "vishnu-dhyana-mantra",
+    "vedaId": "itihasa",
+    "nodeId": "mahabharata-anushasana",
+    "vedaName": "महाभारत (अनुशासन पर्व) एवं विष्णु सहस्रनाम",
+    "shakha": "व्यास परम्परा",
+    "textName": "श्रीविष्णु सहस्रनाम ध्यान श्लोक",
+    "sectionRef": "ध्यान श्लोक १",
+    "mantraNumber": "१",
+    "rishi": "महर्षि वेदव्यास / भीष्म पितामह",
+    "devata": "चतुर्भुज भगवान् महाविष्णु",
+    "chhanda": "शार्दूलविक्रीडित छन्द",
+    "svara": "सस्वर ध्यान पाठ",
+    "sanskrit": "शान्ताकारं भुजगशयनं पद्मनाभं सुरेशं\nविश्वाधारं गगनसदृशं मेघवर्णं शुभाङ्गम्।\nलक्ष्मीकान्तं कमलनयनं योगिभिर्ध्यानगम्यं\nवन्दे विष्णुं भवभयहरं सर्वलोकैकनाथम्॥१॥",
+    "transliteration": "śāntākāraṃ bhujaga-śayanaṃ padmanābhaṃ sureśaṃ\nviśvādhāraṃ gagana-sadṛśaṃ megha-varṇaṃ śubhāṅgam |\nlakṣmī-kāntaṃ kamala-nayanaṃ yogibhir-dhyāna-gamyaṃ\nvande viṣṇuṃ bhava-bhaya-haraṃ sarva-lokaika-nātham || 1 ||",
+    "anvaya": "शान्ताकारं भुजगशयनं पद्मनाभं सुरेशं विश्वाधारं गगनसदृशं मेघवर्णं शुभाङ्गं लक्ष्मीकान्तं कमलनयनं योगिभिः ध्यानगम्यं भवभयहरं सर्वलोकैकनाथं विष्णुं वन्दे।",
+    "viniyoga": "ॐ अस्य श्रीविष्णुसहस्रनामस्तोत्रस्य वेदव्यास ऋषिः, अनुष्टुप् छन्दः, भगवान् महाविष्णुर्देवता, मोक्षप्राप्त्यर्थे ध्याने विनियोगः।",
+    "hindiTranslation": "जिनका स्वरूप परम शांत है, जो शेषनाग की शय्या पर शयन करते हैं, जिनकी नाभि से कमल प्रस्फुटित है, जो देवताओं के स्वामी हैं, जो सम्पूर्ण विश्व के आधार हैं, आकाश के समान निर्लेप एवं व्यापक हैं, मेघ के समान श्याम वर्ण और परम शुभ अंगों वाले हैं; जो महालक्ष्मी के प्रिय पति, कमल जैसे नयनों वाले, योगियों द्वारा ध्यान में प्राप्त होने योग्य, संसार के भय को हरने वाले और समस्त लोकों के एकमात्र स्वामी हैं—उन भगवान् विष्णु की मैं वन्दना करता हूँ।",
+    "englishTranslation": "I revere Lord Vishnu, the embodiment of profound peace, who reclines on the serpent Adishesha, from whose navel springs the cosmic lotus, the supreme Lord of all devas, the foundation of the cosmos, boundless as the firmament, of dark cloud-like complexion, with auspicious limbs; the beloved of Goddess Lakshmi, with lotus-petal eyes, realized by yogis in deep meditation, the dispeller of all worldly fears, and the sole sovereign Lord of all universes.",
+    "hinglishTranslation": "Shant swaroop, Sheshnaag par shayan karne wale, Brahmaji ke janm-sthal kamal-naabhi wale, aakash jaisa vishal, Devi Lakshmi ke swami, aur sansar ke bhay ko door karne wale Lord Vishnu ko main pranam karta hoon.",
+    "padapatha": [
+      {
+        "word": "शान्तऽआकारम्",
+        "meaning": "परम शांत स्वरूप वाले"
+      },
+      {
+        "word": "भुजगऽशयनम्",
+        "meaning": "शेषनाग की शय्या पर शयन करने वाले"
+      },
+      {
+        "word": "पद्मऽनाभम्",
+        "meaning": "नाभि में कमल धारण करने वाले"
+      },
+      {
+        "word": "सुरऽईशम्",
+        "meaning": "देवताओं के अधीश्वर"
+      },
+      {
+        "word": "विश्वऽआधारम्",
+        "meaning": "सृष्टि के आधार"
+      },
+      {
+        "word": "गगनऽसदृशम्",
+        "meaning": "आकाश के समान सर्वव्यापी"
+      },
+      {
+        "word": "मेघऽवर्णम्",
+        "meaning": "नील मेघ जैसा श्यामल वर्ण"
+      },
+      {
+        "word": "लक्ष्मीऽकान्तम्",
+        "meaning": "माता महालक्ष्मी के पति"
+      },
+      {
+        "word": "भवऽभयऽहरम्",
+        "meaning": "संसार के जन्म-मरण भय को हरने वाले"
+      },
+      {
+        "word": "वन्दे",
+        "meaning": "मैं वन्दना करता हूँ"
+      }
+    ],
+    "bhashyaSummary": "विष्णु सहस्रनाम शांकर भाष्य: भीष्म पितामह ने युधिष्ठिर को यह स्तुति प्रदान की थी। यह ध्यान श्लोक भगवान् विष्णु के साकार-निराकार दोनों पक्षों का अप्रतिम समन्वय प्रस्तुत करता है।",
+    "sadhanaPhala": "नित्य पाठ से मानसिक शांति, दुःस्वप्न का नाश, अकाल मृत्यु से रक्षा और नारायण की कृपा से बैकुंठ लोक की प्राप्ति होती है।",
+    "shastricContext": "महाभारत अनुशासन पर्व में भीष्म-युधिष्ठिर संवाद के अंतर्गत श्रीविष्णु सहस्रनाम का मुख्य ध्यान मन्त्र।",
+    "audioUrl": null,
+    "previousId": "stotra-achyutashtakam",
+    "nextId": "stotra-saraswati-vandana",
+    "chapterMantraIds": [
+      "stotra-vishnu-dhyana"
+    ],
+    "orderIndex": 77,
+    "status": "ACTIVE"
+  },
+  {
+    "id": "stotra-saraswati-vandana",
+    "slug": "saraswati-vandana",
+    "vedaId": "purana",
+    "nodeId": "brahmavaivarta-purana",
+    "vedaName": "ब्रह्मवैवर्त पुराण एवं शारदा स्तुति",
+    "shakha": "सरस्वती परम्परा",
+    "textName": "महासरस्वती वन्दना",
+    "sectionRef": "ध्यान श्लोक १",
+    "mantraNumber": "१",
+    "rishi": "भगवान् ब्रह्मा / कश्यप",
+    "devata": "भगवती महासरस्वती (विद्या एवं वाणी की अधिष्ठात्री)",
+    "chhanda": "शार्दूलविक्रीडित छन्द",
+    "svara": "सस्वर विद्या वन्दना",
+    "sanskrit": "या कुन्देन्दुतुषारहारधवला या शुभ्रवस्त्रावृता\nया वीणावरदण्डमण्डितकरा या श्वेतपद्मासना।\nया ब्रह्माच्युतशंकरप्रभृतिभिर्देवैः सदा वन्दिता\nसा मां पातु सरस्वती भगवती निःशेषजाड्यापहा॥१॥",
+    "transliteration": "yā kundendu-tuṣāra-hāra-dhavalā yā śubhra-vastrāvṛtā\nyā vīṇā-vara-daṇḍa-maṇḍita-karā yā śveta-padmāsanā |\nyā brahmācyuta-śaṅkara-prabhṛtibhir-devaiḥ sadā vanditā\nsā māṃ pātu sarasvatī bhagavatī niḥśeṣa-jāḍyāpahā || 1 ||",
+    "anvaya": "या कुन्द-इन्दु-तुषार-हार-धवला, या शुभ्र-वस्त्रावृता, या वीणा-वर-दण्ड-मण्डित-करा, या श्वेत-पद्मासना, या ब्रह्मा-अच्युत-शंकर-प्रभृतिभिः देवैः सदा वन्दिता, सा निःशेष-जाड्यापहा भगवती सरस्वती मां पातु।",
+    "viniyoga": "ॐ अस्य श्रीसरस्वतीस्तोत्रस्य कश्यप ऋषिः, शार्दूलविक्रीडितं छन्दः, भगवती सरस्वती देवता, वाक्सिद्धिमेधाप्राप्त्यर्थे जपे विनियोगः।",
+    "hindiTranslation": "जो कुन्द के पुष्प, चन्द्रमा, हिम और मोतियों के हार के समान निष्कलंक श्वेत हैं; जिन्होंने शुभ्र श्वेत वस्त्र धारण किए हैं; जिनके करकमलों में वीणा का श्रेष्ठ दण्ड सुशोभित है; जो श्वेत कमल के आसन पर विराजमान हैं; ब्रह्मा, विष्णु और शिव आदि देवताओं द्वारा जो सदा वन्दित हैं—वे समस्त जड़ता, अज्ञान और मन्दबुद्धि को समूल नष्ट करने वाली भगवती सरस्वती मेरी रक्षा करें।",
+    "englishTranslation": "May Goddess Saraswati protect me—She who is fair as the jasmine flower, the moon, snow, and a garland of pearls; who is robed in pristine white garments; whose hands are adorned with the sacred veena; who is seated upon a pure white lotus; who is ever adored by Brahma, Vishnu, Shiva, and other gods; and who dispels every trace of ignorance, lethargy, and darkness from the intellect.",
+    "hinglishTranslation": "Jo chandan, barf aur motiyon ki tarah shvet hain, jinhone safed vastra pehne hain, jinke haathon mein Veena shobhit hai, jo safed kamal par baithti hain aur jinki pooja Brahma, Vishnu aur Shiv karte hain—wo Ma Saraswati hamari sari murkhta aur alashya ko door karein.",
+    "padapatha": [
+      {
+        "word": "कुन्दऽइन्दुऽतुषारऽधवला",
+        "meaning": "कुन्द पुष्प, चन्द्रमा व हिम जैसी श्वेत"
+      },
+      {
+        "word": "शुभ्रऽवस्त्रऽआवृता",
+        "meaning": "श्वेत वस्त्र धारण करने वाली"
+      },
+      {
+        "word": "वीणाऽवरऽदण्ड",
+        "meaning": "श्रेष्ठ वीणा से सुशोभित"
+      },
+      {
+        "word": "श्वेतऽपद्मऽआसना",
+        "meaning": "श्वेत कमल के आसन पर स्थित"
+      },
+      {
+        "word": "देवैःऽसदाऽवन्दिता",
+        "meaning": "समस्त देवों द्वारा पूजित"
+      },
+      {
+        "word": "निःशेषऽजाड्यऽअपहा",
+        "meaning": "सम्पूर्ण अज्ञान व जड़ता को हरने वाली"
+      },
+      {
+        "word": "पातु",
+        "meaning": "रक्षा करें / विद्या प्रदान करें"
+      }
+    ],
+    "bhashyaSummary": "ज्ञान एवं विद्या की अधिष्ठात्री देवी सरस्वती का यह शाश्वत मन्त्र साधक के मूलाधार से आज्ञा चक्र तक वाक्-शक्ति का जागरण करता है। 'निःशेषजाड्यापहा' का अर्थ है मस्तिष्क की जड़ता और संशय को पूर्णतः मिटा देना।",
+    "sadhanaPhala": "विद्यार्थियों एवं शोधकर्ताओं हेतु नित्य प्रातः पाठ करने से स्मरण शक्ति, एकाग्रता, वक्तृत्व कला और विद्या में असाधारण सफलता मिलती है।",
+    "shastricContext": "सम्पूर्ण भारतवर्ष में विद्यारम्भ, वसन्त पंचमी एवं नित्य अध्ययन से पूर्व किया जाने वाला सर्वमान्य सरस्वती मन्त्र।",
+    "audioUrl": null,
+    "previousId": "stotra-vishnu-dhyana",
+    "nextId": "stotra-guru-vandana",
+    "chapterMantraIds": [
+      "stotra-saraswati-vandana"
+    ],
+    "orderIndex": 78,
+    "status": "ACTIVE"
+  },
+  {
+    "id": "stotra-guru-vandana",
+    "slug": "guru-mantra",
+    "vedaId": "purana",
+    "nodeId": "skanda-purana",
+    "vedaName": "स्कन्द पुराण (उत्तरखण्ड - गुरुगीता)",
+    "shakha": "गुरु परम्परा",
+    "textName": "श्री गुरु वन्दना एवं गुरु मन्त्र",
+    "sectionRef": "गुरुगीता मन्त्र ३२-३३",
+    "mantraNumber": "३२-३३",
+    "rishi": "भगवान् सदाशिव",
+    "devata": "श्रीसद्गुरु (परब्रह्म स्वरूप)",
+    "chhanda": "अनुष्टुप् (८+८+८+८ = ३२ वर्ण)",
+    "svara": "सस्वर गुरु वन्दना",
+    "sanskrit": "गुरुर्ब्रह्मा गुरुर्विष्णुः गुरुर्देवो महेश्वरः।\nगुरुः साक्षात् परं ब्रह्म तस्मै श्रीगुरवे नमः॥\nअखण्डमण्डलाकारं व्याप्तं येन चराचरम्।\nतत्पदं दर्शितं येन तस्मै श्रीगुरवे नमः॥",
+    "transliteration": "gurur-brahmā gurur-viṣṇur gurur-devo maheśvaraḥ |\nguruḥ sākṣāt paraṃ brahma tasmai śrī-gurave namaḥ ||\nakhaṇḍa-maṇḍalākāraṃ vyāptaṃ yena carācaram |\ntat-padaṃ darśitaṃ yena tasmai śrī-gurave namaḥ ||",
+    "anvaya": "गुरुः ब्रह्मा, गुरुः विष्णुः, गुरुः देवः महेश्वरः, गुरुः साक्षात् परं ब्रह्म, तस्मै श्रीगुरवे नमः। येन अखण्डमण्डलाकारं चराचरं व्याप्तं, येन तत्पदं दर्शितं, तस्मै श्रीगुरवे नमः।",
+    "viniyoga": "ॐ अस्य श्रीगुरुमन्त्रस्य सदाशिव ऋषिः, अनुष्टुप् छन्दः, श्रीसद्गुरुर्देवता, आत्मज्ञानसिद्धये गुरुभक्तये च विनियोगः।",
+    "hindiTranslation": "गुरु ही ब्रह्मा (सृष्टिकर्ता) हैं, गुरु ही विष्णु (पालनकर्ता) हैं, और गुरु ही देव महेश्वर (संहारकर्ता) हैं। गुरु ही साक्षात् परब्रह्म हैं; उन श्रीसद्गुरुदेव को मेरा सादर प्रणाम है। जिन्होंने इस सम्पूर्ण अखण्ड ब्रह्माण्ड एवं चराचर जगत् में व्याप्त उस परम सत्य पद का साक्षात्कार कराया है, उन श्रीसद्गुरुदेव को नमन है।",
+    "englishTranslation": "The Guru is Brahma (the Creator), the Guru is Vishnu (the Preserver), and the Guru is Maheswara (the Dissolver of illusions). The Guru is verily the Supreme Absolute Brahman; salutations to that noble Guru. Salutations to the revered Guru who has revealed that Supreme State which permeates the entire undivided cosmos of animate and inanimate creation.",
+    "hinglishTranslation": "Guru hi Brahma hain, Guru hi Vishnu hain, Guru hi Shiv hain. Guru saakshaat Param Brahma hain, unhe mera pranam. Jinhone hume is poore bramhand mein vyapt sachche Parmatma ka darshan karaya, un Gurudev ko naman.",
+    "padapatha": [
+      {
+        "word": "गुरुः",
+        "meaning": "अज्ञान के अंधकार को मिटाने वाले गुरु"
+      },
+      {
+        "word": "ब्रह्मा",
+        "meaning": "सृजनकर्ता"
+      },
+      {
+        "word": "विष्णुः",
+        "meaning": "पोषणकर्ता"
+      },
+      {
+        "word": "महेश्वरः",
+        "meaning": "शिव रूप"
+      },
+      {
+        "word": "साक्षात्",
+        "meaning": "प्रत्यक्ष स्वरूप"
+      },
+      {
+        "word": "परम्ऽब्रह्म",
+        "meaning": "सर्वोच्च परब्रह्म"
+      },
+      {
+        "word": "तस्मै",
+        "meaning": "उन"
+      },
+      {
+        "word": "श्रीगुरवे",
+        "meaning": "पावन गुरुदेव को"
+      },
+      {
+        "word": "नमः",
+        "meaning": "मेरा नमन"
+      }
+    ],
+    "bhashyaSummary": "स्कन्द पुराण गुरुगीता: 'गु' का अर्थ है अंधकार (अज्ञान) और 'रु' का अर्थ है तेज (ज्ञान)। जो अज्ञान के घने अंधकार से निकालकर सत्य के प्रकाश में ले जाते हैं, वे ही सद्गुरु हैं। गुरु केवल हाड़-मांस का शरीर नहीं, अपितु शिष्य को परमात्मा से जोड़ने वाली जीवंत चैतन्य शक्ति हैं।",
+    "sadhanaPhala": "गुरु मन्त्र के नित्य स्मरण से अहंकार का नाश, साधना में आने वाले अवरोधों का निवारण और आत्मज्ञान की प्राप्ति होती है।",
+    "shastricContext": "सनातन धर्म में आध्यात्मिक साधना का प्रथम सोपान—गुरु कृपा और गुरु वन्दना।",
+    "audioUrl": null,
+    "previousId": "stotra-saraswati-vandana",
+    "nextId": "stotra-karpura-gauram",
+    "chapterMantraIds": [
+      "stotra-guru-vandana"
+    ],
+    "orderIndex": 79,
+    "status": "ACTIVE"
+  },
+  {
+    "id": "stotra-karpura-gauram",
+    "slug": "karpura-gauram",
+    "vedaId": "purana",
+    "nodeId": "shiva-purana",
+    "vedaName": "शिव महापुराण एवं आरती मन्त्र",
+    "shakha": "शैव परम्परा",
+    "textName": "कर्पूरगौरं करुणावतारम् (शिव स्तुति)",
+    "sectionRef": "आरती मन्त्र",
+    "mantraNumber": "१",
+    "rishi": "भगवान् विष्णु",
+    "devata": "भवानी सहित भगवान् भव (सदाशिव)",
+    "chhanda": "भुजंगप्रयात छन्द",
+    "svara": "आरती पाठ",
+    "sanskrit": "कर्पूरगौरं करुणावतारं\nसंसारसारं भुजगेन्द्रहारम्।\nसदावसन्तं हृदयारविन्दे\nभवं भवानीसहितं नमामि॥१॥",
+    "transliteration": "karpūra-gauraṃ karuṇāvatāraṃ\nsaṃsāra-sāraṃ bhujagendra-hāram |\nsadā vasantaṃ hṛdayāravinde\nbhavaṃ bhavānī-sahitaṃ namāmi || 1 ||",
+    "anvaya": "कर्पूरगौरं करुणावतारं संसारसारं भुजगेन्द्रहारं हृदयारविन्दे सदा वसन्तं भवानीसहितं भवं (अहं) नमामि।",
+    "viniyoga": "ॐ अस्य शिवआरतीमन्त्रस्य भगवान् विष्णु ऋषिः, भुजङ्गप्रयातं छन्दः, भवानीसहितः शिवो देवता, नीराजनसमये विनियोगः।",
+    "hindiTranslation": "जो कर्पूर के समान श्वेत एवं दिव्य कान्तिमान हैं, जो करुणा के साक्षात् अवतार हैं, जो इस सम्पूर्ण संसार के मूल सार-तत्त्व हैं, जिन्होंने वासुकि सर्पराज को हार के रूप में धारण किया है; जो भक्तों के हृदयकमल में सदा निवास करते हैं—उन माता भवानी सहित देवाधिदेव भगवान् शिव को मैं प्रणाम करता हूँ।",
+    "englishTranslation": "I bow to Lord Shiva along with Mother Bhavani—He who is pure white and luminous like camphor, the very incarnation of compassion, the ultimate essence of worldly existence, adorned with the serpent king as a garland, and who eternally dwells within the lotus of the devotee's heart.",
+    "hinglishTranslation": "Karpura jaise safed aur tejashvi, karuna ke avtar, sansar ke mool aadhar, sarpon ka haar pehanne wale aur hriday-kamal mein nivas karne wale Mata Parvati sahit Bhagwan Shiv ko mera pranam.",
+    "padapatha": [
+      {
+        "word": "कर्पूरऽगौरम्",
+        "meaning": "कपूर के समान दिव्य श्वेत कान्ति वाले"
+      },
+      {
+        "word": "करुणाऽअवतारम्",
+        "meaning": "दया व करुणा के साक्षात् विग्रह"
+      },
+      {
+        "word": "संसारऽसारम्",
+        "meaning": "सम्पूर्ण विश्व के मूल तत्त्व"
+      },
+      {
+        "word": "भुजगेन्द्रऽहारम्",
+        "meaning": "सर्पराज का हार पहनने वाले"
+      },
+      {
+        "word": "सदाऽवसन्तम्",
+        "meaning": "सदा वास करने वाले"
+      },
+      {
+        "word": "हृदयऽअरविन्दे",
+        "meaning": "हृदयरूपी कमल में"
+      },
+      {
+        "word": "भवानीऽसहितम्",
+        "meaning": "माता पार्वती के सहित"
+      },
+      {
+        "word": "भवम्",
+        "meaning": "सदाशिव को"
+      },
+      {
+        "word": "नमामि",
+        "meaning": "मैं नमन करता हूँ"
+      }
+    ],
+    "bhashyaSummary": "शिव महापुराण: जब भगवान् शिव और माता पार्वती का पावन विवाह सम्पन्न हुआ, तब भगवान् विष्णु ने आरती के समय इस परम पावन श्लोक से भगवान् शिव की स्तुति की थी।",
+    "sadhanaPhala": "आरती के पश्चात् इस मन्त्र के उच्चारण से पूजा की समस्त न्यूनताएँ पूर्ण होती हैं और हृदय में असीम शान्ति का संचार होता है।",
+    "shastricContext": "प्रत्येक सनातनी पूजा, आरती एवं मन्दिर दर्शन के अंत में अनिवार्य रूप से बोला जाने वाला सर्वप्रिय मन्त्र।",
+    "audioUrl": null,
+    "previousId": "stotra-guru-vandana",
+    "nextId": "stotra-mahishasura-1",
+    "chapterMantraIds": [
+      "stotra-karpura-gauram"
+    ],
+    "orderIndex": 80,
+    "status": "ACTIVE"
+  },
+  {
+    "id": "stotra-mahishasura-1",
+    "slug": "mahishasuramardini-stotram",
+    "vedaId": "purana",
+    "nodeId": "markandeya-purana",
+    "vedaName": "मार्कण्डेय पुराण (दुर्गा सप्तशती) परम्परा",
+    "shakha": "शाक्त परम्परा",
+    "textName": "महिषासुरमर्दिनी स्तोत्रम्",
+    "sectionRef": "प्रथम श्लोक",
+    "mantraNumber": "१",
+    "rishi": "आदि शंकराचार्य",
+    "devata": "भगवती दुर्गा महिषासुरमर्दिनी",
+    "chhanda": "विशिष्ट पादाकुलक छन्द",
+    "svara": "ओजस्वी शाक्त गान",
+    "sanskrit": "अयि गिरिनन्दिनि नन्दितमेदिनि विश्वविनोदिनि नन्दनुते\nगिरिवरविन्ध्यशिरोऽधिनिवासिनि विष्णुविलासिनि जिष्णुनुते।\nभगवति हे शितिकण्ठकुटुम्बिनि भूरिकुटुम्बिनि भूरिकृते\nजय जय हे महिषासुरमर्दिनि रम्यकपर्दिनि शैलसुते॥१॥",
+    "transliteration": "ayi giri-nandini nandita-medini viśva-vinodini nanda-nute\ngiri-vara-vindhya-śiro'dhi-nivāsini viṣṇu-vilāsini jiṣṇu-nute |\nbhagavati he śiti-kaṇṭha-kuṭumbini bhūri-kuṭumbini bhūri-kṛte\njaya jaya he mahiṣāsura-mardini ramya-kapardini śaila-sute || 1 ||",
+    "anvaya": "अयि गिरिनन्दिनि! नन्दितमेदिनि! विश्वविनोदिनि! नन्दनुते! गिरिवरविन्ध्यशिरोऽधिनिवासिनि! विष्णुविलासिनि! जिष्णुनुते! भगवति हे शितिकण्ठकुटुम्बिनि! भूरिकुटुम्बिनि! भूरिकृते! रम्यकपर्दिनि शैलसुते! महिषासुरमर्दिनि! हे (मातः)! जय जय।",
+    "viniyoga": "ॐ अस्य श्रीमहिषासुरमर्दिनीस्तोत्रस्य आदि शंकराचार्य ऋषिः, विन्ध्यवासिनी भगवती दुर्गा देवता, सर्वशत्रुबाधानिवारणार्थे जपे विनियोगः।",
+    "hindiTranslation": "हे हिमालय की पावन पुत्री! हे पृथ्वी को आनन्दित करने वाली, सम्पूर्ण विश्व को अपनी लीला से आह्लादित करने वाली और नन्दी आदि गणों द्वारा स्तुत्य देवी! हे विन्ध्याचल पर्वत के शिखर पर निवास करने वाली, भगवान् विष्णु को हर्षित करने वाली और इन्द्र द्वारा वन्दित मातेश्वरी! हे नीलकण्ठ भगवान् शिव की अर्धांगिनी, सम्पूर्ण सृष्टि को अपना परिवार बनाने वाली और अनन्त ऐश्वर्य का सृजन करने वाली! हे सुन्दर जटाजूट वाली शैलपुत्री! हे महिषासुर का मर्दन करने वाली माँ दुर्गे! आपकी सदा जय हो, जय हो!",
+    "englishTranslation": "O Daughter of the Mountain Himalaya, who fills the whole earth with delight, who rejoices the universe with Her divine play, praised by Nandi; Dwelling upon the lofty peaks of the Vindhyas, bringing joy to Lord Vishnu, extolled by Indra; O Divine Mother, consort of the blue-throated Shiva, with the entire creation as Your family, dispenser of boundless boons; O maiden with lovely locks of matted hair, destroyer of the demon Mahishasura, Victory to You! Victory to You!",
+    "hinglishTranslation": "Hey Himalaya ki beti, prithvi ko anandit karne wali, Vindhyachal par nivas karne wali, Bhagwan Shiv ki patni aur Mahishasur ka vadh karne wali Ma Durga! Aapki sadaiv vijay ho, jai ho!",
+    "padapatha": [
+      {
+        "word": "गिरिऽनन्दिनि",
+        "meaning": "पर्वतराज हिमालय की पुत्री"
+      },
+      {
+        "word": "नन्दितऽमेदिनि",
+        "meaning": "पृथ्वी को आनन्दित करने वाली"
+      },
+      {
+        "word": "विश्वऽविनोदिनि",
+        "meaning": "संसार को आह्लादित करने वाली"
+      },
+      {
+        "word": "विन्ध्यऽशिरोऽनिवासिनि",
+        "meaning": "विन्ध्याचल के शिखर पर रहने वाली"
+      },
+      {
+        "word": "विष्णुऽविलासिनि",
+        "meaning": "विष्णु की आनन्द शक्ति"
+      },
+      {
+        "word": "शितिकण्ठऽकुटुम्बिनि",
+        "meaning": "भगवान् शिव की पत्नी"
+      },
+      {
+        "word": "महिषासुरऽमर्दिनि",
+        "meaning": "महिषासुर का संहार करने वाली"
+      },
+      {
+        "word": "जयऽजय",
+        "meaning": "सदा विजय हो"
+      }
+    ],
+    "bhashyaSummary": "देवी माहात्म्य (दुर्गा सप्तशती) का सार: आदि शंकराचार्य कृत यह स्तोत्र असुरत्व (काम, क्रोध, मद, लोभ, अहंकार) के संहारक दैवी पराक्रम का उद्घोष है। जब महिषासुर ने त्रिलोकी को त्रस्त किया, तब समस्त देवों के तेज के सम्मिलन से भगवती प्रकट हुईं।",
+    "sadhanaPhala": "नवरात्र में नित्य पाठ करने से भय, तंत्र-बाधा, शत्रु-संकट और दुर्बलता का समूल नाश होता है तथा असीम आत्मबल व विजय की प्राप्ति होती है।",
+    "shastricContext": "शाक्त साधना परम्परा का सर्वाधिक प्रभावशाली, संगीतमय और वीर रस युक्त देवी स्तोत्र।",
+    "audioUrl": null,
+    "previousId": "stotra-karpura-gauram",
+    "nextId": "rv-1-1-1",
+    "chapterMantraIds": [
+      "stotra-mahishasura-1"
+    ],
+    "orderIndex": 81,
+    "status": "ACTIVE"
   }
 ];
+
+export const MANTRA_ALIASES = {
+  "mahamrityunjaya-mantra": "rv-7-59-12",
+  "mahamrityunjaya": "rv-7-59-12",
+  "mrityunjaya": "rv-7-59-12",
+  "gayatri-mantra": "rv-3-62-10",
+  "gayatri": "rv-3-62-10",
+  "purusha-sukta": "rv-10-90-1",
+  "nasadiya-sukta": "rv-10-129-1",
+  "agni-sukta": "rv-1-1-1",
+  "shanti-path": "vs-36-17",
+  "ishavasya-mantra": "vs-40-1",
+  "isha-1": "vs-40-1",
+  "up-isha-1": "vs-40-1",
+  "bhagavad-gita-2-47": "bg-2-47",
+  "gita-2-47": "bg-2-47",
+  "bg-2-47": "bg-2-47",
+  "gita-4-7": "bg-4-7",
+  "gita-18-66": "bg-18-66",
+  "yoga-sutra-1-1": "ys-1-1",
+  "yoga-sutra-1-2": "ys-1-2",
+  "brahma-sutra-1-1-1": "bs-1-1-1",
+  "kena-1": "up-kena-1",
+  "up-kena-1": "up-kena-1",
+  "up-tait-1-11": "up-tait-1-11",
+  "up-ait-3-1-3": "up-ait-3-1-3",
+  "katha-1-3-14": "up-katha-1-3-14",
+  "mandukya-1": "up-mandukya-1",
+  "chandogya-6-8-7": "up-chandogya-6-8-7",
+  "tat-tvam-asi": "up-chandogya-6-8-7",
+  "brihad-1-4-10": "up-brihad-1-4-10",
+  "aham-brahmasmi": "up-brihad-1-4-10",
+  "asato-ma-sadgamaya": "up-brihad-1-4-10",
+  "prajnanam-brahma": "up-ait-3-1-3",
+  "ayam-atma-brahma": "up-mandukya-1",
+  "aditya-hridaya": "vr-aditya-hridaya",
+  "aditya-hridayam": "vr-aditya-hridaya",
+  "sangathan-sukta": "rv-10-191-2",
+  "sam-gacchadhvam": "rv-10-191-2",
+  "yj-36-17": "vs-36-17",
+  "shri-suktam": "rv-khila-shri-sukta",
+  "shri-sukta": "rv-khila-shri-sukta",
+  "lakshmi-suktam": "rv-khila-shri-sukta",
+  "ganapati-mantra": "ganapati-mula-mantra",
+  "ganesha-mantra": "ganapati-mula-mantra",
+  "ganesh-gayatri": "ganapati-mula-mantra",
+  "shiva-tandava-stotram": "stotra-shiva-tandava",
+  "shiva-tandava": "stotra-shiva-tandava",
+  "rudrashtakam": "stotra-rudrashtakam",
+  "namamishamishana": "stotra-rudrashtakam",
+  "madhurashtakam": "stotra-madhurashtakam",
+  "achyutashtakam": "stotra-achyutashtakam",
+  "vishnu-dhyana": "stotra-vishnu-dhyana",
+  "vishnu-dhyana-mantra": "stotra-vishnu-dhyana",
+  "saraswati-vandana": "stotra-saraswati-vandana",
+  "saraswati-mantra": "stotra-saraswati-vandana",
+  "guru-mantra": "stotra-guru-vandana",
+  "guru-vandana": "stotra-guru-vandana",
+  "karpura-gauram": "stotra-karpura-gauram",
+  "mahishasura-mardini": "stotra-mahishasura-1",
+  "mahishasuramardini-stotram": "stotra-mahishasura-1"
+};
 
 export const VEDIC_MANTRAS = {};
 ALL_VEDIC_MANTRAS.forEach((m) => {
   VEDIC_MANTRAS[m.id] = m;
+  if (m.slug && !VEDIC_MANTRAS[m.slug]) {
+    VEDIC_MANTRAS[m.slug] = m;
+  }
 });
 
 export function getMantraById(id) {
-  return VEDIC_MANTRAS[id] || ALL_VEDIC_MANTRAS.find((m) => m.id === id) || null;
+  if (!id) return null;
+  const resolvedId = MANTRA_ALIASES[id] || id;
+  return (
+    VEDIC_MANTRAS[resolvedId] ||
+    ALL_VEDIC_MANTRAS.find((m) => m.id === resolvedId || m.slug === resolvedId) ||
+    null
+  );
 }
 
 export function getMantrasByVeda(vedaId) {
@@ -4831,9 +6903,10 @@ export function searchMantras(query) {
     (m.rishi && m.rishi.toLowerCase().includes(q)) ||
     (m.devata && m.devata.toLowerCase().includes(q)) ||
     (m.id && m.id.toLowerCase().includes(q)) ||
+    (m.slug && m.slug.toLowerCase().includes(q)) ||
+    (m.textName && m.textName.toLowerCase().includes(q)) ||
     (m.mantraNumber && m.mantraNumber.toLowerCase().includes(q))
   );
 }
 
 export default VEDIC_MANTRAS;
-
