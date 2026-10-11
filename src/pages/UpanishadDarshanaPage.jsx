@@ -40,7 +40,7 @@ import {
 } from "../data/scriptures/index.js";
 import ScriptureReaderView from "../components/common/ScriptureReaderView.jsx";
 import DarshanaTaxonomyView from "../components/knowledge/DarshanaTaxonomyView.jsx";
-import bannerSanctum from "../assets/images/library/banners/banner-sanctum.png";
+import bannerKashiGhat from "../assets/images/library/banners/banner-kashi-ghat.png";
 import cardUpanishadImg from "../assets/images/library/cards/card-upanishad.jpg";
 
 export const READER_UPANISHADS = [
@@ -261,16 +261,16 @@ export default function UpanishadDarshanaPage({ onOpenSearch }) {
   return (
     <div className="bg-[#fffaf0] min-h-screen text-stone-900 pb-20">
       {/* 1. Scholarly Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-r from-[#120c06] via-[#1a1008] to-[#0f0804] text-white py-12 sm:py-16 px-4 sm:px-6 lg:px-8 border-b border-amber-900/60 shadow-xl">
-        {/* Sacred Sanctum Background Image with Rich Black Overlay */}
+      <section className="relative overflow-hidden bg-gradient-to-r from-[#0d0703] via-[#150c06] to-[#0a0502] text-white py-12 sm:py-16 px-4 sm:px-6 lg:px-8 border-b border-amber-900/60 shadow-xl">
+        {/* Sacred Serene Spiritual Background Image with Soft 25% Opacity */}
         <div className="absolute inset-0 z-0">
           <img
-            src={bannerSanctum}
-            alt="Sacred Upanishad Sanctum"
-            className="w-full h-full object-cover object-center opacity-70 scale-102 transition-transform duration-1000"
+            src={bannerKashiGhat}
+            alt="Sacred Upanishadic Contemplation"
+            className="w-full h-full object-cover object-center opacity-25 scale-102 transition-transform duration-1000"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/65 to-black/45" />
-          <div className="absolute inset-0 bg-gradient-to-r from-black/75 via-black/40 to-black/70" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#0a0502] via-[#0d0703]/80 to-[#0a0502]/85" />
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-amber-500/10 via-transparent to-black/80" />
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto">
