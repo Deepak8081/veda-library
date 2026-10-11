@@ -15,7 +15,7 @@ export const PURANAS_SCRIPTURE_DATA = {
     chapters: [
       {
         id: "sb-canto-1-ch-1",
-        title: "प्रथम स्कन्ध, प्रथम अध्याय • नैमिषारण्य मुनि संवाद",
+        title: "प्रथम स्कन्ध, प्रथम अध्याय • मंगलाचरण एवं नैमिषारण्य मुनियों के षट्-प्रश्न (श्लोक १–१०)",
         items: [
           {
             number: 1,
@@ -24,11 +24,11 @@ export const PURANAS_SCRIPTURE_DATA = {
             transliteration:
               "oṃ janmādy asya yato 'nvayād itarataś cārtheṣv abhijñaḥ svarāṭ |\ntene brahma hṛdā ya ādi-kavaye muhyanti yat sūrayaḥ ||\ntejo-vāri-mṛdāṃ yathā vinimayo yatra tri-sargo 'mṛṣā |\ndhāmnā svena sadā nirasta-kuhakaṃ satyaṃ paraṃ dhīmahi || 1 ||",
             hindi:
-              "जिससे इस संपूर्ण विश्व की उत्पत्ति, स्थिति और प्रलय होते हैं; जो अन्वय (सृष्टि में व्याप्त) और व्यतिरेक (सृष्टि से परे) रूप से समस्त पदार्थों को जानने वाला तथा स्वराट् (परम स्वतंत्र) है; जिसने आदि-कवि ब्रह्मा के हृदय में संकल्प मात्र से वेद-ज्ञान का विस्तार किया; जिस सत्यस्वरूप परमेश्वर में यह त्रिगुणात्मक प्रपंच उसी प्रकार सत्य प्रतीत होता है जैसे सूर्य की किरणों में जल (मरीचिका) और काँच में जल का भ्रम होता है; जो अपने नित्य प्रकाशमय धाम से माया और कपट को सदा दूर रखता है—उस 'परम सत्य' का हम ध्यान करते हैं।",
+              "जिससे इस संपूर्ण विश्व की उत्पत्ति, स्थिति और प्रलय होते हैं; जो अन्वय (सृष्टि में व्याप्त) और व्यतिरेक (सृष्टि से परे) रूप से समस्त पदार्थों को जानने वाला तथा स्वराट् (परम स्वतंत्र) है; जिसने आदि-कवि ब्रह्मा के हृदय में संकल्प मात्र से वेद-ज्ञान का विस्तार किया; जिस सत्यस्वरूप परमेश्वर में यह त्रिगुणात्मक प्रपंच उसी प्रकार सत्य प्रतीत होता है जैसे सूर्य की किरणों में जल (मरीचिका) और काँच में जल का भ्रम होता है; जो अपने नित्य प्रकाशमय धाम से माया और कपट को सदा दूर रखता है—उस 'परम सत्य' (सत्यं परं) का हम ध्यान करते हैं।",
             english:
               "From whom arises the origin, sustenance, and dissolution of this universe; who is directly and indirectly cognizant of all manifestations and is fully self-luminous; who imparted Vedic knowledge into the heart of the first poet, Brahma, concerning whom even wise sages are bewildered; in whom the threefold material creation appears real like the illusion of water in sunbeams; who by His own self-luminous abode eternally casts off all illusion—upon that Supreme Absolute Truth we meditate.",
             commentary:
-              "श्रीमद्भागवत का सर्वोच्च मंगलाचरण श्लोक (गायत्री-प्रधान)। ब्रह्मसूत्र के 'जन्माद्यस्य यतः' सूत्र की विशद व्याख्या।",
+              "श्रीमद्भागवत का सर्वोच्च मंगलाचरण श्लोक (गायत्री-मंत्र-गर्भित)। ब्रह्मसूत्र के 'जन्माद्यस्य यतः' सूत्र का साक्षात भाष्य।"
           },
           {
             number: 2,
@@ -37,11 +37,11 @@ export const PURANAS_SCRIPTURE_DATA = {
             transliteration:
               "dharmaḥ projjhita-kaitavo 'tra paramo nirmatsarāṇāṃ satāṃ |\nvedyaṃ vāstavam atra vastu śivadaṃ tāpa-trayonmūlanam ||\nśrīmad-bhāgavate mahāmuni-kṛte kiṃ vā parair īśvaraḥ |\nsadyo hṛdy avarudhyate 'tra kṛtibhiḥ śuśrūṣubhis tat-kṣaṇāt || 2 ||",
             hindi:
-              "इस श्रीमद्भागवत में कपट-रहित (निष्काम) परम धर्म का निरूपण है, जो मत्सर (ईर्ष्या)-रहित श्रेष्ठ संतों के लिए ग्राह्य है। इसमें वास्तविक सत्य जानने योग्य है जो परम कल्याणकारी और तीनों तापों (आधिभौतिक, आधिदैविक, आध्यात्मिक) का समूल नाश करने वाला है। महामुनि व्यास द्वारा रचित इस ग्रंथ के श्रवण की इच्छा मात्र से भगवान तत्क्षण साधक के हृदय में अवरुद्ध (प्रकट) हो जाते हैं।",
+              "इस श्रीमद्भागवत में कपट-रहित (मोक्ष की कामना से भी रहित निष्काम) परम धर्म का निरूपण है, जो मत्सर (ईर्ष्या)-रहित श्रेष्ठ संतों के लिए ग्राह्य है। इसमें वास्तविक सत्य जानने योग्य है जो परम कल्याणकारी और तीनों तापों (आधिभौतिक, आधिदैविक, आध्यात्मिक) का समूल नाश करने वाला है। महामुनि व्यास द्वारा रचित इस ग्रंथ के श्रवण की इच्छा मात्र से भगवान तत्क्षण साधक के हृदय में अवरुद्ध (प्रकट होकर स्थिर) हो जाते हैं।",
             english:
-              "In this Srimad Bhagavatam is expounded the supreme Dharma from which all cheating and worldly motives are completely cast out, meant for saintly souls free from malice. Here the Absolute Reality is to be realized—reality that bestows ultimate welfare and uproots the threefold miseries. What need is there of any other scripture? By the noble who desire to hear it, the Supreme Lord is immediately captivated within their hearts.",
+              "In this Srimad Bhagavatam is expounded the supreme Dharma completely purged of all selfish and deceptive motives, meant for saintly souls free from malice. Here the Absolute Reality is to be realized—reality that bestows ultimate welfare and uproots the threefold miseries. What need is there of any other scripture? By the noble who simply desire to hear it, the Supreme Lord is immediately captivated within their hearts.",
             commentary:
-              "भागवत धर्म का वैशिष्ट्य: निष्काम प्रेम-भक्ति और कैतव-रहित धर्म।",
+              "भागवत धर्म का वैशिष्ट्य: निष्काम प्रेम-भक्ति। 'कैतव' अर्थात सकाम कर्म और मोक्ष-कामना का भी त्याग।"
           },
           {
             number: 3,
@@ -50,18 +50,122 @@ export const PURANAS_SCRIPTURE_DATA = {
             transliteration:
               "nigama-kalpa-taror galitaṃ phalaṃ śuka-mukhād amṛta-drava-saṃyutam |\npibata bhāgavataṃ rasam ā-layaṃ muhur aho rasikā bhuvi bhāvukāḥ || 3 ||",
             hindi:
-              "हे भावुक और रसिक भक्तजनों! समस्त वेदों रूपी कल्पवृक्ष का यह पका हुआ अमृतमय फल श्रीमद्भागवत, शुकदेव जी के मुख से मिलकर और भी अधिक मधुर हो गया है। आप सब इस अमृत-रस का मोक्ष-पर्यंत निरंतर रसपान करते रहिए!",
+              "हे भावुक और रसिक भक्तजनों! समस्त वेदों रूपी कल्पवृक्ष का यह पका हुआ अमृतमय फल श्रीमद्भागवत, श्रीशुकदेव जी के मुखारविंद से मिलकर और भी अधिक मधुर हो गया है। आप सब इस अमृत-रस का मोक्ष-पर्यंत निरंतर रसपान करते रहिए!",
             english:
-              "O connoisseurs of divine nectar and devoted souls on earth! Drink constantly this ambrosial fruit of the Vedic wish-fulfilling tree, fallen from the mouth of Sri Sukadeva, enriched with the nectar of immortality, drink this Bhagavatam nectar till liberation and beyond!",
+              "O connoisseurs of divine nectar and devoted souls on earth! Drink constantly this ambrosial fruit of the Vedic wish-fulfilling tree, fallen from the mouth of Sri Sukadeva, enriched with the nectar of immortality; drink this Bhagavatam nectar till liberation and eternally beyond!",
             commentary:
-              "वेद-कल्पवृक्ष का पका हुआ फल भागवत है। रसशास्त्र का यह शिखर श्लोक है।",
+              "रसशास्त्र का शिखर श्लोक। समस्त वैदिक वांग्मय का पका हुआ मधुरतम फल श्रीमद्भागवत है।"
           },
-        ],
+          {
+            number: 4,
+            devanagari:
+              "नैमिषेऽनिमिषक्षेत्रे ऋषयः शौनकादयः।\nसत्रं स्वर्ग्याय लोकाय सहस्रसममासत॥४॥",
+            transliteration:
+              "naimiṣe 'nimiṣa-kṣetre ṛṣayaḥ śaunakādayaḥ |\nsatraṃ svargyāya lokāya sahasra-samam āsata || 4 ||",
+            hindi:
+              "भगवान के पावन अनिमिष क्षेत्र नैमिषारण्य में शौनक आदि महातपस्वी महर्षियों ने लोकों के परम कल्याण हेतु सहस्र वर्षों तक चलने वाले दीर्घकालीन महासत्र (यज्ञ) का अनुष्ठान किया।",
+            english:
+              "In the sacred holy grove of Naimisharanya, Shaunaka and other great sages performed a grand sacrificial session extending over a thousand years for the spiritual elevation of the worlds.",
+            commentary:
+              "नैमिषारण्य: जहाँ भगवान का चक्र-नेमि गिरा और जो कलिकाल में सतोगुणी तपस्या का आदि केंद्र बना।"
+          },
+          {
+            number: 5,
+            devanagari:
+              "त एकदा तु मुनयः प्रातर्हुतहुताग्नयः।\nसत्कृतं सूतमासीनं पप्रच्छुरिदमादरात्॥५॥",
+            transliteration:
+              "ta ekadā tu munayaḥ prātar-huta-hutāgnayaḥ |\nsatkṛtaṃ sūtam āsīnaṃ papracchur idam ādarāt || 5 ||",
+            hindi:
+              "एक दिन प्रातःकाल अग्निहोत्र संपन्न करने के उपरांत उन मुनियों ने वहाँ आसन पर विराजमान पूज्य सूत जी (रोमहर्षण/उग्रश्रवा) का सत्कार कर उनसे अत्यंत आदरपूर्वक प्रश्न किए।",
+            english:
+              "One day, having completed their morning fire offerings, the sages respectfully honored the venerable Suta seated before them and enquired with profound reverence.",
+            commentary:
+              "सत्संग का शुभारंभ। ज्ञान-प्राप्ति का प्रथम सोपान विनीत भाव से प्रामाणिक गुरु से प्रश्न करना है।"
+          },
+          {
+            number: 6,
+            devanagari:
+              "ऋषय ऊचुः—\nत्वया खलु पुराणानि सेतिहासानि चानघ।\nआख्यातान्यप्यधीतानि धर्मशास्त्राणि यान्युत॥६॥",
+            transliteration:
+              "ṛṣaya ūcuḥ —\ntvayā khalu purāṇāni setihāsāni cānagha |\nākhyātāny apy adhītāni dharma-śāstrāṇi yāny uta || 6 ||",
+            hindi:
+              "ऋषियों ने कहा—हे निष्पाप सूत जी! आपने इतिहास सहित समस्त अठारह पुराणों तथा धर्मशास्त्रों का न केवल विधिवत अध्ययन किया है, अपितु उनका सम्यक व्याख्यान भी किया है।",
+            english:
+              "The sages said: O sinless Suta, you have verily studied and thoroughly expounded the sacred Puranas along with the histories and the shastras of righteousness.",
+            commentary:
+              "सूत जी की विद्वता और निष्पाप आचरण की प्रशंसा। श्लोक में 'अनघ' (दोषरहित) संबोधन महत्त्वपूर्ण है।"
+          },
+          {
+            number: 7,
+            devanagari:
+              "यानि वेदविदां श्रेष्ठो भगवान् बादरायणः।\nअन्ये च मुनयः सूत परावरविदो विदुः॥७॥",
+            transliteration:
+              "yāni veda-vidāṃ śreṣṭho bhagavān bādarāyaṇaḥ |\nanye ca munayaḥ sūta parāvara-vido viduḥ || 7 ||",
+            hindi:
+              "वेदवेत्ताओं में श्रेष्ठ भगवान बादरायण (महर्षि वेदव्यास) तथा परावर (लौकिक व पारलौकिक) तत्त्वों को जानने वाले अन्य महर्षि जो कुछ भी जानते हैं, वह सब आप भलीभाँति जानते हैं।",
+            english:
+              "Whatever the foremost knower of the Vedas, Bhagavan Badarayana Vyasa, and other sages who know both the transcendent and the phenomenal realm know, all that is fully known to you.",
+            commentary:
+              "'परावरविदः'—पर (अद्वैत ब्रह्मविद्या) और अवर (लौकिक धर्म व कर्मकाण्ड) दोनों का समग्र साक्षात्कार।"
+          },
+          {
+            number: 8,
+            devanagari:
+              "वेत्थ त्वं सौम्य तत्सर्वं तत्त्वतस्तदनुग्रहात्।\nब्रूयुः स्निग्धस्य शिष्यस्य गुरवो गुह्यमप्युत॥८॥",
+            transliteration:
+              "vettha tvaṃ saumya tat sarvaṃ tattvatas tad-anugrahāt |\nbrūyuḥ snigdhasya śiṣyasya guravo guhyam apy uta || 8 ||",
+            hindi:
+              "हे सौम्य! आप गुरुजनों की अहैतुकी अनुकंपा से उन समस्त गूढ़ रहस्यों को तात्त्विक रूप से जानते हैं; क्योंकि कृपालु गुरु अपने स्नेही और निष्कपट शिष्य को परम गोपनीय ज्ञान भी प्रदान कर देते हैं।",
+            english:
+              "O gentle one, by the grace of your spiritual masters, you know all that in ultimate truth; for loving teachers reveal even their most confidential wisdom unto an affectionate and sincere disciple.",
+            commentary:
+              "गुरु-कृपा की अनिवार्यता। अध्यात्म-ज्ञान केवल बौद्धिक अध्ययन से नहीं, अपितु गुरु के हृदय-अनुग्रह से उद्घाटित होता है।"
+          },
+          {
+            number: 9,
+            devanagari:
+              "तत्र तत्राञ्जसाऽऽयुष्मन् भवता यद्विनिश्चितम्।\nपुंसां मेकान्ततः श्रेयस्तन्नः शंसितुमर्हसि॥९॥",
+            transliteration:
+              "tatra tatrāñjasā''yuṣman bhavatā yad viniścitam |\npuṃsāṃ mekāntataḥ śreyas tan naḥ śaṃsitum arhasi || 9 ||",
+            hindi:
+              "अतः हे आयुष्मान सूत जी! उन नाना शास्त्रों में मनुष्यों के आत्यंतिक कल्याण हेतु जो एकान्ततः (निश्चित रूप से) सर्वश्रेष्ठ साधन आपने निश्चित किया है, वह हमें कृपापूर्वक विस्तार से बतलाइए।",
+            english:
+              "Therefore, O blessed long-lived one, whatever you have definitively ascertained as the absolute and supreme good (shreyas) for all human beings, please impart that unto us clearly.",
+            commentary:
+              "मुनियों का प्रथम एवं मूल प्रश्न: जीवों के आत्यंतिक कल्याण (श्रेय) का सबसे सुगम और अचूक मार्ग क्या है?"
+          },
+          {
+            number: 10,
+            devanagari:
+              "प्रायेणाल्पायुषः सभ्य कलावस्मिन् युगे जनाः।\nमन्दाः सुमन्दमतयो मन्दभाग्या ह्युपद्रुताः॥१०॥",
+            transliteration:
+              "prāyeṇālpāyuṣaḥ sabhya kalāv asmin yuge janāḥ |\nmandāḥ sumanda-matayo manda-bhāgyā hy upadrutāḥ || 10 ||",
+            hindi:
+              "हे निष्पाप सूत जी! इस कलियुग में मनुष्य प्रायः अल्पायु, साधन-शून्य (आलसी), मन्दबुद्धि, दुर्भाग्यशाली और नाना प्रकार के आधि-व्याधियों व क्लेशों से निरंतर उपद्रुत (पीड़ित) रहते हैं।",
+            english:
+              "O noble Suta, in this age of Kali, human beings are generally short-lived, spiritually sluggish, of dull intellect, unfortunate, and constantly afflicted by bodily and mental tribulations.",
+            commentary:
+              "कलियुग के जीवों की यथार्थ करुण दशा का वर्णन। इसीलिए शौनकादि मुनि सरलतम नाम-संकीर्तन और भागवत श्रवण का मार्ग पूछते हैं।"
+          }
+        ]
       },
       {
         id: "sb-chatuhshloki",
-        title: "द्वितीय स्कन्ध, नवम अध्याय • चतुःश्लोकी भागवत (मन्त्र ३३–३६)",
+        title: "द्वितीय स्कन्ध, नवम अध्याय • चतुःश्लोकी भागवत (श्लोक ३२–३६)",
         items: [
+          {
+            number: 32,
+            devanagari:
+              "यावानहं यथाभावो यद्रूपगुणकर्मकः।\nतथैव तत्त्वविज्ञानमस्तु ते मदनुग्रहात्॥३२॥",
+            transliteration:
+              "yāvān ahaṃ yathā-bhāvo yad-rūpa-guṇa-karmakaḥ |\ntathaiva tattva-vijñānam astu te mad-anugrahāt || 32 ||",
+            hindi:
+              "भगवान नारायण ने ब्रह्मा जी से कहा—मेरा जितना विस्तार है, मेरा जो वास्तविक स्वरूप (सत्-चित्-आनंद) है, तथा मेरे जो दिव्य रूप, गुण और कर्म (लीलाएँ) हैं—मेरी कृपा से उन सबका तात्त्विक विज्ञान तुम्हें साक्षात प्राप्त हो।",
+            english:
+              "The Supreme Lord said unto Brahma: Whatever is My cosmic extent, whatever is My true transcendental nature, and whatever are My divine forms, attributes, and pastimes—may you realize all this in absolute truth by My grace.",
+            commentary:
+              "चतुःश्लोकी भागवत की दिव्य पीठिका। भगवान का ब्रह्मा जी को पूर्ण आत्म-साक्षात्कार और सृष्टि-सामर्थ्य का वरदान।"
+          },
           {
             number: 33,
             devanagari:
@@ -71,9 +175,9 @@ export const PURANAS_SCRIPTURE_DATA = {
             hindi:
               "सृष्टि से पूर्व केवल मैं ही था, मेरे अतिरिक्त न कोई स्थूल सत् था, न सूक्ष्म असत् था और न उनका कारण प्रकृति। सृष्टि के पश्चात भी जो कुछ यह दृश्यमान है वह भी मैं ही हूँ, और प्रलय के पश्चात जो शेष रहेगा वह भी मैं ही हूँ।",
             english:
-              "I alone existed in the beginning, and nothing else—neither gross matter, nor subtle cause, nor that which is beyond. After creation, whatever is manifest is also I, and whatever remains after dissolution, that also am I.",
+              "I alone existed in the beginning, and nothing else—neither gross matter, nor subtle cause, nor that which is beyond. After creation, whatever is manifest is also I, and whatever remains after cosmic dissolution, that also am I.",
             commentary:
-              "चतुःश्लोकी भागवत का प्रथम श्लोक: भगवान नारायण द्वारा ब्रह्मा जी को उपदिष्ट संपूर्ण भागवत का सार।",
+              "चतुःश्लोकी भागवत का प्रथम श्लोक (ज्ञान)। परमात्मा की अनादि-अनंत अद्वितीयता (अद्वैत ब्रह्म तत्त्व)।"
           },
           {
             number: 34,
@@ -86,7 +190,7 @@ export const PURANAS_SCRIPTURE_DATA = {
             english:
               "That which appears to have existence without real substance, and which does not appear within the Self—know that to be My Maya (illusory energy), like a reflection and like darkness.",
             commentary:
-              "माया का शास्त्रीय लक्षण: सत्-असत् अनिर्वचनीय शक्ति।",
+              "चतुःश्लोकी का द्वितीय श्लोक (माया लक्षण)। माया परमात्मा की अचिंत्य शक्ति है जो सत् और असत् से अनिर्वचनीय है।"
           },
           {
             number: 35,
@@ -97,9 +201,9 @@ export const PURANAS_SCRIPTURE_DATA = {
             hindi:
               "जैसे पंचमहाभूत छोटे-बड़े समस्त भौतिक शरीरों में कारण रूप से प्रविष्ट होते हुए भी स्वतंत्र रूप से उनमें अप्रविष्ट (अलिप्त) रहते हैं; वैसे ही मैं समस्त प्राणियों में व्यापक होकर भी उनमें अलिप्त रहता हूँ।",
             english:
-              "As the great elements enter into all beings, high and low, and yet do not enter into them (remaining distinct in their own essence); even so I am present within all beings and yet transcending them all.",
+              "As the great cosmic elements enter into all beings, high and low, and yet do not enter into them (remaining distinct in their own essence); even so I am present within all beings and yet transcending them all.",
             commentary:
-              "ईश्वर की सर्वव्यापकता और निर्लिप्तता का सुंदर समन्वय।",
+              "चतुःश्लोकी का तृतीय श्लोक (सृष्टि-रहस्य)। ईश्वर की सर्वव्यापकता और निर्लिप्तता का अद्वैत समन्वय।"
           },
           {
             number: 36,
@@ -110,37 +214,309 @@ export const PURANAS_SCRIPTURE_DATA = {
             hindi:
               "आत्म-तत्त्व के जिज्ञासु को केवल इतना ही जानना चाहिए कि जो अन्वय (सृष्टि में उपस्थिति) और व्यतिरेक (प्रलय में शेष रहने) के द्वारा सर्वत्र और सर्वदा विद्यमान रहता है, वही एकमात्र परम सत्य है।",
             english:
-              "Only this much is to be enquired into by a seeker of the Truth of the Self: that which exists everywhere and at all times, through direct presence (anvaya) and indirect absence (vyatireka).",
+              "Only this much is to be enquired into by a seeker of the Truth of the Self: that which exists everywhere and at all times, through direct presence (anvaya) and indirect transcendence (vyatireka).",
             commentary:
-              "चतुःश्लोकी भागवत की पूर्णता। यही समस्त वेदान्त का चरम निष्कर्ष है।",
-          },
-        ],
+              "चतुःश्लोकी भागवत की पूर्णता। यही समस्त वेदों, उपनिषदों और भागवत का चरम निष्कर्ष है।"
+          }
+        ]
       },
-    ],
-  },
-
-  "vishnu-purana": {
-    label: "विष्णु पुराण (सात्विक महापुराण)",
-    sourceTotal: "६ अंश • १२६ अध्याय • २३,००० श्लोक",
-    editionNote:
-      "गीताप्रेस गोरखपुर • महर्षि पराशर एवं मैत्रेय संवाद • पंचलक्षण समन्वित",
-    chapters: [
       {
-        id: "vp-amsha-1-ch-1",
-        title: "प्रथम अंश, प्रथम अध्याय • सृष्टि-उत्पत्ति एवं पराशर-वचन",
+        id: "sb-gopi-gita",
+        title: "दशम स्कन्ध, एकत्रिश अध्याय • गोपी गीत (श्लोक १–१०)",
         items: [
           {
             number: 1,
             devanagari:
-              "ॐ पराशर उवाच\nॐ नमो भगवते तस्मै वासुदेवाय धीमते।\nयमेकं सर्वगं शान्तं ध्यायन्ति मुनयोऽव्ययम्॥१॥",
+              "जयति तेऽधिकं जन्मना व्रजः श्रयत इन्दिरा शश्वदत्र हि।\nदयित दृश्यतां दिक्षु तावकास्त्वयि धृतासवास्त्वां विचिन्वते॥१॥",
             transliteration:
-              "oṃ parāśara uvāca |\noṃ namo bhagavate tasmai vāsudevāya dhīmate |\nyam ekaṃ sarva-gaṃ śāntaṃ dhyāyanti munayo 'vyayam || 1 ||",
+              "jayati te 'dhikaṃ janmanā vrajaḥ śrayata indirā śaśvad atra hi |\ndayita dṛśyatāṃ dikṣu tāvakās tvayi dhṛtāsavās tvāṃ vicinvate || 1 ||",
             hindi:
-              "पराशर ऋषि बोले—उन बुद्धिमान भगवान वासुदेव को सादर नमस्कार है, जिन एकमात्र सर्वव्यापी, शांत और अविनाशी परमेश्वर का मुनिगण निरंतर ध्यान करते हैं।",
+              "गोपियाँ बोलीं—हे प्यारे! आपके प्राकट्य से यह व्रजभूमि वैकुण्ठ से भी अधिक महिमामयी हो गई है और साक्षात महालक्ष्मी जी यहाँ नित्य निवास करने लगी हैं। परन्तु हे प्रियतम! हम सब केवल आपके लिए ही अपने प्राण धारण किए हुए हैं, कृपा करके दर्शन दीजिए, हम सब दसों दिशाओं में आपको ही खोज रही हैं।",
             english:
-              "Parashara said: Om, salutations unto that Supreme Lord Vasudeva, the all-wise, whom the sages contemplate as the one all-pervading, serene, and imperishable Supreme Being.",
+              "The Gopis said: O Beloved, by Your birth Vraja flourishes exceedingly, and the Goddess of Fortune, Indira, dwells here eternally. O Cherished One, please reveal Yourself unto Your devotees who maintain their life breaths solely for You and search for You everywhere!",
             commentary:
-              "विष्णु पुराण का आदि मंगलाचरण। वासुदेव तत्त्व की सर्वव्यापकता।",
+              "गोपी गीत का प्रथम अमृतमय श्लोक। प्रेमलक्षणा भक्ति की पराकाष्ठा, जहाँ भक्त के प्राण केवल प्रभु-दर्शन पर टिके हैं।"
+          },
+          {
+            number: 2,
+            devanagari:
+              "शरदुदाशये साधुजातसत्सरसिजोदरश्रीमुषा दृशा।\nसुरतनाथ तेऽशुल्कदासिका वरद निघ्नतो नेह किं वधः॥२॥",
+            transliteration:
+              "śarad-udāśaye sādhu-jāta-sat-sarasijodara-śrī-muṣā dṛśā |\nsurata-nātha te 'śulka-dāsikā varada nighnato neha kiṃ vadhaḥ || 2 ||",
+            hindi:
+              "हे वरदायक प्रभु! शरद ऋतु के निर्मल जलाशय में विकसित हुए सुंदर कमल के भीतरी कोष की कांति को चुराने वाले आपके नयनों के बाणों से हम बिना मूल्य की दासियाँ घायल हो रही हैं; क्या इस प्रकार प्रेम से मारना वध नहीं कहलाता?",
+            english:
+              "O Lord of divine love, O Bestower of boons! With Your gaze that steals the beauty of the finest autumn lotuses blooming in clear waters, You are slaying us, Your unbought maidservants; is this not a slaughter?",
+            commentary:
+              "भगवान के कमल-नयनों की अलौकिक शोभा और गोपियों का अनन्य आत्म-समर्पण।"
+          },
+          {
+            number: 3,
+            devanagari:
+              "विषजलाप्ययाद्व्यालराक्षसाद्वर्षमारुताद्वैद्युतानलात्।\nवृषमयात्मजाद्विश्वतो भयादृषभ ते वयं रक्षिता मुहुः॥३॥",
+            transliteration:
+              "viṣa-jalāpyayād vyāla-rākṣasād varṣa-mārutād vaidyutānalāt |\nvṛṣamayātmajād viśvato bhayād ṛṣabha te vayaṃ rakṣitā muhuḥ || 3 ||",
+            hindi:
+              "हे पुरुषोत्तम! कालियादह के विषैले जल से, अजगर रूपी अघासुर से, बकासुर-व्योमासुर से, इंद्र के मूसलाधार वर्षा-वातुल व वज्रपात से, अरिष्टासुर (वृषभासुर) और तृणावर्त से—समस्त भयों से आपने बार-बार हमारी रक्षा की है।",
+            english:
+              "O Foremost of beings! From the venomous waters of Kaliya, from serpents and demons, from raging storms and fierce lightning, from Aristasura and all perils, You have repeatedly delivered us.",
+            commentary:
+              "भगवान श्रीकृष्ण द्वारा ब्रजवासियों की अलौकिक योगमाया रक्षा का स्मरण।"
+          },
+          {
+            number: 4,
+            devanagari:
+              "न खलु गोपिकानन्दनो भवानखिलदेहिनामन्तरात्मदृक्।\nविखनसार्थितो विश्वगुप्तये सख उदेयिवान् सात्वतां कुले॥४॥",
+            transliteration:
+              "na khalu gopikā-nandano bhavān akhila-dehinām antar-ātma-dṛk |\nvikhanasārthito viśva-guptaye sakha udeyivān sātvatāṃ kule || 4 ||",
+            hindi:
+              "हे सखा! आप केवल यशोदा नंदन ही नहीं हैं, अपितु समस्त देहधारियों के हृदय में विराजमान अंतर्यामी साक्षी परमात्मा हैं। ब्रह्मा जी की प्रार्थना पर समस्त विश्व की रक्षा हेतु आप यदुवंश (सात्वत कुल) में अवतरित हुए हैं।",
+            english:
+              "You are verily not merely the son of the Gopi Yashoda, but the indwelling witness and Inner Self of all embodied beings! Entreated by Brahma for the protection of the cosmos, You have appeared in the lineage of the Satvatas, O divine Friend!",
+            commentary:
+              "गोपियों का तात्त्विक ज्ञान: वे श्रीकृष्ण को केवल ब्रज-बालक नहीं, समस्त चराचर का अंतर्यामी परब्रह्म जानती हैं।"
+          },
+          {
+            number: 5,
+            devanagari:
+              "विरचिताभयं वृष्णिधूर्य ते चरणमीयुषां संसृतेर्भयात्।\nकरसरोरुहं कान्त कामदं शिरसि धेहि नः श्रीकरग्रहम्॥५॥",
+            transliteration:
+              "viracitābhayaṃ vṛṣṇi-dhūrya te caraṇam īyuṣāṃ saṃsṛter bhayāt |\nkara-saroruhaṃ kānta kāma-daṃ śirasi dhehi naḥ śrī-kara-graham || 5 ||",
+            hindi:
+              "हे वृष्णिश्रेष्ठ! जो संसार के जन्म-मरण रूपी भय से घबराकर आपके चरणों की शरण में आते हैं, उन्हें अभय प्रदान करने वाला और महालक्ष्मी का हाथ थामने वाला अपना कामद (कामनापूरक) हस्तकमल हमारे मस्तक पर रख दीजिए।",
+            english:
+              "O Chief of the Vrishnis! That lotus hand of Yours which grants fearlessness unto those who seek refuge at Your feet from worldly existence, and which holds the hand of Goddess Lakshmi—place that boon-bestowing hand upon our heads!",
+            commentary:
+              "अभय-हस्त की याचना। प्रभु का चरण-कमल और हस्त-कमल भवसागर से पार उतारने वाले हैं।"
+          },
+          {
+            number: 6,
+            devanagari:
+              "व्रजजनार्तिहन् वीर योषितां निजजनस्मयध्वंसनस्मित।\nभज सखे भवत्किङ्करीः स्म नो जलरुहाननं चारु दर्शय॥६॥",
+            transliteration:
+              "vraja-janārti-han vīra yoṣitāṃ nija-jana-smaya-dhvaṃsana-smita |\nbhaja sakhe bhavat-kiṅkarīḥ sma no jalaruhānanaṃ cāru darśaya || 6 ||",
+            hindi:
+              "हे ब्रजवासियों का दुःख हरने वाले वीर! अपनी मंद-मंद मुस्कान से भक्तों के गर्व को चूर करने वाले प्रियतम! हम आपकी दासियों को स्वीकार कीजिए और अपना परम सुंदर कमल-मुख हमें दिखाइए।",
+            english:
+              "O Hero who dispels the affliction of the people of Vraja, whose gentle smile quells all pride in Your devotees! Accept us as Your humble handmaidens and reveal Your exquisite lotus face!",
+            commentary:
+              "भगवान अहंकार को सहन नहीं करते। मद-मर्दन के पश्चात ही प्रभु अपनी पूर्ण कृपा बरसाते हैं।"
+          },
+          {
+            number: 7,
+            devanagari:
+              "प्रणतदेहिनां पापकर्शनं तृणचरानुगं श्रीनिकेतनम्।\nफणिफणार्पितं ते पदाम्बुजं कृणु कुचेषु नः कृन्धि हृच्छयम्॥७॥",
+            transliteration:
+              "praṇata-dehināṃ pāpa-karśanaṃ tṛṇa-carānugaṃ śrī-niketanam |\nphaṇi-phaṇārpitaṃ te padāmbujaṃ kṛṇu kuceṣu naḥ kṛndhi hṛc-chayam || 7 ||",
+            hindi:
+              "जो शरणागतों के समस्त पापों को नष्ट करने वाला है, जो गऊओं के पीछे-पीछे वन-वन भटकता है, जो महालक्ष्मी का नित्य निवास-स्थल है और जिसने कालिया नाग के फनों पर नृत्य किया—उस पावन चरणकमल को हमारे हृदय पर स्थापित कर हमारे विरह-ताप को शांत कीजिए।",
+            english:
+              "Your lotus foot, which destroys the sins of surrendered souls, follows the grazing cows, is the eternal abode of Sri Lakshmi, and danced upon Kaliya's hoods—place that lotus foot upon our hearts and assuage our burning agony!",
+            commentary:
+              "कालिया-दमन चरण और लक्ष्मी-वंदित चरण की महिमा। भक्ति में विरह ही मिलन का सबसे गहरा साधन है।"
+          },
+          {
+            number: 8,
+            devanagari:
+              "मधुरया गिरा वल्गुवाक्यया बुधमनोज्ञया पुष्करेक्षण।\nविधिकरीरिमा वीर मुह्यतीरधरसीधुनाऽऽप्याययस्व नः॥८॥",
+            transliteration:
+              "madhurayā girā valgu-vākyayā budha-manojñayā puṣkarekṣaṇa |\nvidhi-karīr imā vīra muhyatīr adhara-sīdhunā''pyāyayasva naḥ || 8 ||",
+            hindi:
+              "हे कमलनयन! अपनी मधुर, सुकोमल और ज्ञानियों के मन को मुग्ध करने वाली वाणी से, और अपने अधरामृत के दिव्य रस से, आपकी आज्ञाकारिणी एवं विरह में मूर्छित हम गोपियों को पुनः जीवन प्रदान कीजिए।",
+            english:
+              "O Lotus-eyed hero! With Your sweet, melodious speech that delights the wise, and with the nectar of Your lips, revitalize us, Your obedient maidservants who are fainting in separation!",
+            commentary:
+              "भगवान की वाणी स्वयं नादब्रह्म है जो मुमुक्षुओं और भक्तों को परमानंद प्रदान करती है।"
+          },
+          {
+            number: 9,
+            devanagari:
+              "तव कथामृतं तप्तजीवनं कविभिरीडितं कल्मषापहम्।\nश्रवणमङ्गलं श्रीमदाततं भुवि गृणन्ति ते भूरिदा जनाः॥९॥",
+            transliteration:
+              "tava kathāmṛtaṃ tapta-jīvanaṃ kavibhir īḍitaṃ kalmaṣāpaham |\nśravaṇa-maṅgalaṃ śrīmad ātataṃ bhuvi gṛṇanti te bhūridā janāḥ || 9 ||",
+            hindi:
+              "आपकी अमृतमयी लीला-कथा संसारी तापों से तपे हुए जीवों को परम जीवन देने वाली है। बड़े-बड़े ब्रह्मज्ञानी संतों ने इसका गान किया है; यह समस्त पापों का समूल नाश करने वाली, सुनने मात्र से परम मंगल करने वाली और अनंत आध्यात्मिक ऐश्वर्य से परिपूर्ण है। इस धराधाम पर जो आपकी कथा का गान व विस्तार करते हैं, वे ही वास्तव में सबसे बड़े दानी हैं!",
+            english:
+              "The nectar of Your pastimes gives life unto those scorched by worldly miseries; it is celebrated by enlightened poets and washes away all sins. It is supremely auspicious to hear and bestows boundless spiritual wealth; those who distribute it upon this earth are verily the greatest benefactors!",
+            commentary:
+              "श्रीमद्भागवत का अमर श्लोक। भगवान की कथा का श्रवण व प्रचार ही संसार का सबसे बड़ा परोपकार और दान है।"
+          },
+          {
+            number: 10,
+            devanagari:
+              "प्रहसितं प्रिय प्रेमवीक्षणं विहरणं च ते ध्यानमङ्गलम्।\nरहसि संविदो या हृदिस्पृशः कुहक नो मनः क्षोभयन्ति हि॥१०॥",
+            transliteration:
+              "prahasitaṃ priya prema-vīkṣaṇaṃ viharaṇaṃ ca te dhyāna-maṅgalam |\nrahasi saṃvido yā hṛdi-spṛśaḥ kuhaka no manaḥ kṣobhayanti hi || 10 ||",
+            hindi:
+              "हे प्यारे! आपका वह मधुर हास्य, प्रेमभरी चितवन, ध्यान करने पर परम मंगल देने वाली आपकी विहार-लीलाएँ और एकांत में कही गई वे हृदयस्पर्शी बातें—हे छलिया! वे सब हमारे मन को निरंतर व्याकुल और विह्वल कर रही हैं।",
+            english:
+              "O Beloved! Your enchanting laughter, Your loving glance, Your pastimes so auspicious for meditation, and the intimate words whispered in secluded groves—O playful Enchanter, they deeply agitate our hearts!",
+            commentary:
+              "गोपियों की एकाग्र तन्मयता। जब मन केवल प्रभु के रूप, गुण और चेष्टाओं में लीन हो जाता है, वही समाधि है।"
+          }
+        ]
+      },
+      {
+        id: "sb-canto-11-gita",
+        title: "एकादश स्कन्ध • उद्धव गीता — २४ गुरु उपाख्यान एवं आत्म-ज्ञान (१० श्लोक)",
+        items: [
+          {
+            number: 1,
+            devanagari:
+              "अवधूत उवाच—\nसन्ति मे गुरवो राजन् बहवो बुद्धिसंश्रिताः।\nयतो बुद्धिमुपादाय मुक्तोऽटामीह तान् शृणु॥१॥",
+            transliteration:
+              "avadhūta uvāca —\nsanti me guravo rājan bahavo buddhi-saṃśritāḥ |\nyato buddhim upādāya mukto 'ṭāmīha tān śṛṇu || 1 ||",
+            hindi:
+              "अवधूत दत्तात्रेय जी ने राजा यदु से कहा—हे राजन्! मेरी अपनी बुद्धि से मैंने अनेक गुरु बनाए हैं, जिनसे यथार्थ शिक्षा ग्रहण करके मैं समस्त बंधनों से मुक्त होकर इस पृथ्वी पर स्वच्छंद विचरण करता हूँ; आप उन गुरुओं के विषय में श्रवण करें।",
+            english:
+              "The Avadhuta Dattatreya said unto King Yadu: O King, I have adopted many preceptors through my own discerning intellect; taking wisdom from them, I wander freely across this earth liberated from all bonds. Please listen about them.",
+            commentary:
+              "उद्धव गीता (भागवत ११.७.३२) का आदि उद्घोष। प्रत्येक वस्तु, जीव और प्राकृतिक घटना से आत्मज्ञान की शिक्षा ग्रहण करना।"
+          },
+          {
+            number: 2,
+            devanagari:
+              "पृथिवी वायुराकाशमापोऽग्निश्चन्द्रमा रविः।\nकपोतोऽजगरः सिन्धुः पतङ्गो मधुकृद्गजः॥\nमधुहा हरिणो मीनः पिङ्गला कुररोऽर्भकः।\nकुमारी शरकृत् सर्प ऊर्णनाभिः सुपेशकृत्॥२॥",
+            transliteration:
+              "pṛthivī vāyur ākāśam āpo 'gniś candramā raviḥ |\nkapoto 'jagaraḥ sindhuḥ pataṅgo madhukṛd gajaḥ ||\nmadhuhā hariṇo mīnaḥ piṅgalā kuraro 'rbhakaḥ |\nkumārī śarakṛt sarpa ūrṇanābhiḥ supeśakṛt || 2 ||",
+            hindi:
+              "१. पृथ्वी, २. वायु, ३. आकाश, ४. जल, ५. अग्नि, ६. चंद्रमा, ७. सूर्य, ८. कबूतर, ९. अजगर, १०. समुद्र, ११. पतंगा, १२. भौंरा, १३. हाथी, १४. शहद निकालने वाला, १५. हिरण, १६. मछली, १७. पिंगला वेश्या, १८. कुरर पक्षी, १९. बालक, २०. कुमारी कन्या, २१. बाण बनाने वाला (शरकृत्), २२. सर्प, २३. मकड़ी (ऊर्णनाभि), और २४. भृंगी कीट (पेशकृत्)—ये मेरे चौबीस गुरु हैं।",
+            english:
+              "1. Earth, 2. Air, 3. Sky, 4. Water, 5. Fire, 6. Moon, 7. Sun, 8. Pigeon, 9. Python, 10. Ocean, 11. Moth, 12. Honeybee, 13. Elephant, 14. Honey-gatherer, 15. Deer, 16. Fish, 17. Pingala the courtesan, 18. Osprey bird, 19. Infant, 20. Maiden, 21. Arrow-maker, 22. Serpent, 23. Spider, and 24. Wasp—these twenty-four are my preceptors.",
+            commentary:
+              "श्रीमद्भागवत के प्रसिद्ध २४ गुरुओं की आधिकारिक नामावली (११.७.३३-३५)। प्रकृति ही सबसे बड़ी पाठशाला है।"
+          },
+          {
+            number: 3,
+            devanagari:
+              "भूतैराक्रम्यमाणोऽपि धीरो दैववशानुगैः।\nतन्मार्गं न गतो दैवं विद्वान् शिक्षेत क्षमामिलात्॥३॥",
+            transliteration:
+              "bhūtair ākramyamāṇo 'pi dhīro daiva-vaśānugaiḥ |\ntan-mārgaṃ na gato daivaṃ vidvān śikṣeta kṣamām ilāt || 3 ||",
+            hindi:
+              "पृथ्वी गुरु से शिक्षा: जैसे लोग पृथ्वी पर आघात करते हैं, खनन करते हैं या मल-मूत्र त्यागते हैं, फिर भी पृथ्वी अचल रहकर सबको क्षमा करती है और अन्न देती है; वैसे ही ज्ञानी पुरुष को दूसरों के दुर्व्यवहार से विचलित न होकर क्षमाशील और परोपकारी रहना चाहिए।",
+            english:
+              "Lesson from Earth: Even when trampled, dug, or injured by beings acting under destiny, a wise person should never deviate from their own righteous path, learning absolute forbearance, patience, and forgiveness from the Earth.",
+            commentary:
+              "पृथ्वी से धैर्य, क्षमा और परोपकार की साधना (भागवत ११.७.३७)।"
+          },
+          {
+            number: 4,
+            devanagari:
+              "सर्वभूतस्थितं शान्तमनन्तमचलं परम्।\nआकाशमिव चात्मानं वीक्षेत न जहाति यत्॥४॥",
+            transliteration:
+              "sarva-bhūta-sthitaṃ śāntaṃ anantam acalaṃ param |\nākāśam iva cātmānaṃ vīkṣeta na jahāti yat || 4 ||",
+            hindi:
+              "आकाश गुरु से शिक्षा: जैसे आकाश समस्त घटों, मठों और बादलों में व्यापक होकर भी वायु, धूल या अग्नि से कभी लिप्त नहीं होता; वैसे ही साधक को समस्त शरीरों में रहते हुए भी अपनी अंतरात्मा को सर्वव्यापी, शांत, अनंत, अचल और सर्वथा निर्लेप देखना चाहिए।",
+            english:
+              "Lesson from the Sky: Just as space is present in all vessels and yet remains untainted by clouds or dust, even so a yogi should contemplate the Self as present in all beings, tranquil, infinite, immovable, and totally untainted.",
+            commentary:
+              "आकाश से निर्लेप और असंग रहने की शिक्षा (भागवत ११.७.४२)। 'असङ्गो ह्ययं पुरुषः'।"
+          },
+          {
+            number: 5,
+            devanagari:
+              "स्वच्छः प्रकृतितः स्निग्धो माधुर्यो लोकपावनः।\nमुनिः पुनात्यपां मित्रमीक्षोपस्पर्शकीर्तनैः॥५॥",
+            transliteration:
+              "svacchaḥ prakṛtitaḥ snigdho mādhuriyo loka-pāvanaḥ |\nmuniḥ punāty apāṃ mitram īkṣopa-sparśa-kīrtanaiḥ || 5 ||",
+            hindi:
+              "जल गुरु से शिक्षा: जैसे जल स्वभाव से ही स्वच्छ, स्निग्ध (शीतल), मधुर और समस्त संसार को पवित्र करने वाला होता है; वैसे ही मुनि को अपने दर्शन, स्पर्श और अमृतमयी वाणी से समस्त जीवों को पावन करने वाला जल के समान निर्मल होना चाहिए।",
+            english:
+              "Lesson from Water: Naturally pure, gentle, sweet, and purifying all beings, a sage should resemble water, sanctifying everyone by his very glance, touch, and sacred words.",
+            commentary:
+              "जल से स्वभाव की स्वच्छता, कोमलता और लोक-पावनता की शिक्षा (भागवत ११.७.४४)।"
+          },
+          {
+            number: 6,
+            devanagari:
+              "तेजस्वी तपसा दीप्तो दुर्धर्षोऽकिञ्चनो मुनिः।\nअग्निमौक्तिकवद् भुङ्क्ते सर्वदोषविवर्जितः॥६॥",
+            transliteration:
+              "tejasvī tapasā dīpto durdharṣo 'kiñcano muniḥ |\nagni-mauktikavad bhuṅkte sarva-doṣa-vivarjitaḥ || 6 ||",
+            hindi:
+              "अग्नि गुरु से शिक्षा: जैसे अग्नि सब कुछ भस्म करते हुए भी तेजस्वी रहती है, किसी वस्तु के दोष से दूषित नहीं होती और अकिंचन (संग्रह-रहित) रहती है; वैसे ही तपस्वी मुनि को अपनी इंद्रियों के विषयों को स्वीकार करते हुए भी राग-द्वेष से अछूता और दैदीप्यमान रहना चाहिए।",
+            english:
+              "Lesson from Fire: Luminous, radiant with ascetic penance, formidable, and possessing nothing, the sage consumes food without being tainted by any defects, shining brightly like pure fire.",
+            commentary:
+              "अग्नि से अपरिग्रह और निर्दोषता की शिक्षा (भागवत ११.७.४५)।"
+          },
+          {
+            number: 7,
+            devanagari:
+              "आशा हि परमं दुःखं नैराश्यं परमं सुखम्।\nयथा संछिद्य कान्ताशां सुखं सुष्वाप पिङ्गला॥७॥",
+            transliteration:
+              "āśā hi paramaṃ duḥkhaṃ nairāśyaṃ paramaṃ sukham |\nyathā saṃchidya kāntāśāṃ sukhaṃ suṣvāpa piṅgalā || 7 ||",
+            hindi:
+              "पिंगला वेश्या से शिक्षा: संसार के नश्वर पदार्थों और पुरुषों से सुख की 'आशा' रखना ही परम दुःख है, और समस्त बाह्य आशाओं का त्याग (वैराग्य) ही परम सुख है; जैसे पिंगला ने धनवान पुरुषों की व्यर्थ आशा छोड़कर प्रभु के चरणों में विश्राम पाकर सुख की नींद ली।",
+            english:
+              "Lesson from Pingala: Expectation and worldly hope is indeed the greatest misery, while desirelessness (detachment) is supreme bliss; just as Pingala, completely severing her lustful hope for paramours, slept in profound peace and joy.",
+            commentary:
+              "उद्धव गीता का अत्यंत प्रसिद्ध सूत्र: 'आशा हि परमं दुःखं नैराश्यं परमं सुखम्' (भागवत ११.८.४४)।"
+          },
+          {
+            number: 8,
+            devanagari:
+              "एकमेवाद्वितीयं यत् तद्ब्रह्मात्मेति मे मतिः।\nऊर्णनाभिर्यथा तन्तून् सृजते संहरत्यपि॥८॥",
+            transliteration:
+              "ekam evādvitīyaṃ yat tad-brahmātmeti me matiḥ |\nūrṇanābhir yathā tantūn sṛjate saṃharaty api || 8 ||",
+            hindi:
+              "मकड़ी (ऊर्णनाभि) से शिक्षा: जैसे मकड़ी अपने ही भीतर से जाले के तंतुओं को बाहर निकालती है, उस पर क्रीड़ा करती है और अंत में पुनः अपने भीतर समेट लेती है; वैसे ही अद्वितीय परमेश्वर अपनी ही माया से इस संपूर्ण विश्व का सृजन करते हैं और अंत में स्वयं में विलीन कर लेते हैं।",
+            english:
+              "Lesson from the Spider: Just as a spider emits threads from within itself, plays upon the web, and re-absorbs it back into itself, even so the one Supreme Brahman projects this universe through His own energy and withdraws it again at will.",
+            commentary:
+              "सृष्टि और प्रलय का मकड़ी दृष्टांत (भागवत ११.९.१४)। उपनिषदों ('यथोर्णनाभिः सृजते गृह्णते च') का पौराणिक विवरण।"
+          },
+          {
+            number: 9,
+            devanagari:
+              "वस्तुतो न भिदा काचित् सर्वभूतेषु संस्थिता।\nगुणा गुणेषु वर्तन्ते मयि सर्वाणि तानि च॥९॥",
+            transliteration:
+              "vastuto na bhidā kācit sarva-bhūteṣu saṃsthitā |\nguṇā guṇeṣu vartante mayi sarvāṇi tāni ca || 9 ||",
+            hindi:
+              "हंस गीता उपदेश: वास्तव में समस्त प्राणियों में विद्यमान आत्मतत्त्व में रंचमात्र भी भेद नहीं है। सत्व, रज और तम—ये तीनों गुण ही इंद्रियों और विषयों के रूप में परस्पर बरतते हैं; मैं (परमात्मा) उन सबसे परे सबका अधिष्ठान हूँ।",
+            english:
+              "Hamsa Gita Teaching: In reality, there is not the slightest differentiation in the Self residing in all beings. The qualities (gunas) merely interact among the qualities; I, the Supreme Self, remain the transcendent substratum of all.",
+            commentary:
+              "अद्वैत आत्म-साक्षात्कार (भागवत ११.१३.२२)। देह-बुद्धि का निवारण और आत्मा की एकता।"
+          },
+          {
+            number: 10,
+            devanagari:
+              "नृदेहमाद्यं सुलभं सुदुर्लभं प्लवं सुकल्पं गुरुकर्णधारम्।\nमयानुकूलेन नभस्वतेरितं पुमान् भवाब्धिं न तरेत् स आत्महा॥१०॥",
+            transliteration:
+              "nṛ-deham ādyaṃ sulabhaṃ sudurlabhaṃ plavaṃ sukalpaṃ guru-karṇadhāram |\nmayānukūlena nabhasvateritaṃ pumān bhavābdhiṃ na taret sa ātma-hā || 10 ||",
+            hindi:
+              "भगवान श्रीकृष्ण बोले—यह मानव शरीर समस्त आध्यात्मिक साधनों का मूल है, अत्यंत दुर्लभ होने पर भी प्रारब्धवश सुलभ हुआ है, और भवसागर तरने के लिए एक सुदृढ़ नौका के समान है। इसमें सद्गुरु कर्णधार (मल्लाह) हैं और मैं (ईश्वर) अनुकूल वायु के समान इसे आगे बढ़ा रहा हूँ; ऐसा अनुकूल अवसर पाकर भी जो मनुष्य भवसागर पार नहीं करता, वह वस्तुतः आत्मघाती है!",
+            english:
+              "Lord Krishna said: This human body is the primary and firm boat for crossing the ocean of worldly existence, extremely rare to attain yet obtained by grace, steered by a competent guru as helmsman, and propelled by Me as the favorable wind. A person who fails to cross the ocean with such aids is verily a slayer of his own soul!",
+            commentary:
+              "उद्धव गीता (भागवत ११.२०.१७) का परम उपदेश। मानव जीवन का एकमात्र सच्चा सदुपयोग आत्म-साक्षात्कार और भगवत्प्राप्ति है।"
+          }
+        ]
+      }
+    ]
+  },
+
+  "vishnu-purana": {
+    label: "विष्णु पुराण (सात्विक महापुराण - पुराणरत्न)",
+    sourceTotal: "६ अंश • १२६ अध्याय • २३,००० श्लोक",
+    editionNote:
+      "गीताप्रेस गोरखपुर • महर्षि पराशर एवं मैत्रेय संवाद • पंचलक्षण समन्वित प्रामाणिक वैष्णव महापुराण",
+    chapters: [
+      {
+        id: "vp-amsha-1-ch-1-2",
+        title: "प्रथम अंश, अध्याय १ व २ • मंगलाचरण एवं विष्णोः स्वरूप (८ श्लोक)",
+        items: [
+          {
+            number: 1,
+            devanagari:
+              "ॐ पराशर उवाच—\nॐ नमो भगवते तस्मै वासुदेवाय धीमते।\nयमेकं सर्वगं शान्तं ध्यायन्ति मुनयोऽव्ययम्॥१॥",
+            transliteration:
+              "oṃ parāśara uvāca —\noṃ namo bhagavate tasmai vāsudevāya dhīmate |\nyam ekaṃ sarva-gaṃ śāntaṃ dhyāyanti munayo 'vyayam || 1 ||",
+            hindi:
+              "महर्षि पराशर बोले—उन परम बुद्धिमान भगवान वासुदेव को सादर नमस्कार है, जिन एकमात्र सर्वव्यापी, परम शांत और अविनाशी परमेश्वर का मुनिगण निरंतर ध्यान करते हैं।",
+            english:
+              "Maharshi Parashara said: Om, salutations unto that Supreme Lord Vasudeva, the all-wise, whom the sages contemplate as the one all-pervading, serene, and imperishable Supreme Being.",
+            commentary:
+              "विष्णु पुराण (१.१.१) का आदि मंगलाचरण। 'वासुदेव' का अर्थ है जो समस्त विश्व में वास करते हैं और जिनमें समस्त विश्व वास करता है।"
           },
           {
             number: 2,
@@ -149,45 +525,188 @@ export const PURANAS_SCRIPTURE_DATA = {
             transliteration:
               "sṛṣṭi-sthity-anta-karaṇīṃ brahma-viṣṇu-śivātmikām |\nsa saṃjñāṃ yāti bhagavān eka eva janārdanaḥ || 2 ||",
             hindi:
-              "सृष्टि, स्थिति और प्रलय करने वाले ब्रह्मा, विष्णु और शिव रूपी तीनों स्वरूपों को धारण करके वह एकमात्र भगवान जनार्दन ही विविध संज्ञाओं को प्राप्त होते हैं।",
+              "सृष्टि, स्थिति और प्रलय करने वाले ब्रह्मा, विष्णु और शिव रूपी तीनों स्वरूपों को धारण करके वह एकमात्र भगवान जनार्दन ही अपनी लीला से भिन्न-भिन्न संज्ञाओं (नामों) को प्राप्त होते हैं।",
             english:
-              "Assuming the forms of Brahma, Vishnu, and Shiva for creation, preservation, and dissolution, that one Lord Janardana alone receives different designations.",
+              "Assuming the tripartite forms of Brahma, Vishnu, and Shiva for creation, preservation, and dissolution, that one Supreme Lord Janardana alone receives different designations.",
             commentary:
-              "त्रिमूर्ति (त्रिदेव) का एकत्व। एकमात्र परमात्मा ही तीनों कार्यों के अनुसार भिन्न नामों से पुकारे जाते हैं।",
+              "त्रिमूर्ति (त्रिदेव) का मूलभूत अद्वैत एकत्व (विष्णु पुराण १.१.२)। एक ही परमात्मा तीन ब्रह्मांडीय कार्यों के अनुसार तीन रूपों में प्रकट होते हैं।"
           },
-        ],
+          {
+            number: 3,
+            devanagari:
+              "विष्णोः सकाशादुद्भूतं जगत्तत्रैव च स्थितम्।\nस्थितिसंयमकर्ताऽसौ जगतोऽस्य जगच्च सः॥३॥",
+            transliteration:
+              "viṣṇoḥ sakāśād udbhūtaṃ jagat tatraiva ca sthitam |\nsthiti-saṃyama-kartā''sau jagato 'sya jagac ca saḥ || 3 ||",
+            hindi:
+              "भगवान विष्णु से ही यह संपूर्ण जगत उत्पन्न हुआ है, उन्हीं में यह स्थित रहता है; वे ही इसके पालनकर्ता और संहारकर्ता हैं, और यह संपूर्ण जगत भी वास्तव में वही हैं।",
+            english:
+              "From Lord Vishnu alone has this universe arisen, in Him alone does it abide; He is the preserver and dissolver of this cosmos, and He Himself is the manifest universe.",
+            commentary:
+              "सर्वकारण-कारणत्व (विष्णु पुराण १.१.३१)। 'जगच्च सः'—अद्वैत वेदान्त का विवर्त और अभिन्न-निमित्तोपादान कारणत्व।"
+          },
+          {
+            number: 4,
+            devanagari:
+              "ॐ अविकाराय शुद्धाय नित्याय परमात्मने।\nसदैकरूपरूपाय विष्णवे सर्वजिष्णवे॥४॥",
+            transliteration:
+              "oṃ avikārāya śuddhāya nityāya paramātmane |\nsadaika-rūpa-rūpāya viṣṇave sarva-jiṣṇave || 4 ||",
+            hindi:
+              "निर्विकार, परम शुद्ध, नित्य, सदा एकरस रूप वाले, और समस्त दोषों पर विजय पाने वाले सर्वजिष्णु परमात्मा भगवान विष्णु को बारंबार नमस्कार है।",
+            english:
+              "Salutations unto Lord Vishnu, the changeless, the pure, the eternal Supreme Self, ever uniform in essence, the conqueror of all.",
+            commentary:
+              "अध्याय २ का मंगलाचरण (१.२.२)। परमात्मा के निर्गुण-निर्विकार स्वरूप का निरूपण।"
+          },
+          {
+            number: 5,
+            devanagari:
+              "नमो हिरण्यगर्भाय हरये शंकराय च।\nवासुदेवाय ताराय सर्गस्थित्यन्तहेतवे॥५॥",
+            transliteration:
+              "namo hiraṇyagarbhāya haraye śaṅkarāya ca |\nvāsudevāya tārāya sarga-sthity-anta-hetave || 5 ||",
+            hindi:
+              "सृष्टि के हेतु ब्रह्मा (हिरण्यगर्भ), संहार के हेतु शंकर (रुद्र), और पालनकर्ता हरि; तथा संसार-सागर से तारने वाले तारक वासुदेव को सादर प्रणाम है।",
+            english:
+              "Bowing unto Hiranyagarbha (Brahma), Hari (Vishnu), and Shankara (Shiva), and unto Vasudeva, the deliverer from worldly existence, the prime cause of creation, maintenance, and dissolution.",
+            commentary:
+              "विष्णु पुराण १.२.३। हरि और शंकर की अभिन्नता का प्रत्यक्ष प्रमाण।"
+          },
+          {
+            number: 6,
+            devanagari:
+              "प्रधानं पुरुषं चापि प्रविश्यात्मेच्छया हरिः।\nक्षोभयामास सम्प्राप्ते सर्गकाले व्ययाव्ययौ॥६॥",
+            transliteration:
+              "pradhānaṃ puruṣaṃ cāpi praviśyātmecchayā hariḥ |\nkṣobhayām āsa samprāpte sarga-kāle vyayāvyayau || 6 ||",
+            hindi:
+              "सृष्टि का काल आने पर सर्वसमर्थ भगवान श्रीहरि ने अपनी स्वेच्छा से क्षयशील प्रधान (प्रकृति) और अविनाशी पुरुष (जीवात्मा) दोनों में प्रविष्ट होकर उनमें सृष्टि का क्षोभ (हलचल) उत्पन्न किया।",
+            english:
+              "When the time for creation arrived, Lord Hari entered by His own divine will into both Pradhana (material nature) and Purusha (the spirit), and stirred the perishable and the imperishable into active manifestation.",
+            commentary:
+              "सांख्य-प्रकृति और पुरुष का वेदान्तिक समाधान (१.२.१०)। परमात्मा के प्रवेश बिना जड़ प्रकृति सृष्टि नहीं रच सकती।"
+          },
+          {
+            number: 7,
+            devanagari:
+              "स एव क्षोभको ब्रह्मन् क्षोभ्यश्च परमेश्वरः।\nसंकोचविकासाभ्यां प्रधानत्वेन संस्थितः॥७॥",
+            transliteration:
+              "sa eva kṣobhako brahman kṣobhyaś ca parameśvaraḥ |\nsaṅkoca-vikāsābhyāṃ pradhānatvena saṃsthitaḥ || 7 ||",
+            hindi:
+              "हे ब्रह्मन्! वह परमेश्वर स्वयं ही क्षोभक (प्रेरक) हैं और स्वयं ही क्षोभ्य (प्रकृति) हैं; वे ही प्रलय में संकोच और सृष्टि में विकास को प्राप्त होकर प्रधान रूप से स्थित रहते हैं।",
+            english:
+              "O Brahmin, that Supreme Lord Himself is the agitator and He Himself is the agitated nature; through contraction in dissolution and expansion in creation, He abides as the primary cause.",
+            commentary:
+              "विष्णु पुराण १.२.१४। ईश्वर की सर्वसमर्थता: कर्ता, करण और उपादान तीनों वही हैं।"
+          },
+          {
+            number: 8,
+            devanagari:
+              "कलामुहूर्तादियमयश्च कालो न यद्विभूतेः परिणामहेतुः।\nस ईश्वरो व्यष्टिसमष्टिरूपो व्यक्तस्वरूपोऽप्रकटस्वरूपः॥८॥",
+            transliteration:
+              "kalā-muhūrtādi-yamayaś ca kālo na yad-vibhūteḥ pariṇāma-hetuḥ |\nsa īśvaro vyaṣṭi-samaṣṭi-rūpo vyakta-svarūpo 'prakaṭa-svarūpaḥ || 8 ||",
+            hindi:
+              "कला, मुहूर्त आदि रूपों में गतिमान काल जिस परमेश्वर की विभूति में कोई विकार या परिणाम उत्पन्न नहीं कर सकता; वही ईश्वर व्यष्टि (व्यक्तिगत जीव) और समष्टि (समग्र ब्रह्माण्ड), तथा व्यक्त और अव्यक्त रूप में विराजमान हैं।",
+            english:
+              "Time, measured by seconds and hours, can cause no modification in His infinite glory; that Supreme Lord manifests as both the individual and the cosmic whole, both the manifest universe and the unmanifest transcendent Reality.",
+            commentary:
+              "काल से परे परमात्मा (विष्णु पुराण १.२.६६)। काल भी ईश्वर की ही एक शक्ति है जो जीवों पर शासन करती है किंतु ईश्वर को स्पर्श नहीं कर सकती।"
+          }
+        ]
       },
       {
-        id: "vp-prahlada-stuti",
-        title: "प्रथम अंश, विंश अध्याय • भक्त प्रह्लाद की अनन्य स्तुति",
+        id: "vp-amsha-1-ch-22",
+        title: "प्रथम अंश, अध्याय २२ • विष्णु की पराशक्ति एवं अग्नि-ज्योत्स्ना दृष्टान्त (६ श्लोक)",
         items: [
           {
             number: 1,
             devanagari:
-              "प्रह्लाद उवाच\nनमस्ते पुण्डरीकाक्ष नमस्ते पुरुषोत्तम।\nनमस्ते सर्वलोकात्मन् नमस्ते तिग्मचक्रधृक्॥१॥",
+              "एकदेशस्थितस्याग्नेर्ज्योत्स्ना विस्तारिणी यथा।\nपरस्य ब्रह्मणः शक्तिस्तथैतदखिलं जगत्॥१॥",
             transliteration:
-              "prahlāda uvāca |\nnamas te puṇḍarīkākṣa namas te puruṣottama |\nnamas te sarva-lokātman namas te tigma-cakra-dhṛk || 1 ||",
+              "eka-deśa-sthitasyāgner jyotsnā vistāriṇī yathā |\nparasya brahmaṇaḥ śaktis tathaitad akhilaṃ jagat || 1 ||",
             hindi:
-              "प्रह्लाद बोले—हे कमलनयन! आपको नमस्कार है। हे पुरुषोत्तम! आपको नमस्कार है। हे समस्त लोकों की अंतरात्मा! आपको नमस्कार है। हे तीक्ष्ण सुदर्शन चक्र धारण करने वाले! आपको सादर प्रणाम है।",
+              "जैसे एक स्थान पर स्थित अग्नि का प्रकाश (ज्योत्स्ना) दूर-दूर तक चारों ओर फैल जाता है; ठीक उसी प्रकार एक स्थान पर स्थित परब्रह्म परमात्मा की शक्ति ही इस संपूर्ण जगत के रूप में विस्तृत हो रही है।",
             english:
-              "Prahlada said: Salutations unto You, O lotus-eyed Lord! Salutations unto You, O Supreme Person! Salutations unto You, the inmost Self of all worlds! Salutations unto You, the wielder of the sharp Sudarshana discus!",
+              "Just as the illumination of a fire situated in a single place spreads all around, even so the inherent power (shakti) of the Supreme Brahman expands as this entire universe.",
             commentary:
-              "विष्णु पुराण में प्रह्लाद चरित्र और अनन्य शरणागति का शिखर श्लोक।",
+              "विष्णु पुराण (१.२२.५३) का विश्वप्रसिद्ध दार्शनिक श्लोक। अद्वैत शक्ति-परिणाम और अचिंत्य-भेदाभेद का मूल आधार।"
           },
-        ],
-      },
-    ],
+          {
+            number: 2,
+            devanagari:
+              "सा च विष्णोः परा शक्तिः क्षेत्रज्ञाख्या तथा परा।\nअविद्याकर्मसंज्ञान्या तृतीया शक्तिरिष्यते॥२॥",
+            transliteration:
+              "sā ca viṣṇoḥ parā śaktiḥ kṣetrajñākhyā tathā parā |\navidyā-karma-saṃjñānyā tṛtīyā śaktir iṣyate || 2 ||",
+            hindi:
+              "भगवान विष्णु की मूलतः तीन शक्तियाँ हैं: १. परा शक्ति (स्वरूप-शक्ति/चित्-शक्ति), २. अपरा अथवा क्षेत्रज्ञा शक्ति (जीव-शक्ति), और ३. तीसरी अविद्या-कर्म-संज्ञक शक्ति (माया/जड़ प्रकृति शक्ति)।",
+            english:
+              "Lord Vishnu possesses three primary energies: 1. The Supreme internal energy (Para Shakti), 2. The conscious living entity known as Kshetrajna (marginal energy), and 3. The third energy known as Avidya-Karma (the illusory material nature).",
+            commentary:
+              "श्रीमद्भगवद्गीता (७.४-५) के समान वैष्णव वेदान्त का आधारस्तम्भ श्लोक (विष्णु पुराण १.२२.५४)।"
+          },
+          {
+            number: 3,
+            devanagari:
+              "तया तिरोहितत्वाच्च शक्तिः क्षेत्रज्ञसंज्ञिता।\nसर्वभूतेषु भूपाल तारतम्येन वर्तते॥३॥",
+            transliteration:
+              "tayā tirohitatvāc ca śaktiḥ kṣetrajña-saṃjñitā |\nsarva-bhūteṣu bhūpāla tāratamyena vartate || 3 ||",
+            hindi:
+              "उस अविद्या रूपी तीसरी शक्ति से आच्छादित (तिरोहित) होने के कारण ही, हे राजन्! यह क्षेत्रज्ञ (जीव) शक्ति कीट-पतंग से लेकर ब्रह्मा तक समस्त प्राणियों में चेतना के तारतम्य (अल्प-अधिक स्तर) से विद्यमान रहती है।",
+            english:
+              "Covered and obscured by that third energy of Avidya, O King, the conscious soul-energy (Kshetrajna) manifests in varying degrees across all living beings.",
+            commentary:
+              "जीवात्मा का अविद्या-बंधन और चेतना के विभिन्न स्तर (विष्णु पुराण १.२२.५५)।"
+          },
+          {
+            number: 4,
+            devanagari:
+              "अप्रकाशो यथा वह्नेः काष्ठे वर्तते संवृतः।\nतथा सा परमा शक्तिः सर्वसत्त्वेषु संवृता॥४॥",
+            transliteration:
+              "aprakāśo yathā vahneḥ kāṣṭhe vartate saṃvṛtaḥ |\ntathā sā paramā śaktiḥ sarva-sattveṣu saṃvṛtā || 4 ||",
+            hindi:
+              "जैसे काष्ठ (लकड़ी) के भीतर अग्नि गुप्त रूप से विद्यमान रहती है और बाहर से दिखाई नहीं देती; वैसे ही परमात्मा की वह परा शक्ति समस्त प्राणियों में भीतर गुप्त रूप से विद्यमान है।",
+            english:
+              "Just as unmanifest fire remains concealed within wood and is not seen, even so that supreme divine energy remains hidden within all living entities.",
+            commentary:
+              "अंतर्यामी आत्मा का काष्ठ-अग्नि दृष्टान्त (विष्णु पुराण १.२२.५६)। साधना और ज्ञान द्वारा यह आंतरिक ज्योति प्रकट होती है।"
+          },
+          {
+            number: 5,
+            devanagari:
+              "द्वे रूपे ब्रह्मणस्तस्य मूर्तं चामूर्तमेव च।\nक्षराक्षरस्वरूपे ते सर्वभूतेषु च स्थिते॥५॥",
+            transliteration:
+              "dve rūpe brahmaṇas tasya mūrtaṃ cāmūrtam eva ca |\nkṣarākṣara-svarūpe te sarva-bhūteṣu ca sthite || 5 ||",
+            hindi:
+              "उस परब्रह्म के दो स्वरूप हैं—एक मूर्त (स्थूल) और दूसरा अमूर्त (सूक्ष्म); यही क्षर (विनाशी जगत) और अक्षर (अविनाशी कूटस्थ) रूप से समस्त भूतों में स्थित हैं।",
+            english:
+              "Brahman has two primary forms—the manifest/corporeal and the unmanifest/incorporeal; these two abide in all beings as the perishable (kshara) and the imperishable (akshara).",
+            commentary:
+              "बृहदारण्यकोपनिषद् ('द्वे वाव ब्रह्मणो रूपे मूर्तं चैवामूर्तं च') का विष्णु पुराण सम्मत भाष्य (१.२२.६१)।"
+          },
+          {
+            number: 6,
+            devanagari:
+              "यन्मयं च जगत्सर्वं यतश्चैतच्चराचरम्।\nयस्मिंश्च लयमेत्यन्ते तस्मै विष्ण्वात्मने नमः॥६॥",
+            transliteration:
+              "yan-mayaṃ ca jagat sarvaṃ yataś caitac carācaram |\nyasmiṃś ca layam ety ante tasmai viṣṇv-ātmane namaḥ || 6 ||",
+            hindi:
+              "यह संपूर्ण जगत जिनके स्वरूप से व्याप्त है, जिससे इस समस्त चराचर का प्राकट्य हुआ है, और प्रलयकाल में जिसमें यह सब विलीन हो जाता है—उन विष्णुरूपी परमात्मा को हमारा सादर प्रणाम है।",
+            english:
+              "Unto that Lord Vishnu, of whose essence this entire universe is composed, from whom this moving and unmoving world has arisen, and into whom it ultimately merges—we offer our reverent salutations.",
+            commentary:
+              "अध्याय २२ का उपसंहार (१.२२.८६)। तैत्तिरीयोपनिषद् के 'यतो वा इमानि भूतानि जायन्ते' का साक्षात विष्णु-परक निरूपण।"
+          }
+        ]
+      }
+    ]
   },
 
   "shiva-purana": {
     label: "शिव पुराण (तामस/शैव महापुराण)",
     sourceTotal: "७ संहिताएँ • ४५८ अध्याय • २४,००० श्लोक",
     editionNote:
-      "गीताप्रेस गोरखपुर • विद्येश्वर संहिता एवं रुद्र संहिता • द्वादश ज्योतिर्लिंग एवं षडक्षर मन्त्र",
+      "गीताप्रेस गोरखपुर • विद्येश्वर संहिता एवं रुद्र संहिता • द्वादश ज्योतिर्लिंग एवं षडक्षर मन्त्र का प्रामाणिक विवेचन",
     chapters: [
       {
-        id: "sp-vidyeshvara-ch-1",
-        title: "विद्येश्वर संहिता, प्रथम अध्याय • शिव महात्म्य एवं पंचाक्षर मन्त्र",
+        id: "sp-vidyeshvara-ch-1-5",
+        title: "विद्येश्वर संहिता, अध्याय १ व ५ • शिव लिंग महात्म्य एवं षडक्षर मन्त्र (८ श्लोक)",
         items: [
           {
             number: 1,
@@ -196,26 +715,253 @@ export const PURANAS_SCRIPTURE_DATA = {
             transliteration:
               "oṃ namaḥ śivāya śubhadāya śubhapradāya |\nśāntāya sarva-vedānta-vedyāya paramātmane || 1 ||",
             hindi:
-              "परम शुभदायक, समस्त मंगलों को प्रदान करने वाले, परम शांत, समस्त वेदान्त द्वारा जानने योग्य परमपिता परमात्मा भगवान शिव को नमस्कार है।",
+              "परम शुभस्वरूप, समस्त मंगलों को प्रदान करने वाले, परम शांत, समस्त वेदान्त द्वारा जानने योग्य परमपिता परमात्मा भगवान शिव को सादर नमस्कार है।",
             english:
-              "Salutations to Shiva, the giver of supreme auspiciousness, the peaceful, the Supreme Self who is to be known through all Vedanta.",
+              "Salutations unto Lord Shiva, the embodiment of supreme auspiciousness, the bestower of all blessings, the serene Supreme Self who is to be known through all Vedanta.",
             commentary:
-              "विद्येश्वर संहिता का मंगलाचरण। पंचाक्षर 'नमः शिवाय' मन्त्र का महात्म्य।",
+              "विद्येश्वर संहिता (१.१.१) का आदि मंगलाचरण। 'शिव' का शाब्दिक अर्थ ही परम कल्याण और मंगल है।"
           },
-        ],
-      },
-    ],
+          {
+            number: 2,
+            devanagari:
+              "निष्कलः सकलश्चेति द्विविधः शिव उच्यते।\nनिष्कलो लिंगरूपेण सकलो मूर्तरूपतः॥२॥",
+            transliteration:
+              "niṣkalaḥ sakalaś ceti dvi-vidhaḥ śiva ucyate |\nniṣkalo liṅga-rūpeṇa sakalo mūrta-rūpataḥ || 2 ||",
+            hindi:
+              "भगवान शिव के दो स्वरूप कहे गए हैं—निष्कल (निराकार, निर्गुण, कला-रहित) और सकल (साकार, सगुण, कला-युक्त)। निष्कल रूप में वे 'शिवलिंग' के रूप में पूजे जाते हैं और सकल रूप में वे कल्याणकारी 'मूर्तरूप' में पूजित होते हैं।",
+            english:
+              "Lord Shiva is declared to have two aspects—the formless/transcendent (Nishkala) and the embodied/manifest (Sakala). In His formless aspect He is worshipped as the Shivalinga, and in His manifest aspect as the divine murti.",
+            commentary:
+              "शिव पुराण (१.१.२) का मौलिक दार्शनिक सिद्धांत: अन्य देव केवल साकार रूप में पूजे जाते हैं, किंतु शिव निराकार ब्रह्म होने के कारण शिवलिंग रूप में भी पूजे जाते हैं।"
+          },
+          {
+            number: 3,
+            devanagari:
+              "लिंगपीठं महादेवी लिंगं साक्षान्महेश्वरः।\nतयोः संपुटरूपेण जगत्सर्वं प्रतिष्ठितम्॥३॥",
+            transliteration:
+              "liṅga-pīṭhaṃ mahā-devī liṅgaṃ sākṣān maheśvaraḥ |\ntayoḥ saṃpuṭa-rūpeṇa jagat sarvaṃ pratiṣṭhitam || 3 ||",
+            hindi:
+              "शिवलिंग का आधार-पीठ साक्षात भगवती महादेवी (पार्वती/प्रकृति) हैं और ऊर्ध्व लिंग साक्षात महेश्वर (परमशिव/पुरुष) हैं; इन दोनों के अविनाशी संयोग रूप में ही यह संपूर्ण ब्रह्माण्ड प्रतिष्ठित है।",
+            english:
+              "The pedestal (pitha) of the Linga is the Supreme Goddess Mahadevi (Prakriti), and the Linga itself is Lord Maheshvara (Purusha); in the eternal unison of these two is the entire universe established.",
+            commentary:
+              "शिव और शक्ति की अभिन्नता (विद्येश्वर संहिता १.५.१०)। शक्ति के बिना शिव निराधार हैं और शिव के बिना शक्ति निष्क्रिय है।"
+          },
+          {
+            number: 4,
+            devanagari:
+              "पीठं प्रकृतिरुद्दिष्टं लिंगं पुरुष उच्यते।\nतयोः संयोगात् सर्गश्च संहारश्चैव जायते॥४॥",
+            transliteration:
+              "pīṭhaṃ prakṛtir uddiṣṭaṃ liṅgaṃ puruṣa ucyate |\ntayoḥ saṃyogāt sargaś ca saṃhāraś caiva jāyate || 4 ||",
+            hindi:
+              "आधार-पीठ को मूल प्रकृति कहा गया है और लिंग को आदिपुरुष कहा गया है; इन दोनों के सामरस्य और संयोग से ही सृष्टि का विस्तार होता है और प्रलयकाल में पुनः इन्हीं में लय होता है।",
+            english:
+              "The pedestal is designated as Prakriti (primordial nature) and the Linga is known as Purusha (the cosmic spirit); from their divine union proceeds creation, and unto them dissolution returns.",
+            commentary:
+              "सांख्य और शैव दर्शन का समन्वय (१.५.१६)। 'लिंग' शब्द का अर्थ है—'लीयते गम्यते यस्मिन्' (जिसमें सब विलीन होता है और जिससे सब प्रकट होता है)।"
+          },
+          {
+            number: 5,
+            devanagari:
+              "ॐकारवाच्यः शिवः साक्षात् षडक्षरो मनुः स्मृतः।\nॐ नमः शिवाय मन्त्रोऽयं सर्वसिद्धिप्रदायकः॥५॥",
+            transliteration:
+              "oṃkāra-vācyaḥ śivaḥ sākṣāt ṣaḍ-akṣaro manuḥ smṛtaḥ |\noṃ namaḥ śivāya mantro 'yaṃ sarva-siddhi-pradāyakaḥ || 5 ||",
+            hindi:
+              "प्रणव ॐकार द्वारा साक्षात भगवान शिव ही वाच्य (कहे जाने योग्य) हैं। यह षडक्षर मंत्र 'ॐ नमः शिवाय' समस्त सिद्धियों, भुक्ति और मुक्ति को प्रदान करने वाला परम तारक मंत्र है।",
+            english:
+              "Lord Shiva Himself is directly denoted by the sacred syllable Omkara. This six-syllabled mantra 'Om Namah Shivaya' is the supreme granter of all spiritual perfections, worldly prosperity, and ultimate liberation.",
+            commentary:
+              "षडक्षर मंत्र की अलौकिक महिमा (विद्येश्वर संहिता १.५.२३)। ॐ सहित 'नमः शिवाय' षडक्षर कहलाता है।"
+          },
+          {
+            number: 6,
+            devanagari:
+              "ओमित्येकाक्षरं ब्रह्म नमः शक्तिरितीरिता।\nशिवाय इति जीवात्मा शिवेन सह तादृशः॥६॥",
+            transliteration:
+              "om ity ekākṣaraṃ brahma namaḥ śaktir itīritā |\nśivāya iti jīvātmā śivena saha tādṛśaḥ || 6 ||",
+            hindi:
+              "'ॐ' यह एकाक्षर परब्रह्म है, 'नमः' परमात्मा की दिव्य शक्ति है, और 'शिवाय' का अर्थ है जीवात्मा का शिव के साथ तादात्म्य (अद्वैत ऐक्य)।",
+            english:
+              "'Om' is the one-syllabled Absolute Brahman, 'Namah' represents His divine power (Shakti), and 'Shivaya' signifies the individual soul attaining oneness with Lord Shiva.",
+            commentary:
+              "षडक्षर मंत्र का गूढ़ दार्शनिक विग्रह (१.५.२४)। मंत्र का जप जीव को पाश-मुक्त कर शिव-तत्व में लीन करता है।"
+          },
+          {
+            number: 7,
+            devanagari:
+              "यत्र यत्र शिवे भक्तिस्तत्र तत्र शिवः स्वयम्।\nभक्तानुकम्पया शम्भुः सन्निधानं करोति हि॥७॥",
+            transliteration:
+              "yatra yatra śive bhaktis tatra tatra śivaḥ svayam |\nbhaktānukampayā śambhuḥ sannidhānaṃ karoti hi || 7 ||",
+            hindi:
+              "जहाँ-जहाँ भी भगवान शिव के प्रति अनन्य प्रेम और निष्काम भक्ति होती है, वहाँ-वहाँ साक्षात देवाधिदेव शिव स्वयं उपस्थित रहते हैं; शम्भु भक्तों पर अनुग्रह करने हेतु सर्वदा सन्निधान करते हैं।",
+            english:
+              "Wherever there is sincere devotion towards Shiva, there Lord Shiva Himself is personally present; out of compassion for His devotees, Shambhu ever manifests His divine presence.",
+            commentary:
+              "भक्ति-वत्सल आशुतोष भगवान शिव (१.५.३८)। शिव केवल जल और बेलपत्र मात्र के समर्पण से संतुष्ट हो जाते हैं।"
+          },
+          {
+            number: 8,
+            devanagari:
+              "ध्यायेन्नित्यं महेशं रजतगिरिनिभं चारुचंद्रावतंसं।\nरत्नाकल्पोज्ज्वलांगं परशुमृगवराभीतिहस्तं प्रसन्नम्॥८॥",
+            transliteration:
+              "dhyāyen nityaṃ maheśaṃ rajata-giri-nibhaṃ cāru-candrāvataṃsaṃ |\nratnākalpojjvalāṅgaṃ paraśu-mṛga-varābhīti-hastaṃ prasannam || 8 ||",
+            hindi:
+              "चांदी के पर्वत (कैलास) के समान श्वेत कांति वाले, सुंदर अर्धचंद्र से सुशोभित मस्तक वाले, रत्नों के आभूषणों से देदीप्यमान अंगों वाले, चारों हाथों में परशु, मृग-मुद्रा, वरद और अभय मुद्रा धारण करने वाले परम प्रसन्नमुख भगवान महेश का नित्य ध्यान करना चाहिए।",
+            english:
+              "One should daily meditate upon Lord Mahesha, whose radiant complexion resembles a mountain of silver, adorned with the delightful crescent moon, radiant with jewel ornaments, holding in His four hands the axe, the deer, the boon-granting, and fear-dispelling gestures, ever serene and gracious.",
+            commentary:
+              "भगवान शिव का सार्वभौमिक ध्यान श्लोक (विद्येश्वर संहिता १.५.४२)। मानस पूजा और ध्यान का शिखर रूप।"
+          }
+        ]
+      }
+    ]
   },
 
   "markandeya-purana": {
     label: "मार्कण्डेय पुराण / श्री दुर्गा सप्तशती (देवी महात्म्य)",
     sourceTotal: "१३७ अध्याय • ९,००० श्लोक (देवी महात्म्य ७०० श्लोक)",
     editionNote:
-      "गीताप्रेस गोरखपुर • महर्षि मेधा एवं सुरथ-समाधि संवाद • नारायणी स्तुति पूर्ण",
+      "गीताप्रेस गोरखपुर • महर्षि मेधा एवं सुरथ-समाधि संवाद • श्री दुर्गा सप्तशती प्रथम एवं एकादश अध्याय (नारायणी स्तुति पूर्ण)",
     chapters: [
       {
+        id: "mp-devi-mahatmya-ch-1",
+        title: "श्री दुर्गा सप्तशती, प्रथम अध्याय • मधु-कैटभ वध एवं महामाया का स्वरूप (१० श्लोक)",
+        items: [
+          {
+            number: 1,
+            devanagari:
+              "ॐ मार्कण्डेय उवाच—\nसावर्णिः सूर्यतनयो यो मनुः कथ्यतेऽष्टमः।\nनिशामय तदुत्पत्तिं विस्तराद् गदतो मम॥१॥",
+            transliteration:
+              "oṃ mārkaṇḍeya uvāca —\nsāvarṇiḥ sūrya-tanayo yo manuḥ kathyate 'ṣṭamaḥ |\nniśāmaya tad-utpattiṃ vistarād gadato mama || 1 ||",
+            hindi:
+              "मार्कण्डेय जी बोले—सूर्य के पुत्र सावर्णि जो आठवें मनु कहे जाते हैं, उनकी उत्पत्ति की पावन कथा मुझसे विस्तारपूर्वक श्रवण करो।",
+            english:
+              "Markandeya said: Savarni, the son of the Sun-god, is spoken of as the eighth Manu; listen attentively as I relate the sacred story of his origin in detail.",
+            commentary:
+              "श्री दुर्गा सप्तशती (देवी माहात्म्य) का प्रथम श्लोक (मार्कण्डेय पुराण अध्याय ८१.१)। राजा सुरथ ही आगे चलकर सावर्णि मनु बनते हैं।"
+          },
+          {
+            number: 2,
+            devanagari:
+              "ज्ञानिनामपि चेतांसि देवी भगवती हि सा।\nबलादाकृष्य मोहाय महामाया प्रयच्छति॥२॥",
+            transliteration:
+              "jñāninām api cetāṃsi devī bhagavatī hi sā |\nbalād ākṛṣya mohāya mahāmāyā prayacchati || 2 ||",
+            hindi:
+              "वे भगवती महामाया देवी ज्ञानियों के भी चित्त को बलपूर्वक खींचकर मोह (संसार-आसक्ति) में डाल देती हैं।",
+            english:
+              "That divine Goddess Mahamaya forcibly draws even the minds of the wise into illusion and worldly attachment.",
+            commentary:
+              "दुर्गा सप्तशती (१.४३ / ८१.४३)। महामाया की अमोघ शक्ति का निरूपण। कोई भी जीव अपने बौद्धिक बल से माया को नहीं जीत सकता।"
+          },
+          {
+            number: 3,
+            devanagari:
+              "तया विसृज्यते विश्वं जगदेतच्चराचरम्।\nसैषा प्रसन्ना वरदा नृणां भवति मुक्तये॥३॥",
+            transliteration:
+              "tayā visṛjyate viśvaṃ jagad etac carācaram |\nsaiṣā prasannā varadā nṛṇāṃ bhavati muktaye || 3 ||",
+            hindi:
+              "उन्हीं महामाया द्वारा यह संपूर्ण चराचर विश्व रचा जाता है; और वही भगवती प्रसन्न होकर वरदायिनी बनकर मनुष्यों को मुक्ति प्रदान करती हैं।",
+            english:
+              "By Her is this entire universe of moving and unmoving beings created; and when pleased, She becomes the gracious granter of boons leading to ultimate liberation.",
+            commentary:
+              "देवी माहात्म्य १.४४। वही अविद्या रूप से संसार का बंधन हैं और विद्या रूप से कैवल्य मुक्ति की दात्री हैं।"
+          },
+          {
+            number: 4,
+            devanagari:
+              "सा विद्या परमा मुक्तेर्हेतुभूता सनातनी।\nसंसारबन्धहेतुश्च सैव सर्वेश्वरेश्वरी॥४॥",
+            transliteration:
+              "sā vidyā paramā mukter hetu-bhūtā sanātanī |\nsaṃsāra-bandha-hetuś ca saiva sarveśvareśvarī || 4 ||",
+            hindi:
+              "वे ही भगवती सर्वेश्वरेश्वरी सनातनी पराविद्या हैं जो मोक्ष का परम हेतु हैं; और वे ही अविद्या रूप से संसार-बंधन का कारण भी हैं।",
+            english:
+              "She is the supreme, eternal Vidya that constitutes the cause of liberation, and She alone is the cause of bondage to worldly existence—the sovereign Queen of all lords.",
+            commentary:
+              "शाक्त वेदान्त का सार (१.४५)। माया और ब्रह्म की एकात्मता: भगवती ही आद्याशक्ति सर्वेश्वरेश्वरी हैं।"
+          },
+          {
+            number: 5,
+            devanagari:
+              "नित्यैव सा जगन्मूर्तिस्तया सर्वमिदं ततम्।\nतथापि तत्समुत्पत्तिर्बहुधा श्रूयतां मम॥५॥",
+            transliteration:
+              "nityaiva sā jagan-mūrtis tayā sarvam idaṃ tatam |\ntathāpi tat-samutpattir bahudhā śrūyatāṃ mama || 5 ||",
+            hindi:
+              "यद्यपि वे नित्य-स्वरूपा हैं और यह संपूर्ण जगत उन्हीं की मूर्ति है तथा उनसे ही यह सब व्याप्त है; तथापि उनका प्राकट्य अनेक प्रकार से होता है, वह मुझसे सुनो।",
+            english:
+              "Though She is eternal, having the universe as Her form, and though all this is pervaded by Her, yet Her manifestation takes place in manifold ways; hear that from me.",
+            commentary:
+              "भगवती का नित्य स्वरूप और अवतार रहस्य (१.५४)। जैसे भगवान अजन्मा होकर भी अवतार लेते हैं, वैसे ही भगवती नित्य होकर भी प्रकट होती हैं।"
+          },
+          {
+            number: 6,
+            devanagari:
+              "देवानां कार्यसिद्ध्यर्थमाविर्भवति सा यदा।\nउत्पन्नेति तदा लोके सा नित्याप्यभिधीयते॥६॥",
+            transliteration:
+              "devānāṃ kārya-siddhy-artham āvirbhavati sā yadā |\nutpanneti tadā loke sā nityāpy abhidhīyate || 6 ||",
+            hindi:
+              "देवताओं के कार्य की सिद्धि हेतु जब-जब वे इस संसार में आविर्भूत होती हैं, तब-तब नित्य होते हुए भी लोक में 'उत्पन्न हुईं' ऐसा कहा जाता है।",
+            english:
+              "Whenever She manifests for accomplishing the purposes of the gods, then, though eternal, She is spoken of in the world as having come into being.",
+            commentary:
+              "देवी माहात्म्य १.५५। भगवती के अवतार का उद्देश्य साधु-रक्षण और धर्म-संस्थापन है।"
+          },
+          {
+            number: 7,
+            devanagari:
+              "योगनिद्रां यदा विष्णोर्जगतः प्रभविष्णुना।\nप्रबोधनार्थाय तदा तुष्टाव परमेष्ठिनः॥७॥",
+            transliteration:
+              "yoga-nidrāṃ yadā viṣṇor jagataḥ prabhaviṣṇunā |\nprabodhana-arthāya tadā tuṣṭāva parameṣṭhinaḥ || 7 ||",
+            hindi:
+              "जब प्रलयकाल में जगत के स्वामी भगवान विष्णु योगनिद्रा में शयन कर रहे थे, तब मधु-कैटभ के भय से त्रस्त ब्रह्मा जी ने श्रीहरि को जगाने हेतु योगनिद्रा देवी की स्तुति की।",
+            english:
+              "When Lord Vishnu, the creator and sovereign of the universe, was reposing in Yoganidra at the end of the cosmic cycle, Brahma praised that Goddess Yoganidra to awaken Him.",
+            commentary:
+              "ब्रह्मा कृत रात्रि सूक्त (१.७०)। योगनिद्रा भगवान विष्णु की अंतरंगा महामाया शक्ति है।"
+          },
+          {
+            number: 8,
+            devanagari:
+              "त्वं स्वाहा त्वं स्वधा त्वं हि वषट्कारः स्वरात्मिका।\nसुधा त्वमक्षरे नित्ये त्रिधा मात्रात्मिका स्थिता॥८॥",
+            transliteration:
+              "tvaṃ svāhā tvaṃ svadhā tvaṃ hi vaṣaṭ-kāraḥ svarātmikā |\nsudhā tvam akṣare nitye tridhā mātrātmikā sthitā || 8 ||",
+            hindi:
+              "ब्रह्मा जी बोले—हे देवि! आप ही स्वाहा (देव-आहुति), आप ही स्वधा (पितृ-आहुति), आप ही वषट्कार और आप ही स्वरूपात्मिका हैं। आप ही अमृत, आप ही नित्य अविनाशी प्रणव (ॐ) की अ-उ-म तीनों मात्राएँ हैं।",
+            english:
+              "Brahma said: You are Svaha (oblation to gods), You are Svadha (oblation to ancestors), You are the sacred Vashatkara and the embodiment of sound! You are the nectar of immortality, the imperishable Omkara abiding in the three mystic measures (A-U-M).",
+            commentary:
+              "ब्रह्मा जी की प्रसिद्ध रात्रि-स्तुति (१.७३)। भगवती समस्त वैदिक यज्ञों और मंत्रों की अधिष्ठात्री हैं।"
+          },
+          {
+            number: 9,
+            devanagari:
+              "त्वयैतद्धार्यते विश्वं त्वयैतत्सृज्यते जगत्।\nत्वयैतत्पाल्यते देवि त्वमत्स्यन्ते च सर्वदा॥९॥",
+            transliteration:
+              "tvayaitad dhāryate viśvaṃ tvayaitat sṛjyate jagat |\ntvayaitat pālyate devi tvam atsy ante ca sarvadā || 9 ||",
+            hindi:
+              "हे देवि! आपके द्वारा ही यह संपूर्ण विश्व धारण किया जाता है, आप ही इस जगत का सृजन करती हैं, आप ही इसका पालन करती हैं, और कल्प के अंत में आप ही इसे संहार (ग्रास) करती हैं।",
+            english:
+              "By You is this universe sustained, by You is this cosmos created, by You is it preserved, O Goddess, and You devour it at the end of time eternally.",
+            commentary:
+              "सृष्टि, स्थिति और संहार की अधिष्ठात्री आद्याशक्ति (१.७५)। भगवती ही परब्रह्म महिषी हैं।"
+          },
+          {
+            number: 10,
+            devanagari:
+              "प्रबुद्धश्च जगत्स्वामी यौ तौ तावतिदुर्जयौ।\nमधुकैटभौ दुरात्मानौ जघान पुरुषोत्तमः॥१०॥",
+            transliteration:
+              "prabuddhaś ca jagat-svāmī yau tau tāv ati-durjayau |\nmadhu-kaiṭabhau durātmānau jaghāna puruṣottamaḥ || 10 ||",
+            hindi:
+              "देवी द्वारा योगनिद्रा से मुक्त किए जाने पर जगत्स्वामी पुरुषोत्तम भगवान विष्णु जागृत हुए और उन्होंने अत्यंत दुर्जय उन दोनों दुरात्मा असुरों मधु और कैटभ का वध किया।",
+            english:
+              "Released from Yoganidra by the Goddess, the Lord of the universe, Purushottama Vishnu, awoke and slew those two exceedingly formidable, evil demons Madhu and Kaitabha.",
+            commentary:
+              "प्रथम चरित की पूर्णता (१.८२)। महाकाली की कृपा से ही तामसिक असुरों मधु-कैटभ का संहार संभव हुआ।"
+          }
+        ]
+      },
+      {
         id: "mp-narayani-stuti",
-        title: "अध्याय ११ • नारायणी स्तुति (श्लोक १–१०)",
+        title: "श्री दुर्गा सप्तशती, एकादश अध्याय • नारायणी स्तुति (१० श्लोक)",
         items: [
           {
             number: 1,
@@ -224,28 +970,132 @@ export const PURANAS_SCRIPTURE_DATA = {
             transliteration:
               "devi prapannārti-hare prasīda prasīda mātar jagato 'khilasya |\nprasīda viśveśvari pāhi viśvaṃ tvam īśvarī devi carācarasya || 1 ||",
             hindi:
-              "हे शरणागतों के दुःख को दूर करने वाली देवि! हम पर प्रसन्न होइए। हे संपूर्ण जगत की माता! प्रसन्न होइए। हे विश्वेश्वरि! विश्व की रक्षा कीजिए; हे देवि! आप ही इस चराचर जगत की अधीश्वरी हैं।",
+              "देवता बोले—हे शरणागतों के दुःख को दूर करने वाली देवि! हम पर प्रसन्न होइए। हे संपूर्ण जगत की माता! प्रसन्न होइए। हे विश्वेश्वरि! विश्व की रक्षा कीजिए; हे देवि! आप ही इस चराचर जगत की अधीश्वरी हैं।",
             english:
-              "O Goddess, remover of the afflictions of those who surrender to You, be pleased! Be gracious, O Mother of the entire universe! Be pleased, O Ruler of the cosmos, protect the world; You are the supreme Sovereign of all moving and unmoving creation.",
+              "The Gods prayed: O Goddess who removes the distress of the surrendered, be pleased! Be gracious, O Mother of the entire universe! Be pleased, O Ruler of the cosmos, protect the world; You are the supreme Sovereign of all moving and unmoving creation.",
             commentary:
-              "देवताओं द्वारा भगवती जगदम्बा की स्तुति। समस्त शक्ति-उपासना का आधार।",
+              "नारायणी स्तुति का प्रथम मंगलाचरण श्लोक (देवी माहात्म्य ११.१)। देवताओं का भगवती जगदम्बा के चरणों में आत्म-निवेदन।"
+          },
+          {
+            number: 2,
+            devanagari:
+              "आधारभूता जगतस्त्वमेका महीस्वरूपेण यतः स्थितासि।\nअपां स्वरूपस्थितया त्वयैतदाप्याय्यते कृत्स्नमलङ्घ्यवीर्ये॥२॥",
+            transliteration:
+              "ādhāra-bhūtā jagatas tvam ekā mahī-svarūpeṇa yataḥ sthitāsi |\napāṃ svarūpa-sthitayā tvayaitad āpyāyyate kṛtsnam alaṅghya-vīrye || 2 ||",
+            hindi:
+              "हे अमोघ पराक्रम वाली देवि! आप ही इस संपूर्ण जगत का एकमात्र आधार हैं, क्योंकि आप पृथ्वी रूप में स्थित हैं; और जल रूप में स्थित होकर आप ही इस समस्त विश्व को तृप्त एवं सिंचित करती हैं।",
+            english:
+              "You alone are the foundational support of the universe, since You abide in the form of the earth; and abiding in the form of water, O of invincible prowess, by You is this entire creation nourished and sustained.",
+            commentary:
+              "पंचमहाभूतों में देवी की व्याप्ति (११.२)। पृथ्वी और जल भगवती के ही वात्सल्यमयी स्वरूप हैं।"
+          },
+          {
+            number: 3,
+            devanagari:
+              "त्वं वैष्णवी शक्तिरनन्तवीर्या विश्वस्य बीजं परमासि माया।\nसम्मोहितं देवि समस्तमेतत् त्वं वै प्रसन्ना भुवि मुक्तिहेतुः॥३॥",
+            transliteration:
+              "tvaṃ vaiṣṇavī śaktir ananta-vīryā viśvasya bījaṃ paramāsi māyā |\nsammohitaṃ devi samastam etat tvaṃ vai prasannā bhuvi mukti-hetuḥ || 3 ||",
+            hindi:
+              "आप अनंत पराक्रम वाली भगवान विष्णु की पराशक्ति हैं, आप ही इस विश्व का आदि बीज और परम महामाया हैं। हे देवि! आपने ही इस संपूर्ण विश्व को मोहित कर रखा है और आपके ही प्रसन्न होने पर यह जीव मुक्ति को प्राप्त होता है।",
+            english:
+              "You are the Vaishnavi Shakti of boundless potency, the primeval seed of the universe, the supreme Maya! By You, O Goddess, is all this cosmos enchanted, and You alone, when pleased, become the cause of final liberation upon earth.",
+            commentary:
+              "नारायणी स्तुति का परम दार्शनिक श्लोक (११.३)। वैष्णवी शक्ति ही मोक्षदायिनी पराशक्ति है।"
+          },
+          {
+            number: 4,
+            devanagari:
+              "विद्याः समस्तास्तव देवि भेदाः स्त्रियः समस्ताः सकला जगत्सु।\nत्वयैकया पूरितमम्बयैतत् का ते स्तुतिः स्तव्यपरापरोक्तिः॥४॥",
+            transliteration:
+              "vidyāḥ samastās tava devi bhedāḥ striyaḥ samastāḥ sakalā jagatsu |\ntvayaikayā pūritam ambayaitat kā te stutiḥ stavya-parāparoktiḥ || 4 ||",
+            hindi:
+              "हे देवि! संसार की समस्त विद्याएँ आपके ही विभिन्न स्वरूप हैं, और जगत की समस्त स्त्रियाँ आपकी ही मूर्तियाँ हैं। हे जगदम्ब! आपने अकेले ही इस संपूर्ण विश्व को परिपूर्ण कर रखा है; आपकी स्तुति कैसे संभव है, जब वाणी के समस्त शब्द ही आपका स्वरूप हैं!",
+            english:
+              "All branches of knowledge are diverse manifestations of You, O Goddess; all women in all the worlds are Your embodiments! By You alone, O Mother, is this universe completely filled; what praise can be uttered of You who transcends all speech?",
+            commentary:
+              "नारी-जाति और ज्ञान-विद्या की दिव्यता (११.४)। समस्त स्त्रियाँ भगवती का ही साक्षात अंश हैं—सनातन धर्म का सर्वोच्च सम्मान।"
+          },
+          {
+            number: 5,
+            devanagari:
+              "सर्वस्य बुद्धिरूपेण जनस्य हृदि संस्थिते।\nस्वर्गापवर्गदे देवि नारायणि नमोऽस्तु ते॥५॥",
+            transliteration:
+              "sarvasya buddhi-rūpeṇa janasya hṛdi saṃsthite |\nsvargāpavargade devi nārāyaṇi namo 'stu te || 5 ||",
+            hindi:
+              "समस्त प्राणियों के हृदय में बुद्धि रूप से विराजमान रहने वाली, तथा स्वर्ग और मोक्ष (अपवर्ग) प्रदान करने वाली हे नारायणी देवि! आपको हमारा बारंबार नमस्कार है।",
+            english:
+              "O You who abide in the heart of every being in the form of intellect, the bestower of heaven and supreme liberation, O Goddess Narayani, salutations unto You!",
+            commentary:
+              "बुद्धि-स्वरूपिणी नारायणी (११.९)। गायत्री मंत्र का साक्षात देवी-परक स्वरूप।"
+          },
+          {
+            number: 6,
+            devanagari:
+              "सर्वमङ्गलमाङ्गल्ये शिवे सर्वार्थसाधिके।\nशरण्ये त्र्यम्बके गौरि नारायणि नमोऽस्तु ते॥६॥",
+            transliteration:
+              "sarva-maṅgala-māṅgalye śive sarvārtha-sādhike |\nśaraṇye tryambake gauri nārāyaṇi namo 'stu te || 6 ||",
+            hindi:
+              "समस्त मंगलों में मंगलमयी, परम कल्याणकारिणी, समस्त पुरुषार्थों (धर्म, अर्थ, काम, मोक्ष) को सिद्ध करने वाली, शरणागतवत्सला, त्रिनेत्रा गौरी, हे नारायणी! आपको बारंबार नमस्कार है।",
+            english:
+              "O You who are the auspiciousness of all that is auspicious, the benevolent, the fulfiller of every purpose, the supreme refuge, three-eyed Gauri, O Narayani, salutations be unto You!",
+            commentary:
+              "सनातन धर्म का सर्वाधिक प्रतिष्ठित एवं पूजित महामंत्र (११.१०)। समस्त मंगलों का आदि स्रोत।"
+          },
+          {
+            number: 7,
+            devanagari:
+              "सृष्टिस्थितिविनाशानां शक्तिभूते सनातनि।\nगुणाश्रये गुणमये नारायणि नमोऽस्तु ते॥७॥",
+            transliteration:
+              "sṛṣṭi-sthiti-vināśānāṃ śakti-bhūte sanātani |\nguṇāśraye guṇa-maye nārāyaṇi namo 'stu te || 7 ||",
+            hindi:
+              "सृष्टि, स्थिति और संहार की सनातन शक्ति-स्वरूपा, तीनों गुणों का आश्रय होने पर भी स्वयं गुणमयी लीला करने वाली हे नारायणी देवि! आपको सादर प्रणाम है।",
+            english:
+              "O eternal Goddess who are the inherent power of creation, preservation, and dissolution, the resting place of the gunas yet embodied in the gunas, O Narayani, salutations unto You!",
+            commentary:
+              "त्रिगुणात्मिका एवं गुणातीत आद्याशक्ति (११.११)।"
+          },
+          {
+            number: 8,
+            devanagari:
+              "शरणागतदीनार्तपरित्राणपरायणे।\nसर्वस्यार्तिहरे देवि नारायणि नमोऽस्तु ते॥८॥",
+            transliteration:
+              "śaraṇāgata-dīnārta-paritrāṇa-parāyaṇe |\nsarvasyārti-hare devi nārāyaṇi namo 'stu te || 8 ||",
+            hindi:
+              "अपनी शरण में आए हुए दीन-दुखियों और पीड़ितों की रक्षा में सदा तत्पर रहने वाली, और सबके संकटों व क्लेशों को हरने वाली हे नारायणी देवि! आपको हमारा बारंबार नमस्कार है।",
+            english:
+              "O You who are ever intent upon saving the surrendered, the destitute, and the afflicted, the remover of all sufferings, O Goddess Narayani, salutations be unto You!",
+            commentary:
+              "शरणागति का परम पावन मंत्र (११.१२)। दीनबंधु भगवती का आर्त-त्राण स्वरूप।"
+          },
+          {
+            number: 9,
+            devanagari:
+              "सर्वस्वरूपे सर्वेशे सर्वशक्तिसमन्विते।\nभयेभ्यस्त्राहि नो देवि दुर्गे देवि नमोऽस्तु ते॥९॥",
+            transliteration:
+              "sarva-svarūpe sarveśe sarva-śakti-samanvite |\nbhayebhyas trāhi no devi durge devi namo 'stu te || 9 ||",
+            hindi:
+              "समस्त रूपों में प्रकट होने वाली, सबकी ईश्वरी, और समस्त दैवी शक्तियों से संपन्न हे दुर्गे देवि! हमें समस्त भयों से बचाइए; हे भगवती दुर्गे! आपको सादर नमस्कार है।",
+            english:
+              "O You who exist as the soul of all, the Sovereign of all, endowed with all powers, protect us from all terrors, O Goddess Durga, salutations unto You!",
+            commentary:
+              "सर्वशक्तियुक्त भगवती दुर्गा की रक्षा-प्रार्थना (११.१७)। समस्त भयों और संकटों का निवारक श्लोक।"
           },
           {
             number: 10,
             devanagari:
-              "सर्वमङ्गलमाङ्गल्ये शिवे सर्वार्थसाधिके।\nशरण्ये त्र्यम्बके गौरि नारायणि नमोऽस्तु ते॥१०॥",
+              "प्रणतानां प्रसीद त्वं देवि विश्वार्तिहारिणी।\nत्रैलोक्यवासिनामीड्ये लोकानां वरदा भव॥१०॥",
             transliteration:
-              "sarva-maṅgala-māṅgalye śive sarvārtha-sādhike |\nśaraṇye tryambake gauri nārāyaṇi namo 'stu te || 10 ||",
+              "praṇatānāṃ prasīda tvaṃ devi viśvārtihāriṇī |\ntrailokya-vāsinām īḍye lokānāṃ varadā bhava || 10 ||",
             hindi:
-              "समस्त मंगलों में मंगलमयी, कल्याणकारिणी, समस्त पुरुषार्थों (धर्म, अर्थ, काम, मोक्ष) को सिद्ध करने वाली, शरणागतवत्सला, त्रिनेत्रा गौरी, हे नारायणी! आपको बारंबार नमस्कार है।",
+              "हे विश्व के कष्टों को हरने वाली देवि! हम शरणागतों पर प्रसन्न होइए। तीनों लोकों के निवासियों द्वारा पूजित हे जगदम्बा! आप समस्त लोकों को अभय और अभीष्ट वरदान देने वाली होइए।",
             english:
-              "O You who are the auspiciousness of all that is auspicious, the benevolent, the fulfiller of every purpose, the worthy refuge, three-eyed Gauri, O Narayani, salutations be to You!",
+              "Be pleased with those who bow before You, O Goddess who removes the agony of the entire world! O adorable Mother worshipped by the inhabitants of all three worlds, bestow Your blessings upon the worlds!",
             commentary:
-              "सनातन धर्म का सर्वाधिक प्रसिद्ध एवं पूजित देवी महामंत्र।",
-          },
-        ],
-      },
-    ],
+              "नारायणी स्तुति की पूर्णता (११.२८)। विश्व-कल्याण और वैश्विक शांति की प्रार्थना।"
+          }
+        ]
+      }
+    ]
   },
 
   "garuda-purana": {

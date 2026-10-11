@@ -28,19 +28,74 @@ import {
   RAMAYANA_DATA,
   MAHABHARATA_DATA,
 } from "../data/itihasaData.js";
+import ScriptureReaderView from "../components/common/ScriptureReaderView.jsx";
+import PuranaItihasaTaxonomyView from "../components/knowledge/PuranaItihasaTaxonomyView.jsx";
+import { getScriptureReaderData } from "../data/scriptures/index.js";
 import bannerTempleGhat from "../assets/images/library/banners/banner-temple-ghat.jpg";
 import cardPuranaImg from "../assets/images/library/cards/card-purana.jpg";
 import cardRamayanaImg from "../assets/images/library/cards/card-ramayana.jpg";
 import cardMahabharataImg from "../assets/images/library/cards/card-mahabharata.jpg";
 import cardGitaImg from "../assets/images/library/cards/card-gita.jpg";
 
+const READER_PURANAS_LIST = [
+  { id: "shrimad-bhagavata", name: "श्रीमद्भागवत", shlokas: "१८,०००", guna: "सात्त्विक" },
+  { id: "vishnu-purana", name: "विष्णु पुराण", shlokas: "२३,०००", guna: "सात्त्विक" },
+  { id: "shiva-purana", name: "शिव पुराण", shlokas: "२४,०००", guna: "तामस" },
+  { id: "markandeya-purana", name: "मार्कण्डेय / दुर्गा सप्तशती", shlokas: "९,०००", guna: "राजस" },
+  { id: "padma-purana", name: "पद्म पुराण", shlokas: "५५,०००", guna: "सात्त्विक" },
+  { id: "brahma-purana", name: "ब्रह्म पुराण", shlokas: "१०,०००", guna: "राजस" },
+  { id: "garuda-purana", name: "गरुड़ पुराण", shlokas: "१९,०००", guna: "सात्त्विक" },
+  { id: "brahmanda-purana", name: "ब्रह्माण्ड पुराण", shlokas: "१२,०००", guna: "राजस" },
+  { id: "brahmavaivarta-purana", name: "ब्रह्मवैवर्त पुराण", shlokas: "१८,०००", guna: "राजस" },
+  { id: "agni-purana", name: "अग्नि पुराण", shlokas: "१५,४००", guna: "राजस" },
+  { id: "bhavishya-purana", name: "भविष्य पुराण", shlokas: "१४,५००", guna: "राजस" },
+  { id: "varaha-purana", name: "वराह पुराण", shlokas: "२४,०००", guna: "सात्त्विक" },
+  { id: "vamana-purana", name: "वामन पुराण", shlokas: "१०,०००", guna: "राजस" },
+  { id: "kurma-purana", name: "कूर्म पुराण", shlokas: "१७,०००", guna: "तामस" },
+  { id: "matsya-purana", name: "मत्स्य पुराण", shlokas: "१४,०००", guna: "तामस" },
+  { id: "linga-purana", name: "लिंग पुराण", shlokas: "११,०००", guna: "तामस" },
+  { id: "narada-purana", name: "नारद पुराण", shlokas: "२५,०००", guna: "सात्त्विक" },
+  { id: "skanda-purana", name: "स्कन्द पुराण", shlokas: "८१,१००", guna: "तामस" },
+];
+
+const READER_ITIHASAS_LIST = [
+  { id: "bhagavad-gita", name: "श्रीमद्भगवद्गीता", shlokas: "७००", epic: "महाभारत भीष्मपर्व" },
+  { id: "valmiki-ramayana", name: "वाल्मीकि रामायण", shlokas: "२४,०००", epic: "आदिकाव्य (७ काण्ड)" },
+  { id: "mahabharata", name: "महाभारत", shlokas: "१,००,०००", epic: "पंचम वेद (१८ पर्व)" },
+];
+
 export default function PuranaItihasaPage({ onOpenSearch }) {
   const navigate = useNavigate();
   const [searchParams, setSearchParams] = useSearchParams();
 
-  // Tab state: 'purana', 'ramayana', 'mahabharata', 'panchalakshana'
+  // Tab state: 'reader', 'taxonomy', 'purana', 'ramayana', 'mahabharata', 'panchalakshana'
   const initialTab = searchParams.get("tab") || "purana";
   const [activeTab, setActiveTab] = useState(initialTab);
+
+  // Reader state
+  const initialSlug = searchParams.get("slug") || "shrimad-bhagavata";
+  const [selectedReaderSlug, setSelectedReaderSlug] = useState(initialSlug);
+  const [readerCategory, setReaderCategory] = useState(
+    READER_ITIHASAS_LIST.some((i) => i.id === initialSlug) ? "itihasa" : "purana"
+  );
+  const [readerInitialChapterId, setReaderInitialChapterId] = useState(null);
+
+  const currentReaderScripture = useMemo(() => {
+    return getScriptureReaderData(selectedReaderSlug);
+  }, [selectedReaderSlug]);
+
+  const handleSelectReaderText = (slug, chapterId = null) => {
+    setSelectedReaderSlug(slug);
+    setReaderInitialChapterId(chapterId);
+    if (READER_ITIHASAS_LIST.some((i) => i.id === slug)) {
+      setReaderCategory("itihasa");
+    } else {
+      setReaderCategory("purana");
+    }
+    setActiveTab("reader");
+    setSearchParams({ tab: "reader", slug });
+    window.scrollTo({ top: 380, behavior: "smooth" });
+  };
 
   // Search & Filters
   const [searchQuery, setSearchQuery] = useState("");
@@ -196,6 +251,18 @@ export default function PuranaItihasaPage({ onOpenSearch }) {
           <div className="flex items-center gap-2">
             {[
               {
+                id: "reader",
+                label: "मूल श्लोक वाचन",
+                en: "Scripture Reader",
+                icon: BookOpen,
+              },
+              {
+                id: "taxonomy",
+                label: "गहन विभाजन व आख्यान",
+                en: "Taxonomy & Jewels",
+                icon: Layers,
+              },
+              {
                 id: "purana",
                 label: "१८ महापुराण",
                 en: "18 Mahapuranas",
@@ -215,7 +282,7 @@ export default function PuranaItihasaPage({ onOpenSearch }) {
               },
               {
                 id: "panchalakshana",
-                label: "पंच लक्षण व उपपुराण",
+                label: "लक्षण व उपपुराण",
                 en: "Pancha Lakshana",
                 icon: Compass,
               },
@@ -226,7 +293,7 @@ export default function PuranaItihasaPage({ onOpenSearch }) {
                 <button
                   key={t.id}
                   onClick={() => handleTabChange(t.id)}
-                  className={`px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold flex items-center gap-2 whitespace-nowrap transition-all cursor-pointer ${
+                  className={`px-3.5 py-2 rounded-xl text-xs sm:text-sm font-semibold flex items-center gap-1.5 whitespace-nowrap transition-all cursor-pointer ${
                     isActive
                       ? "bg-amber-800 text-white shadow-xs font-bold"
                       : "text-stone-700 hover:text-amber-900 hover:bg-amber-50"
@@ -254,6 +321,118 @@ export default function PuranaItihasaPage({ onOpenSearch }) {
 
       {/* 3. Main Content Container */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8">
+        {/* ========================================================================= */}
+        {/* TAB: SCRIPTURE READER VIEW (मूल ग्रंथ एवं आख्यान श्लोक वाचन) */}
+        {/* ========================================================================= */}
+        {activeTab === "reader" && (
+          <div className="space-y-6 animate-fadeIn">
+            {/* Header / Selector Controls */}
+            <div className="bg-white rounded-3xl border border-stone-200 p-6 shadow-xs">
+              <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-5 border-b border-stone-100">
+                <div>
+                  <div className="flex items-center gap-2 text-xs font-bold text-amber-800 uppercase tracking-wider mb-1">
+                    <Sparkles className="w-4 h-4 text-amber-600" />
+                    <span>AUTHENTIC SCRIPTURE READER • प्रामाणिक श्लोक वाचन</span>
+                  </div>
+                  <h2 className="font-serif text-2xl sm:text-3xl font-bold text-stone-900">
+                    {currentReaderScripture?.label || "पुराण एवं इतिहास मूल श्लोक पाठ"}
+                  </h2>
+                  <p className="text-xs text-stone-600 font-devanagari mt-1">
+                    {currentReaderScripture?.editionNote || "गीताप्रेस गोरखपुर एवं बीओआरआई पुणे प्रामाणिक मूल पाठ"}
+                  </p>
+                </div>
+
+                {/* Category Switcher: Puranas vs Itihasas */}
+                <div className="flex items-center bg-[#fffaf0] p-1.5 rounded-2xl border border-amber-200 gap-1.5 self-start md:self-auto">
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setReaderCategory("purana");
+                      setSelectedReaderSlug("shrimad-bhagavata");
+                      setReaderInitialChapterId(null);
+                    }}
+                    className={`px-4 py-2 rounded-xl text-xs font-bold transition-all cursor-pointer ${
+                      readerCategory === "purana"
+                        ? "bg-amber-800 text-white shadow-2xs"
+                        : "text-stone-700 hover:text-amber-900 hover:bg-amber-100/60"
+                    }`}
+                  >
+                    १८ महापुराण ({READER_PURANAS_LIST.length})
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setReaderCategory("itihasa");
+                      setSelectedReaderSlug("bhagavad-gita");
+                      setReaderInitialChapterId(null);
+                    }}
+                    className={`px-4 py-2 rounded-xl text-xs font-bold transition-all cursor-pointer ${
+                      readerCategory === "itihasa"
+                        ? "bg-amber-800 text-white shadow-2xs"
+                        : "text-stone-700 hover:text-amber-900 hover:bg-amber-100/60"
+                    }`}
+                  >
+                    इतिहास एवं महाकाव्य ({READER_ITIHASAS_LIST.length})
+                  </button>
+                </div>
+              </div>
+
+              {/* Quick Pills Selector */}
+              <div className="pt-4">
+                <span className="text-[11px] font-bold text-stone-500 uppercase tracking-wider block mb-2 font-devanagari">
+                  {readerCategory === "purana" ? "महापुराण चुनें (Click to Read):" : "इतिहास व आख्यान चुनें (Click to Read):"}
+                </span>
+                <div className="flex items-center gap-2 overflow-x-auto pb-2 scrollbar-none">
+                  {(readerCategory === "purana" ? READER_PURANAS_LIST : READER_ITIHASAS_LIST).map((item) => {
+                    const isSelected = selectedReaderSlug === item.id;
+                    return (
+                      <button
+                        key={item.id}
+                        type="button"
+                        onClick={() => {
+                          setSelectedReaderSlug(item.id);
+                          setReaderInitialChapterId(null);
+                        }}
+                        className={`px-3 py-1.5 rounded-xl text-xs font-semibold whitespace-nowrap transition-all cursor-pointer border ${
+                          isSelected
+                            ? "bg-amber-900 text-white border-amber-900 shadow-xs font-bold"
+                            : "bg-[#fffaf0] text-stone-700 border-amber-200/70 hover:bg-amber-100/60 hover:text-stone-900"
+                        }`}
+                      >
+                        <span>{item.name}</span>
+                        <span className="text-[10px] opacity-80 ml-1.5 font-normal">
+                          ({item.shlokas})
+                        </span>
+                      </button>
+                    );
+                  })}
+                </div>
+              </div>
+            </div>
+
+            {/* Render Universal Scripture Reader */}
+            {currentReaderScripture ? (
+              <ScriptureReaderView
+                scripture={currentReaderScripture}
+                initialChapterId={readerInitialChapterId}
+              />
+            ) : (
+              <div className="bg-white rounded-3xl border border-stone-200 p-8 text-center">
+                <p className="text-stone-600 font-devanagari">चयनित ग्रंथ का विवरण उपलब्ध नहीं है।</p>
+              </div>
+            )}
+          </div>
+        )}
+
+        {/* ========================================================================= */}
+        {/* TAB: TAXONOMY VIEW (गहन विभाजन एवं आख्यान रत्न) */}
+        {/* ========================================================================= */}
+        {activeTab === "taxonomy" && (
+          <div className="animate-fadeIn">
+            <PuranaItihasaTaxonomyView onSelectReaderText={handleSelectReaderText} />
+          </div>
+        )}
+
         {/* ========================================================================= */}
         {/* TAB 1: 18 MAHAPURANAS (पुराण) */}
         {/* ========================================================================= */}
@@ -670,7 +849,7 @@ export default function PuranaItihasaPage({ onOpenSearch }) {
                     </div>
 
                     {/* Action Footer */}
-                    <div className="mt-5 pt-3.5 border-t border-stone-100 flex items-center justify-between">
+                    <div className="mt-5 pt-3.5 border-t border-stone-100 flex items-center justify-between gap-2 flex-wrap">
                       <button
                         type="button"
                         onClick={() => setSelectedPuranaModal(p)}
@@ -680,14 +859,26 @@ export default function PuranaItihasaPage({ onOpenSearch }) {
                         <span>सारांश</span>
                       </button>
 
-                      <Link
-                        to={`/library/purana/${p.slug}`}
-                        className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-amber-50 text-amber-900 hover:bg-amber-100 font-bold text-xs transition-colors"
-                        title="विस्तृत अध्ययन करें"
-                      >
-                        <span>ग्रंथ संरचना</span>
-                        <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
-                      </Link>
+                      <div className="flex items-center gap-1.5">
+                        <button
+                          type="button"
+                          onClick={() => handleSelectReaderText(p.slug)}
+                          className="inline-flex items-center gap-1 px-2.5 py-1.5 rounded-lg bg-amber-800 text-white hover:bg-amber-900 font-bold text-xs transition-colors cursor-pointer shadow-2xs"
+                          title="मूल श्लोक एवं अनुवाद पढ़ें"
+                        >
+                          <BookOpen className="w-3 h-3 text-amber-200" />
+                          <span>श्लोक वाचन</span>
+                        </button>
+
+                        <Link
+                          to={`/library/purana/${p.slug}`}
+                          className="inline-flex items-center gap-1 px-2.5 py-1.5 rounded-lg bg-amber-50 text-amber-900 hover:bg-amber-100 font-bold text-xs transition-colors"
+                          title="विस्तृत अध्ययन करें"
+                        >
+                          <span>संरचना</span>
+                          <ArrowRight className="w-3 h-3 group-hover:translate-x-0.5 transition-transform" />
+                        </Link>
+                      </div>
                     </div>
                   </div>
                 );
@@ -811,6 +1002,25 @@ export default function PuranaItihasaPage({ onOpenSearch }) {
                         ))}
                       </div>
                     </div>
+
+                    {/* Kanda Card Action Footer */}
+                    <div className="mt-4 pt-3 border-t border-stone-100 flex items-center justify-between flex-wrap gap-2">
+                      <button
+                        type="button"
+                        onClick={() => handleSelectReaderText("valmiki-ramayana")}
+                        className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-amber-800 text-white hover:bg-amber-900 font-bold text-xs transition-colors cursor-pointer shadow-2xs"
+                      >
+                        <BookOpen className="w-3.5 h-3.5 text-amber-200" />
+                        <span>काण्ड श्लोक वाचन</span>
+                      </button>
+                      <Link
+                        to="/library/itihasa/valmiki-ramayana"
+                        className="text-xs font-bold text-amber-900 hover:text-amber-950 flex items-center gap-1"
+                      >
+                        <span>संपूर्ण काण्ड विवरण</span>
+                        <ChevronRight className="w-3.5 h-3.5" />
+                      </Link>
+                    </div>
                   </div>
                 ))}
               </div>
@@ -862,18 +1072,27 @@ export default function PuranaItihasaPage({ onOpenSearch }) {
                   "{MAHABHARATA_DATA.famousMaxim}"
                 </div>
                 <div className="flex flex-col sm:flex-row lg:flex-col gap-2">
+                  <button
+                    type="button"
+                    onClick={() => handleSelectReaderText("bhagavad-gita")}
+                    className="flex items-center justify-center gap-1.5 px-4 py-2 rounded-xl bg-amber-800 text-white text-xs font-bold hover:bg-amber-900 transition-colors shadow-2xs cursor-pointer"
+                  >
+                    <BookOpen className="w-3.5 h-3.5 text-amber-200" />
+                    <span>श्रीमद्भगवद्गीता (७०० श्लोक वाचन)</span>
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => handleSelectReaderText("mahabharata")}
+                    className="flex items-center justify-center gap-1.5 px-4 py-2 rounded-xl bg-purple-800 text-white text-xs font-bold hover:bg-purple-900 transition-colors shadow-2xs cursor-pointer"
+                  >
+                    <BookOpen className="w-3.5 h-3.5 text-purple-200" />
+                    <span>महाभारत मूल श्लोक वाचन</span>
+                  </button>
                   <Link
                     to="/library/itihasa/mahabharata"
-                    className="flex items-center justify-center gap-1.5 px-4 py-2 rounded-xl bg-purple-800 text-white text-xs font-bold hover:bg-purple-900 transition-colors shadow-2xs"
+                    className="flex items-center justify-center gap-1.5 px-4 py-2 rounded-xl bg-stone-100 text-stone-700 text-xs font-bold hover:bg-stone-200 transition-colors"
                   >
                     <span>महाभारत १८ पर्व संरचना</span>
-                    <ArrowRight className="w-3.5 h-3.5" />
-                  </Link>
-                  <Link
-                    to="/library/itihasa/bhagavad-gita"
-                    className="flex items-center justify-center gap-1.5 px-4 py-2 rounded-xl bg-amber-800 text-white text-xs font-bold hover:bg-amber-900 transition-colors shadow-2xs"
-                  >
-                    <span>श्रीमद्भगवद्गीता (७०० श्लोक)</span>
                     <ArrowRight className="w-3.5 h-3.5" />
                   </Link>
                 </div>
@@ -929,14 +1148,30 @@ export default function PuranaItihasaPage({ onOpenSearch }) {
                       </div>
                     </div>
 
-                    <button
-                      type="button"
-                      onClick={() => setSelectedJewelModal(j)}
-                      className="mt-4 pt-3 border-t border-stone-100 text-xs font-bold text-amber-800 hover:text-amber-950 flex items-center justify-between cursor-pointer"
-                    >
-                      <span>अध्ययन करें (Explore Jewel)</span>
-                      <span>→</span>
-                    </button>
+                    <div className="mt-4 pt-3 border-t border-stone-100 flex items-center justify-between gap-2 flex-wrap">
+                      <button
+                        type="button"
+                        onClick={() => setSelectedJewelModal(j)}
+                        className="text-xs font-bold text-stone-600 hover:text-stone-900 flex items-center gap-1 cursor-pointer"
+                      >
+                        <Info className="w-3.5 h-3.5" />
+                        <span>सारांश</span>
+                      </button>
+
+                      <button
+                        type="button"
+                        onClick={() => {
+                          if (j.id === "bhagavad-gita") handleSelectReaderText("bhagavad-gita");
+                          else if (j.id === "vishnu-sahasranama") handleSelectReaderText("mahabharata", "mb-vishnu-sahasranama");
+                          else if (j.id === "yaksha-prashna") handleSelectReaderText("mahabharata", "mb-yaksha-prashna");
+                          else handleSelectReaderText("mahabharata");
+                        }}
+                        className="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-amber-800 text-white hover:bg-amber-900 font-bold text-xs transition-colors cursor-pointer shadow-2xs"
+                      >
+                        <BookOpen className="w-3 h-3 text-amber-200" />
+                        <span>मूल श्लोक</span>
+                      </button>
+                    </div>
                   </div>
                 ))}
               </div>
@@ -973,6 +1208,24 @@ export default function PuranaItihasaPage({ onOpenSearch }) {
                     <p className="text-xs text-stone-600 font-devanagari mt-1.5 leading-relaxed line-clamp-3">
                       {pv.desc}
                     </p>
+
+                    <button
+                      type="button"
+                      onClick={() => {
+                        if (pv.id === "bhishma-parva") handleSelectReaderText("bhagavad-gita");
+                        else if (pv.id === "vana-parva") handleSelectReaderText("mahabharata", "mb-yaksha-prashna");
+                        else if (pv.id === "shanti-parva") handleSelectReaderText("mahabharata", "mb-shanti-parva");
+                        else if (pv.id === "anushasana-parva") handleSelectReaderText("mahabharata", "mb-vishnu-sahasranama");
+                        else handleSelectReaderText("mahabharata");
+                      }}
+                      className="mt-3 pt-2.5 border-t border-purple-100 flex items-center justify-between text-xs font-bold text-purple-900 hover:text-purple-950 cursor-pointer w-full"
+                    >
+                      <span className="flex items-center gap-1">
+                        <BookOpen className="w-3 h-3 text-purple-600" />
+                        <span>पर्व श्लोक वाचन</span>
+                      </span>
+                      <ArrowRight className="w-3 h-3" />
+                    </button>
                   </div>
                 ))}
               </div>
@@ -1003,6 +1256,18 @@ export default function PuranaItihasaPage({ onOpenSearch }) {
               <p className="text-xs sm:text-sm text-stone-700 font-devanagari leading-relaxed">
                 {PANCHA_LAKSHANA.translation}
               </p>
+
+              <div className="mt-4 flex flex-wrap gap-2">
+                <button
+                  type="button"
+                  onClick={() => handleTabChange("taxonomy")}
+                  className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-amber-800 text-white font-bold text-xs hover:bg-amber-900 transition-colors shadow-2xs cursor-pointer"
+                >
+                  <Layers className="w-3.5 h-3.5 text-amber-200" />
+                  <span>दश लक्षण (भागवत १२.७) एवं संपूर्ण १८ उपपुराण विभाजन देखें</span>
+                  <ArrowRight className="w-3.5 h-3.5" />
+                </button>
+              </div>
 
               {/* 5 Cards Grid */}
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 mt-6">
