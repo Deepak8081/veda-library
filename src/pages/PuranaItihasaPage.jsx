@@ -136,58 +136,58 @@ export default function PuranaItihasaPage({ onOpenSearch }) {
   return (
     <div className="bg-[#fffaf0] min-h-screen text-stone-900 pb-20">
       {/* 1. Scholarly Hero Section */}
-      <div className="relative bg-gradient-to-r from-[#1a110a] via-[#2c1b10] to-[#1e130b] text-white py-12 sm:py-16 px-4 sm:px-6 lg:px-8 border-b border-amber-900/40 overflow-hidden shadow-md">
-        <div className="absolute inset-0 z-0 opacity-25 mix-blend-luminosity">
+      <div className="relative bg-gradient-to-r from-[#fff9eb] via-[#fffdf5] to-[#fef5dc] text-stone-900 py-12 sm:py-16 px-4 sm:px-6 lg:px-8 border-b-2 border-amber-200/90 overflow-hidden shadow-xs">
+        <div className="absolute inset-0 z-0 opacity-15 mix-blend-multiply">
           <img
             src={bannerTempleGhat}
             alt="Vedic Temple Heritage"
             className="w-full h-full object-cover object-center"
           />
         </div>
-        <div className="absolute inset-0 bg-gradient-to-t from-[#1a110a] via-transparent to-black/40 z-0" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#fff9eb]/90 via-[#fffdf5]/60 to-white/70 z-0" />
 
         <div className="relative z-10 max-w-7xl mx-auto">
           {/* Breadcrumb */}
-          <div className="flex items-center gap-2 text-xs text-amber-300/80 mb-4 font-serif">
-            <Link to="/" className="hover:text-amber-200">
+          <div className="flex items-center gap-2 text-xs text-amber-900/80 mb-4 font-serif font-medium">
+            <Link to="/" className="hover:text-amber-950 hover:underline">
               होम
             </Link>
             <span>/</span>
-            <Link to="/library" className="hover:text-amber-200">
+            <Link to="/library" className="hover:text-amber-950 hover:underline">
               वैदिक ज्ञानकोष
             </Link>
             <span>/</span>
-            <span className="text-amber-100 font-semibold">
+            <span className="text-amber-950 font-bold">
               पुराण एवं इतिहास
             </span>
           </div>
 
           <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6">
             <div className="max-w-3xl">
-              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider bg-amber-500/20 text-amber-300 border border-amber-500/30 mb-3">
-                <Sparkles className="w-3.5 h-3.5" />
+              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-amber-100/90 text-amber-950 border border-amber-300/80 mb-3 shadow-2xs">
+                <Sparkles className="w-3.5 h-3.5 text-amber-700" />
                 <span>PURANA & ITIHASA ARCHIVE</span>
               </span>
 
-              <h1 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-white mb-3">
+              <h1 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-amber-950 mb-3">
                 पुराण एवं इतिहास
-                <span className="block text-xl sm:text-2xl font-normal text-amber-200/90 mt-1 font-sans">
+                <span className="block text-xl sm:text-2xl font-normal text-amber-900/90 mt-1 font-sans">
                   The Sacred Chronologies, Epics & Cosmic Histories
                 </span>
               </h1>
 
-              <p className="text-stone-300 text-sm sm:text-base font-devanagari leading-relaxed">
+              <p className="text-stone-700 text-sm sm:text-base font-devanagari leading-relaxed">
                 १८ महापुराण, वाल्मीकि रामायण, महाभारत एवं श्रीमद्भगवद्गीता —
                 वेदों के अमूर्त ज्ञान को प्रत्यक्ष जीवन, आख्यान, अवतार लीला और
                 धर्म की कसौटी पर कसने वाली भारत की सनातन ज्ञान परंपरा।
               </p>
 
               {/* Classical Sanskrit Aphorism Banner */}
-              <div className="mt-5 p-3.5 rounded-xl bg-amber-950/60 border border-amber-600/40 text-amber-100 text-xs sm:text-sm font-devanagari leading-relaxed">
-                <span className="font-bold text-amber-300 block mb-0.5">
+              <div className="mt-5 p-3.5 rounded-xl bg-gradient-to-r from-[#fff7e0] via-[#fffdf4] to-[#fef4d6] border-2 border-amber-300/90 text-amber-950 text-xs sm:text-sm font-devanagari leading-relaxed shadow-2xs">
+                <span className="font-bold text-amber-900 block mb-0.5">
                   {ITIHASA_EPISTEMOLOGY.pramanaQuote}
                 </span>
-                <span className="text-amber-200/80 text-xs">
+                <span className="text-amber-800/80 text-xs font-medium">
                   — {ITIHASA_EPISTEMOLOGY.pramanaSource} :{" "}
                   {ITIHASA_EPISTEMOLOGY.pramanaMeaning}
                 </span>
@@ -196,47 +196,47 @@ export default function PuranaItihasaPage({ onOpenSearch }) {
 
             {/* Quick Metrics Badge Card */}
             <div className="grid grid-cols-2 sm:grid-cols-2 gap-3 w-full lg:w-auto self-stretch lg:self-auto text-center">
-              <div className="bg-black/40 backdrop-blur-md border border-amber-500/30 rounded-2xl p-4">
-                <div className="font-serif text-2xl font-bold text-amber-300">
+              <div className="bg-white/95 backdrop-blur-md border-2 border-amber-200/90 rounded-2xl p-4 shadow-xs hover:border-amber-400 hover:shadow-md transition-all text-center">
+                <div className="font-serif text-2xl sm:text-3xl font-extrabold text-amber-800">
                   १८
                 </div>
-                <div className="text-[11px] text-stone-300 font-semibold uppercase">
+                <div className="text-[11px] text-amber-950 font-bold uppercase tracking-wider">
                   महापुराण
                 </div>
-                <div className="text-[10px] text-stone-400 mt-0.5">
+                <div className="text-[10px] text-stone-600 mt-0.5 font-medium">
                   ~४,००,००० श्लोक
                 </div>
               </div>
-              <div className="bg-black/40 backdrop-blur-md border border-amber-500/30 rounded-2xl p-4">
-                <div className="font-serif text-2xl font-bold text-amber-300">
+              <div className="bg-white/95 backdrop-blur-md border-2 border-amber-200/90 rounded-2xl p-4 shadow-xs hover:border-amber-400 hover:shadow-md transition-all text-center">
+                <div className="font-serif text-2xl sm:text-3xl font-extrabold text-amber-800">
                   २४,०००
                 </div>
-                <div className="text-[11px] text-stone-300 font-semibold uppercase">
+                <div className="text-[11px] text-amber-950 font-bold uppercase tracking-wider">
                   रामायण श्लोक
                 </div>
-                <div className="text-[10px] text-stone-400 mt-0.5">
+                <div className="text-[10px] text-stone-600 mt-0.5 font-medium">
                   ७ काण्ड • ५०० सर्ग
                 </div>
               </div>
-              <div className="bg-black/40 backdrop-blur-md border border-amber-500/30 rounded-2xl p-4">
-                <div className="font-serif text-2xl font-bold text-amber-300">
+              <div className="bg-white/95 backdrop-blur-md border-2 border-amber-200/90 rounded-2xl p-4 shadow-xs hover:border-amber-400 hover:shadow-md transition-all text-center">
+                <div className="font-serif text-2xl sm:text-3xl font-extrabold text-amber-800">
                   १,००,०००
                 </div>
-                <div className="text-[11px] text-stone-300 font-semibold uppercase">
+                <div className="text-[11px] text-amber-950 font-bold uppercase tracking-wider">
                   महाभारत श्लोक
                 </div>
-                <div className="text-[10px] text-stone-400 mt-0.5">
+                <div className="text-[10px] text-stone-600 mt-0.5 font-medium">
                   १८ पर्व + हरिवंश
                 </div>
               </div>
-              <div className="bg-black/40 backdrop-blur-md border border-amber-500/30 rounded-2xl p-4">
-                <div className="font-serif text-2xl font-bold text-amber-300">
+              <div className="bg-white/95 backdrop-blur-md border-2 border-amber-200/90 rounded-2xl p-4 shadow-xs hover:border-amber-400 hover:shadow-md transition-all text-center">
+                <div className="font-serif text-2xl sm:text-3xl font-extrabold text-amber-800">
                   ५
                 </div>
-                <div className="text-[11px] text-stone-300 font-semibold uppercase">
+                <div className="text-[11px] text-amber-950 font-bold uppercase tracking-wider">
                   पंच लक्षण
                 </div>
-                <div className="text-[10px] text-stone-400 mt-0.5">
+                <div className="text-[10px] text-stone-600 mt-0.5 font-medium">
                   सृष्टि व वंशावली
                 </div>
               </div>
@@ -327,23 +327,23 @@ export default function PuranaItihasaPage({ onOpenSearch }) {
         {activeTab === "reader" && (
           <div className="space-y-6 animate-fadeIn">
             {/* Header / Selector Controls */}
-            <div className="bg-white rounded-3xl border border-stone-200 p-6 shadow-xs">
-              <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-5 border-b border-stone-100">
+            <div className="bg-gradient-to-r from-[#fff9ea] via-[#fffbf0] to-[#fef5db] rounded-3xl border-2 border-amber-300/80 p-6 shadow-sm">
+              <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-5 border-b border-amber-200/70">
                 <div>
-                  <div className="flex items-center gap-2 text-xs font-bold text-amber-800 uppercase tracking-wider mb-1">
-                    <Sparkles className="w-4 h-4 text-amber-600" />
+                  <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-amber-100 text-amber-950 border border-amber-300 mb-2 shadow-2xs">
+                    <Sparkles className="w-3.5 h-3.5 text-amber-700" />
                     <span>AUTHENTIC SCRIPTURE READER • प्रामाणिक श्लोक वाचन</span>
                   </div>
-                  <h2 className="font-serif text-2xl sm:text-3xl font-bold text-stone-900">
+                  <h2 className="font-serif text-2xl sm:text-3xl font-bold text-amber-950">
                     {currentReaderScripture?.label || "पुराण एवं इतिहास मूल श्लोक पाठ"}
                   </h2>
-                  <p className="text-xs text-stone-600 font-devanagari mt-1">
+                  <p className="text-xs text-stone-700 font-devanagari mt-1">
                     {currentReaderScripture?.editionNote || "गीताप्रेस गोरखपुर एवं बीओआरआई पुणे प्रामाणिक मूल पाठ"}
                   </p>
                 </div>
 
                 {/* Category Switcher: Puranas vs Itihasas */}
-                <div className="flex items-center bg-[#fffaf0] p-1.5 rounded-2xl border border-amber-200 gap-1.5 self-start md:self-auto">
+                <div className="flex items-center bg-white/95 p-1.5 rounded-2xl border-2 border-amber-200/90 shadow-sm gap-1.5 self-start md:self-auto">
                   <button
                     type="button"
                     onClick={() => {
@@ -353,8 +353,8 @@ export default function PuranaItihasaPage({ onOpenSearch }) {
                     }}
                     className={`px-4 py-2 rounded-xl text-xs font-bold transition-all cursor-pointer ${
                       readerCategory === "purana"
-                        ? "bg-amber-800 text-white shadow-2xs"
-                        : "text-stone-700 hover:text-amber-900 hover:bg-amber-100/60"
+                        ? "bg-gradient-to-r from-amber-700 to-amber-800 text-white shadow-xs font-bold border border-amber-800"
+                        : "text-stone-700 hover:text-amber-950 hover:bg-amber-50"
                     }`}
                   >
                     १८ महापुराण ({READER_PURANAS_LIST.length})
@@ -368,8 +368,8 @@ export default function PuranaItihasaPage({ onOpenSearch }) {
                     }}
                     className={`px-4 py-2 rounded-xl text-xs font-bold transition-all cursor-pointer ${
                       readerCategory === "itihasa"
-                        ? "bg-amber-800 text-white shadow-2xs"
-                        : "text-stone-700 hover:text-amber-900 hover:bg-amber-100/60"
+                        ? "bg-gradient-to-r from-amber-700 to-amber-800 text-white shadow-xs font-bold border border-amber-800"
+                        : "text-stone-700 hover:text-amber-950 hover:bg-amber-50"
                     }`}
                   >
                     इतिहास एवं महाकाव्य ({READER_ITIHASAS_LIST.length})
