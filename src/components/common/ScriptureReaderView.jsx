@@ -38,6 +38,7 @@ export default function ScriptureReaderView({ scripture, initialChapterId = null
   const [currentPage, setCurrentPage] = useState(1);
   const [jumpTo, setJumpTo] = useState("");
   const [searchText, setSearchText] = useState("");
+  const [readerLanguage, setReaderLanguage] = useState("all"); // "all", "hindi", "english", "hinglish"
 
   const selectedChapter =
     scripture.chapters.find((chapter) => chapter.id === selectedChapterId) ||
@@ -252,6 +253,35 @@ export default function ScriptureReaderView({ scripture, initialChapterId = null
         </div>
       </div>
 
+      {/* 3-Language Selector Bar (Hindi • English • Hinglish) */}
+      <div className="mt-3 flex items-center justify-between flex-wrap gap-2.5 p-2.5 rounded-2xl bg-white border border-amber-200/80 shadow-2xs">
+        <div className="flex items-center gap-1.5 text-xs font-bold text-stone-700">
+          <Sparkles className="w-4 h-4 text-amber-600" />
+          <span>अर्थ एवं व्याख्या भाषा:</span>
+        </div>
+        <div className="flex items-center gap-1 overflow-x-auto text-xs font-bold p-0.5 rounded-xl bg-amber-50/70 border border-amber-200/80">
+          {[
+            { id: "all", label: "सभी ३ भाषाएँ (All 3)" },
+            { id: "hindi", label: "हिन्दी भावार्थ" },
+            { id: "english", label: "English Translation" },
+            { id: "hinglish", label: "सरल हिंग्लिश" }
+          ].map((lang) => (
+            <button
+              key={lang.id}
+              type="button"
+              onClick={() => setReaderLanguage(lang.id)}
+              className={`px-3 py-1.5 rounded-lg transition-all cursor-pointer whitespace-nowrap ${
+                readerLanguage === lang.id
+                  ? "bg-amber-800 text-white shadow-2xs font-bold"
+                  : "text-stone-700 hover:text-amber-900 hover:bg-amber-100/60"
+              }`}
+            >
+              {lang.label}
+            </button>
+          ))}
+        </div>
+      </div>
+
       {/* 4. Top Pagination Controls (if paginated) */}
       {isPaginated && (
         <div className="mt-4 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between border-b border-stone-100 pb-3">
@@ -335,18 +365,9 @@ export default function ScriptureReaderView({ scripture, initialChapterId = null
                 </p>
               </div>
 
-              {/* Roman IAST Transliteration */}
-              {item.transliteration && (
-                <div className="mt-3.5 p-3 rounded-xl bg-stone-50 border border-stone-200/70 text-xs sm:text-sm text-stone-700 font-serif italic leading-relaxed">
-                  <span className="font-bold text-stone-800 not-italic block mb-0.5 text-[11px] uppercase tracking-wider">
-                    रोमन लिप्यंतरण (IAST Transliteration):
-                  </span>
-                  {item.transliteration}
-                </div>
-              )}
-
-              {/* Hindi Translation */}
-              {item.hindi && (
+              {/* 3-Language Translation Display (Hindi, English, Hinglish) */}
+              {/* 1. Hindi Translation */}
+              {item.hindi && (readerLanguage === "all" || readerLanguage === "hindi") && (
                 <div className="mt-3.5 p-3.5 rounded-xl bg-amber-50/50 border border-amber-200/60 text-xs sm:text-sm text-stone-900 font-devanagari leading-relaxed">
                   <span className="font-bold text-amber-900 block mb-1 text-xs">
                     हिंदी भावार्थ (Hindi Translation):
@@ -355,13 +376,23 @@ export default function ScriptureReaderView({ scripture, initialChapterId = null
                 </div>
               )}
 
-              {/* English Translation */}
-              {item.english && (
-                <div className="mt-3 p-3 rounded-xl bg-stone-50/70 border border-stone-200/60 text-xs sm:text-sm text-stone-700 leading-relaxed">
+              {/* 2. English Translation */}
+              {item.english && (readerLanguage === "all" || readerLanguage === "english") && (
+                <div className="mt-3 p-3 rounded-xl bg-stone-50/70 border border-stone-200/60 text-xs sm:text-sm text-stone-700 leading-relaxed font-sans">
                   <span className="font-bold text-stone-800 block mb-0.5 text-xs">
                     English Translation:
                   </span>
                   {item.english}
+                </div>
+              )}
+
+              {/* 3. Hinglish Explanation */}
+              {(item.hinglish || item.hindi) && (readerLanguage === "all" || readerLanguage === "hinglish") && (
+                <div className="mt-3 p-3 rounded-xl bg-orange-50/40 border border-orange-200/60 text-xs sm:text-sm text-stone-800 leading-relaxed font-sans">
+                  <span className="font-bold text-orange-900 block mb-0.5 text-xs">
+                    सरल हिंग्लिश व्याख्या (Hinglish Guide):
+                  </span>
+                  {item.hinglish || item.hindi}
                 </div>
               )}
 

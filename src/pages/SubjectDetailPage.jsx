@@ -767,8 +767,7 @@ function ScriptureReaderView({ scripture }) {
       return (
         String(item.number).includes(q) ||
         (item.devanagari && item.devanagari.toLowerCase().includes(q)) ||
-        (item.transliteration &&
-          item.transliteration.toLowerCase().includes(q)) ||
+        (item.hinglish && item.hinglish.toLowerCase().includes(q)) ||
         (item.hindi && item.hindi.toLowerCase().includes(q)) ||
         (item.english && item.english.toLowerCase().includes(q)) ||
         (item.commentary && item.commentary.toLowerCase().includes(q))
@@ -1019,15 +1018,6 @@ function ScriptureReaderView({ scripture }) {
                 </p>
               </div>
 
-              {item.transliteration && (
-                <div className="mt-3 text-sm text-stone-600">
-                  <span className="font-bold text-stone-700">
-                    Transliteration:
-                  </span>{" "}
-                  {item.transliteration}
-                </div>
-              )}
-
               {item.hindi && (
                 <div className="mt-2 text-sm text-stone-700">
                   <span className="font-bold text-stone-800">Hindi:</span>{" "}
@@ -1039,6 +1029,13 @@ function ScriptureReaderView({ scripture }) {
                 <div className="mt-2 text-sm text-stone-700">
                   <span className="font-bold text-stone-800">English:</span>{" "}
                   {item.english}
+                </div>
+              )}
+
+              {(item.hinglish || item.hindi) && (
+                <div className="mt-2 text-sm text-stone-700">
+                  <span className="font-bold text-stone-800">Hinglish:</span>{" "}
+                  {item.hinglish || item.hindi}
                 </div>
               )}
 

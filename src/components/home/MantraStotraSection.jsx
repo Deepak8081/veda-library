@@ -147,8 +147,7 @@ export default function MantraStotraSection({ onNavigateKnowledge }) {
   const [activeCategoryTab, setActiveCategoryTab] = useState("all");
   const [copiedId, setCopiedId] = useState(null);
   const [playingId, setPlayingId] = useState(null);
-  const [globalIast, setGlobalIast] = useState(false);
-  const [cardIastState, setCardIastState] = useState({});
+  const [langMode, setLangMode] = useState("all"); // 'all' | 'hindi' | 'english' | 'hinglish'
   const [fontSizeIndex, setFontSizeIndex] = useState(1); // 0: Normal, 1: Medium, 2: Large
   const [showAllMantras, setShowAllMantras] = useState(false);
 
@@ -166,8 +165,10 @@ export default function MantraStotraSection({ onNavigateKnowledge }) {
       return {
         ...cfg,
         sanskrit: live?.sanskrit || "",
-        transliteration: live?.transliteration || "",
         hindiTranslation: live?.hindiTranslation || "",
+        englishTranslation: live?.englishTranslation || cfg.englishTranslation || "",
+        hinglishTranslation: live?.hinglishTranslation || cfg.hinglishTranslation || "",
+        spiritualPurport: live?.shastricContext || cfg.spiritualPurport,
         rishi: live?.rishi || "वैदिक ऋषि परंपरा",
         devata: live?.devata || "परमात्मा / अभीष्ट देव",
         chhanda: live?.chhanda || "वैदिक छंद",
@@ -205,15 +206,6 @@ export default function MantraStotraSection({ onNavigateKnowledge }) {
     navigator.clipboard.writeText(text);
     setCopiedId(id);
     setTimeout(() => setCopiedId(null), 2200);
-  };
-
-  // Toggle individual card IAST transliteration
-  const toggleCardIast = (id, e) => {
-    if (e) e.stopPropagation();
-    setCardIastState((prev) => ({
-      ...prev,
-      [id]: prev[id] === undefined ? !globalIast : !prev[id]
-    }));
   };
 
   // Web Speech API: Chanting Audio Pronunciation
@@ -327,24 +319,28 @@ export default function MantraStotraSection({ onNavigateKnowledge }) {
               ))}
             </div>
 
-            {/* Global IAST Transliteration Toggle */}
-            <button
-              type="button"
-              onClick={() => {
-                const next = !globalIast;
-                setGlobalIast(next);
-                // Reset card overrides so global state applies everywhere
-                setCardIastState({});
-              }}
-              className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-semibold border transition-all cursor-pointer shadow-2xs ${
-                globalIast
-                  ? "bg-amber-800 text-white border-amber-800"
-                  : "bg-white/90 text-stone-700 border-amber-300/80 hover:bg-amber-50"
-              }`}
-            >
-              <Languages className="w-3.5 h-3.5" />
-              <span>IAST लिप्यांतरण {globalIast ? "चालू" : "दिखाएं"}</span>
-            </button>
+            {/* 3-Language Translation Selector (Hindi • English • Hinglish) */}
+            <div className="flex items-center p-0.5 rounded-xl border border-amber-300/80 bg-white/90 shadow-2xs text-xs font-semibold">
+              {[
+                { id: "all", label: "सभी ३ भाषाएँ" },
+                { id: "hindi", label: "हिन्दी" },
+                { id: "english", label: "English" },
+                { id: "hinglish", label: "हिंग्लिश" }
+              ].map((l) => (
+                <button
+                  key={l.id}
+                  type="button"
+                  onClick={() => setLangMode(l.id)}
+                  className={`px-2.5 py-1 rounded-lg transition-all cursor-pointer ${
+                    langMode === l.id
+                      ? "bg-amber-800 text-white font-bold shadow-2xs"
+                      : "text-stone-700 hover:bg-amber-50"
+                  }`}
+                >
+                  {l.label}
+                </button>
+              ))}
+            </div>
 
             {/* View Full Mantra Library */}
             <button
@@ -395,10 +391,6 @@ export default function MantraStotraSection({ onNavigateKnowledge }) {
         {/* Mantra Cards Grid (High contrast, crystal-clear typography, sacred borders) */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-7 animate-fadeIn">
           {displayedMantras.map((mantra) => {
-            const isCardIastActive =
-              cardIastState[mantra.id] !== undefined
-                ? cardIastState[mantra.id]
-                : globalIast;
             const isPlayingThis = playingId === mantra.id;
             const isCopied = copiedId === mantra.id;
 
@@ -411,7 +403,7 @@ export default function MantraStotraSection({ onNavigateKnowledge }) {
                 <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-amber-400/30 via-amber-600 to-amber-400/30 group-hover:from-amber-500 group-hover:via-amber-700 group-hover:to-amber-500 transition-all" />
 
                 <div>
-                  {/* Card Header: Category Badge + Source + Action Quick Icons */}
+                  {/* Card Header: Category Badge + Source + Quick Copy */}
                   <div className="flex items-start justify-between gap-2 pb-3 border-b border-amber-100/90">
                     <div className="flex flex-wrap items-center gap-1.5">
                       <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-md bg-amber-100/90 border border-amber-300/80 text-amber-950 text-[11px] font-bold">
@@ -424,21 +416,6 @@ export default function MantraStotraSection({ onNavigateKnowledge }) {
                     </div>
 
                     <div className="flex items-center gap-1.5 shrink-0">
-                      {/* Individual IAST Toggle Button */}
-                      <button
-                        type="button"
-                        onClick={(e) => toggleCardIast(mantra.id, e)}
-                        title={isCardIastActive ? "Hide IAST transliteration" : "Show IAST transliteration"}
-                        className={`px-2 py-1 rounded-lg border text-[11px] font-medium flex items-center gap-1 transition-colors cursor-pointer ${
-                          isCardIastActive
-                            ? "bg-amber-100 text-amber-950 border-amber-300 font-bold"
-                            : "bg-stone-50/80 text-stone-600 border-stone-200 hover:bg-amber-50 hover:text-amber-900"
-                        }`}
-                      >
-                        <Languages className="w-3 h-3" />
-                        <span>IAST</span>
-                      </button>
-
                       {/* Quick Copy Button */}
                       <button
                         type="button"
@@ -473,34 +450,37 @@ export default function MantraStotraSection({ onNavigateKnowledge }) {
                     {mantra.title}
                   </h3>
 
-                  {/* Sacred Sanskrit Text Box (Framed with sacred gold border & high-contrast Devanagari) */}
+                  {/* Sacred Sanskrit Text Box */}
                   <div className="rounded-xl bg-[#fffdf8] border-2 border-amber-200/90 shadow-2xs p-4 sm:p-5 relative my-3">
-                    {/* Devanagari Shloka with authentic Vedic Svara markings */}
                     <p
                       className={`font-devanagari font-bold text-stone-950 text-center whitespace-pre-line tracking-wide select-text ${fontSizes[fontSizeIndex].shlokaClass}`}
                     >
                       {mantra.sanskrit}
                     </p>
-
-                    {/* IAST Transliteration Box (Toggleable per card or globally) */}
-                    {isCardIastActive && mantra.transliteration && (
-                      <div className="mt-3.5 pt-3 border-t border-amber-200/80 bg-amber-50/50 rounded-lg p-2.5 text-center transition-all animate-fadeIn">
-                        <span className="text-[10px] font-sans uppercase font-bold text-amber-800 tracking-wider block mb-1">
-                          IAST Roman Transliteration
-                        </span>
-                        <p className="font-serif italic text-xs sm:text-sm text-stone-800 leading-relaxed tracking-wide select-text whitespace-pre-line">
-                          {mantra.transliteration}
-                        </p>
-                      </div>
-                    )}
                   </div>
 
-                  {/* Concise Hindi Bhavartha */}
-                  <div className="mt-3.5 space-y-2">
-                    <p className="text-xs sm:text-sm text-stone-700 font-devanagari leading-relaxed">
-                      <strong className="text-stone-900 font-bold">भावार्थ: </strong>
-                      {mantra.hindiTranslation}
-                    </p>
+                  {/* 3-Language Expositions (Hindi • English • Hinglish) */}
+                  <div className="mt-3.5 space-y-2.5">
+                    {(langMode === "all" || langMode === "hindi") && mantra.hindiTranslation && (
+                      <p className="text-xs sm:text-sm text-stone-700 font-devanagari leading-relaxed">
+                        <strong className="text-stone-900 font-bold">हिन्दी भावार्थ: </strong>
+                        {mantra.hindiTranslation}
+                      </p>
+                    )}
+
+                    {(langMode === "all" || langMode === "english") && mantra.englishTranslation && (
+                      <p className="text-xs sm:text-sm text-stone-700 font-serif italic leading-relaxed">
+                        <strong className="text-stone-900 font-sans font-bold not-italic">English: </strong>
+                        "{mantra.englishTranslation}"
+                      </p>
+                    )}
+
+                    {(langMode === "all" || langMode === "hinglish") && mantra.hinglishTranslation && (
+                      <p className="text-xs sm:text-sm text-stone-700 font-sans leading-relaxed">
+                        <strong className="text-stone-900 font-bold">सरल हिंग्लिश: </strong>
+                        {mantra.hinglishTranslation}
+                      </p>
+                    )}
 
                     {/* Highlighted Spiritual Purport (आध्यात्मिक मर्म / फलश्रुति) */}
                     <div className="p-3 rounded-xl bg-gradient-to-r from-amber-50/90 via-orange-50/70 to-amber-50/90 border border-amber-200/80 text-amber-950 text-xs sm:text-[13px] font-devanagari flex items-start gap-2 shadow-2xs">

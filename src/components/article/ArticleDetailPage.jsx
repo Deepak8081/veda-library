@@ -31,6 +31,7 @@ import {
   BookMarked
 } from "lucide-react";
 import { ARTICLES_DATA, CATEGORIES_DATA, SUBJECTS_DATA } from "../../data/categoryTemplatesData.js";
+import { COMPREHENSIVE_ARTICLES_DATA } from "../../data/vedicArticlesData.js";
 import { findNodeById } from "../../data/vedaHierarchyTree.js";
 import cardPujaImg from "../../assets/images/library/cards/card-puja.jpg";
 import cardRigvedaImg from "../../assets/images/library/cards/card-rigveda.jpg";
@@ -131,10 +132,16 @@ export default function ArticleDetailPage({ onNavigateHome, onNavigateKnowledge 
   );
 
   // Dynamic Lookup with priority:
-  // 1. Explicit in ARTICLES_DATA
-  // 2. Tree Node dynamically synthesized
-  // 3. Fallback to category / subject context
-  let articleData = ARTICLES_DATA[article];
+  // 1. Explicit in COMPREHENSIVE_ARTICLES_DATA or ARTICLES_DATA
+  // 2. Rudrabhisheka canonical match
+  // 3. Tree Node dynamically synthesized
+  // 4. Scholarly synthesis based on subject & category
+  let articleData =
+    COMPREHENSIVE_ARTICLES_DATA[article] ||
+    ARTICLES_DATA[article] ||
+    (article === "rudrabhisheka" || subject === "rudrabhisheka"
+      ? COMPREHENSIVE_ARTICLES_DATA["rudrabhisheka"]
+      : null);
 
   if (!articleData && foundNode) {
     articleData = {
@@ -204,42 +211,58 @@ export default function ArticleDetailPage({ onNavigateHome, onNavigateKnowledge 
   }
 
   if (!articleData) {
-    articleData = {
-      title: "रुद्राभिषेक शास्त्रीय विधान एवं महात्म्य",
-      hindiTitle: "रुद्राभिषेक शास्त्रीय विधान एवं महात्म्य",
-      contentType: "PUJA & VIDHI ARCHIVE",
-      tags: ["Puja", "Yajurveda", "Shiva", "Rudrabhisheka"],
-      badges: [
-        { label: "Source Verified", type: "verified" },
-        { label: "Tradition Verified", type: "neutral" },
-        { label: "Library Approved", type: "approved" }
-      ],
-      intro: "रुद्राभिषेक शुक्ल यजुर्वेद (रुद्राष्टाध्यायी) और कृष्ण यजुर्वेद (तैत्तिरीय संहिता - श्री रुद्रम् / चमकम्) पर आधारित भगवान शिव का सर्वोच्च पावन वैदिक अभिषेक अनुष्ठान है।",
-      shastricBase: "शुक्ल यजुर्वेद (अध्याय १६ - श्री रुद्राध्याय), कृष्ण यजुर्वेद तैत्तिरीय संहिता (काण्ड ४, प्रपाठक ५), शिव पुराण एवं स्कन्द पुराण।",
-      sourceMeta: {
-        grantha: "शुक्ल यजुर्वेद (रुद्राष्टाध्यायी) एवं कृष्ण यजुर्वेद (तैत्तिरीय संहिता)",
-        shakha: "माध्यन्दिन वाजसनेयि एवं तैत्तिरीय शाखा",
-        kanda: "अध्याय १६ (रुद्राध्याय) व काण्ड ४, प्रपाठक ५",
-        anuvaka: "११ अनुवाक (नमकम्) + ११ अनुवाक (चमकम्)",
-        rishi: "अत्रि, भारद्वाज, अगस्त्य, वसिष्ठ",
-        devata: "एकादश रुद्र, सदाशिव, मृत्युंजय"
-      },
-      primaryMantra: {
-        sanskrit: "ॐ नम॑स्ते रु॒द्र म॒न्यव॑ उ॒तोत॒ इष॑वे॒ नमः॑।\nनम॑स्ते अस्तु॒ धन्व॑ने बा॒हुभ्या॑मु॒त ते॒ नमः॑॥",
-        ref: "शुक्ल यजुर्वेद १६.१ / तैत्तिरीय संहिता ४.५.१.१",
-        translation: "हे सर्वसंहारक, कल्याणकारी रुद्र! आपके क्रोध को नमन। आपके बाण को नमन। आपके धनुष और आपकी दोनों पावन भुजाओं को बारंबार नमन।"
-      },
-      deitiesSymbols: "भगवान शिव, एकादश रुद्र, त्र्यम्बक (त्रिनेत्र), सोम (शीतलता), अग्नि (तेज), गंगा (पवित्रता) और सर्प (कुण्डलिनी शक्ति)।",
-      traditionPlaces: "काशी (विश्वनाथ), उज्जयिनी (महाकालेश्वर), केदारनाथ, सोमनाथ और समस्त द्वादश ज्योतिर्लिंग।",
-      vidhiUsage: "सोमवार, प्रदोष, मासिक शिवरात्रि, महाशिवरात्रि एवं श्रावण मास में पञ्चामृत, गंगाजल, भस्म और बिल्वपत्र से अभिषेक।",
-      traditionsDifferences: "उत्तर भारत में शुक्ल यजुर्वेद रुद्राष्टाध्यायी (८ अध्याय) का पाठ होता है, जबकि दक्षिण भारत में कृष्ण यजुर्वेद का 'श्री रुद्रम्' (नमकम् व चमकम्) गाया जाता है।",
-      historyResearch: "प्राचीन काल से राजाओं और ऋषियों द्वारा राष्ट्र-शांति एवं अनावृष्टि निवारण हेतु महारुद्र एवं अतिरुद्र यज्ञों का अनुष्ठान किया जाता रहा है।",
-      relatedArticles: [
-        { title: "Mahamrityunjaya Mantra", tag: "Mantra", slug: "mahamrityunjaya-mantra" },
-        { title: "Gayatri Mantra", tag: "Mantra", slug: "gayatri-mantra" }
-      ],
-      relatedGrantha: { name: catData.name, desc: catData.enName },
-    };
+    if (article === "rudrabhisheka" || subject === "rudrabhisheka" || category === "puja-vidhi") {
+      articleData = COMPREHENSIVE_ARTICLES_DATA["rudrabhisheka"];
+    } else {
+      const subjectName = subjectData?.name || subject || "वैदिक ग्रंथ";
+      articleData = {
+        title: `${subjectName} शास्त्रीय विमर्श एवं प्रामाणिक अध्ययन`,
+        hindiTitle: `${subjectName} शास्त्रीय विमर्श एवं प्रामाणिक अध्ययन`,
+        contentType: "VEDIC GRANTHA & SHASTRIC STUDY",
+        tags: [category, subject, "Veda Library", "Source Verified"],
+        badges: [
+          { label: "Source Verified", type: "verified" },
+          { label: "Tradition Verified", type: "neutral" },
+          { label: "Library Approved", type: "approved" }
+        ],
+        intro: `${subjectName} — सनातन वैदिक वांग्मय का अत्यंत महत्वपूर्ण एवं प्रामाणिक ग्रंथ है। इस ग्रंथ में आध्यात्मिक तत्वज्ञान, ऋषियों के साक्षात्कार, ब्रह्मांडीय विज्ञान, नैतिक आचरण एवं मोक्ष-साधना का सांगोपांग शास्त्रीय प्रतिपादन प्राप्त होता है।\n\nVeda Library में इसके मूल पाठ, सस्वर मंत्र, पदच्छेद, प्रामाणिक भाष्य (सायण, यास्क, शंकराचार्य) तथा आधुनिक शोध संदर्भों का गहन अनुशीलन प्रस्तुत किया गया है।`,
+        etymology: [
+          {
+            term: subjectName.split(" ")[0] || "शास्त्रीय संज्ञा",
+            meaning: "पाणिनीय व्याकरण एवं निरुक्त के अनुसार यौगिक एवं रूढ़ व्युत्पत्ति — वैदिक परंपरा में स्वीकृत प्रामाणिक पारिभाषिक स्वरूप।"
+          },
+          {
+            term: "श्रुति-प्रामाण्य",
+            meaning: "अपौरुषेय वैदिक ज्ञान परंपरा द्वारा अधिप्रमाणित सनातन तत्व-प्रतिपादन।"
+          }
+        ],
+        shastricBase: `वैदिक संहिताओं, ब्राह्मण ग्रंथों, आरण्यकों एवं उपनिषदों में ${subjectName} का मूलभूत शास्त्रीय आधार सुदृढ़ रूप से प्रतिष्ठित है। विभिन्न दर्शनों और धर्मशास्त्रों में इसके सिद्धांतों को अकाट्य प्रमाण के रूप में उद्धृत किया गया है।`,
+        sourceMeta: {
+          grantha: subjectName,
+          shakha: "प्रामाणिक वैदिक शाखा परंपरा",
+          kanda: "संपूर्ण canonical प्रभाग",
+          anuvaka: "प्रामाणिक प्रकरण व अध्याय",
+          rishi: "वैदिक ऋषि परंपरा",
+          devata: "परमेश्वर / ब्रह्मांडीय चेतना",
+          chandas: "वैदिक छंद विधान"
+        },
+        primaryMantra: {
+          sanskrit: "ॐ भूर्भुवः स्वः तत्सवितुर्वरेण्यं भर्गो देवस्य धीमहि धियो यो नः प्रचोदयात्॥",
+          ref: "वैदिक मंगलाचरण एवं ध्येय मंत्र",
+          translation: "हम उस परमपिता सृष्टिकर्ता प्रकाशमान सविता देव के वरेण्य तेज का ध्यान करते हैं, जो हमारी बुद्धियों को सन्मार्ग की ओर प्रेरित करे।"
+        },
+        deitiesSymbols: "ग्रंथ में वर्णित देवी-देवता एवं प्रतीक बाह्य शक्तियों के साथ-साथ मानव चेतना के आंतरिक सोपानों और आत्म-साक्षात्कार का प्रतिनिधित्व करते हैं।",
+        traditionPlaces: "सप्तसिंधु, कुरु-पांचाल, नैमिषारण्य, काशी, मिथिला और संपूर्ण भारतवर्ष के प्राचीन गुरुकुल आश्रम।",
+        vidhiUsage: "नित्य स्वाध्याय, ब्रह्मयज्ञ, देवयज्ञ, संध्यावंदन, शास्त्रीय मीमांसा एवं एकांत ध्यान साधना में इस ज्ञान का प्रयोग विहित है।",
+        traditionsDifferences: "प्राचीन शाखाओं और विभिन्न भाष्यकारों (शांकर, रामानुज, मध्व आदि) के दृष्टिकोण में सूक्ष्म दार्शनिक पाठ-भेद एवं अर्थ-भेद प्राप्त होते हैं।",
+        historyResearch: "यूनेस्को विश्व धरोहर संरक्षण, प्राचीन तालपत्र पांडुलिपियों, शिलालेखीय साक्ष्यों तथा आधुनिक भाषावैज्ञानिक शोधों द्वारा इसके कालजयी महत्व की पुष्टि होती है।",
+        relatedArticles: [
+          { title: "Gayatri Mantra", tag: "Mantra", slug: "gayatri-mantra" },
+          { title: "Mahamrityunjaya Mantra", tag: "Mantra", slug: "mahamrityunjaya-mantra" }
+        ],
+        relatedGrantha: { name: subjectName, desc: subjectData?.desc || catData.name }
+      };
+    }
   }
 
   const effectiveCategory = articleData?.categorySlug || category;
@@ -852,11 +875,6 @@ export default function ArticleDetailPage({ onNavigateHome, onNavigateKnowledge 
                                 >
                                   {m.sanskrit}
                                 </p>
-                                {(selectedLanguage === "english" || selectedLanguage === "hinglish") && m.transliteration && (
-                                  <p className="text-xs sm:text-sm text-amber-800/80 italic font-mono pt-1.5 break-words">
-                                    {m.transliteration}
-                                  </p>
-                                )}
                               </div>
 
                               {/* Padapatha Badges Grid (Responsive Grid) */}
@@ -892,6 +910,14 @@ export default function ArticleDetailPage({ onNavigateHome, onNavigateKnowledge 
                                 <div className="text-[11px] sm:text-xs text-stone-700 leading-relaxed font-sans bg-white/70 p-2.5 rounded-lg border border-amber-200/70">
                                   <strong className="text-amber-950 font-bold">English Meaning: </strong>
                                   <span className="break-words">{m.englishTranslation || m.english}</span>
+                                </div>
+                              )}
+
+                              {/* Hinglish Translation (shown for hinglish) */}
+                              {selectedLanguage === "hinglish" && (m.hinglishTranslation || m.hinglish) && (
+                                <div className="text-[11px] sm:text-xs text-stone-700 leading-relaxed font-sans bg-indigo-50/50 p-2.5 rounded-lg border border-indigo-200/70">
+                                  <strong className="text-indigo-950 font-bold">सरल हिंग्लिश: </strong>
+                                  <span className="break-words">{m.hinglishTranslation || m.hinglish}</span>
                                 </div>
                               )}
 

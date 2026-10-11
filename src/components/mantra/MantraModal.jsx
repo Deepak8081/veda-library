@@ -56,8 +56,7 @@ export default function MantraModal({
   // Resolved mantra state
   const [currentMantra, setCurrentMantra] = useState(null);
   const [fontSizeLevel, setFontSizeLevel] = useState(1); // 0: standard, 1: large, 2: extra large
-  const [langTab, setLangTab] = useState("both"); // 'hindi', 'english', 'both'
-  const [showTransliteration, setShowTransliteration] = useState(false);
+  const [langTab, setLangTab] = useState("all"); // 'all', 'hindi', 'english', 'hinglish'
   const [copied, setCopied] = useState(false);
   const [isPlayingAudio, setIsPlayingAudio] = useState(false);
   const [audioSupported, setAudioSupported] = useState(true);
@@ -379,26 +378,6 @@ export default function MantraModal({
               </p>
             </div>
 
-            {/* Roman IAST Transliteration (Toggleable or auto-shown) */}
-            {currentMantra.transliteration && (
-              <div className="mt-4 pt-3 border-t border-amber-200/70">
-                <div className="flex items-center justify-center gap-2 mb-1.5">
-                  <button
-                    type="button"
-                    onClick={() => setShowTransliteration((prev) => !prev)}
-                    className="text-[11px] font-bold text-amber-800 hover:text-amber-950 underline cursor-pointer flex items-center gap-1"
-                  >
-                    <span>{showTransliteration ? "रोमन लिपि छुपाएँ" : "रोमन उच्चारण देखें (Roman IAST)"}</span>
-                  </button>
-                </div>
-                {showTransliteration && (
-                  <p className="font-serif italic text-stone-700 text-xs sm:text-sm whitespace-pre-line max-w-2xl mx-auto leading-relaxed select-text bg-white/70 p-2.5 rounded-xl border border-amber-200/60 mt-1">
-                    {currentMantra.transliteration}
-                  </p>
-                )}
-              </div>
-            )}
-
             {/* Quick in-card Speaker Chanting Prompt */}
             {audioSupported && (
               <div className="mt-4 flex items-center justify-center">
@@ -462,12 +441,12 @@ export default function MantraModal({
               <div className="flex items-center p-0.5 rounded-xl bg-amber-50 border border-amber-200 text-xs font-bold">
                 <button
                   type="button"
-                  onClick={() => setLangTab("both")}
+                  onClick={() => setLangTab("all")}
                   className={`px-2.5 py-1 rounded-lg transition-colors cursor-pointer ${
-                    langTab === "both" ? "bg-amber-600 text-white shadow-2xs" : "text-stone-600 hover:text-amber-900"
+                    langTab === "all" || langTab === "both" ? "bg-amber-600 text-white shadow-2xs" : "text-stone-600 hover:text-amber-900"
                   }`}
                 >
-                  दोनों (Both)
+                  सभी ३ भाषाएँ (All 3)
                 </button>
                 <button
                   type="button"
@@ -487,11 +466,20 @@ export default function MantraModal({
                 >
                   English
                 </button>
+                <button
+                  type="button"
+                  onClick={() => setLangTab("hinglish")}
+                  className={`px-2.5 py-1 rounded-lg transition-colors cursor-pointer ${
+                    langTab === "hinglish" ? "bg-amber-600 text-white shadow-2xs" : "text-stone-600 hover:text-amber-900"
+                  }`}
+                >
+                  हिंग्लिश
+                </button>
               </div>
             </div>
 
             {/* Hindi Translation Card */}
-            {(langTab === "both" || langTab === "hindi") && currentMantra.hindiTranslation && (
+            {(langTab === "all" || langTab === "both" || langTab === "hindi") && currentMantra.hindiTranslation && (
               <div className="p-4 rounded-xl bg-[#fffcf7] border-l-4 border-amber-500 border border-amber-100 select-text">
                 <span className="inline-block text-[10px] font-bold uppercase tracking-wider text-amber-900 bg-amber-100 px-2 py-0.5 rounded mb-2">
                   सरल हिंदी भावार्थ
@@ -503,13 +491,25 @@ export default function MantraModal({
             )}
 
             {/* English Translation Card */}
-            {(langTab === "both" || langTab === "english") && currentMantra.englishTranslation && (
+            {(langTab === "all" || langTab === "both" || langTab === "english") && currentMantra.englishTranslation && (
               <div className="p-4 rounded-xl bg-[#fafafa] border-l-4 border-stone-400 border border-stone-200 select-text">
                 <span className="inline-block text-[10px] font-bold uppercase tracking-wider text-stone-700 bg-stone-100 px-2 py-0.5 rounded mb-2">
                   English Meaning
                 </span>
                 <p className="font-serif text-sm sm:text-base text-stone-700 leading-relaxed italic">
                   "{currentMantra.englishTranslation}"
+                </p>
+              </div>
+            )}
+
+            {/* Hinglish Translation Card */}
+            {(langTab === "all" || langTab === "both" || langTab === "hinglish") && (currentMantra.hinglishTranslation || currentMantra.hindiTranslation) && (
+              <div className="p-4 rounded-xl bg-[#f8f9ff] border-l-4 border-indigo-400 border border-indigo-100 select-text">
+                <span className="inline-block text-[10px] font-bold uppercase tracking-wider text-indigo-900 bg-indigo-100 px-2 py-0.5 rounded mb-2">
+                  सरल हिंग्लिश व्याख्या (Hinglish Guide)
+                </span>
+                <p className="font-sans text-sm sm:text-base text-stone-800 leading-relaxed font-normal">
+                  {currentMantra.hinglishTranslation || currentMantra.hindiTranslation}
                 </p>
               </div>
             )}

@@ -245,9 +245,6 @@ export default function MantraReaderPage({ onOpenSearch }) {
     const saved = localStorage.getItem("veda_reader_fontsize_idx");
     return saved !== null ? Number(saved) : 2; // Default to index 2: "text-2xl sm:text-3xl"
   });
-  const [scriptMode, setScriptMode] = useState(() => {
-    return localStorage.getItem("veda_reader_script") || "both"; // 'both', 'devanagari', 'iast'
-  });
   const [fontFamily, setFontFamily] = useState(() => {
     return localStorage.getItem("veda_reader_font_family") || "serif"; // 'serif', 'sans'
   });
@@ -307,10 +304,6 @@ export default function MantraReaderPage({ onOpenSearch }) {
   useEffect(() => {
     localStorage.setItem("veda_reader_fontsize_idx", String(fontSizeIndex));
   }, [fontSizeIndex]);
-
-  useEffect(() => {
-    localStorage.setItem("veda_reader_script", scriptMode);
-  }, [scriptMode]);
 
   useEffect(() => {
     localStorage.setItem("veda_reader_font_family", fontFamily);
@@ -544,9 +537,6 @@ export default function MantraReaderPage({ onOpenSearch }) {
     const textToCopy = `॥ ॐ ॥
 ${mantra.sanskrit}
 
-IAST:
-${mantra.transliteration || ""}
-
 — ${mantra.textName} (${mantra.sectionRef} • मंत्र ${mantra.mantraNumber})
 ऋषि: ${mantra.rishi || "वैदिक ऋषि"} | देवता: ${mantra.devata || "परमेश्वर"} | छन्द: ${mantra.chhanda || "वैदिक छन्द"}
 
@@ -555,6 +545,9 @@ ${mantra.hindiTranslation}
 
 English Translation:
 ${mantra.englishTranslation || ""}
+
+सरल हिंग्लिश व्याख्या:
+${mantra.hinglishTranslation || ""}
 
 स्रोत: Veda Library — https://vedalibrary.org`;
 
@@ -893,35 +886,7 @@ ${mantra.englishTranslation || ""}
               </div>
             </div>
 
-            {/* 3. Script Switcher (देवनागरी • IAST • उभय) */}
-            <div className="flex items-center gap-1.5 flex-wrap">
-              <span className="text-[11px] font-bold uppercase tracking-wider opacity-75 flex items-center gap-1">
-                <Languages className="w-3.5 h-3.5 text-amber-600" />
-                <span>लिपि:</span>
-              </span>
-              <div className="flex items-center p-0.5 rounded-xl border border-amber-200/60 bg-black/5 dark:bg-white/5 text-xs font-bold">
-                {[
-                  { id: "both", label: "उभय (Both)" },
-                  { id: "devanagari", label: "देवनागरी" },
-                  { id: "iast", label: "IAST (रोमन)" }
-                ].map((sc) => (
-                  <button
-                    key={sc.id}
-                    type="button"
-                    onClick={() => setScriptMode(sc.id)}
-                    className={`px-2.5 py-1 rounded-lg transition-all cursor-pointer ${
-                      scriptMode === sc.id
-                        ? "bg-amber-600 text-white font-bold shadow-2xs"
-                        : "opacity-75 hover:opacity-100 hover:bg-black/5"
-                    }`}
-                  >
-                    {sc.label}
-                  </button>
-                ))}
-              </div>
-            </div>
-
-            {/* 4. Font Style (Serif Vedic vs Clean Sans) */}
+            {/* 3. Font Style (Serif Vedic vs Clean Sans) */}
             <div className="flex items-center gap-1.5 flex-wrap">
               <div className="flex items-center p-0.5 rounded-xl border border-amber-200/60 bg-black/5 dark:bg-white/5 text-xs font-bold">
                 <button
@@ -1263,31 +1228,16 @@ ${mantra.englishTranslation || ""}
               </div>
 
               {/* Devanagari Sanskrit Block */}
-              {(scriptMode === "both" || scriptMode === "devanagari") && (
-                <div className="text-center py-5 sm:py-7">
-                  <div
-                    style={{ lineHeight: 2.3 }}
-                    className={`font-devanagari font-bold tracking-wide select-text transition-all ${
-                      fontFamily === "serif" ? "font-serif" : "font-sans"
-                    } ${currentFontSize.cls} ${themeObj.sanctuaryText}`}
-                  >
-                    {renderedSanskritTokens}
-                  </div>
-                </div>
-              )}
-
-              {/* IAST Roman Transliteration Block */}
-              {(scriptMode === "both" || scriptMode === "iast") && mantra.transliteration && (
+              <div className="text-center py-5 sm:py-7">
                 <div
-                  className={`text-center pt-5 pb-3 border-t font-serif italic text-base sm:text-lg leading-relaxed select-text transition-all ${
-                    themeObj.subtleBorder
-                  } ${themeObj.transliterationColor}`}
+                  style={{ lineHeight: 2.3 }}
+                  className={`font-devanagari font-bold tracking-wide select-text transition-all ${
+                    fontFamily === "serif" ? "font-serif" : "font-sans"
+                  } ${currentFontSize.cls} ${themeObj.sanctuaryText}`}
                 >
-                  <p className="max-w-2xl mx-auto whitespace-pre-line">
-                    {mantra.transliteration}
-                  </p>
+                  {renderedSanskritTokens}
                 </div>
-              )}
+              </div>
 
               {/* Word Highlight Notice if active */}
               {activeWordMatch && (
